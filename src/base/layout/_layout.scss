@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+// -----------------------------------------------------------------------------
+// LEGACY
+// -----------------------------------------------------------------------------
+// #region
+
+// MAIN CONTAINERS V1
+// #region
+
+
+// #endregion
+
+// #endregion
+
+// -----------------------------------------------------------------------------
+// CONTAINERS
+// -----------------------------------------------------------------------------
+// #region
+
+
+
+.wrapper {
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    align-items: start;
+    grid-column-gap: var(--size-gutter-xl);
+    grid-row-gap: $size-line;
+    grid-template-areas:
+      'sidebar header'
+      'sidebar main'
+      'sidebar footer';
+    grid-template-columns: 9.6rem 1fr;
+    grid-template-rows: 12rem 1fr minmax(min-content, max-content);
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
+  }
+}
+
+.primary-nav {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
