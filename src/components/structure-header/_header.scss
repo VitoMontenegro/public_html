@@ -1,0 +1,260 @@
+// -----------------------------------------------------------------------------
+// BASE
+// -----------------------------------------------------------------------------
+// #region
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: $size-line;
+  position: relative;
+  width: 100%;
+  z-index: calc(var(--layer-zindex-scrim) + 1);
+
+  @include media-breakpoint-up(md) {
+    --gap: #{$size-3};
+
+    @include grid();
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: $size-5 0 0;
+    z-index: 3;
+  }
+
+}
+// #endregion
+
+// -----------------------------------------------------------------------------
+// LOGO
+// -----------------------------------------------------------------------------
+// #region
+
+// @see base/graphics/logo
+// #endregion
+
+// -----------------------------------------------------------------------------
+// SEARCH
+// -----------------------------------------------------------------------------
+// #region
+
+
+// Base
+.header__search {
+  @include media-breakpoint-down(md) {
+    background-color: var(--color-background-base);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-$size-line);
+    transition:
+      opacity var(--motion-duration-sm) var(--motion-easing-base),
+      transform var(--motion-duration-sm) var(--motion-easing-base);
+    height: $size-1 * 10;
+    z-index: var(--layer-zindex-drawer);
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    grid-column: auto / span 4;
+    transform: none;
+    height: auto;
+  }
+
+  @include media-breakpoint-up(xl) {
+    grid-column: 1/span 8;
+  }
+}
+
+// Input and its container
+.header__search [type='text'],
+.header__search .input,
+.header__search .form__item {
+  padding-bottom: 0;
+  flex-grow: 1;
+}
+
+.header__search [type='search'],
+.header__search [type='text'] {
+  padding-right: $size-7;
+  min-width: 100%;
+  background: var(--color-background-alt);
+  border: 1px solid var(--color-ink-border);
+  border-radius: var(--shape-border-radius-lg);
+}
+
+// Submit
+.header__search-submit {
+  @extend %btn;
+
+  background: transparent;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: $size-6;
+  height: $size-6;
+}
+
+// -----------------------------------------------------------------------------
+// MENU
+// -----------------------------------------------------------------------------
+// #region
+
+.header__menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0 0 0 $size-1;
+
+  .header__notify {
+    button {
+      position: relative;
+      background: var(--color-ink-inverse-base);
+    }
+    .header__notify-label {
+      display: none;
+      font-size: 10px;
+      line-height: 12px;
+      padding: 0px 0px;
+      text-align: center;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 15px;
+      height: 16px;
+      left: 19px;
+      top: -7px;
+      background: #3073DF;
+      border-radius: 100px;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+    // An explicit start is used to preserve right alignment when hiding other
+    // header elements
+    grid-column: 6 / span 7;
+    justify-content: flex-end;
+    padding-left: 0;
+    position: static;
+  }
+
+  @include media-breakpoint-up(lg) {
+      grid-column: 9/span 4;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// AVATAR
+// -----------------------------------------------------------------------------
+// #region
+
+.header_photo {
+  @extend %avatar, %avatar-sm;
+
+  background-image: var(--asset-data-image-user);
+  border-radius: var(--shape-border-radius-pill);
+
+  > img {
+    border-radius: var(--shape-border-radius-pill);
+  }
+
+  @include media-breakpoint-up(md) {
+    // Add right padding if user menu contains user name
+    // margin-right: $size-1;
+  }
+}
+// #endregion
+// Override complicated selector
+.dropdown-menu > li > button .is-user-menu-icon {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.header__user {
+  margin-left: 3rem;
+  a {
+    color: var(--color-ink-2ry);
+        position: relative;
+  }
+  span {
+    font-size: var(--font-size-small);
+    letter-spacing: var(--size-letter-spacing-small);
+    text-transform: uppercase;
+    margin-left: 2.5rem;
+  }
+  .header__photo-is_online {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 2rem;
+
+    @include media-breakpoint-up(md) {
+      right: 0;
+    }
+  }  
+}
+
+
+// LANGUAGE TOGGLE
+
+.header__language-toggle {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    padding: 0;
+    // margin-left: auto;
+    width: $size-5;
+    min-width: $size-5;
+    margin-left: 0.3rem;
+  }
+}
+
+.header__language-toggle .btn {
+  background-color: transparent;
+  color: var(--color-ink-2ry);
+  padding-right: 0;
+  padding-left: $size-1 * 1.5;
+
+  &:hover {
+    background: var(--color-background-alt);
+  }
+}
+
+.header__language-toggle .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+// #endregion

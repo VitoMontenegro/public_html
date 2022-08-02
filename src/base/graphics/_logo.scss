@@ -15,6 +15,7 @@
     align-items: center;
     flex-direction: column;
     width: $size-line * 4;
+    margin: auto;
   }
 
   @include media-breakpoint-up(xl) {
@@ -58,3 +59,8 @@
   margin-top: .35rem;
 }
 
+.header__logo {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}

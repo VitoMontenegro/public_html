@@ -14,10 +14,10 @@
 @import 'base/graphics/icon';
 @import 'base/graphics/logo';
 // @import 'base/content/media';
-// @import 'base/content/lists';
+@import 'base/content/lists';
 @import 'base/button';
 @import 'base/shared';
-// @import 'base/input/form';
+@import 'base/input/form';
 // @import 'base/input/label';
 // @import 'base/input/select';
 // @import 'base/input/checks-radio';
@@ -33,7 +33,7 @@
 // @import 'components/input/combobox';
 // @import 'components/structure-card/product-tile';
 // @import 'components/actions-rating/rating';
-// @import 'components/attribution-avatar/avatar';
+@import 'components/attribution-avatar/avatar';
 // @import 'components/attribution-tag/tag';
 // @import 'components/content-comments/comments';
 // @import 'components/content-empty-state/empty-state';
@@ -43,8 +43,8 @@
 // @import 'components/content-main/tools';
 // @import 'components/content-table/table';
 // @import 'components/disclosure-accordion/accordion';
-// @import 'components/disclosure-float/dropdown';
-// @import 'components/disclosure-float/float';
+@import 'components/disclosure-float/dropdown';
+@import 'components/disclosure-float/float';
 // @import 'components/disclosure-modal/modal';
 // @import 'components/disclosure-tabs/tabs';
 // @import 'components/disclosure-tooltip/tooltip';
@@ -61,7 +61,7 @@
 // @import 'components/structure-card/card';
 // @import 'components/structure-cover/cover';
 // @import 'components/structure-footer/footer';
-// @import 'components/structure-header/header';
+@import 'components/structure-header/header';
 // @import 'components/structure-hero/hero';
 // @import 'components/structure-section/section';
 // @import 'components/view-list/list';
@@ -81,12 +81,29 @@
 // @import 'util/overrides';
 
 // BS5 utilities
-// @import './node_modules/bootstrap/scss/utilities';
+@import "./node_modules/bootstrap/scss/maps";
+@import './node_modules/bootstrap/scss/utilities';
+
 
 // Only use the utilities we need
+$utilities: map-get-multiple(
+  $utilities,
+  (
+    'display',
+    'margin-top',
+    'margin-bottom',
+    'margin-x',
+    'negative-margin-bottom',
+    'padding-x',
+    'padding-top',
+    'padding-bottom',
+    'padding-right',
+    'padding-left'
+    // 'order','flex','flex-direction','flex-grow','flex-shrink','flex-wrap','justify-content','align-items','align-content','align-self','margin', 'margin-y', 'margin-left','negative-margin','negative-margin-x','negative-margin-y','negative-margin-top','negative-margin-right', 'negative-margin-left','padding','padding-x','padding-y',
+  ));
 
 
-//@import './node_modules/bootstrap/scss/utilities/api';
+@import './node_modules/bootstrap/scss/utilities/api';
 
 // Print
 //@import 'base/print';

@@ -26,6 +26,10 @@
   }
 
 }
+.header__language-toggle .icon {
+  height: var(--size-height-icon-md);
+  width: var(--size-height-icon-md);
+}
 
 %icon-active {
   --icon-stroke: var(--color-ink-inverse-base);

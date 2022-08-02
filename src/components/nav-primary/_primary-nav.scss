@@ -17,6 +17,7 @@
   z-index: calc(var(--layer-zindex-scrim) + 1);
 
   @include media-breakpoint-up(md) {
+    background-color: var(--color-background-alt);
     //background-color: var(--color-background-alt);
     backdrop-filter: none;
     display: flex;
@@ -31,7 +32,7 @@
     border-image: var(--asset-background-image-section-nav) 8 round round;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     padding:
       $size-4p5
       $size-4p5
@@ -42,7 +43,7 @@
   .menu {
     display: flex;
     padding: 0;
-    
+
     @include media-breakpoint-down(md) {
       align-items: stretch;
       height: $size-7;
@@ -99,14 +100,14 @@
     width: clamp(8rem, 25%, 16.8rem);
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin-bottom: $size-1;
   }
 }
 
 .primary-nav .menu .menu__item,
 .primary-nav .dropdown__item {
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(lg) {
     padding: $size-half;
   }
 }
@@ -136,7 +137,7 @@
     height: $size-8;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     flex-direction: row;
     justify-content: flex-start;
     padding: .2rem 1.6rem;
@@ -154,7 +155,7 @@
   font-weight: var(--font-weight-big);
   max-width: 100%;
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(lg) {
     text-transform: none;
   }
 }
@@ -165,7 +166,7 @@
   display: block;
   margin: 0 auto;
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin: 0 $size-2 0 0;
   }
 }
@@ -268,7 +269,7 @@
     }
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     height: $size-5;
   }
 }
@@ -277,7 +278,7 @@
 // stylelint-disable selector-max-compound-selectors
 .primary-nav .is-cta > .menu__link .label {
 
-  @include media-breakpoint-down(xl) {
+  @include media-breakpoint-down(lg) {
     @include visually-hidden();
   }
 
@@ -291,7 +292,7 @@
 .primary-nav .is-cta > .menu__link .icon {
   transform: translateY(-.1rem);
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin-right: $size-1;
     margin-left: -$size-1;
   }
@@ -323,7 +324,7 @@
 }
 
 .primary-nav .is-more .dropdown__item {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     margin-bottom: $size-1;
   }
 }
@@ -357,3 +358,6 @@
   }
 }
 // #endregion
+.primary-nav .buttons {
+  padding-bottom: 0;
+}

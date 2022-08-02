@@ -36,13 +36,13 @@
 }
 
 .wrapper {
-  @extend %q-container, %q-container-base;
+  @extend %q-container;
   min-height: 100vh;
   @include media-breakpoint-up(md) {
     display: grid;
     align-items: start;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-column-gap: var(--size-gutter-xl);
+    grid-row-gap: 2.4rem;
     grid-template-areas:
       'sidebar header'
       'sidebar main'
@@ -52,7 +52,7 @@
     padding-left: 0;
   }
 
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
   }
 }
@@ -64,21 +64,11 @@
 .header {
   grid-area: header;
   background-color: var(--color-background-base);
-  height: 100%;
-  @include media-breakpoint-up(md) {
-    padding-left: var(--size-gutter-xl);
-  }
-  
 }
 
 .main {
   grid-area: main;
    background-color: var(--color-background-base);
-   height: 100%;
-   @include media-breakpoint-up(md) {
-    padding-left: var(--size-gutter-xl);
-   }
-   
 }
 
 .footer {
@@ -86,3 +76,17 @@
 }
 
 
+
+// -----------------------------------------------------------------------------
+// CSS GRID
+// -----------------------------------------------------------------------------
+// #region
+
+// @see layout.md
+
+@mixin grid() {
+  display: grid;
+  gap: var(--gap, #{$size-2});
+  grid-template-columns: repeat(var(--columns, 12), 1fr);
+  // grid-template-rows: repeat(var(--rows, 1), auto);
+}

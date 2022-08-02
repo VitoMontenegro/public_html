@@ -12,6 +12,7 @@ gulp - build and starts the Browsersync server
 // Paths
 const root = {
   src: './src',
+  srctwig: './twig',
   dest: '.',
 };
 
@@ -26,9 +27,9 @@ const paths = {
   },
 
   markup: {
-    src: [`${root.src}/pages/**/*.twig`, `!${root.src}/pages/base/*.twig`],
-    watch: `${root.src}/**/*.twig`,
-    dest: `${root.src}/pages`,
+    src: `${root.srctwig}/**/*.twig`,
+    watch: `${root.srctwig}/**/*.twig`,
+    dest: `${root.srctwig}/page/`,
   },
 
   img: {
@@ -89,20 +90,13 @@ gulp.task('watch', function() {
 });
 
 
+
+
 gulp.task('compile', function () {
     'use strict';
     var twig = require('gulp-twig');
-    return gulp.src(paths.markup.src, { base: './src/pages' })
-        .pipe(twig({
-            data: {
-                title: 'Gulp and Twig',
-                benefits: [
-                    'Fast',
-                    'Flexible',
-                    'Secure'
-                ],
-            }
-        }))
+    return gulp.src(paths.markup.src)
+        .pipe(twig())
         .pipe(gulp.dest(paths.markup.dest));
 });
 

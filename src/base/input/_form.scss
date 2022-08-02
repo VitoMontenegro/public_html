@@ -1,0 +1,71 @@
+lect,
+textarea,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+.form-control,
+%input {
+  appearance: none;
+  background-clip: padding-box;
+  border-radius: var(--shape-border-radius-base);
+  border: 0;
+  color: var(--color-ink-2ry);
+  display: block;
+  font-size: var(--font-size-base);
+  margin: 0;
+  padding-top: var(--size-padding-y-input);
+  padding-right: var(--size-padding-right-input);
+  padding-bottom: var(--size-padding-y-input);
+  padding-left: var(--size-padding-left-input);
+  overflow: visible;
+  transition: border-color var(--motion-easing-base) var(--motion-duration-sm);
+  width: 100%;
+  max-width: 100%;
+  min-height: $size-line * 2;
+
+  &:focus {
+    color: var(--color-ink-base);
+    border-color: var(--color-primary-base);
+    box-shadow: var(--layer-box-shadow-focus-outline);
+    outline: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: var(--color-ink-3ry);
+    // Override Firefox's unusual default opacity
+    opacity: 1;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: var(--size-width-readable);
+  }
+}
+
+textarea {
+  // In textarea, we cannot control the bottom padding. But we can add whitespace
+  // from above
+  padding-top: calc(var(--size-padding-y-input) + .9rem);
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+textarea,
+%input {
+  // override lastpass inline styles
+  background-image: none !important;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title></title>
     
     <link rel="stylesheet" href="../../../../css/project.css">
 </head>
@@ -11,7 +11,7 @@
     <div class="wrapper">
         <div class="header" id="header">
 			<a class="header__logo logo" href="/src/pages/home/">
-				<img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+				<img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="">
 			    <div class="logo__copy">			    	
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
@@ -19,34 +19,36 @@
 
 			<form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
 				<div class="form__item">
-					<input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Поиск...">
+					<input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
 
 					<button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
 						<svg class="icon" aria-hidden="true" focusable="false">
-							<use href="/projects/mybusines.app/images/base/graphics/sprite.svg#icon-search"></use>
+							<use href="/projects/mybusines.app/src/base/graphics/sprite.svg#icon-search"></use>
 						</svg>
 					</button>
 				</div>
 			</form>
 
 			<ul class="header__menu" id="header-menu">
-			    <li class="header__location">
-				  	<button type="button" data-toggle="modal" data-target="#modal-location">	        
+			    <li class="header__notify">
+				  	<button type="button" data-toggle="modal" data-target="#modal-notify">	        
 			        	<svg class="icon" aria-hidden="true" focusable="false">
-					      	<use href="/images/base/graphics/flags.svg#icon-flag-ru"></use>
+					      	<use href="/src/base/graphics/sprite.svg#icon-bell"></use>
 					  	</svg>
-					  	<div id="top_notify_count" class="TopNavBtn__notifyCount">1</div>
+					  	<div id="header__notify-count" class="header__notify-label active">1</div>
 				  	</button>
 			    </li>
 				<li class="dropdown header__user is-on">
-					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" style="background-color:transparent" aria-expanded="false">
+					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"aria-expanded="false">
 						<div class="header_photo">
-							<img src="./images/profile_nophoto.jpg" alt="Владимир Никишин">
-							<div aria-hidden="true" data-text-as-pseudo-element="ВН"></div>
-							<span>
-								Владимир
-							</span>
+							<img src="/src/images/profile_photo.png" alt="Владимир Никишин">
 						</div>
+						<div class="header__photo-is_online">	        
+				        	<svg class="icon" aria-hidden="true" focusable="false">
+						      	<use href="/src/base/graphics/sprite.svg#icon-check"></use>
+						  	</svg>
+						</div>
+						<span>Владимир</span>
 					</a>
 					<ul class="dropdown-menu">	
 						<li><a href="#">Профиль</a></li>
@@ -59,16 +61,14 @@
 			    <li class="header__language-toggle dropdown">
 			  		<button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        	<svg class="icon" aria-hidden="true" focusable="false">
-					      	<use href="/images/base/graphics/flags.svg#icon-flag-ru"></use>
+					      	<use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
 					  	</svg>
-
-			        	<span class="sr-only">Изменение языка</span>
 			  		</button>
 			      	<ul class="dropdown-menu" aria-label="Изменение языка">
 						<li>
 							<a href="/de/health_programs" lang="de">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-de"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-de"></use>
 								</svg>
 								Deutsch
 							</a>
@@ -76,7 +76,7 @@
 						<li>
 							<a href="/en/health_programs" lang="en">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-en"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-en"></use>
 								</svg>
 								English
 							</a>
@@ -84,7 +84,7 @@
 						<li>
 							<a href="/es/health_programs" lang="es">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-es"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-es"></use>
 								</svg>
 								Español
 							</a>
@@ -92,7 +92,7 @@
 						<li>
 							<a href="/fr/health_programs" lang="fr">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-fr"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-fr"></use>
 								</svg>
 								Français
 							</a>
@@ -100,7 +100,7 @@
 						<li>
 							<a href="/it/health_programs" lang="it">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-it"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-it"></use>
 								</svg>
 								Italiano
 							</a>
@@ -108,7 +108,7 @@
 						<li>
 							<a href="/pt/health_programs" lang="pt">
 								<svg class="icon" aria-hidden="true" focusable="false">
-								<use href="/images/base/graphics/flags.svg#icon-flag-pt"></use>
+								<use href="/src/base/graphics/flags.svg#icon-flag-pt"></use>
 								</svg>
 								Português
 							</a>
@@ -116,7 +116,7 @@
 						<li>
 							<a href="/ru/health_programs" lang="ru">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-ru"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
 								</svg>
 								Русский
 							</a>
@@ -124,7 +124,7 @@
 						<li>
 							<a href="/zh/health_programs" lang="zh">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/images/base/graphics/flags.svg#icon-flag-zh"></use>
+									<use href="/src/base/graphics/flags.svg#icon-flag-zh"></use>
 								</svg>
 								中文
 							</a>
@@ -132,7 +132,7 @@
 						<li>
 							<a href="#page-footer">
 								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/projects/hlaclub.com/images/base/graphics/sprite.svg#icon-more"></use>
+									<use href="/projects/hlaclub.com/src/base/graphics/sprite.svg#icon-more"></use>
 								</svg>
 								More
 							</a>
@@ -143,13 +143,13 @@
         </div>
 
         <div class="main">
-        	{% block content %}
-        	{% endblock %}
+        	
+        	
         </div>
 
         <nav class="primary-nav">
         	<a class="primary-nav__logo logo" href="/">
-			    <img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+			    <img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="">
 			    <div class="logo__copy">			    	
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
@@ -157,7 +157,7 @@
 
             <ul class="menu" role="menu">
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/src/pages/home/" role="menuitem">
+                	<a class="dropdown__link" href="/twig/page/home/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-home"></use>
 		                </svg>
@@ -165,7 +165,7 @@
                	 	</a>
                 </li>
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/src/pages/news/" role="menuitem">
+                	<a class="dropdown__link" href="/twig/page/news/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-news"></use>
 		                </svg>
@@ -213,7 +213,7 @@
                	 	</a>
                 </li>
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/src/pages/discount/" role="menuitem">
+                	<a class="dropdown__link" href="/twig/page/discount/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-promotions"></use>
 		                </svg>

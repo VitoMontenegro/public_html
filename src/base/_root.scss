@@ -55,7 +55,7 @@
   --color-ink-2ry:                      hsl(var(--h), 30%, 40%);
   --color-ink-3ry:                      hsl(var(--h), 32%, 52%);
   --color-ink-icon:                     var(--color-ink-3ry);
-  --color-ink-border:                   hsl(var(--h), 32%, 79%);
+  --color-ink-border:                   hsl(var(--h), 30%, 86%);
   --color-ink-shadow:                   var(--h) 10% 11%;
   --color-ink-accent:                   hsl(var(--color-ink-shadow) / .04);
   --color-ink-accent-hover:             hsl(var(--color-ink-shadow) / .08);
@@ -173,6 +173,7 @@
   --font-line-height-small:             1.3rem; 
   --size-padding-top-small:             1.05rem;
   --size-padding-bottom-small:          1.95rem;
+  --size-letter-spacing-small:          .05rem;
 
   // Lists
   --size-padding-bottom-li:             .2rem;
@@ -228,7 +229,7 @@
   --shape-border-radius-base:           .4rem;
 
   // Dropdowns, Modal Bottom Sheets, Pickers, Sticky Blocks, Popovers, Tooltips
-  --shape-border-radius-lg:             .4rem;
+  --shape-border-radius-lg:             .667rem;
 
   // Modals
   --shape-border-radius-xl:             .8rem;
@@ -306,6 +307,7 @@
   // ---------------------------------------------------------------------------
   // #region
   --size-height-icon:                   2rem;
+  --size-height-icon-md:                2.4rem;
   --size-height-button:                 #{$size-line * 2};
 
   --asset-data-image-list-bullet:       url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%228%22%20height%3D%225%22%20viewBox%3D%220%200%208%205%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%204C3.10457%204%204%203.10457%204%202C4%200.895431%203.10457%200%202%200C0.895431%200%200%200.895431%200%202C0%203.10457%200.895431%204%202%204Z%22%20fill%3D%22%232787e7%22%2F%3E%3C%2Fsvg%3E');
