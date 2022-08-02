@@ -69,7 +69,25 @@ const paths = {
 const gulp = require('gulp'),
       sass = require('gulp-sass')(require('sass')),
       svgSprite = require('gulp-svg-sprite'),
-      connect = require('gulp-connect');
+      browserSync = require('browser-sync'),
+      connect = require('gulp-connect'),
+      reload = browserSync.reload;
+
+gulp.task('browserSync', function() {
+    browserSync({
+        server: {
+            baseDir: './'
+        },
+        open: false,
+        notify: false
+    });
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/*.scss', ['style']);
+    gulp.watch('src/*.html', ['html'])
+});
+
 
 gulp.task('compile', function () {
     'use strict';
@@ -132,6 +150,6 @@ gulp.task('sprite', function () {
 
 
  
-gulp.task('default', gulp.series('compile', 'sass', 'sprite', 'webserver'));
+gulp.task('default', gulp.series('compile', 'sass', 'sprite', 'webserver','watch', 'browserSync'));
 
 

@@ -12,14 +12,21 @@
         <div class="header" id="header"></div>
         <div class="main">
         	
-
+<h2>Home</h2>
 
         </div>
         <nav class="primary-nav">
-        	<a class="primary-nav__logo logo"></a>
+        	<a class="primary-nav__logo logo" href="/">
+			    <img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="Home">
+			    <div class="logo__copy">			    	
+				    <div class="tagline">Общероссийское Движение Предпринимателей</div>
+			    </div>
+			      	
+			   
+		  	</a>
             <ul class="menu" role="menu">
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
+                	<a class="dropdown__link" href="/src/pages/home/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-home"></use>
 		                </svg>
@@ -27,7 +34,7 @@
                	 	</a>
                 </li>
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
+                	<a class="dropdown__link" href="/src/pages/news/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-news"></use>
 		                </svg>
@@ -75,7 +82,7 @@
                	 	</a>
                 </li>
                 <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
+                	<a class="dropdown__link" href="/src/pages/discount/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-promotions"></use>
 		                </svg>
@@ -90,7 +97,25 @@
 	                	<span class="label">Реклама</span>
                	 	</a>
                 </li>
-            </ul>            
+            </ul>   
+			<ul class="buttons">
+				<li>
+					<a class="btn is-primary iconFix" href="/ru/editpost">
+						<svg class="icon is-left" aria-hidden="true" focusable="false">
+							<use href="/src/base/graphics/sprite.svg#icon-plus"></use>
+						</svg>
+						Публикация
+					</a>
+				</li>
+				<li>
+					<a class="btn is-ghost" href="https://hlaclub.com/?type=rss" target="_blank">
+						<svg class="icon is-left" aria-hidden="true" focusable="false">
+							<use href="/src/base/graphics/sprite.svg#icon-broadcast"></use>
+						</svg>
+						Эфир
+					</a>
+				</li>
+			</ul>         
         </nav>
     </div>
 </body>

@@ -13,6 +13,14 @@
   src:
     url('../src/fonts/Roboto-Italic.ttf') format('truetype'),
 }
+@font-face {
+  font-display: swap;
+  font-family: 'PT Root UI';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url('../src/fonts/PT-Root-UI_Bold.ttf') format('truetype'),
+}
 
 
 
@@ -21,7 +29,7 @@
 // -----------------------------------------------------------------------------
 
 body {
-  background-color: var(--color-background-base);
+  background-color: var(--color-background-alt);
   color: var(--color-ink-base);
 
   // Use flex to distribute blocks across the entire height of the screen

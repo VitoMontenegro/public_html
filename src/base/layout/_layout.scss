@@ -18,15 +18,31 @@
 // -----------------------------------------------------------------------------
 // #region
 
-
+%q-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--size-padding-x-container);
+  padding-right: var(--size-padding-x-container);
+  width: 100%;
+}
+%q-container-base {
+  // we iterate over the map $container-max-widths: save the key to the variable
+  // $breakpoint, and save the value to the variable $max-width
+  @each $breakpoint, $max-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      max-width: calc(#{$max-width} + var(--size-padding-x-container) * 2);
+    }
+  }
+}
 
 .wrapper {
-
+  @extend %q-container, %q-container-base;
+  min-height: 100vh;
   @include media-breakpoint-up(md) {
     display: grid;
     align-items: start;
-    grid-column-gap: var(--size-gutter-xl);
-    grid-row-gap: $size-line;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     grid-template-areas:
       'sidebar header'
       'sidebar main'
@@ -47,10 +63,22 @@
 
 .header {
   grid-area: header;
+  background-color: var(--color-background-base);
+  height: 100%;
+  @include media-breakpoint-up(md) {
+    padding-left: var(--size-gutter-xl);
+  }
+  
 }
 
 .main {
   grid-area: main;
+   background-color: var(--color-background-base);
+   height: 100%;
+   @include media-breakpoint-up(md) {
+    padding-left: var(--size-gutter-xl);
+   }
+   
 }
 
 .footer {

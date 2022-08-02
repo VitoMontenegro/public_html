@@ -6,9 +6,7 @@
 // #region
 
 .primary-nav {
-  background-color: var(--color-background-acrylic);
-  backdrop-filter: var(--color-background-acrylic-backdrop);
-  border-top: .1rem solid var(--color-ink-border);
+  border-top: .8rem solid var(--color-ink-border);
   position: fixed;
   right: 0;
   bottom: 0;
@@ -19,9 +17,8 @@
   z-index: calc(var(--layer-zindex-scrim) + 1);
 
   @include media-breakpoint-up(md) {
-    background-color: var(--color-background-alt);
+    //background-color: var(--color-background-alt);
     backdrop-filter: none;
-    border-top: 0;
     display: flex;
     flex-direction: column;
     padding-top: $size-line;
@@ -31,15 +28,39 @@
     right: auto;
     height: 100vh;
     z-index: var(--layer-zindex-header);
+    border-image: var(--asset-background-image-section-nav) 8 round round;
   }
 
   @include media-breakpoint-up(xl) {
     padding:
-      ($size-line * 2)
-      $size-4
+      $size-4p5
+      $size-4p5
       $size-line
       $size-5;
   }
+
+  .menu {
+    display: flex;
+    padding: 0;
+    
+    @include media-breakpoint-down(md) {
+      align-items: stretch;
+      height: $size-7;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex: 1;
+      flex-direction: column;
+      margin-top: 5.2rem;
+      padding-bottom: 2rem;
+      height: auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-top: 5.6rem;
+    }
+  }
+
 }
 // #endregion
 
@@ -69,29 +90,7 @@
 // -----------------------------------------------------------------------------
 // MENU
 // -----------------------------------------------------------------------------
-// #region
 
-.primary-nav > .menu {
-  display: flex;
-  padding: 0;
-
-  @include media-breakpoint-down(md) {
-    align-items: stretch;
-    height: $size-7;
-  }
-
-  @include media-breakpoint-up(md) {
-    flex: 1;
-    flex-direction: column;
-    margin-top: 5.2rem;
-    padding-bottom: 2rem;
-    height: auto;
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin-top: 7.2rem;
-  }
-}
 
 // ITEMS
 

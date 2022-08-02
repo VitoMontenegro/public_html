@@ -14,7 +14,8 @@
     "gulp-connect": "",
     "gulp-sass": "",
     "sass": "",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-sprite": "^1.5.0",    
+    "browser-sync": "^2.27.5",
     "gulp-twig": "^1.2.0"
   },
   "dependencies": {
