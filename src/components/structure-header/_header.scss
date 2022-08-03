@@ -13,7 +13,7 @@
   z-index: calc(var(--layer-zindex-scrim) + 1);
 
   @include media-breakpoint-up(md) {
-    --gap: #{$size-3};
+    --gap: #{$size-2};
 
     @include grid();
 
@@ -72,13 +72,10 @@
 
   @include media-breakpoint-up(md) {
     display: block;
-    grid-column: auto / span 4;
     transform: none;
     height: auto;
-  }
 
-  @include media-breakpoint-up(xl) {
-    grid-column: 1/span 8;
+    grid-column: 1/span 7;
   }
 }
 
@@ -123,11 +120,12 @@
   list-style: none;
   padding: 0 0 0 $size-1;
 
-  .header__notify {
-    button {
+  button {
       position: relative;
       background: var(--color-ink-inverse-base);
-    }
+  }
+
+  .header__notify {    
     .header__notify-label {
       display: none;
       font-size: 10px;
@@ -157,7 +155,7 @@
     box-shadow: none;
     // An explicit start is used to preserve right alignment when hiding other
     // header elements
-    grid-column: 6 / span 7;
+    grid-column: 8/span 6;
     justify-content: flex-end;
     padding-left: 0;
     position: static;
@@ -247,9 +245,6 @@
   padding-right: 0;
   padding-left: $size-1 * 1.5;
 
-  &:hover {
-    background: var(--color-background-alt);
-  }
 }
 
 .header__language-toggle .dropdown-menu {

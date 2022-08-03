@@ -1,0 +1,34 @@
+{% set languages = {
+  af: "Afrikaans",
+  de: "Deutsch",
+  en: "English",
+  es: "Español",
+  fr: "Français",
+  it: "Italiano",
+  pl: "Polski",
+  pt: "Português",
+  hr: "Srpsko-hrvatski",
+  fi: "Suomi",
+  tr: "Türkçe",
+  ru: "Русский",
+  uk: "Українська",
+  hy: "Հայերեն",
+  he: "עִברִית",
+  ar: "العربية",
+  hi: "हिन्दी",
+  th: "ภาษาไทย",
+  zh: "中文",
+  ja: "日本語"
+} %}
+<ul class="dropdown-menu" aria-label="Change languages">
+    {% for key, value in languages %}
+    <li>
+        <a href="/{{ key }}{$simpleuri}" lang="{{ key }}">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-{{ key }}"></use>
+            </svg>
+            {{ value }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>

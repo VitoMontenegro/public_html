@@ -11,7 +11,7 @@
   letter-spacing: .05rem;
   line-height: var(--font-line-height-small);
   text-transform: uppercase;
-  border-radius: var(--shape-border-radius-xl);
+  border-radius: var(--shape-border-radius-base);
   color: var(--color-ink-2ry);
   cursor: pointer;
   display: flex;
@@ -33,9 +33,20 @@
   .icon {
     margin-right: $size-1p5;
     transform: translateY(-.1rem);
+
+    @include media-breakpoint-up(md) {
+      width: 18px;
+      margin-right: 0;
+    }
   }
 
   > .label {
     transform: translateY(.1rem);
+  }
+
+  @include media-breakpoint-up(xs) {
+    flex-direction: column;
+    padding: 1.5rem 0.8rem;
+    border-radius: 0;
   }
 }

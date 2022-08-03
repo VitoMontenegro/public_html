@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discount</title>
     
-    <link rel="stylesheet" href="../../../../css/project.css">
+    <link rel="stylesheet" href="/css/project.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+  		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  		crossorigin="anonymous"></script>
+    <script src="/src/js/qwerty/blog.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -23,7 +27,7 @@
 
 					<button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
 						<svg class="icon" aria-hidden="true" focusable="false">
-							<use href="/projects/mybusines.app/src/base/graphics/sprite.svg#icon-search"></use>
+							<use href="/src/base/graphics/sprite.svg#icon-search"></use>
 						</svg>
 					</button>
 				</div>
@@ -50,13 +54,20 @@
 						</div>
 						<span>Владимир</span>
 					</a>
-					<ul class="dropdown-menu">	
-						<li><a href="#">Профиль</a></li>
-						<li><a href="#">Мои финансы</a></li>
-						<li><a href="#">Бонусы и скидки</a></li>	
-						<li><a href="#">Настройки</a></li>	
-						<li><a href="#">Выход</a></li>	
-					</ul>
+					
+<ul class="dropdown-menu">	
+	
+		<li><a href="#/profile">my profile</a></li>
+	
+		<li><a href="#/finances">my finances</a></li>
+	
+		<li><a href="#/bonuses">bonuses and discounts</a></li>
+	
+		<li><a href="#/settings">settings</a></li>
+	
+		<li><a href="#/exit">exit</a></li>
+	
+</ul>
 				</li>    
 			    <li class="header__language-toggle dropdown">
 			  		<button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,88 +75,206 @@
 					      	<use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
 					  	</svg>
 			  		</button>
-			      	<ul class="dropdown-menu" aria-label="Изменение языка">
-						<li>
-							<a href="/de/health_programs" lang="de">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-de"></use>
-								</svg>
-								Deutsch
-							</a>
-						</li>
-						<li>
-							<a href="/en/health_programs" lang="en">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-en"></use>
-								</svg>
-								English
-							</a>
-						</li>
-						<li>
-							<a href="/es/health_programs" lang="es">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-es"></use>
-								</svg>
-								Español
-							</a>
-						</li>
-						<li>
-							<a href="/fr/health_programs" lang="fr">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-fr"></use>
-								</svg>
-								Français
-							</a>
-						</li>
-						<li>
-							<a href="/it/health_programs" lang="it">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-it"></use>
-								</svg>
-								Italiano
-							</a>
-						</li>
-						<li>
-							<a href="/pt/health_programs" lang="pt">
-								<svg class="icon" aria-hidden="true" focusable="false">
-								<use href="/src/base/graphics/flags.svg#icon-flag-pt"></use>
-								</svg>
-								Português
-							</a>
-						</li>
-						<li>
-							<a href="/ru/health_programs" lang="ru">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
-								</svg>
-								Русский
-							</a>
-						</li>
-						<li>
-							<a href="/zh/health_programs" lang="zh">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/src/base/graphics/flags.svg#icon-flag-zh"></use>
-								</svg>
-								中文
-							</a>
-						</li>
-						<li>
-							<a href="#page-footer">
-								<svg class="icon" aria-hidden="true" focusable="false">
-									<use href="/projects/hlaclub.com/src/base/graphics/sprite.svg#icon-more"></use>
-								</svg>
-								More
-							</a>
-						</li>
-					</ul>
+			  		
+<ul class="dropdown-menu" aria-label="Change languages">
+    
+    <li>
+        <a href="/af{$simpleuri}" lang="af">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-af"></use>
+            </svg>
+            Afrikaans
+        </a>
+    </li>
+    
+    <li>
+        <a href="/de{$simpleuri}" lang="de">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-de"></use>
+            </svg>
+            Deutsch
+        </a>
+    </li>
+    
+    <li>
+        <a href="/en{$simpleuri}" lang="en">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-en"></use>
+            </svg>
+            English
+        </a>
+    </li>
+    
+    <li>
+        <a href="/es{$simpleuri}" lang="es">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-es"></use>
+            </svg>
+            Español
+        </a>
+    </li>
+    
+    <li>
+        <a href="/fr{$simpleuri}" lang="fr">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-fr"></use>
+            </svg>
+            Français
+        </a>
+    </li>
+    
+    <li>
+        <a href="/it{$simpleuri}" lang="it">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-it"></use>
+            </svg>
+            Italiano
+        </a>
+    </li>
+    
+    <li>
+        <a href="/pl{$simpleuri}" lang="pl">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-pl"></use>
+            </svg>
+            Polski
+        </a>
+    </li>
+    
+    <li>
+        <a href="/pt{$simpleuri}" lang="pt">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-pt"></use>
+            </svg>
+            Português
+        </a>
+    </li>
+    
+    <li>
+        <a href="/hr{$simpleuri}" lang="hr">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-hr"></use>
+            </svg>
+            Srpsko-hrvatski
+        </a>
+    </li>
+    
+    <li>
+        <a href="/fi{$simpleuri}" lang="fi">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-fi"></use>
+            </svg>
+            Suomi
+        </a>
+    </li>
+    
+    <li>
+        <a href="/tr{$simpleuri}" lang="tr">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-tr"></use>
+            </svg>
+            Türkçe
+        </a>
+    </li>
+    
+    <li>
+        <a href="/ru{$simpleuri}" lang="ru">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
+            </svg>
+            Русский
+        </a>
+    </li>
+    
+    <li>
+        <a href="/uk{$simpleuri}" lang="uk">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-uk"></use>
+            </svg>
+            Українська
+        </a>
+    </li>
+    
+    <li>
+        <a href="/hy{$simpleuri}" lang="hy">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-hy"></use>
+            </svg>
+            Հայերեն
+        </a>
+    </li>
+    
+    <li>
+        <a href="/he{$simpleuri}" lang="he">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-he"></use>
+            </svg>
+            עִברִית
+        </a>
+    </li>
+    
+    <li>
+        <a href="/ar{$simpleuri}" lang="ar">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-ar"></use>
+            </svg>
+            العربية
+        </a>
+    </li>
+    
+    <li>
+        <a href="/hi{$simpleuri}" lang="hi">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-hi"></use>
+            </svg>
+            हिन्दी
+        </a>
+    </li>
+    
+    <li>
+        <a href="/th{$simpleuri}" lang="th">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-th"></use>
+            </svg>
+            ภาษาไทย
+        </a>
+    </li>
+    
+    <li>
+        <a href="/zh{$simpleuri}" lang="zh">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-zh"></use>
+            </svg>
+            中文
+        </a>
+    </li>
+    
+    <li>
+        <a href="/ja{$simpleuri}" lang="ja">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/src/base/graphics/flags.svg#icon-flag-ja"></use>
+            </svg>
+            日本語
+        </a>
+    </li>
+    
+</ul>
+
+
 				</li>
 			</ul>
         </div>
 
         <div class="main">
-        	
+	        <div class="main__content">        	
+	        	
 <h2>News</h2>
 
+	        </div>
+	        <div class="main__sidebar">    	
+	        	
+	        	
+	        </div>
         </div>
 
         <nav class="primary-nav">
@@ -157,77 +286,95 @@
 		  	</a>
 
             <ul class="menu" role="menu">
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/twig/page/home/" role="menuitem">
+                <li class="menu__item is-mypage">
+                	<a class="menu__link active" href="/twig/page/mypage/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-home"></use>
 		                </svg>
-	                	<span class="label">Моя страница</span>
+	                	<span class="label">My page</span>
                	 	</a>
                 </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/twig/page/news/" role="menuitem">
+                <li class="menu__item is-news">
+                	<a class="menu__link" href="/twig/page/news/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-news"></use>
 		                </svg>
-	                	<span class="label">Новости</span>
+	                	<span class="label">News</span>
                	 	</a>
                 </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
+                <li class="menu__item is-add">
+                	<a class="menu__link active" href="javascript:void(0)" role="menuitem">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/src/base/graphics/sprite.svg#icon-plus-gray"></use>
+		                </svg>
+	                	<span class="label">Add</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-messenger">
+                	<a class="menu__link" href="#" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-messenger"></use>
 		                </svg>
-	                	<span class="label">Мессенджер</span>
+	                	<span class="label">Messenger</span>
                	 	</a>
                 </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
+                <li class="menu__item is-friends">
+                	<a class="menu__link" href="#" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
 		                	<use href="/src/base/graphics/sprite.svg#icon-friends"></use>
 		                </svg>
-	                	<span class="label">Друзья</span>
+	                	<span class="label">Friends</span>
                	 	</a>
                 </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
-		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-community"></use>
+                <li class="menu__item dropdown is-more">
+                	<a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menuitem" >
+                		<svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/src/base/graphics/sprite.svg#icon-more"></use>
 		                </svg>
-	                	<span class="label">Сообщества</span>
-               	 	</a>
-                </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
-		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-organizations"></use>
-		                </svg>
-	                	<span class="label">Организации</span>
-               	 	</a>
-                </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
-		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-events"></use>
-		                </svg>
-	                	<span class="label">Мероприятия</span>
-               	 	</a>
-                </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="/twig/page/discount/" role="menuitem">
-		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-promotions"></use>
-		                </svg>
-	                	<span class="label">Скидки и акции</span>
-               	 	</a>
-                </li>
-                <li class="menu__item is-events">
-                	<a class="dropdown__link" href="#" role="menuitem">
-		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-advertising"></use>
-		                </svg>
-	                	<span class="label">Реклама</span>
-               	 	</a>
+		                <span class="label">More</span>
+                	</a>
+		            <ul class="dropdown__menu menu" role="menu"aria-label="More">
+		                <li class="menu__item is-community">
+		                	<a class="dropdown__link" href="#" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-community"></use>
+				                </svg>
+			                	<span class="label">Community</span>
+		               	 	</a>
+		                </li>
+		                <li class="menu__item is-organizations">
+		                	<a class="dropdown__link" href="#" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-organizations"></use>
+				                </svg>
+			                	<span class="label">Organizations</span>
+		               	 	</a>
+		                </li>
+		                <li class="menu__item is-events">
+		                	<a class="dropdown__link" href="#" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-events"></use>
+				                </svg>
+			                	<span class="label">Events</span>
+		               	 	</a>
+		                </li>
+		                <li class="menu__item is-promotions">
+		                	<a class="dropdown__link" href="/twig/page/discount/" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-promotions"></use>
+				                </svg>
+			                	<span class="label">Promotions</span>
+		               	 	</a>
+		                </li>
+		                <li class="menu__item is-advertising">
+		                	<a class="dropdown__link" href="#" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-advertising"></use>
+				                </svg>
+			                	<span class="label">Advertising</span>
+		               	 	</a>
+		                </li>
+		            </ul>
                 </li>
             </ul> 
 
@@ -237,7 +384,7 @@
 						<svg class="icon is-left" aria-hidden="true" focusable="false">
 							<use href="/src/base/graphics/sprite.svg#icon-plus"></use>
 						</svg>
-						Публикация
+						Publication
 					</a>
 				</li>
 				<li>
@@ -245,11 +392,12 @@
 						<svg class="icon is-left" aria-hidden="true" focusable="false">
 							<use href="/src/base/graphics/sprite.svg#icon-broadcast"></use>
 						</svg>
-						Эфир
+						Broadcast
 					</a>
 				</li>
 			</ul>         
         </nav>
+
     </div>
 </body>
 </html>

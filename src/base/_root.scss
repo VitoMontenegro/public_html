@@ -42,6 +42,7 @@
   // BASE BACKGROUNDS
   // For the sake of design, we can violate the recommendations in contrast, but
   // only where, it will not spoil the UX.
+  --color-background-hover:             hsl(var(--h), var(--s), 97%);
   --color-background-base:              hsl(var(--h-red), 100%, 100%);
   --color-background-alt:               hsl(220, 20%, 97%);
   --color-background-inverse:           hsl(var(--h), 32%, 15%);
@@ -175,6 +176,9 @@
   --size-padding-bottom-small:          1.95rem;
   --size-letter-spacing-small:          .05rem;
 
+
+  --font-size-ectra-small:               .7rem;
+
   // Lists
   --size-padding-bottom-li:             .2rem;
   --size-padding-bottom-list:           #{$size-2};
@@ -223,16 +227,16 @@
   // BOX BORDER RADIUS
 
   // Alerts, Cards, Rectangular Images
-  --shape-border-radius-sm:             .2rem;
+  --shape-border-radius-sm:             .667rem;
 
   // Buttons
-  --shape-border-radius-base:           .4rem;
+  --shape-border-radius-base:           1rem;
 
   // Dropdowns, Modal Bottom Sheets, Pickers, Sticky Blocks, Popovers, Tooltips
-  --shape-border-radius-lg:             .667rem;
+  --shape-border-radius-lg:             1.5rem;
 
   // Modals
-  --shape-border-radius-xl:             .8rem;
+  --shape-border-radius-xl:             2.25rem;
 
   --shape-border-radius-pill:           99rem;
 

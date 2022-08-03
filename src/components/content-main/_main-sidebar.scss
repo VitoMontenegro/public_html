@@ -1,0 +1,46 @@
+.main__sidebar__item {
+  padding:  $size-4p5 $size-2p5;
+}
+.main__sidebar__item__list {
+  padding-left: 0;
+  li {    
+    list-style-position: inside;
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    margin: 0;
+    position: relative;
+    border-radius: var(--shape-border-radius-base);
+
+    a {
+      text-decoration: none;
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+
+      .label {
+        padding-left: $size-4;
+        color: var(--color-ink-2ry);
+        font-weight: var(--font-weight-big);
+        max-width: 100%;
+      }
+      .pull-right {
+        float: right;
+        position: absolute;
+        right: 1.5rem;
+        font-size: var(--font-size-small);
+      }
+    }
+
+
+    &:hover,
+    &.active{
+      background: var(--color-background-hover);
+    }
+  }
+}

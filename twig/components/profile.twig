@@ -1,0 +1,12 @@
+{% set profileLink = {
+  profile: "my profile",
+  finances: "my finances",
+  bonuses: "bonuses and discounts",
+  settings: "settings",
+  exit: "exit"
+} %}
+<ul class="dropdown-menu">	
+	{% for key, value in profileLink %}
+		<li><a href="#/{{ key }}">{{ value }}</a></li>
+	{% endfor %}
+</ul>

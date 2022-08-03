@@ -52,7 +52,7 @@
     padding-left: 0;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
   }
 }
@@ -68,9 +68,35 @@
 
 .main {
   grid-area: main;
-   background-color: var(--color-background-base);
-}
+  background-color: var(--color-background-base);
+  width: 100%;
 
+  @include media-breakpoint-up(lg) {
+    --gap: #{$size-3};
+
+    display: grid;
+    gap: var(--gap, 1.6rem);
+    grid-template-columns: repeat(var(--columns, 12), 1fr);
+
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.main__content {
+  background: green;
+
+  @include media-breakpoint-up(md) {
+    grid-column: 1/span 8;
+  }
+
+}
+.main__sidebar {
+
+  @include media-breakpoint-up(md) {
+    grid-column: 9/span 4
+  }
+
+}
 .footer {
   grid-area: footer;
 }

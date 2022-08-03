@@ -69,3 +69,10 @@ textarea,
   // override lastpass inline styles
   background-image: none !important;
 }
+
+// Input container
+.form__item,
+.filter__item {
+  position: relative;
+  padding-bottom: var(--size-padding-bottom-form-group);
+}
