@@ -10,7 +10,7 @@
 @import 'base/root';
 @import 'base/normalize';
 @import 'base/content/body';
-// @import 'base/content/headings';
+@import 'base/content/headings';
 @import 'base/graphics/icon';
 @import 'base/graphics/logo';
 // @import 'base/content/media';
@@ -39,7 +39,7 @@
 // @import 'components/content-empty-state/empty-state';
 // @import 'components/content-main/body';
 // @import 'components/content-main/byline';
-// @import 'components/content-main/header';
+@import 'components/content-main/header';
 @import 'components/content-main/_main-sidebar';
 // @import 'components/content-main/tools';
 // @import 'components/content-table/table';

@@ -66,6 +66,7 @@
 }
 
 .header__logo {
+  max-width: 19rem;
   @include media-breakpoint-up(md) {
     display: none;
   }

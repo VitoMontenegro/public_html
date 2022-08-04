@@ -65,6 +65,13 @@
 			  		{% include "components/languages.twig" %}
 
 				</li>
+				<li class="has-search-button">
+					<a class="btn is-compact" href="/ru/search" role="button" data-search-btn="" aria-haspopup="true" aria-label="Submit Search">
+						<svg class="icon" aria-hidden="true" focusable="false">
+							<use href="/src/base/graphics/sprite.svg#icon-search"></use>
+						</svg>
+					</a>
+				</li>
 			</ul>
         </div>
 
@@ -136,6 +143,15 @@
 		                <span class="label">More</span>
                 	</a>
 		            <ul class="dropdown__menu menu" role="menu"aria-label="More">
+
+		                <li class="menu__item is-friends_copy">
+		                	<a class="dropdown__link" href="#" role="menuitem">
+				                <svg class="icon" aria-hidden="true" focusable="false">
+				                	<use href="/src/base/graphics/sprite.svg#icon-friends"></use>
+				                </svg>
+			                	<span class="label">Friends</span>
+		               	 	</a>
+		                </li>
 		                <li class="menu__item is-community">
 		                	<a class="dropdown__link" href="#" role="menuitem">
 				                <svg class="icon" aria-hidden="true" focusable="false">
@@ -190,7 +206,7 @@
 					</a>
 				</li>
 				<li>
-					<a class="btn is-ghost" href="https://hlaclub.com/?type=rss" target="_blank">
+					<a class="btn" href="https://hlaclub.com/?type=rss" target="_blank">
 						<svg class="icon is-left" aria-hidden="true" focusable="false">
 							<use href="/src/base/graphics/sprite.svg#icon-broadcast"></use>
 						</svg>

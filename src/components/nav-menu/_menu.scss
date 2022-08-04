@@ -36,7 +36,7 @@
 
     @include media-breakpoint-up(md) {
       width: 18px;
-      margin-right: 0;
+      // margin-right: 0;
     }
   }
 
@@ -45,8 +45,19 @@
   }
 
   @include media-breakpoint-up(xs) {
-    flex-direction: column;
+    // flex-direction: column;
     padding: 1.5rem 0.8rem;
-    border-radius: 0;
+  }
+}
+
+.is-friends {
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+.is-friends_copy {
+  @include media-breakpoint-up(sm) {
+    display: none;
   }
 }

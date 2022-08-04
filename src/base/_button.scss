@@ -11,6 +11,7 @@
   white-space: nowrap;
   user-select: none;
   vertical-align: middle;
+  color: var(--color-ink-2ry);;
 
   &:focus {
     outline: 0;
@@ -59,6 +60,7 @@
   }
   &.is-ghost {
     color: var(--color-ink-2ry);
+        background-color: transparent;
   }
 
   @include media-breakpoint-up(md) {

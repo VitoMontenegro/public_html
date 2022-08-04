@@ -64,6 +64,10 @@
 .header {
   grid-area: header;
   background-color: var(--color-background-base);
+
+  button {
+    background-color: transparent;
+  }
 }
 
 .main {
@@ -83,7 +87,6 @@
   }
 }
 .main__content {
-  background: green;
 
   @include media-breakpoint-up(md) {
     grid-column: 1/span 8;
