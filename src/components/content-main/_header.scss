@@ -86,8 +86,10 @@
     width: 100%;
     background-color: var(--color-ink-accent);
     border-radius: var(--shape-border-radius-base);
+  	overflow: hidden;
 }
 .expand__action__item {
+	transition: var(--motion-duration-sm) var(--motion-easing-base);
   	width: 44px;
   	display: flex;
   	align-items: center;
@@ -116,4 +118,17 @@
 		    width: 0.1rem;
 	  	}
   	}
+  	&:hover {
+	    background-color: var(--color-ink-accent-hover);
+  	}
+}
+
+// SINGLE ACTION
+
+.main__header.has-single-action {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

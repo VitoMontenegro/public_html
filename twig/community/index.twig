@@ -1,0 +1,55 @@
+{% extends "../base.twig" %}
+
+{% set title = 'Community' %}
+
+
+{% block content %}
+	{% include '../components/group_content_header.twig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+<div class="main__sidebar__item has-shadow has-border-radius-base">
+	<div class="main__sidebar__item__title">
+		Recommendations
+	</div>
+	<ul class="main__sidebar__group__list">
+		<li>
+			<a class="group__list__link" href="#">
+				<div class="thumb" style="background-image:url()"></div>
+				<div class="group__list__desc_info">
+			    	<div class="group_name"><a href="#">Mining</a></div>
+			    	<div class="group_desc"><span>75 th.</span> participants</div>
+			  	</div>
+			</a>
+		</li>			
+		<li>
+			<a class="group__list__link" href="#">
+				<div class="thumb" style="background-image:url()"></div>
+				<div class="group__list__desc_info">
+			    	<div class="group_name"><a href="#">Cleaning</a></div>
+			    	<div class="group_desc"><span>64 th.</span> participants</div>
+			  	</div>
+			</a>
+		</li>				
+		<li>
+			<a class="group__list__link" href="#">
+				<div class="thumb" style="background-image:url()"></div>
+				<div class="group__list__desc_info">
+			    	<div class="group_name"><a href="#">Dancing to Modern Talking</a></div>
+			    	<div class="group_desc"><span>120 th.</span> participants</div>
+			  	</div>
+			</a>
+		</li>					
+		<li>
+			<a class="group__list__link" href="#">
+				<div class="thumb" style="background-image:url()"></div>
+				<div class="group__list__desc_info">
+			    	<div class="group_name"><a href="#">Cars 60-70</a></div>
+			    	<div class="group_desc"><span>40 th.</span> participants</div>
+			  	</div>
+			</a>
+		</li>			
+	</ul>
+</div>
+{% endblock %}
