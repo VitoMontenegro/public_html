@@ -40,12 +40,41 @@
         }
     }
 }
-.group__count-number, .group__last-update {
+.list__captio__item {
     font-weight: 400;
-font-size: 12px;
-line-height: 16px;
-/* or 133% */
+    font-size: 12px;
+    line-height: 16px;
+    /* or 133% */
 
-text-align: center;
-color: #475F85;
+    text-align: center;
+    color: #475F85;
+}
+
+
+
+
+
+
+.link.is-wrapper {
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    border-radius: var(--shape-border-radius-lg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &:focus-visible,
+  &:hover {
+    &::before {
+      box-shadow: var(--layer-box-shadow-focus-outline);
+    }
+  }
 }

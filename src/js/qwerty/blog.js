@@ -14,8 +14,8 @@
 
 jQuery(document).ready(function($){
 	$('.dropdown').on('click', function(){
-		$('.dropdown').not($(this)).removeClass('open');
-		$(this).toggleClass('open');
+		//$('.dropdown').not($(this)).removeClass('open');
+		$(this).addClass('open');
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
@@ -24,6 +24,10 @@ jQuery(document).ready(function($){
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
 		}
+	});
+	
+	$('.dropdown-menu_wrap').on('click', function(event) {
+	    event.stopPropagation();
 	});
 
 

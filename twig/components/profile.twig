@@ -5,8 +5,10 @@
   settings: "settings",
   exit: "exit"
 } %}
-<ul class="dropdown-menu">	
-	{% for key, value in profileLink %}
-		<li><a href="#/{{ key }}">{{ value }}</a></li>
-	{% endfor %}
-</ul>
+<div class="dropdown-menu_wrap">
+  <ul class="dropdown-menu">  
+    {% for key, value in profileLink %}
+      <li><a href="#/{{ key }}">{{ value }}</a></li>
+    {% endfor %}
+  </ul>  
+</div>

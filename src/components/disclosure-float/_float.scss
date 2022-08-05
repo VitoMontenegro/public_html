@@ -21,9 +21,9 @@
   width: var(--size-width-sm);
   z-index: var(--layer-zindex-dropdown);
 
-  @include media-breakpoint-up(sm) {
-    width: var(--size-width-base);
-  }
+  // @include media-breakpoint-up(sm) {
+  //   width: var(--size-width-base);
+  // }
 }
 
 .float.is-open,
