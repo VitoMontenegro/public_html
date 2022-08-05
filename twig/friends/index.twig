@@ -1,24 +1,21 @@
 {% extends "../base.twig" %}
 
-{% set title = 'Community' %}
+{% set title = 'Friends' %}
 
 {% set captionActions = [
-	['details', "I participate", 8],
-	['details', "My", 3],
-	['isIcon', "Sort", 'sort'],
-	['isIcon', "Add", 'plus-gray']
+	['details', "all"],
+	['details', "By name", 3]
 ] %}
 
 {# ['entetyAvatarImg', "groupNameH", 'countNumbers', 'lastUpdate']#}
 {% set groupList = [
-	['./mybg.jpg', "B2B Lead Genera…", '17 th.', 'just now'],
-	['./mybg.jpg', "Эко-игрушки", '17 th.', '1 h ago'],
-	['./mybg.jpg', "Домострой", '17 th.', 'yesterday'],
-	['./mybg.jpg', "Фуд-траки", '17 th.', '24 feb'],
-	['./mybg.jpg', "Mustang, Comaro…", '17 th.', 'just now'],
-	['./mybg.jpg', "Design Inspiration", '17 th.', '1 h ago'],
-	['./mybg.jpg', "Кёкусинкай в Бу…", '17 th.', '24 feb'],
-	['./mybg.jpg', "IT-воспитание", '17 th.', 'yesterday'],
+	['./mybg.jpg', "Eugene Potapenko", 'Petrovac'],
+	['./mybg.jpg', "Mia Suono-Oro", 'Moscow'],
+	['./mybg.jpg', "Александр Бойко", 'Moscow'],
+	['./mybg.jpg', "Екатерина Велик…", 'Moscow'],
+	['./mybg.jpg', "Валентина Ветер", 'Moscow'],
+	['./mybg.jpg', "Design Inspiration", 'Kyiv'],
+	['./mybg.jpg', "Павел Дорошенко", 'Moscow'],
 ] %}
 
 {% block content %}

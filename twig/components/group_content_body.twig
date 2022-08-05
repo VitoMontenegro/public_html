@@ -1,0 +1,8 @@
+{% import "../base/macros.twig" as nameMacro %}
+<div class="main__body group__body">
+	<div class="group__body__list">
+		{% for key, value in groupList %}
+			{{ nameMacro.groups(value[0], value[1], value[2], value[3]) }}
+		{% endfor %}
+	</div>
+</div>

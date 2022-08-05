@@ -130,5 +130,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: $size-4
   }
+}
+.group-caption__actions {
+	.btn {
+		padding: 0 12px;
+
+		.icon {
+			margin: 0;
+		}
+	}
 }

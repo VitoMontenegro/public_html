@@ -1,29 +1,11 @@
+{% import "../base/macros.twig" as groupCaption %}
+
 <div class="main__header has-single-action allads">
 	<h1>{{ title }}</h1>
-
-	<div class="table-caption__actions">
-		<button class="btn is-ghost is-details" type="button" aria-label="participate">
-			<span class="text-truncate">
-				I participate (8)
-			</span>
-		</button>
-		<button class="btn is-ghost is-details" type="button" aria-label="My">
-			<span class="text-truncate">
-				My (3)
-			</span>
-		</button>
-		<button class="btn is-ghost" type="button" aria-label="Sort">
-			<svg class="icon" aria-hidden="true" focusable="false">
-				<use href="/src/base/graphics/sprite.svg#icon-sort"></use>
-			</svg>
-		</button>
-		<button class="btn is-ghost" type="button" aria-label="Add">
-			<svg class="icon" aria-hidden="true" focusable="false">
-			<use href="/src/base/graphics/sprite.svg#icon-plus-gray"></use>
-			</svg>
-		</button>
+	<div class="group-caption__actions">
+		{% for key, value in captionActions %}
+			{% set name = value[0] %}
+			{{ groupCaption[name](value[1], value[2]) }}
+		{% endfor %}
 	</div>
-
-
-
 </div>
