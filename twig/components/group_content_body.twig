@@ -1,4 +1,6 @@
 {% import "../base/macros.twig" as nameMacro %}
+
+
 <div class="main__body group__body">
 	<div class="group__body__list">
 	{% if groupList|length > 0 %}
@@ -6,6 +8,7 @@
 			{{ nameMacro.groups(value[0], value[1], value[2], value[3]) }}
 		{% endfor %}
 	{% endif %}
+
 	{% if friendList|length > 0 %}
 		{% for key, value in friendList %}
 			{{ nameMacro.friends(value[0], value[1], value[2], value[3]) }}

@@ -20,18 +20,7 @@
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
 			</a>
-
-			<form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
-				<div class="form__item">
-					<input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
-
-					<button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
-						<svg class="icon" aria-hidden="true" focusable="false">
-							<use href="/src/base/graphics/sprite.svg#icon-search"></use>
-						</svg>
-					</button>
-				</div>
-			</form>
+			{% include './components/search_form.twig' %}
 
 			<ul class="header__menu" id="header-menu">
 			    <li class="header__notify">
@@ -45,7 +34,7 @@
 				<li class="dropdown header__user is-on">
 					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"aria-expanded="false">
 						<div class="header_photo">
-							<img src="/src/images/profile_photo.png" alt="Владимир Никишин">
+							<img src="/src/images/avatar.jpg" alt="Владимир Никишин">
 						</div>
 						<div class="header__photo-is_online">	        
 				        	<svg class="icon" aria-hidden="true" focusable="false">

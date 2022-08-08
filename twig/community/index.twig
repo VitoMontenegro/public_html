@@ -11,14 +11,21 @@
 
 {# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
 {% set groupList = [
-	['./mybg.jpg', "B2B Lead Genera…", '17 th. members', 'Last publish just now'],
-	['./mybg.jpg', "Эко-игрушки", '17 th. members', 'Last publish 1 h ago'],
-	['./mybg.jpg', "Домострой", '17 th. members', 'Last publish yesterday'],
-	['./mybg.jpg', "Фуд-траки", '17 th. members', 'Last publish 24 feb'],
-	['./mybg.jpg', "Mustang, Comaro…", '17 th. members', 'Last publish just now'],
-	['./mybg.jpg', "Design Inspiration", '17 th. members', 'Last publish 1 h ago'],
-	['./mybg.jpg', "Кёкусинкай в Бу…", '17 th. members', 'Last publish 24 feb'],
-	['./mybg.jpg', "IT-воспитание", '17 th. members', 'Last publish yesterday'],
+	['/src/images/mybg.jpg', "B2B Lead Genera…", '17 th. members', 'Last publish just now'],
+	['/src/images/mybg.jpg', "Эко-игрушки", '17 th. members', 'Last publish 1 h ago'],
+	['/src/images/mybg.jpg', "Домострой", '17 th. members', 'Last publish yesterday'],
+	['/src/images/mybg.jpg', "Фуд-траки", '17 th. members', 'Last publish 24 feb'],
+	['/src/images/mybg.jpg', "Mustang, Comaro…", '17 th. members', 'Last publish just now'],
+	['/src/images/mybg.jpg', "Design Inspiration", '17 th. members', 'Last publish 1 h ago'],
+	['/src/images/mybg.jpg', "Кёкусинкай в Бу…", '17 th. members', 'Last publish 24 feb'],
+	['/src/images/mybg.jpg', "IT-воспитание", '17 th. members', 'Last publish yesterday'],
+] %}
+
+{% set SidebarGroupList = [
+	['/src/images/mybg.jpg', "Mining", '17 th. participants', '#'],
+	['/src/images/mybg.jpg', "Cleaning", '64 th. participants', '#'],
+	['/src/images/mybg.jpg', "Dancing to Modern Talking", '120 th. participants', '#'],
+	['/src/images/mybg.jpg', "Cars 60-70", '40 th. participants', '#'],
 ] %}
 
 {% block content %}
@@ -32,43 +39,6 @@
 		<div class="main__sidebar__item__title">
 			Recommendations
 		</div>
-		<ul class="main__sidebar__group__list">
-			<li>
-				<a class="group__list__link" href="#">
-					<div class="thumb" style="background-image:url()"></div>
-					<div class="group__list__desc_info">
-				    	<div class="group_name"><a href="#">Mining</a></div>
-				    	<div class="group_desc"><span>75 th.</span> participants</div>
-				  	</div>
-				</a>
-			</li>			
-			<li>
-				<a class="group__list__link" href="#">
-					<div class="thumb" style="background-image:url()"></div>
-					<div class="group__list__desc_info">
-				    	<div class="group_name"><a href="#">Cleaning</a></div>
-				    	<div class="group_desc"><span>64 th.</span> participants</div>
-				  	</div>
-				</a>
-			</li>				
-			<li>
-				<a class="group__list__link" href="#">
-					<div class="thumb" style="background-image:url()"></div>
-					<div class="group__list__desc_info">
-				    	<div class="group_name"><a href="#">Dancing to Modern Talking</a></div>
-				    	<div class="group_desc"><span>120 th.</span> participants</div>
-				  	</div>
-				</a>
-			</li>					
-			<li>
-				<a class="group__list__link" href="#">
-					<div class="thumb" style="background-image:url()"></div>
-					<div class="group__list__desc_info">
-				    	<div class="group_name"><a href="#">Cars 60-70</a></div>
-				    	<div class="group_desc"><span>40 th.</span> participants</div>
-				  	</div>
-				</a>
-			</li>			
-		</ul>
+		{% include '../components/sidebar_group_list.twig' %}
 	</div>
 {% endblock %}

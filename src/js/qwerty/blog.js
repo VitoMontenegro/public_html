@@ -19,10 +19,18 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
-		var div = $( ".dropdown-menu" ); // тут указываем ID элемента
+		var div = $( ".dropdown-menu" ),
+			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
+			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
+		}
+		if ( !smartSearchInner.is(e.target) // если клик был не по нашему блоку
+		    && smartSearchInner.has(e.target).length === 0 
+		    && !smartSearchBtnr.is(e.target)) { // и не по его дочерним элементам
+			smartSearchInner.hide(); // скрываем его
+			smartSearchBtnr.removeClass('open');
 		}
 	});
 	
@@ -30,6 +38,23 @@ jQuery(document).ready(function($){
 	    event.stopPropagation();
 	});
 
+	$('#smart-search-btn').on('click', function() {
+		$(this).toggleClass('open');
+		$('#smartSearchInner').toggle();
+	});
+
+	$('.items_scroll:not(.select_all)').on('click', function(){
+		$(this).toggleClass('active');
+	});
+
+	$('.select_all').on('click',function() {
+		if ($(this).hasClass('active')) {
+			$('.items_scroll').removeClass('active');
+		} else {
+			$('.items_scroll').addClass('active');
+		}
+		
+	});
 
 
 });

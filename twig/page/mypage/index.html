@@ -20,18 +20,34 @@
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
 			</a>
+			    <form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
+        <div class="form__item">
+            <input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
 
-			<form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
-				<div class="form__item">
-					<input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
+            
 
-					<button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
-						<svg class="icon" aria-hidden="true" focusable="false">
-							<use href="/src/base/graphics/sprite.svg#icon-search"></use>
-						</svg>
-					</button>
-				</div>
-			</form>
+            <button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/src/base/graphics/sprite.svg#icon-search"></use>
+                </svg>
+            </button>
+            <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base">
+                <div class="search__filter__item">
+                    <div class="form__item has-select form__item-countries">
+                        <label>
+                            <div class="form-label__title">Country, Region, City:</div>
+                            <select class="select" id="countries">
+                                <option value="au">Australia</option>
+                                <option value="no">Norway</option>
+                                <option value="ru" selected>Russia</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </form>
 
 			<ul class="header__menu" id="header-menu">
 			    <li class="header__notify">
@@ -45,7 +61,7 @@
 				<li class="dropdown header__user is-on">
 					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"aria-expanded="false">
 						<div class="header_photo">
-							<img src="/src/images/profile_photo.png" alt="Владимир Никишин">
+							<img src="/src/images/avatar.jpg" alt="Владимир Никишин">
 						</div>
 						<div class="header__photo-is_online">	        
 				        	<svg class="icon" aria-hidden="true" focusable="false">
@@ -284,7 +300,7 @@
 	<div class="main__content__header__cover">
 		<div class="profile__cover">
 			<div class="profile__cover__slider">
-				<img src="./mybg.jpg" alt="" class="profile__cover_img">
+				<img src="/src/images/mybg.jpg" alt="" class="profile__cover_img">
 			</div>
 		</div>
 	</div>	
@@ -292,7 +308,7 @@
 		<div class="main__content__header__data__top">
 			<div class="main__content__header__ava">
 				<div class="entety__avatar">
-					<img src="./avatar.jpg" alt="" class="entety__avatar_img">
+					<img src="/src/images/avatar.jpg" alt="" class="entety__avatar_img">
 				</div>
 			</div>
 			<div class="main__content__header__title">

@@ -1,0 +1,133 @@
+    <form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
+        <div class="form__item">
+            <input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
+
+            {% if title == 'Community' or   title == 'Friends' %}
+                <button class="header__search-submit" id="smart-search-btn" type="submit" aria-label="Settings">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use href="/src/base/graphics/sprite.svg#icon-settings"></use>
+                    </svg>
+                </button>
+            {% endif %}
+
+            <button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/src/base/graphics/sprite.svg#icon-search"></use>
+                </svg>
+            </button>
+            <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base">
+                <div class="search__filter__item">
+                    <div class="form__item has-select form__item-countries">
+                        <label>
+                            <div class="form-label__title">Country, Region, City:</div>
+                            <select class="select" id="countries">
+                                <option value="au">Australia</option>
+                                <option value="no">Norway</option>
+                                <option value="ru" selected>Russia</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                {% if title == 'Friends' %}
+                    <div class="search__filter__item">
+                        <div class="form__item has-select">
+                            <label>
+                                <div class="form-label__title">Age:</div>
+                                <span class="flex select__age">
+                                    <select class="select age__from" id="ageFrom">
+                                        <option disabled selected hidden>From</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                    </select>
+                                    <select class="select age__to" id="ageTo">
+                                        <option disabled selected hidden>To</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                    </select>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="search__filter__item sex_select">
+                        <div class="flex align-center">
+                            <div class="form-label__title">Sex:</div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label flex align-center">
+                                    <input type="radio" class="form-check-input" name="sex" value="any">
+                                    <span>Any</span>
+                                </label>
+                            </div>             
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label flex align-center">
+                                    <input type="radio" class="form-check-input" name="sex" value="female">
+                                    <span>Female</span>
+                                </label>
+                            </div>             
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label flex align-center">
+                                    <input type="radio" class="form-check-input" name="sex" value="male">
+                                    <span>Male</span>
+                                </label>
+                            </div>                    
+                        </div>
+                    </div>
+                    
+                    <div class="search__filter__item search__filter__item_footer">
+                        <div class="flex align-center justify-between">
+                            <label class="flex align-center">
+                                <input type="checkbox" id="mpagree"> 
+                                Only in the "Friends" section
+                            </label>
+                            <button class="form__btn btn is-primary" type="submit">Find</button>
+                        </div>
+                    </div>
+                {% elseif title == 'Community' %}
+                    <div class="search__filter__item">
+                        <div class="form-label__title">Category:</div>
+                        <div class="search__filter__item__items">
+                            <div class="items_scroll select_all" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/src/base/graphics/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>All</span>
+                            </div>
+                            <div class="items_scroll" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/src/base/graphics/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>Community ODP</span>
+                            </div>
+                            <div class="items_scroll" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/src/base/graphics/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span> Household service</span>
+                            </div>
+                            <div class="items_scroll" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/src/base/graphics/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>Healthcare</span>
+                            </div>
+                            <div class="items_scroll" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/src/base/graphics/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>Catering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search__filter__item search__filter__item_footer">
+                        <div class="flex align-center justify-between">
+                            <label class="flex align-center">
+                                <input type="checkbox" id="mpagree"> 
+                                Only in organizations
+                            </label>
+                            <button class="form__btn btn is-primary" type="submit">Find</button>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </form>

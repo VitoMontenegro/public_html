@@ -1,5 +1,6 @@
 lect,
 textarea,
+select,
 input[type='text'],
 input[type='password'],
 input[type='email'],
@@ -16,7 +17,7 @@ input[type='time'],
 %input {
   appearance: none;
   background-clip: padding-box;
-  border-radius: var(--shape-border-radius-base);
+  border-radius: var(--shape-border-radius-sm);
   border: 0;
   color: var(--color-ink-2ry);
   display: block;
@@ -34,7 +35,6 @@ input[type='time'],
 
   &:focus {
     color: var(--color-ink-base);
-    border-color: var(--color-primary-base);
     box-shadow: var(--layer-box-shadow-focus-outline);
     outline: 0;
   }
@@ -74,5 +74,4 @@ textarea,
 .form__item,
 .filter__item {
   position: relative;
-  padding-bottom: var(--size-padding-bottom-form-group);
 }
