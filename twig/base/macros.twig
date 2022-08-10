@@ -131,6 +131,18 @@
     </li>
 {% endmacro %}
 
+{% macro mainSidebarList(sidebarListLink, sidebarListTitle, sidebarListCount) %}
+    <li>
+        <a class="main__sidebar__item__link" href="{{ sidebarListLink }}">
+            <span class="label">{{ sidebarListTitle }}</span>
+            {% if   sidebarListCount|length > 0 %}
+                <span class="badge pull-right">{{ sidebarListCount }}</span>
+            {% endif %}
+
+        </a>
+    </li>
+{% endmacro %}
+
 {% macro modal(name, icon) %}
     <div class="modal fade" id="modal" aria-labelledby="region-selector-title" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">

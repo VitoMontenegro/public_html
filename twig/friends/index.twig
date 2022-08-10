@@ -25,6 +25,15 @@
 	['/src/images/profile_friend.png', "Руслан Кислицин", 'July 7', '#'],
 ] %}
 
+{% set mainSidebarList = [
+	['#', "Friends", '825'],
+	['#', "Nearby", '2'],
+	['#', "Friend requests", '135'],
+	['#', "Recommendations"],
+	['#', "Subscriptions", '20'],
+	['#', "Subscribers", '3']
+] %}
+
 {% block content %}
 	{% include '../components/group_content_header.twig' %}
 	{% include '../components/group_content_body.twig' %}
@@ -32,8 +41,9 @@
 
 
 {% block sidebar %}
-	<div class="main__sidebar__item has-shadow has-border-radius-base">
-		<div class="main__sidebar__item__title">
+	<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+		{% include '../components/main_sidebar_item.twig' %}
+		<div class="main__sidebar__item__title is_birthday">
 			Birthdays
 		</div>
 		{% include '../components/sidebar_group_list.twig' %}

@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
-		var div = $( ".dropdown-menu" ),
+		var div = $( ".dropdown-menu, .dropdown__menu" ),
 			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
 			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку

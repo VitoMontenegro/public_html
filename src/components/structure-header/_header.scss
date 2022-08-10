@@ -10,7 +10,6 @@
   padding-top: $size-line;
   position: relative;
   width: 100%;
-  z-index: calc(var(--layer-zindex-scrim) + 1);
 
   @include media-breakpoint-up(md) {
     --gap: #{$size-2};

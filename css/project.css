@@ -69,6 +69,7 @@
   --color-scrim-base: rgba(0, 0, 0, 0.56);
   --color-scrim-contrast: rgba(0, 0, 0, 0.8);
   --color-brightness-hover: 1.2;
+  --color-sidebar-count: hsl(var(--h), 30%, 62%);
   /* stylelint-disable indentation */
   --font-family-base:
     "Roboto",
@@ -1704,7 +1705,7 @@ textarea {
 }
 
 .group-caption__actions .btn {
-  padding: 0 12px;
+  padding: 0 1.2rem;
 }
 .group-caption__actions .btn .icon {
   margin: 0;
@@ -1720,6 +1721,17 @@ textarea {
 .main__sidebar__item__title {
   margin-bottom: 1.6rem;
 }
+.main__sidebar__item__title.is_birthday {
+  margin-top: 5.6rem;
+}
+
+.is_pickout .main__sidebar__item__list .pull-right {
+  padding: 0.4rem 0.8rem;
+  background: var(--color-sidebar-count);
+  border-radius: var(--shape-border-radius-pill);
+  color: var(--color-ink-inverse-max);
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
+}
 
 .main__sidebar__item__list {
   padding-left: 0;
@@ -1728,7 +1740,7 @@ textarea {
   list-style-position: inside;
   width: 100%;
   padding: 1.2rem 1.5rem;
-  margin: 0;
+  margin: 0 0 0.8rem;
   position: relative;
   border-radius: var(--shape-border-radius-base);
 }
@@ -1775,14 +1787,15 @@ textarea {
 }
 .main__sidebar__group__list li .sidebar__entety__title {
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--font-size-small);
   line-height: 16px;
+  color: hsl(var(--h), var(--s), 12%);
   color: #081935;
 }
 .main__sidebar__group__list li .sidebar__entety__subtitle {
-  font-size: 12px;
-  line-height: 16px;
-  color: #475F85;
+  font-size: var(--font-size-small);
+  line-height: 1.6rem;
+  color: var(--color-ink-2ry);
 }
 
 .main__sidebar__group__list__link span {
@@ -1803,6 +1816,7 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .group__body__list__ava {
@@ -2157,6 +2171,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 5.6rem;
+  background-color: var(--color-background-base);
 }
 @media (min-width: 768px) {
   .primary-nav {
@@ -2481,13 +2496,48 @@ textarea {
     justify-content: center;
     width: 7rem;
     margin: auto;
-    border-radius: 10px;
+    border-radius: var(--shape-border-radius-base);
   }
 }
 @media (max-width: 1359.98px) {
   .primary-nav .buttons a svg {
     margin: 0;
   }
+}
+
+.main__sidebar__footer {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--font-line-height-small);
+  padding-bottom: calc(var(--size-space-base) * 4);
+  text-align: center;
+}
+.main__sidebar__footer,
+.main__sidebar__footer ul {
+  font-weight: normal;
+}
+@media (min-width: 768px) {
+  .main__sidebar__footer {
+    padding-bottom: var(--size-space-base);
+    margin-top: 5.6rem;
+  }
+}
+
+.footer__meta-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+}
+.footer__meta-nav li {
+  margin-bottom: 0.8rem;
+}
+
+.footer__logo {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .header {
@@ -2497,7 +2547,6 @@ textarea {
   padding-top: 2.4rem;
   position: relative;
   width: 100%;
-  z-index: calc(var(--layer-zindex-scrim) + 1);
 }
 @media (min-width: 768px) {
   .header {

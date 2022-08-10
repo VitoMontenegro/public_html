@@ -9,6 +9,13 @@
 	stats: "Statistic",
 } %}
 
+{% set mainSidebarList = [
+	['#', "About me"],
+	['#', "Newsline"],
+	['#', "Photo and video", '204'],
+	['#', "Favorites", '248'],
+	['#', "Stories archive", '3']
+] %}
 
 
 {% block content %}
@@ -18,35 +25,6 @@
 
 {% block sidebar %}
 <div class="main__sidebar__item has-shadow has-border-radius-base">
-	<ul class="main__sidebar__item__list">
-		<li>
-			<a class="main__sidebar__item__link" href="#">
-				<span class="label">About me</span>
-			</a>
-		</li>
-		<li class="active">
-			<a class="main__sidebar__item__link" href="#">
-				<span class="label">Newsline</span>
-			</a>
-		</li>
-		<li>
-			<a class="main__sidebar__item__link" href="#">
-				<span class="label">Photo and video</span>
-				<span class="badge pull-right">204</span>
-			</a>
-		</li>
-		<li>
-			<a class="main__sidebar__item__link" href="#">
-				<span class="label">Favorites</span>
-				<span class="badge pull-right">248</span>
-			</a>
-		</li>
-		<li>
-			<a class="main__sidebar__item__link" href="#">
-				<span class="label">Stories archive</span>
-				<span class="badge pull-right">3</span>
-			</a>
-		</li>
-	</ul> 
+	{% include '../components/main_sidebar_item.twig' %}
 </div>
 {% endblock %}
