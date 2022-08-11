@@ -1,0 +1,30 @@
+{% extends "../index.twig" %}	
+
+{% set profileCoverImg = '/assets/images/tailors.jpg' %}
+{% set entetyAvatarImg = '/assets/images/tailors.png' %}
+{% set groupNameH = 'Tailors' %}
+{% set groupNameInfo = 'Открытое сообщество. 327 695 участников' %}
+{% set headerActions = {
+	editProfile: "Edit profile",
+	stats: "Statistic",
+} %}
+
+{% set mainSidebarList = [
+	['#', "About"],
+	['#', "Timeline", '2'],
+	['#', "Themes", '100 500'],
+	['#', "Photo/Video", 204],
+	['#', "Events"],
+	['#', "Files", '20']
+] %}
+
+{% block content %}
+	{% include '../components/main_content_header.twig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+		{% include '../components/main_sidebar_item.twig' %}
+	</div>
+{% endblock %}

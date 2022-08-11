@@ -1,0 +1,30 @@
+{% extends "../index.twig" %}	
+
+{% set profileCoverImg = '/assets/images/alphaBack.jpg' %}
+{% set entetyAvatarImg = '/assets/images/alpha.png' %}
+{% set groupNameH = 'Alfa Bank' %}
+{% set groupNameInfo = 'Finance. Working as usual' %}
+{% set headerActions = {
+	likebig: "Like",
+	more: "Edit profile"
+} %}
+
+{% set mainSidebarList = [
+	['#', "About"],
+	['#', "Timeline", '2'],
+	['#', "Themes", '100 500'],
+	['#', "Photo/Video", 204],
+	['#', "Events"],
+	['#', "Files", '20']
+] %}
+
+{% block content %}
+	{% include '../components/main_content_header.twig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+		{% include '../components/main_sidebar_item.twig' %}
+	</div>
+{% endblock %}
