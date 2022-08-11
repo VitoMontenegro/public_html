@@ -1,3 +1,11 @@
+.group__body {
+    margin-top: 5rem;
+    
+  @include media-breakpoint-up(md) {
+
+      margin-top: 0;
+  }
+}
 .group__body__list {
     display: grid;
     grid-column-gap: $size-line;
@@ -93,6 +101,8 @@
 .link.is-wrapper {
   text-decoration: none;
   position: relative;
+      width: 100%;
+    display: block;
 
   &::before {
     border-radius: var(--shape-border-radius-lg);

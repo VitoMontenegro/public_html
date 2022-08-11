@@ -134,11 +134,30 @@
   }
 }
 .group-caption__actions {
+	text-align: center;
 	.btn {
-		padding: 0 1.2rem;
+		padding: 0 $size-1;
+
+		@include media-breakpoint-up(sm) {
+			padding: 0 $size-1p5;
+		}
+		
 
 		.icon {
 			margin: 0;
+		}
+
+		.dropdown-menu {
+			.menu__title {
+			    padding: 1.5rem 0.8rem;
+			    display: block;
+			}
+			.icon {
+				margin-right: 1.2rem;
+			}
+		}
+		&:hover {
+			background: var(--color-ink-accent);
 		}
 	}
 }

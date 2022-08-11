@@ -5,7 +5,7 @@
 	<div class="group-caption__actions">
 		{% for key, value in captionActions %}
 			{% set name = value[0] %}
-			{{ groupCaption[name](value[1], value[2]) }}
+			{{ groupCaption[name](value[1], value[2], value[3], value[4]) }}
 		{% endfor %}
 	</div>
 </div>

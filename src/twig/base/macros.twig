@@ -14,12 +14,28 @@
         </button>
 {% endmacro %}
 
-{% macro isIcon(name, icon) %}
-        <button class="btn is-ghost" type="button" aria-label="{{ name }}">
+{% macro isIcon(name, icon, list, nameList) %}
+        <div class="btn is-ghost dropdown" type="button" aria-label="{{ name }}">
             <svg class="icon" aria-hidden="true" focusable="false">
                 <use href="/assets/sprite/sprite.svg#icon-{{ icon }}"></use>
             </svg>
-        </button>
+            <div class="dropdown-menu_wrap">
+                <ul class="dropdown-menu"> 
+                        <li><span class="menu__title">{{ nameList }}</span></li>
+                    {% for keylist, valuelist in list %}
+                        <li>
+                            <a href="" class="{{ valuelist[0] }}">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-{{ valuelist[0] }}"></use>
+                                </svg>
+                                <span>{{ valuelist[1] }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    
+                </ul>  
+            </div>
+        </div>
 {% endmacro %}
 
 {% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle,enterySubtitleLast) %}

@@ -74,7 +74,12 @@
   grid-area: main;
   background-color: var(--color-background-base);
   width: 100%;
+      margin-top: 5rem;
 
+  @include media-breakpoint-up(md) {
+
+      margin-top: 0;
+  }
   @include media-breakpoint-up(lg) {
     --gap: #{$size-3};
 
