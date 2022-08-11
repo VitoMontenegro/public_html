@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title}}</title>
     
-    <link rel="stylesheet" href="/css/project.css">
+    <link rel="stylesheet" href="/project.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"
   		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
   		crossorigin="anonymous"></script>
-    <script src="/src/js/qwerty/blog.js"></script>
+    <script src="/assets/js/app.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div class="header" id="header">
 			<a class="header__logo logo" href="/src/pages/home/">
-				<img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+				<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
 			    <div class="logo__copy">			    	
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
@@ -26,7 +26,7 @@
 			    <li class="header__notify">
 				  	<button type="button" data-toggle="modal" data-target="#modal-notify">	        
 			        	<svg class="icon" aria-hidden="true" focusable="false">
-					      	<use href="/src/base/graphics/sprite.svg#icon-bell"></use>
+					      	<use href="/assets/sprite/sprite.svg#icon-bell"></use>
 					  	</svg>
 					  	<div id="header__notify-count" class="header__notify-label active">1</div>
 				  	</button>
@@ -34,11 +34,11 @@
 				<li class="dropdown header__user is-on">
 					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"aria-expanded="false">
 						<div class="header_photo">
-							<img src="/src/images/avatar.jpg" alt="Владимир Никишин">
+							<img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
 						</div>
 						<div class="header__photo-is_online">	        
 				        	<svg class="icon" aria-hidden="true" focusable="false">
-						      	<use href="/src/base/graphics/sprite.svg#icon-check"></use>
+						      	<use href="/assets/sprite/sprite.svg#icon-check"></use>
 						  	</svg>
 						</div>
 						<span>Владимир</span>
@@ -48,7 +48,7 @@
 			    <li class="header__language-toggle dropdown">
 			  		<button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        	<svg class="icon" aria-hidden="true" focusable="false">
-					      	<use href="/src/base/graphics/flags.svg#icon-flag-ru"></use>
+					      	<use href="/assets/images/flags.svg#icon-flag-ru"></use>
 					  	</svg>
 			  		</button>
 			  		{% include "components/languages.twig" %}
@@ -57,7 +57,7 @@
 				<li class="has-search-button">
 					<a class="btn is-compact" href="/ru/search" role="button" data-search-btn="" aria-haspopup="true" aria-label="Submit Search">
 						<svg class="icon" aria-hidden="true" focusable="false">
-							<use href="/src/base/graphics/sprite.svg#icon-search"></use>
+							<use href="/assets/sprite/sprite.svg#icon-search"></use>
 						</svg>
 					</a>
 				</li>
@@ -91,7 +91,7 @@
 	        			</li>
 	        		</ul>
 		        	<div class="footer__logo">
-		        		<img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+		        		<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
 		        	</div>
 	        		<div class="footer__site-credits">
 	      				<div class="nottranslate">Copyright ©&nbsp;2022, <br>Social movement of entrepreneurs&nbsp;™</div>
@@ -104,7 +104,7 @@
 
         <nav class="primary-nav">
         	<a class="primary-nav__logo logo" href="/">
-			    <img class="logo__mark" src="/src/base/graphics/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+			    <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
 			    <div class="logo__copy">			    	
 				    <div class="tagline">Social movement of entrepreneurs</div>
 			    </div>
@@ -112,17 +112,17 @@
 
             <ul class="menu" role="menu">
                 <li class="menu__item is-mypage">
-                	<a class="menu__link active" href="/twig/page/mypage/" role="menuitem">
+                	<a class="menu__link active" href="/mypage/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-home"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-home"></use>
 		                </svg>
 	                	<span class="label">My page</span>
                	 	</a>
                 </li>
                 <li class="menu__item is-news">
-                	<a class="menu__link" href="/twig/page/news/" role="menuitem">
+                	<a class="menu__link" href="/news/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-news"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-news"></use>
 		                </svg>
 	                	<span class="label">News</span>
                	 	</a>
@@ -130,7 +130,7 @@
                 <li class="menu__item is-add">
                 	<a class="menu__link active" href="javascript:void(0)" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-plus-gray"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
 		                </svg>
 	                	<span class="label">Add</span>
                	 	</a>
@@ -138,15 +138,15 @@
                 <li class="menu__item is-messenger">
                 	<a class="menu__link" href="#" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-messenger"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-messenger"></use>
 		                </svg>
 	                	<span class="label">Messenger</span>
                	 	</a>
                 </li>
                 <li class="menu__item is-friends">
-                	<a class="menu__link" href="/twig/page/friends/" role="menuitem">
+                	<a class="menu__link" href="/friends/" role="menuitem">
 		                <svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-friends"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-friends"></use>
 		                </svg>
 	                	<span class="label">Friends</span>
                	 	</a>
@@ -154,7 +154,7 @@
                 <li class="menu__item dropdown is-more">
                 	<a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menuitem" >
                 		<svg class="icon" aria-hidden="true" focusable="false">
-		                	<use href="/src/base/graphics/sprite.svg#icon-more"></use>
+		                	<use href="/assets/sprite/sprite.svg#icon-more"></use>
 		                </svg>
 		                <span class="label">More</span>
                 	</a>
@@ -164,23 +164,23 @@
 			                <li class="menu__item is-friends_copy">
 			                	<a class="dropdown__link" href="#" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-friends"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-friends"></use>
 					                </svg>
 				                	<span class="label">Friends</span>
 			               	 	</a>
 			                </li>
 			                <li class="menu__item is-community">
-			                	<a class="dropdown__link" href="/twig/page/community" role="menuitem">
+			                	<a class="dropdown__link" href="/community/" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-community"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-community"></use>
 					                </svg>
 				                	<span class="label">Community</span>
 			               	 	</a>
 			                </li>
 			                <li class="menu__item is-organizations">
-			                	<a class="dropdown__link" href="/twig/page/organizations" role="menuitem">
+			                	<a class="dropdown__link" href="/organizations" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-organizations"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-organizations"></use>
 					                </svg>
 				                	<span class="label">Organizations</span>
 			               	 	</a>
@@ -188,7 +188,7 @@
 			                <li class="menu__item is-events">
 			                	<a class="dropdown__link" href="#" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-events"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-events"></use>
 					                </svg>
 				                	<span class="label">Events</span>
 			               	 	</a>
@@ -196,7 +196,7 @@
 			                <li class="menu__item is-promotions">
 			                	<a class="dropdown__link" href="/twig/page/discount/" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-promotions"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-promotions"></use>
 					                </svg>
 				                	<span class="label">Promotions</span>
 			               	 	</a>
@@ -204,7 +204,7 @@
 			                <li class="menu__item is-advertising">
 			                	<a class="dropdown__link" href="#" role="menuitem">
 					                <svg class="icon" aria-hidden="true" focusable="false">
-					                	<use href="/src/base/graphics/sprite.svg#icon-advertising"></use>
+					                	<use href="/assets/sprite/sprite.svg#icon-advertising"></use>
 					                </svg>
 				                	<span class="label">Advertising</span>
 			               	 	</a>
@@ -219,7 +219,7 @@
 				<li>
 					<a class="btn is-primary iconFix" href="/ru/editpost">
 						<svg class="icon is-left" aria-hidden="true" focusable="false">
-							<use href="/src/base/graphics/sprite.svg#icon-plus"></use>
+							<use href="/assets/sprite/sprite.svg#icon-plus"></use>
 						</svg>
 						Publication
 					</a>
@@ -227,7 +227,7 @@
 				<li>
 					<a class="btn" href="https://hlaclub.com/?type=rss" target="_blank">
 						<svg class="icon is-left" aria-hidden="true" focusable="false">
-							<use href="/src/base/graphics/sprite.svg#icon-broadcast"></use>
+							<use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
 						</svg>
 						Broadcast
 					</a>

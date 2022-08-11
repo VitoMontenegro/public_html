@@ -1,149 +1,262 @@
-/*
-TASKS:
-clean
-img
-js
-twig
-css
-sprite
-build
-gulp - build and starts the Browsersync server
-*/
-// Paths
-const root = {
-  src: './src',
-  srctwig: './twig',
-  dest: '.',
-};
+"use strict";
 
-const paths = {
-  css: {
-    src: {
-      main: `${root.src}/project.scss`,
+const {src, dest} = require("gulp");
+const gulp = require("gulp");
+const autoprefixer = require("gulp-autoprefixer");
+const cssbeautify = require("gulp-cssbeautify");
+const removeComments = require('gulp-strip-css-comments');
+const rename = require("gulp-rename");
+const sass = require("gulp-sass")(require("sass"));
+const cssnano = require("gulp-cssnano");
+const uglify = require("gulp-uglify");
+const plumber = require("gulp-plumber");
+const panini = require("panini");
+const del = require("del");
+const notify = require("gulp-notify");
+const webpack = require('webpack');
+const twig = require('gulp-twig');
+const svgSprite = require('gulp-svg-sprite');
+const webpackStream = require('webpack-stream');
+const browserSync = require("browser-sync").create();
+
+
+/* Paths */
+const srcPath = 'src/';
+const distPath = 'dist/';
+
+const path = {
+    build: {
+        html:   distPath,
+        js:     distPath + "assets/js/",
+        css:    distPath + "assets/css/",
+        images: distPath + "assets/images/",
+        fonts:  distPath + "assets/fonts/",
+        sprite: distPath + "assets/sprite/"
     },
-    watch: `${root.src}/**/*.scss`,
-    tmp: `${root.src}/css`,
-    dest: `${root.dest}/css`,
-  },
-
-  markup: {
-    src: `${root.srctwig}/**/*.twig`,
-    watch: `${root.srctwig}/**/*.twig`,
-    dest: `${root.srctwig}/page/`,
-  },
-
-  img: {
     src: {
-      graphics: [
-        `${root.src}/**/*.+(jpg|jpeg|png|svg|gif|webp|ico)`,
-        `!${root.src}/base/graphics/sprite/**/*`,
-        `!${root.src}/img/**/*`,
-      ],
-      content: `${root.src}/img/**/*.+(jpg|jpeg|png|svg|gif|webp)`,
+        html:   srcPath + "twig/**/*.twig",
+        js:     srcPath + "js/**/*.js",
+        css:    srcPath + "**/*.scss",
+        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        sprite: srcPath + "base/graphics/sprite/*.svg"
     },
-    // Vars array in watchers breaks build process, so there is one var for a watcher
-    watch: [
-      `${root.src}/**/*.+(jpg|jpeg|png|svg|gif|webp)`,
-      `!${root.src}/base/graphics/sprite/**/*`,
-    ],
-    dest: `${root.dest}/images`,
-  },
-
-  js: {
-    src: {
-      main: `${root.src}/main.js`,
-      vendor: `${root.src}/js/**/*.js`,
+    watch: {
+        html:   srcPath + "**/*.twig",
+        js:     srcPath + "js/**/*.js",
+        css:    srcPath + "**/*.scss",
+        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        sprite: srcPath + "base/graphics/sprite/*.svg"
     },
-    watch: [`${root.src}/**/*.js`],
-    dest: `${root.dest}/js`,
-  },
-
-  sprite: {
-    src: {
-      main: [`${root.src}/base/graphics/sprite/*.svg`],
-    },
-    dest: `${root.src}/base/graphics`,
-  },
-};
+    clean: "./" + distPath
+}
 
 
-const gulp = require('gulp'),
-      sass = require('gulp-sass')(require('sass')),
-      svgSprite = require('gulp-svg-sprite'),
-      browserSync = require('browser-sync'),
-      connect = require('gulp-connect'),
-      reload = browserSync.reload;
 
-gulp.task('browserSync', function() {
-    browserSync({
+/* Tasks */
+
+function serve() {
+    browserSync.init({
         server: {
-            baseDir: './'
-        },
-        open: false,
-        notify: false
+            baseDir: "./" + distPath
+        }
     });
-});
+}
 
-gulp.task('watch', function() {
-    gulp.watch('src/*.scss', ['style']);
-    gulp.watch('src/*.html', ['html'])
-});
+// function html(cb) {
+//     panini.refresh();
+//     return src(path.src.html, {base: srcPath})
+//         .pipe(plumber())
+//         .pipe(panini({
+//             root:       srcPath,
+//             layouts:    srcPath + 'layouts/',
+//             partials:   srcPath + 'partials/',
+//             helpers:    srcPath + 'helpers/',
+//             data:       srcPath + 'data/'
+//         }))
+//         .pipe(dest(path.build.html))
+//         .pipe(browserSync.reload({stream: true}));
 
+//     cb();
+// }
 
+function css(cb) {
+    return src(path.src.css, {base: srcPath + "assets/scss/"})
+        .pipe(plumber({
+            errorHandler : function(err) {
+                notify.onError({
+                    title:    "SCSS Error",
+                    message:  "Error: <%= error.message %>"
+                })(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass({
+            includePaths: './node_modules/'
+        }))
+        .pipe(autoprefixer({
+            cascade: true
+        }))
+        .pipe(cssbeautify())
+        .pipe(dest(path.build.css))
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".css"
+        }))
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.reload({stream: true}));
 
+    cb();
+}
 
-gulp.task('compile', function () {
-    'use strict';
-    var twig = require('gulp-twig');
-    return gulp.src(paths.markup.src)
+function cssWatch(cb) {
+    return src(path.src.css, {base: srcPath + "assets/scss/"})
+        .pipe(plumber({
+            errorHandler : function(err) {
+                notify.onError({
+                    title:    "SCSS Error",
+                    message:  "Error: <%= error.message %>"
+                })(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass({
+            includePaths: './node_modules/'
+        }))
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".css"
+        }))
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function js(cb) {
+    return src(path.src.js, {base: srcPath + 'assets/js/'})
+        .pipe(plumber({
+            errorHandler : function(err) {
+                notify.onError({
+                    title:    "JS Error",
+                    message:  "Error: <%= error.message %>"
+                })(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(webpackStream({
+          mode: "production",
+          output: {
+            filename: 'app.js',
+          }
+        }))
+        .pipe(dest(path.build.js))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function jsWatch(cb) {
+    return src(path.src.js, {base: srcPath + 'assets/js/'})
+        .pipe(plumber({
+            errorHandler : function(err) {
+                notify.onError({
+                    title:    "JS Error",
+                    message:  "Error: <%= error.message %>"
+                })(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(webpackStream({
+          mode: "development",
+          output: {
+            filename: 'app.js',
+          }
+        }))
+        .pipe(dest(path.build.js))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function images(cb) {
+    return src(path.src.images)
+        .pipe(dest(path.build.images))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+function html(cb) {
+    return src(path.src.html)
         .pipe(twig())
-        .pipe(gulp.dest(paths.markup.dest));
-});
+        .pipe(dest(path.build.html))
+        .pipe(browserSync.reload({stream: true}));
 
-gulp.task('webserver', function() {
-  connect.server();
-});
+    cb();
+}
+function sprite(cb) {
+    return src(path.src.sprite)        
+        .pipe(
+          svgSprite({
+            mode: {
+              symbol: {
+                dest: '.', // Output in the same directory
+                sprite: 'sprite.svg', // Sprite path and name
+                prefix: '.', // Prefix for CSS selectors
+                dimensions: '', // Suffix for dimension CSS selectors
+              },
+            },
+            svg: {
+              xmlDeclaration: false, // strip out the XML attribute
+              doctypeDeclaration: false, // don't include the !DOCTYPE declaration
+              namespaceClassnames: false, // keep the source class names untouched
+            },
+          })
+        )
+        .pipe(dest(path.build.sprite))
+        .pipe(browserSync.reload({stream: true}));
 
-gulp.task('sass', function () {
-  return gulp.src(paths.css.src.main)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(paths.css.dest));
-});
+    cb();
+}
 
-gulp.task('sprite', function () {
-  return gulp.src(paths.sprite.src.main)
-    .pipe(
-      svgSprite({
-        mode: {
-          symbol: {
-            dest: '.', // Output in the same directory
-            sprite: 'sprite.svg', // Sprite path and name
-            prefix: '.', // Prefix for CSS selectors
-            dimensions: '', // Suffix for dimension CSS selectors
-          },
-        },
-        svg: {
-          xmlDeclaration: false, // strip out the XML attribute
-          doctypeDeclaration: false, // don't include the !DOCTYPE declaration
-          namespaceClassnames: false, // keep the source class names untouched
-        },
-      })
-    )
-    .pipe(gulp.dest(paths.sprite.dest));
-});
+function fonts(cb) {
+    return src(path.src.fonts)
+        .pipe(dest(path.build.fonts))
+        .pipe(browserSync.reload({stream: true}));
 
+    cb();
+}
 
+function clean(cb) {
+    return del(path.clean);
 
+    cb();
+}
+
+function watchFiles() {
+    gulp.watch([path.watch.html], html);
+    gulp.watch([path.watch.css], cssWatch);
+    gulp.watch([path.watch.js], jsWatch);
+    gulp.watch([path.watch.images], images);
+    gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.sprite], sprite);
+}
+
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, sprite));
+const watch = gulp.parallel(build, watchFiles, serve);
 
 
 
+/* Exports Tasks */
+exports.html = html;
+exports.css = css;
+exports.js = js;
 
-
-
-
-
-
- 
-gulp.task('default', gulp.series('compile', 'sass', 'sprite', 'webserver','watch', 'browserSync'));
-
-
+exports.images = images;
+exports.fonts = fonts;
+exports.clean = clean;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;

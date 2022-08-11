@@ -17,7 +17,7 @@
 {% macro isIcon(name, icon) %}
         <button class="btn is-ghost" type="button" aria-label="{{ name }}">
             <svg class="icon" aria-hidden="true" focusable="false">
-                <use href="/src/base/graphics/sprite.svg#icon-{{ icon }}"></use>
+                <use href="/assets/sprite/sprite.svg#icon-{{ icon }}"></use>
             </svg>
         </button>
 {% endmacro %}
@@ -33,7 +33,7 @@
                 </span>
                 <button class="entety__btns">
                     <svg class="icon" aria-hidden="true" focusable="false">
-                        <use href="/src/base/graphics/sprite.svg#icon-more"></use>
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
                     </svg>
                 </button>
             </div>
@@ -80,7 +80,7 @@
                 </span>
                 <span class="entety__btns">
                     <svg class="icon" aria-hidden="true" focusable="false">
-                        <use href="/src/base/graphics/sprite.svg#icon-more"></use>
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
                     </svg>
                 </span>
                 {% set frienadLink = {
