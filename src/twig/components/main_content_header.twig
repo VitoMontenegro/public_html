@@ -22,7 +22,7 @@
 			<div class="main__content__header__actions">
 				<ul class="header__action__menu">
 					{% for key, value in headerActions %}
-						<li class="expand__action__item">
+						<li class="expand__action__item {{ key }}">
 							<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
 		            			<svg class="icon" aria-hidden="true" focusable="false">
 		                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>

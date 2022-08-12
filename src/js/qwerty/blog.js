@@ -55,6 +55,25 @@ jQuery(document).ready(function($){
 		}
 		
 	});
+	$('.expand__action__item button').on('click', function(){
+		$(this).closest('li').toggleClass('active');
+	});
 
+
+	myFunc.call();
+
+ 	$(".intervalcheck").change(function(){
+   		myFunc.call();
+ 	});
+ 
+	function myFunc(){
+	  	var intervalCheck = $("input[name='search_from']:checked").val();
+	 
+	  	$("#smart-search-btn span" ).empty();
+	  	$("#smart-search-btn span" ).append(intervalCheck);
+	}
+	$('.custom-radio').on('click', function() {
+		console.log($(this).find('input'));
+	});
 
 });

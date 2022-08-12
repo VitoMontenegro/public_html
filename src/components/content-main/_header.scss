@@ -90,19 +90,19 @@
 }
 .expand__action__item {
 	transition: var(--motion-duration-sm) var(--motion-easing-base);
-  	width: 44px;
   	display: flex;
   	align-items: center;
   	justify-content: center;
   	list-style: none;
-  	padding: 0;
+  	padding: 0 ;
 
   	button {
-  		padding: 0;
+  		padding: 0 1.2rem;
   	 	.icon {
   	 		margin: 0;
   	 	}
   	}
+
   	&:last-child {
   		position: relative;
 	  	&:before {
@@ -118,8 +118,16 @@
 		    width: 0.1rem;
 	  	}
   	}
-  	&:hover {
-	    background-color: var(--color-ink-accent-hover);
+
+
+  	&.likeblue {
+  		&.active {
+	  		button {
+	  			--icon-fill-blue: #fff;
+			    background:  var(--color-background-primary-dark);
+	    		box-shadow: inset 0px 4px 8px rgb(8 25 53 / 24%), inset 0px 2px 4px rgb(8 25 53 / 24%);
+	  		}
+  		}
   	}
 }
 
