@@ -60,7 +60,7 @@
 
 
             <div class="group__body__list__captio">
-                {% if   entetySubTytle|length > 0 > 0 %}
+                {% if   entetySubTytle|length > 0 %}
                     <div class="list__captio__item">{{ entetySubTytle }}</div>
                 {% endif %}
 
@@ -68,6 +68,129 @@
                     <div class="list__captio__item">{{ enterySubtitleLast }}</div>
                 {% endif %}
                 
+            </div>
+        </div>
+{% endmacro %}
+
+{% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent) %}
+
+        <div class="main__content__body__item has-shadow has-border-radius-lg">
+            <div class="main__content__body__item__header">
+                <a class="main__content__body__list__link" href="#">
+                    <span>
+                        <figure class="entety__avatar">
+                            <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="sidebar__entety__avatar_img">
+                        </figure>                
+                    </span>
+                    <div class="main__content__body__list__link__desc">
+                        <div class="main__content__entety__title">{{ entetyTitle }}</div>
+                        <div class="main__content__entety__subtitle"><span>{{entetySubTytle}}</span></div>
+                    </div>
+                </a>     
+                <div class="is_link dropdown">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                    </svg>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li>
+                                <a href="" class="alphabet">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
+                                    </svg>
+                                    <span>item 1</span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="" class="calendar">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                                    </svg>
+                                    <span>item 2</span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="" class="likebig">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
+                                    </svg>
+                                    <span>item 3</span>
+                                </a>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>       
+            </div>
+
+            {% if entetyMainImg|length > 0 %}
+                <div class="main__content__body__image">
+                    <span>
+                        <figure class="entety__avatar">
+                            <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
+                        </figure>                
+                    </span>
+                </div>
+            {% endif %}
+            {% if entetyMainContent|length > 0 %}
+            <div class="main__content__body__txt crop-height">
+                <div class="crop-height__txt">{{entetyMainContent}}</div> 
+            </div>
+            {% endif %}
+
+
+
+            <div class="main__content__body__list__captio">
+               <div class="btn is-ghost dropdown count_btn" type="button" aria-label="Sort">
+                    <span class="grow">+44</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-ghost dropdown count_btn" type="button" aria-label="Sort">
+                    <span class="reduce">-1</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-ghost dropdown" type="button" aria-label="Sort">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-eye"></use>
+                    </svg>
+                    <span>120 040</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-ghost dropdown" type="button" aria-label="Sort">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                    </svg>
+                    <span>89+3</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                                <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-ghost dropdown" type="button" aria-label="Sort">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
+                    </svg>
+                    <span>2</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                                <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
             </div>
         </div>
 {% endmacro %}

@@ -55,7 +55,7 @@ jQuery(document).ready(function($){
 		}
 		
 	});
-	$('.expand__action__item button').on('click', function(){
+	$('.main__content__header__actions .expand__action__item button').on('click', function(){
 		$(this).closest('li').toggleClass('active');
 	});
 
@@ -75,5 +75,39 @@ jQuery(document).ready(function($){
 	$('.custom-radio').on('click', function() {
 		console.log($(this).find('input'));
 	});
+
+var showChar = 357;
+	var ellipsestext = "...";
+	var moretext = "More";
+	var lesstext = "Less";
+	$('.crop-height__txt').each(function() {
+		var content = $(this).html();
+
+		if(content.length > showChar) {
+
+			var c = content.substr(0, showChar);
+			var h = content.substr(showChar-1, content.length - showChar);
+
+			var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+			$(this).html(html);
+		}
+
+	});
+
+	$(".morelink").click(function(){
+		if($(this).hasClass("less")) {
+			$(this).removeClass("less");
+			$(this).html(moretext);
+		} else {
+			$(this).addClass("less");
+			$(this).html(lesstext);
+		}
+		$(this).parent().prev().toggle();
+		$(this).prev().toggle();
+		return false;
+	});
+
+
 
 });

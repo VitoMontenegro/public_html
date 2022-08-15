@@ -102,7 +102,6 @@
 .header__search [type='text'] {
   padding-right: $size-7;
   min-width: 100%;
-  background: var(--color-background-alt);
   border: 1px solid var(--color-ink-border);
 }
 .search__filter {
@@ -446,9 +445,9 @@
       line-height: 16px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-      color: #475F85;
+      color: var(--color-ink-2ry);
       max-height: 3.2rem;
-      background: #eee;
+      background: var(--color-background-alt);
       border-radius: 20px;
       padding: 8px 12px;
 

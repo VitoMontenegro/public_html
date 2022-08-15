@@ -22,17 +22,82 @@
 			<div class="main__content__header__actions">
 				<ul class="header__action__menu">
 					{% for key, value in headerActions %}
-						<li class="expand__action__item {{ key }}">
-							<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
-		            			<svg class="icon" aria-hidden="true" focusable="false">
-		                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
-		            			</svg>
-							</button>						
-						</li>
+						{% if key == 'more' %}
+							<li class="expand__action__item dropdown {{ key }}">
+								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+			            			<svg class="icon" aria-hidden="true" focusable="false">
+			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
+			            			</svg>
+								</button>	
+								<div class="dropdown-menu_wrap">
+									<ul class="dropdown-menu"> 
+			                            <li>
+			                                <a href="" class="alphabet">
+			                                    <svg class="icon" aria-hidden="true" focusable="false">
+			                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
+			                                    </svg>
+			                                    <span>item 1</span>
+			                                </a>
+			                            </li>
+			                        
+			                            <li>
+			                                <a href="" class="calendar">
+			                                    <svg class="icon" aria-hidden="true" focusable="false">
+			                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+			                                    </svg>
+			                                    <span>item 2</span>
+			                                </a>
+			                            </li>
+			                        
+			                            <li>
+			                                <a href="" class="likebig">
+			                                    <svg class="icon" aria-hidden="true" focusable="false">
+			                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
+			                                    </svg>
+			                                    <span>item 3</span>
+			                                </a>
+			                            </li>
+			                        </ul> 
+					            </div>					
+							</li>
+						{% else %}
+							<li class="expand__action__item {{ key }}">
+								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+			            			<svg class="icon" aria-hidden="true" focusable="false">
+			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
+			            			</svg>
+								</button>						
+							</li>
+						{% endif %}
 					{% endfor %}				
 				</ul>
 
 			</div>	
 		</div>
+	</div>
+
+	<div class="main__content__header__list">
+		<ul class="main__content__header__list__menu">
+			<li class="expand__action__item active">
+				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+        			<span>All</span>
+				</button>						
+			</li>
+			<li class="expand__action__item">
+				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+        			<span>Broadcasts</span>
+				</button>						
+			</li>
+			<li class="expand__action__item">
+				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+        			<span>Photos</span>
+				</button>						
+			</li>
+			<li class="expand__action__item">
+				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+        			<span>Videos</span>
+				</button>						
+			</li>
+		</ul>
 	</div>
 </div>
