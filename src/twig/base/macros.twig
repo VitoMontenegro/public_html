@@ -281,31 +281,3 @@
         </a>
     </li>
 {% endmacro %}
-
-{% macro modal(name, icon) %}
-    <div class="modal fade" id="modal" aria-labelledby="region-selector-title" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal__header">
-                    <h3 class="modal__title" id="region-selector-title">Выберите город или регион</h3>
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                </div>
-                
-                <form class="modal__body" id="form-region"><label class="sr-only" id="form-region-label" for="form-region-input">Выберите город или регион</label>
-                    <div class="combobox" id="form-region-combobox"><input id="form-region-input" type="text" role="combobox" aria-expanded="false" aria-owns="form-region-suggestions" aria-haspopup="grid" autocomplete="off" autocapitalize="off" spellcheck="false" aria-autocomplete="list" aria-controls="form-region-suggestions" placeholder="Начните вводить название…" />
-                        <ul class="combobox__suggestions" id="form-region-suggestions" role="listbox" aria-labelledby="form-region-label">
-                            <li class="combobox__option" role="option"><span class="combobox__option-label">Москва</span><span class="combobox__option-details">Москва и Московская область, Россия</span></li>
-                            <li class="combobox__option" role="option"><span class="combobox__option-label">Санкт-Петербург</span><span class="combobox__option-details">Санкт-Петербург и Ленинградская область, Россия Санкт-Петербург и Ленинградская область, Россия Санкт-Петербург и Ленинградская область, Россия</span></li>
-                            <li class="combobox__option" role="option"><span class="combobox__option-label">Самара</span><span class="combobox__option-details">Самарская область, Россия</span></li>
-                        </ul>
-                    </div>
-                </form>
-                <div class="modal__footer"><button class="btn is-primary" type="submit">Продолжить с новым регионом </button></div>
-            </div>
-        </div>
-    </div>
-{% endmacro %}

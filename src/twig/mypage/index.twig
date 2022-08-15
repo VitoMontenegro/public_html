@@ -5,7 +5,7 @@
 {% set groupNameH = 'Владимир Никишин' %}
 {% set groupNameInfo = 'Что нам с этих 300г будет? Мы же гипербореи' %}
 {% set headerActions = {
-	editProfile: "Edit profile",
+	editProfile: "editProfile",
 	stats: "Statistic",
 } %}
 
@@ -29,6 +29,8 @@
 {% block content %}
 	{% include '../components/main_content_header.twig' %}
 	{% include '../components/main_content_body.twig' %}
+
+	{% include '../components/modals.twig' %}
 {% endblock %}
 
 

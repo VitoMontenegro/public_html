@@ -7,7 +7,7 @@
 {% set groupNameH = 'Tailors' %}
 {% set groupNameInfo = 'Open community. 327 695 members' %}
 {% set headerActions = {
-	editProfile: "Edit profile",
+	editProfile: "editCommunity",
 	more: "Statistic",
 } %}
 
@@ -29,6 +29,9 @@
 {% block content %}
 	{% include '../components/main_content_header.twig' %}
 	{% include '../components/main_content_body.twig' %}
+
+	{% include '../components/modals.twig' %}
+
 {% endblock %}
 
 

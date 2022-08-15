@@ -62,7 +62,8 @@
 							</li>
 						{% else %}
 							<li class="expand__action__item {{ key }}">
-								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+
+    							<button class="btn is-ghost is-details" type="button" data-toggle="modal" data-target="#{{ value }}" aria-label="{{ value }}">   
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
 			            			</svg>
