@@ -38,29 +38,23 @@
 			}
 		}
 		.dropdown-menu {
-			    left: -24rem;
+		    left: -24rem;
 		}
 
 
 	}
 }
-.is_link {
-	cursor: pointer;
-}
 .main__content__body__txt {
 	margin-top: 1.6rem;
 	font-family: 'SF Pro Text';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 24px;
-	color: #475F85;
+	line-height: var(--font-line-height-middle);
+	color: var(--color-ink-2ry);
 }
 
 a.morelink {
     text-decoration: none;
     outline: none;
-    color: #475F85;
+    color: var(--color-ink-2ry);
     font-weight: 600;
 
 }

@@ -60,23 +60,41 @@
     flex: 1;
     min-width: 0;
     pointer-events: all;
+  	margin-bottom: $size-4;
     .group__name_h {
 		  color: var(--color-ink-title);
 		  font-size: var(--font-size-big);
 		  line-height: var(--font-line-height-big);
 		  margin: 0; 	
+		  font-weight: 500;
+		  text-align: center;
 
 		@include media-breakpoint-up(md) {			
 			font-size: var(--font-size-subhead-h2);
 			font-weight: var(--font-weight-subhead-h2);
 			line-height: var(--font-line-height-subhead-h2);
 			letter-spacing: -.05rem;
+		  	text-align: left;
 		}
     } 
 
 	.group__name_info {
 	    font-size: var(--font-size-middle);
 	    line-height: var(--font-line-height-middle);
+	    color: var(--color-ink-2ry);
+        width: 90vw;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    text-align: center;
+		@include media-breakpoint-up(sm) {
+			width: auto;
+			text-align: left;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 0;
 	}
 }
 .header__action__menu{
@@ -128,6 +146,12 @@
 	  		}
   		}
   	}
+  	.dropdown-menu {
+  		left: -13.2rem;
+  		@include media-breakpoint-up(md) {
+  			left: -22rem;
+  		}
+  	}
 }
 
 // SINGLE ACTION
@@ -141,15 +165,41 @@
   }
 }
 .main__content__header__list__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: none;
     padding: 0;
-        background-color: var(--color-ink-accent);
     border-radius: var(--shape-border-radius-base);
+    position: absolute;
+    background-color: var(--color-background-base);;
+    width: 26rem;
+    z-index: 1;
     overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include media-breakpoint-up(sm) {
+    	margin-top: 3rem;
+    	background-color: var(--color-ink-accent);
+    	position: relative;
+    	width: auto;
+    	display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    li {
+	    	width: 25%;
+			&.active {
+				button {
+					background: #DCE7F9;
+				}			
+			}
+			&:not(:first-child):before {
+				display: block;
+			}
+	    }
+    }
+    @include media-breakpoint-up(md) {
+    	margin-top: 0;
+    }
     li {
-    	width: 25%;
 
     	button {
 		    width: 100%;
@@ -157,12 +207,21 @@
     		justify-content: center;
     		font-weight: 500;
     	}
-
-		&.active {
-			button {
-				background: #DCE7F9;
-			}			
+		&:not(:first-child):before {
+			display: none;
 		}
+
+    }
+}
+.main__content__search-submit {
+    display: flex;
+    align-items: center;
+    background: inherit;
+    justify-content: center;
+    width: 100%;
+    margin: $size-2p5 0;
+    @include media-breakpoint-up(sm) {
+    	display: none;
     }
 }
 // GROUP ACTION

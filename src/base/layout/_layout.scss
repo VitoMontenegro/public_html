@@ -125,22 +125,3 @@
   // grid-template-rows: repeat(var(--rows, 1), auto);
 }
 
-
-// -----------------------------------------------------------------------------
-// CSS FLex
-// -----------------------------------------------------------------------------
-// #region
-
-.flex {
-  display: flex;
-}
-.align-center {
-  align-items:center;
-
-  .form-label__title, .search__filter__item label {
-    margin-bottom: 0;
-  }
-}
-.justify-between {
-  justify-content:space-between;
-}
