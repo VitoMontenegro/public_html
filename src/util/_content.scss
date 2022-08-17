@@ -17,15 +17,34 @@
 .justify-between {
   justify-content:space-between;
 }
-.for_desctop {
-  display: none;
-  @include media-breakpoint-up(sm) {
-        display: var(--display);
-  }
-}
-
-
 
 .is_link {
   cursor: pointer;
+}
+
+
+.sm_hidden {
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: var(--display);
+  }
+}
+.md_hidden {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: var(--display);
+  }
+}
+
+.sm_visible {
+  display: var(--display);
+  @include media-breakpoint-up(sm) {        
+    display: none;
+  }
+}
+.md_visible {
+  display: var(--display);
+  @include media-breakpoint-up(md) {        
+    display: none;
+  }
 }

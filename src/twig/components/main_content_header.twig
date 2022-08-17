@@ -31,38 +31,70 @@
 								</button>	
 								<div class="dropdown-menu_wrap">
 									<ul class="dropdown-menu"> 
-			                            <li>
-			                                <a href="" class="alphabet">
-			                                    <svg class="icon" aria-hidden="true" focusable="false">
-			                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
-			                                    </svg>
-			                                    <span>item 1</span>
-			                                </a>
-			                            </li>
-			                        
-			                            <li>
-			                                <a href="" class="calendar">
-			                                    <svg class="icon" aria-hidden="true" focusable="false">
-			                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
-			                                    </svg>
-			                                    <span>item 2</span>
-			                                </a>
-			                            </li>
-			                        
-			                            <li>
-			                                <a href="" class="likebig">
-			                                    <svg class="icon" aria-hidden="true" focusable="false">
-			                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
-			                                    </svg>
-			                                    <span>item 3</span>
-			                                </a>
-			                            </li>
+									{% for key, value in mainSidebarList %}
+				                            <li class="md_visible">
+				                                <a href="" class="alphabet">
+				                                    <svg class="icon" aria-hidden="true" focusable="false">
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                    </svg>
+				                                    <span>{{value[1]}}</span>
+				                                </a>
+				                            </li>
+									{% endfor %} 
+									{% for key, value in headerActionsList %}
+				                            <li>
+				                                <a href="" class="alphabet">
+				                                    <svg class="icon" aria-hidden="true" focusable="false">
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                    </svg>
+				                                    <span>{{value[1]}}</span>
+				                                </a>
+				                            </li>
+									{% endfor %}
 			                        </ul> 
 					            </div>					
 							</li>
+						{% elseif key == 'stats'%}
+							<li class="expand__action__item stats md_hidden btn">
+    							<button class=" is-ghost is-details" type="button" data-toggle="modal" data-target="#{{ value }}" aria-label="{{ value }}">   
+			            			<svg class="icon" aria-hidden="true" focusable="false">
+			                			<use href="/assets/sprite/sprite.svg#icon-stats"></use>
+			            			</svg>
+								</button>								
+							</li>			
+							<li class="expand__action__item dropdown md_visible">
+								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+			            			<svg class="icon" aria-hidden="true" focusable="false">
+			                			<use href="/assets/sprite/sprite.svg#icon-more"></use>
+			            			</svg>
+								</button>	
+								<div class="dropdown-menu_wrap">
+									<ul class="dropdown-menu">
+										{% for key, value in mainSidebarList %}
+				                            <li>
+				                                <a href="" class="alphabet">
+				                                    <svg class="icon" aria-hidden="true" focusable="false">
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                    </svg>
+				                                    <span>{{value[1]}}</span>
+				                                </a>
+				                            </li>
+										{% endfor %}
+										{% for key, value in headerActionsList %}
+					                            <li>
+					                                <a href="" class="alphabet">
+					                                    <svg class="icon" aria-hidden="true" focusable="false">
+					                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+					                                    </svg>
+					                                    <span>{{value[1]}}</span>
+					                                </a>
+					                            </li>
+										{% endfor %}
+			                        </ul> 
+					            </div>
+							</li>
 						{% else %}
 							<li class="expand__action__item {{ key }}">
-
     							<button class="btn is-ghost is-details" type="button" data-toggle="modal" data-target="#{{ value }}" aria-label="{{ value }}">   
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
