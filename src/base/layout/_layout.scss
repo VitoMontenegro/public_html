@@ -99,8 +99,9 @@
 
 }
 .main__sidebar {
-
+  display: none;
   @include media-breakpoint-up(md) {
+    display: block;
     grid-column: 9/span 4
   }
 

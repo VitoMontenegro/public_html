@@ -17,18 +17,18 @@
 ] %}
 
 {% set mainSidebarList = [
-	['#', "About"],
-	['#', "Timeline", '2'],
-	['#', "Themes", '100 500'],
-	['#', "Photo/Video", 204],
-	['#', "Events"],
-	['#', "Files", '20']
+	['info', 'link','#', "About"],
+	['news', 'link','#', "Timeline", '2'],
+	['tag', 'link','#', "Themes", '100 500'],
+	['camera', 'link','#', "Photo/Video", 204],
+	['events', 'link','#', "Events"],
+	['', 'link','#', "Files", '20']
 ] %}
 
 {% set headerActionsList = [
-	['#', 'Message'],
-	['#', 'Invite friends'],
-	['#', 'Block'],
+	['messenger', 'link','#', 'Message'],
+	['invite', 'link','#', 'Invite friends'],
+	['blocked', 'link','#', 'Block'],
 ] %}
 {% block content %}
 	{% include '../components/main_content_header.twig' %}

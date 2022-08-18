@@ -147,9 +147,13 @@
   		}
   	}
   	.dropdown-menu {
-  		left: -13.2rem;
   		@include media-breakpoint-up(md) {
   			left: -22rem;
+  		}
+
+  		.border_bottom_grey {
+  				border-bottom: 1px solid #D1D9E6;
+  				display: block;
   		}
   	}
 }
@@ -170,7 +174,7 @@
     border-radius: var(--shape-border-radius-base);
     position: absolute;
     background-color: var(--color-background-base);;
-    width: 26rem;
+    width: 100%;
     z-index: 1;
     overflow: hidden;
     left: 0;

@@ -32,37 +32,52 @@
 								<div class="dropdown-menu_wrap">
 									<ul class="dropdown-menu"> 
 									{% for key, value in mainSidebarList %}
-				                            <li class="md_visible">
-				                                <a href="" class="alphabet">
+										{% if value[0] %}
+				                            <li class="lg_visible">
+												{% if value[1] == 'link' %}
+				                                	<a href="{{value[2]}}" class="alphabet">
+												{% else %}
+				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
-				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
 				                                    </svg>
-				                                    <span>{{value[1]}}</span>
+				                                    <span>{{value[3]}}</span>
 				                                </a>
 				                            </li>
+			                            {% endif %}
 									{% endfor %} 
+											<li class="lg_visible">
+												<span class="border_bottom_grey"></span>
+											</li>
 									{% for key, value in headerActionsList %}
+										{% if value[0] %}
 				                            <li>
-				                                <a href="" class="alphabet">
+												{% if value[1] == 'link' %}
+				                                	<a href="{{value[2]}}" class="alphabet">
+												{% else %}
+				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
-				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
 				                                    </svg>
-				                                    <span>{{value[1]}}</span>
+				                                    <span>{{value[3]}}</span>
 				                                </a>
 				                            </li>
+				                        {% endif %}
 									{% endfor %}
 			                        </ul> 
 					            </div>					
 							</li>
 						{% elseif key == 'stats'%}
-							<li class="expand__action__item stats md_hidden btn">
-    							<button class=" is-ghost is-details" type="button" data-toggle="modal" data-target="#{{ value }}" aria-label="{{ value }}">   
+							<li class="expand__action__item stats lg_hidden">
+    							<button class="btn is-ghost is-details" type="button" data-toggle="modal" data-target="#{{ value }}" aria-label="{{ value }}">   
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-stats"></use>
 			            			</svg>
 								</button>								
 							</li>			
-							<li class="expand__action__item dropdown md_visible">
+							<li class="expand__action__item dropdown lg_visible">
 								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-more"></use>
@@ -71,22 +86,33 @@
 								<div class="dropdown-menu_wrap">
 									<ul class="dropdown-menu">
 										{% for key, value in mainSidebarList %}
-				                            <li>
-				                                <a href="" class="alphabet">
+				                            <li class="lg_visible">
+												{% if value[1] == 'link' %}
+				                                	<a href="{{value[2]}}" class="alphabet">
+												{% else %}
+				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
-				                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
 				                                    </svg>
-				                                    <span>{{value[1]}}</span>
+				                                    <span>{{value[3]}}</span>
 				                                </a>
 				                            </li>
 										{% endfor %}
+											<li class="lg_visible">
+												<span class="border_bottom_grey"></span>
+											</li>
 										{% for key, value in headerActionsList %}
 					                            <li>
-					                                <a href="" class="alphabet">
+													{% if value[1] == 'link' %}
+					                                	<a href="{{value[2]}}" class="alphabet">
+													{% else %}
+					                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+													{% endif %}
 					                                    <svg class="icon" aria-hidden="true" focusable="false">
-					                                        <use href="/assets/sprite/sprite.svg#icon-{{key}}"></use>
+					                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
 					                                    </svg>
-					                                    <span>{{value[1]}}</span>
+					                                    <span>{{value[3]}}</span>
 					                                </a>
 					                            </li>
 										{% endfor %}

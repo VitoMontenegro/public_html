@@ -348,8 +348,10 @@
     height: 1.5rem;
   }
   .dropdown-menu {
-    left: auto;
-    right: -2rem;
+    @include media-breakpoint-up(sm) {
+      left: auto;
+      right: -2rem;
+    }
 
     @include media-breakpoint-up(md) {
       right: 0;

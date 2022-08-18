@@ -12,18 +12,18 @@
 } %}
 
 {% set mainSidebarList = [
-	['#', "About"],
-	['#', "Timeline", '2', 'active'],
-	['#', "Themes", '100 500'],
-	['#', "Photo/Video", 204],
-	['#', "Events"],
-	['#', "Files", '20']
+	['info', 'link','#', "About"],
+	['news', 'link','#', "Timeline", '2', 'active'],
+	['tag', 'link','#', "Themes", '100 500'],
+	['camera', 'link','#', "Photo/Video", 204],
+	['events', 'link','#', "Events"],
+	['', 'link','#', "Files", '20']
 ] %}
 
 {% set headerActionsList = [
-	['#', 'Stats'],
-	['#', 'Invite friends'],
-	['#', 'Archive'],
+	['stats', 'toggle', 'editProfile', 'Stats'],
+	['archive', 'link','#', 'Invite friends'],
+	['archive', 'link', '#', 'Archive'],
 ] %}
 
 {% set mainContentList = [

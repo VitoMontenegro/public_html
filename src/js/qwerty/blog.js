@@ -117,7 +117,6 @@ jQuery(document).ready(function($){
 				container = $(this).closest('ul');
 			$('#statisticBtn span').html(txt);
 			container.hide();
-
 		});		
 	}
 
