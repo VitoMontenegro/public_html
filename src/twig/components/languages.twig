@@ -21,10 +21,10 @@
   ja: "日本語"
 } %}
 <div class="dropdown-menu_wrap">
-    <ul class="dropdown-menu" aria-label="Change languages">
+    <ul class="dropdown-menu">
         {% for key, value in languages %}
         <li class="menu__item  is-dashboard">
-            <a href="/{{ key }}{$simpleuri}" lang="{{ key }}">
+            <a href="/{{ key }}" lang="{{ key }}">
                 <svg class="icon" aria-hidden="true" focusable="false">
                     <use href="/assets/images/flags.svg#icon-flag-{{ key }}"></use>
                 </svg>

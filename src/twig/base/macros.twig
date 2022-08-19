@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% macro isIcon(name, icon, list, nameList) %}
-        <div class="btn is-ghost dropdown" type="button" aria-label="{{ name }}">
+        <div class="btn is-ghost dropdown">
             <svg class="icon" aria-hidden="true" focusable="false">
                 <use href="/assets/sprite/sprite.svg#icon-{{ icon }}"></use>
             </svg>
@@ -42,11 +42,11 @@
 
         <div class="group__body__list__item">
             <div class="group__body__list__ava">
-                <span>
+                {% if entetyAvatarImg|length > 0 %}
                     <figure class="entety__avatar">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                     </figure>                
-                </span>
+                {% endif %}
                 <button class="entety__btns">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-more"></use>
@@ -60,7 +60,7 @@
 
 
             <div class="group__body__list__captio">
-                {% if   entetySubTytle|length > 0 %}
+                {% if entetySubTytle|length > 0 %}
                     <div class="list__captio__item">{{ entetySubTytle }}</div>
                 {% endif %}
 
@@ -77,11 +77,11 @@
         <div class="main__content__body__item has-shadow has-border-radius-lg">
             <div class="main__content__body__item__header">
                 <a class="main__content__body__list__link" href="#">
-                    <span>
+                    {% if entetyAvatarImg|length > 0 %}
                         <figure class="entety__avatar">
                             <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="sidebar__entety__avatar_img">
-                        </figure>                
-                    </span>
+                        </figure>  
+                    {% endif %}
                     <div class="main__content__body__list__link__desc">
                         <div class="main__content__entety__title">{{ entetyTitle }}</div>
                         <div class="main__content__entety__subtitle"><span>{{entetySubTytle}}</span></div>
@@ -126,23 +126,21 @@
 
             {% if entetyMainImg|length > 0 %}
                 <div class="main__content__body__image">
-                    <span>
-                        <figure class="entety__avatar">
-                            <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
-                        </figure>                
-                    </span>
+                    <figure class="entety__avatar">
+                        <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
+                    </figure>    
                 </div>
             {% endif %}
             {% if entetyMainContent|length > 0 %}
-            <div class="main__content__body__txt crop-height">
-                <div class="crop-height__txt">{{entetyMainContent}}</div> 
-            </div>
+                <div class="main__content__body__txt crop-height">
+                    <div class="crop-height__txt">{{entetyMainContent}}</div> 
+                </div>
             {% endif %}
 
 
 
             <div class="main__content__body__list__captio">
-               <div class="btn is-ghost count_btn" type="button" aria-label="Sort">
+               <div class="btn is-ghost count_btn">
                     <span class="grow">+44</span>
                     <div class="dropdown-menu_wrap">
                         <ul class="dropdown-menu"> 
@@ -150,7 +148,7 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost count_btn" type="button" aria-label="Sort">
+               <div class="btn is-ghost count_btn">
                     <span class="reduce">-1</span>
                     <div class="dropdown-menu_wrap">
                         <ul class="dropdown-menu"> 
@@ -158,7 +156,7 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost sm_hidden" type="button" aria-label="Sort">
+               <div class="btn is-ghost sm_hidden">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-eye"></use>
                     </svg>
@@ -169,7 +167,7 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost" type="button" aria-label="Sort">
+               <div class="btn is-ghost">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-comment"></use>
                     </svg>
@@ -180,7 +178,7 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost sm_hidden" type="button" aria-label="Sort">
+               <div class="btn is-ghost sm_hidden">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
                     </svg>
@@ -212,11 +210,11 @@
        #}
         <div class="group__body__list__item">
             <div class="group__body__list__ava dropdown">
-                <span>
+                {% if entetyAvatarImg|length > 0 %}
                     <figure class="entety__avatar">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                     </figure>                
-                </span>
+                {% endif %}
                 <span class="entety__btns">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-more"></use>
@@ -248,7 +246,7 @@
                     <div class="list__captio__item">{{ entetySubTytle }}</div>
                 {% endif %}
 
-                <btn class="btn user__btn-overflow"></btn>
+                <button class="btn user__btn-overflow"></button>
                 
             </div>
         </div>
@@ -257,14 +255,14 @@
 {% macro sidebarGroupList(sidebarEntetyAvatar, sidebarEntetyTitle, sidebarEntetySubTitle, sidebarEntetyLink) %}
     <li>
         <a class="main__sidebar__group__list__link" href="{{ sidebarEntetyLink }}">
-            <span>
+            {% if  sidebarEntetyAvatar|length > 0 %}
                 <figure class="entety__avatar">
                     <img src="{{ sidebarEntetyAvatar }}" alt="" class="sidebar__entety__avatar_img">
                 </figure>                
-            </span>
+            {% endif %}
             <div class="sidebar__entety__desc">
                 <div class="sidebar__entety__title">{{ sidebarEntetyTitle }}</div>
-                <div class="sidebar__entety__subtitle"><span>{{ sidebarEntetySubTitle }}</div>
+                <div class="sidebar__entety__subtitle">{{ sidebarEntetySubTitle }}</div>
             </div>
         </a>
     </li>

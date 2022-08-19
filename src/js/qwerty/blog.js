@@ -13,7 +13,7 @@
 // }
 
 jQuery(document).ready(function($){
-	$('.main .dropdown').on('click', function(){
+	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
 		$(this).addClass('open');
 	});

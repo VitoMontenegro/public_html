@@ -15,14 +15,14 @@
 			display: flex;
 		    flex-wrap: wrap;
     		align-items: center;
-    		span {
-			    width: 4rem;
-			    height: 4rem;
-			    margin-right: 1.7rem;
+    		
 			    .entety__avatar {
 			        overflow: hidden;
+				    width: 4rem;
+				    height: 4rem;
+				    margin-right: 1.7rem;
 			    }
-    		}
+    		
 
 			.main__content__entety__title {
 			    font-weight: 500;

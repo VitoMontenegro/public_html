@@ -29,12 +29,14 @@ li {
 }
 
 ul {
-  list-style-image: var(--asset-data-image-list-bullet);
   padding-left: $size-2;
 
   // @include media-breakpoint-up(md) {
   //   padding-left: 0;
   // }
+}
+ul li::marker {
+    color: var(--color-primary-base);
 }
 
 ol ol,

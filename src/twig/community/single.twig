@@ -15,7 +15,7 @@
 	['info', 'link','#', "About"],
 	['news', 'link','#', "Timeline", '2', 'active'],
 	['tag', 'link','#', "Themes", '100 500'],
-	['camera', 'link','#', "Photo/Video", 204],
+	['camera', 'link','#', "Photo/Video", '204'],
 	['events', 'link','#', "Events"],
 	['', 'link','#', "Files", '20']
 ] %}
@@ -34,9 +34,6 @@
 {% block content %}
 	{% include '../components/main_content_header.twig' %}
 	{% include '../components/main_content_body.twig' %}
-
-	{% include '../components/modals.twig' %}
-
 {% endblock %}
 
 

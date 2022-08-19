@@ -10,7 +10,7 @@
     display: grid;
     grid-column-gap: $size-line;
     grid-row-gap: 3.9rem;
-    grid-template-columns: repeat(auto-fill, minmax(14rem,1fr));    
+    grid-template-columns: repeat(auto-fill, minmax(16rem,1fr));    
 }
 .group__body__list__item {
     display: flex;

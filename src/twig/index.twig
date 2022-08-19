@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title}}</title>
-    
+    <link rel="preload" href="/assets/fonts/Roboto-Regular.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Medium.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Black.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Italic.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/PT-Root-UI_Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Thin.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Regular.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Medium.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Semibold.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Bold.otf" as="font">
+
     <link rel="stylesheet" href="/project.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"
   		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
@@ -14,7 +26,7 @@
 <body>
     <div class="wrapper">
         <div class="header" id="header">
-			<a class="header__logo logo" href="/src/pages/home/">
+			<a class="header__logo logo" href="/">
 				<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
 			    <div class="logo__copy">			    	
 				    <div class="tagline">Social movement of entrepreneurs</div>
@@ -24,15 +36,15 @@
 
 			<ul class="header__menu" id="header-menu">
 			    <li class="header__notify">
-				  	<button type="button" data-toggle="modal" data-target="#modal-notify">	        
+				  	<button type="button" data-bs-toggle="modal" data-bs-target="#modal-notify">	        
 			        	<svg class="icon" aria-hidden="true" focusable="false">
 					      	<use href="/assets/sprite/sprite.svg#icon-bell"></use>
 					  	</svg>
-					  	<div id="header__notify-count" class="header__notify-label active">1</div>
+					  	<span id="header__notify-count" class="header__notify-label active">1</span>
 				  	</button>
 			    </li>
 				<li class="dropdown header__user is-on">
-					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"aria-expanded="false">
+					<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 						<div class="header_photo">
 							<img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
 						</div>
@@ -46,7 +58,7 @@
 					{% include "components/profile.twig" %}
 				</li>    
 			    <li class="header__language-toggle dropdown">
-			  		<button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  		<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			        	<svg class="icon" aria-hidden="true" focusable="false">
 					      	<use href="/assets/images/flags.svg#icon-flag-ru"></use>
 					  	</svg>
@@ -68,6 +80,10 @@
 	        <div class="main__content">        	
 	        	{% block content %}
 	        	{% endblock %}
+
+
+				{% include 'components/modals.twig' %}
+
 	        </div>
 	        <div class="main__sidebar">    	
 	        	{% block sidebar %}
@@ -159,7 +175,7 @@
 		                <span class="label">More</span>
                 	</a>
                 	<div class="dropdown-menu_wrap">
-			            <ul class="dropdown__menu menu" role="menu"aria-label="More">
+			            <ul class="dropdown__menu menu" role="menu" aria-label="More">
 
 			                <li class="menu__item is-friends_copy">
 			                	<a class="dropdown__link" href="#" role="menuitem">

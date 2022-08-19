@@ -1,5 +1,5 @@
 {% set profileLink = {
-  profile: "my profile",
+  mypage: "my profile",
   finances: "my finances",
   bonuses: "bonuses and discounts",
   settings: "settings",
@@ -8,7 +8,7 @@
 <div class="dropdown-menu_wrap">
   <ul class="dropdown-menu">  
     {% for key, value in profileLink %}
-      <li><a href="#/{{ key }}">{{ value }}</a></li>
+      <li><a href="/{{ key }}">{{ value }}</a></li>
     {% endfor %}
   </ul>  
 </div>

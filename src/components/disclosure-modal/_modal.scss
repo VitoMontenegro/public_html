@@ -39,7 +39,6 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    transform: translate(0, -25%);
 
     transition: transform var(--motion-duration-base) var(--motion-easing-appearance);
   }

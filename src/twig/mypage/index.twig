@@ -10,8 +10,8 @@
 } %}
 
 {% set mainSidebarList = [
-	['info', 'link','#', "About me"],
-	['news', 'link','#', "Newsline"],
+	['info', 'link','#', "About me", '', 'active'],
+	['news', 'link','#', "Newsline", ''],
 	['camera', 'link','#', "Photo and video", '204'],
 	['tag', 'link','#', "Favorites", '248'],
 	['archive', 'link','#', "Stories archive", '3']
@@ -32,8 +32,6 @@
 {% block content %}
 	{% include '../components/main_content_header.twig' %}
 	{% include '../components/main_content_body.twig' %}
-
-	{% include '../components/modals.twig' %}
 {% endblock %}
 
 
