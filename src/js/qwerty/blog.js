@@ -23,6 +23,7 @@ jQuery(document).ready(function($){
 			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
 			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
 			typeID = $('#typeID'); // тут указываем ID элемента
+			publicationPrivate = $('#publicationPrivate'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
@@ -39,6 +40,12 @@ jQuery(document).ready(function($){
 			typeID.hide(); // скрываем его
 			typeID.removeClass('open');
 		}
+		if ( !publicationPrivate.is(e.target) // если клик был не по нашему блоку
+		    && publicationPrivate.has(e.target).length === 0 
+		    && !publicationPrivate.is(e.target)) { // и не по его дочерним элементам
+			publicationPrivate.hide(); // скрываем его
+			publicationPrivate.removeClass('open');
+		}
 	});
 	
 	$('.dropdown-menu_wrap').on('click', function(event) {
@@ -53,6 +60,11 @@ jQuery(document).ready(function($){
 	$('#addID').on('click', function() {
 		$(this).toggleClass('open');
 		$('#typeID').toggle();
+	});
+
+	$('#publicationType').on('click', function() {
+		$(this).toggleClass('open');
+		$('#publicationPrivate').toggle();
 	});
 
 	$('.items_scroll:not(.select_all)').on('click', function(){
@@ -74,12 +86,16 @@ jQuery(document).ready(function($){
 
 	changeHeaderFormView.call();
 	changeModalFormView.call();
+	changePublicationPrivate.call();
 
  	$(".intervalcheck").change(function(){
    		changeHeaderFormView.call();
  	});
  	$(".typeIdCheck").change(function(){
    		changeModalFormView.call();
+ 	});
+ 	$(".publicationCheck").change(function(){
+   		changePublicationPrivate.call();
  	});
  
 	function changeHeaderFormView(){
@@ -94,6 +110,13 @@ jQuery(document).ready(function($){
 	 
 	  	$("#addID span" ).empty();
 	  	$("#addID span" ).append(typeIdCheck);
+	}
+ 
+	function changePublicationPrivate(){
+	  	var publicationCheck = $("input[name='publicationPrivate']:checked").val();
+	 
+	  	$("#publicationType span" ).empty();
+	  	$("#publicationType span" ).append(publicationCheck);
 	}
 
 	$('.custom-radio').on('click', function() {

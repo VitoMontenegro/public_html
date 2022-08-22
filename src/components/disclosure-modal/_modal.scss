@@ -116,7 +116,6 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 // Top section of the modal w/ title and dismiss
 .modal__header,
 .modal-header {
-  border-bottom: 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -464,3 +463,21 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 .stat__body__list__item {
   padding: 1.6rem 2rem;
 }
+.is_publication {
+    top: 77px;
+    right: 6rem;
+    display: block;
+    left: auto;
+    padding: 0.5rem 3.2rem 1.3rem;
+    min-width: 28rem;
+    position: absolute;
+    background-color: var(--color-background-base);
+    z-index: 2;
+}
+.edit__icons {
+  margin-right: 2rem;
+button {
+    padding: 0 1rem;
+    background: inherit;
+  }
+} 

@@ -231,22 +231,22 @@
                 </li>
             </ul> 
 
-			<ul class="buttons">
+			<ul class="buttons sm_hidden">
 				<li>
-					<a class="btn menu__link is-primary iconFix" href="/ru/editpost">
-						<svg class="icon is-left" aria-hidden="true" focusable="false">
-							<use href="/assets/sprite/sprite.svg#icon-plus"></use>
-						</svg>
-						Publication
-					</a>
+					<button class="btn menu__link menu__link is-primary iconFix" type="button" data-bs-toggle="modal" data-bs-target="#createPost" aria-label="createPost">   
+            			<svg class="icon" aria-hidden="true" focusable="false">
+                			<use href="/assets/sprite/sprite.svg#icon-plus"></use>
+            			</svg>
+            			<span>Publication</span>
+					</button>
 				</li>
 				<li>
-					<a class="btn menu__link" href="https://hlaclub.com/?type=rss" target="_blank">
-						<svg class="icon is-left" aria-hidden="true" focusable="false">
-							<use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
-						</svg>
-						Broadcast
-					</a>
+					<button class="btn menu__link is-details" type="button" data-bs-toggle="modal" data-bs-target="#broadcastModal" aria-label="broadcastModal">   
+            			<svg class="icon" aria-hidden="true" focusable="false">
+                			<use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
+            			</svg>
+            			<span>Broadcast</span>
+					</button>
 				</li>
 			</ul>         
         </nav>

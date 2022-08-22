@@ -7,4 +7,17 @@
     	height: 2rem;
 	}
 }
-
+textarea {
+	height: 100%;
+}
+.modal input.no-border,
+.modal select.no-border,
+.modal textarea.no-border {
+	border: 0;
+	background: inherit;
+}
+.modal input.no-bg , 
+.modal select.no-bg , 
+.modal textarea.no-bg {
+	background: inherit;
+}

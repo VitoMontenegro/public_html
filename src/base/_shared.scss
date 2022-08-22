@@ -90,3 +90,7 @@
 %no_bg {
   background: unset;
 }
+.border-bottom,
+%border-bottom {
+  border-bottom: 1px solid #D1D9E6;
+}

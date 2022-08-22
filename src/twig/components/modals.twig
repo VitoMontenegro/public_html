@@ -661,3 +661,121 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="createPost" aria-labelledby="community-selector-title" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal__box">
+                <div class="modal-scroll">
+                    <div class="modal__header justify-between relative border-bottom">
+                        <h2 class="modal__title" id="community-selector-title">Create a post</h2>
+                   
+                        <button class="btn is_rubber no_bg open" id="publicationType" type="button" aria-label="Settings">
+                            <span>Available to everyone</span>
+                        </button>
+                        <div id="publicationPrivate" class=" has-shadow has-border-radius-base is_publication">
+                            <ul class="no_list_style publicationCheck">
+                                <li class="custom-radio"> 
+                                    <label>
+                                        <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
+                                        <span>Available to everyone</span>                        
+                                    </label>
+                                </li>
+                                <li class="custom-radio"> 
+                                    <label>  
+                                        <input type="radio" name="publicationPrivate" value="Smth else"> 
+                                        <span>Smth else</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form class="modal__body" id="edit_community">
+                        <textarea rows="30" class="no-bg no-border" name="createPostContent"></textarea>
+                    </form>
+                </div>
+
+                <div class="modal__footer has-dual-purpose">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        Cancel
+                    </button>
+
+                    <div class="right flex justify-between align-center">
+                        <div class="flex justify-between align-center edit__icons">
+                            <div>
+                                Add:
+                            </div>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-tag"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <a class="btn is-primary iconFix" href="/ru/editpost">
+                            Save
+                        </a>                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="broadcastModal" aria-labelledby="community-selector-title" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal__box">
+                <div class="modal-scroll">
+                    <div class="modal__header">
+                        <h2 class="modal__title" id="community-selector-title">Broadcast</h2>
+                   
+                        <button class="btn menu__link is_rubber no_bg open" id="addID" type="button" aria-label="Settings">
+                            <span>Passport</span>
+                        </button>
+                        <div id="typeID" class="search__filter has-shadow has-border-radius-base is_modal">
+                            <ul class="no_list_style typeIdCheck">
+                                <li class="custom-radio"> 
+                                    <label>
+                                        <input type="radio" name="myIdoc" value="Passport" checked=""> 
+                                        <span>Passport</span>                        
+                                    </label>
+                                </li>
+                                <li class="custom-radio"> 
+                                    <label>  
+                                        <input type="radio" name="myIdoc" value="Smth else"> 
+                                        <span>Smth else</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                      
+                    </div>
+                    <div class="modal__subheader">
+                        Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
+                    </div>
+                </div>
+
+                <div class="modal__footer has-dual-purpose">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        Cancel
+                    </button>
+                   <a class="btn is-primary iconFix" href="/ru/editpost">
+                        Save
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>

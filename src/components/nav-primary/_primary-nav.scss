@@ -99,6 +99,7 @@
 // ITEMS
 
 .primary-nav .menu__item {
+  z-index: 2;
   @include media-breakpoint-down(md) {
     width: clamp(8rem, 25%, 16.8rem);
   }
