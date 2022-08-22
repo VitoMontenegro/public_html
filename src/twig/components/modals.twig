@@ -210,9 +210,9 @@
                 </div>
 
                 <div class="modal__footer has-dual-purpose">
-                    <a class="btn" href="https://hlaclub.com/?type=rss" target="_blank">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
                         Cancel
-                    </a>
+                    </button>
                    <a class="btn is-primary iconFix" href="/ru/editpost">
                         Save
                     </a>
@@ -570,9 +570,9 @@
                 </div>
 
                 <div class="modal__footer has-dual-purpose">
-                    <a class="btn" href="https://hlaclub.com/?type=rss" target="_blank">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
                         Cancel
-                    </a>
+                    </button>
                    <a class="btn is-primary iconFix" href="/ru/editpost">
                         Save
                     </a>
@@ -599,15 +599,48 @@
     <div class="modal fade" id="statisticForm" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
-                <div class="modal__header">
-                    <h3 class="modal__title">Statistic</h3>
-                    {#
+                <div class="modal-scroll">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Statistic</h3>
+                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal__body">
+                        <div class="stat__body__list">
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Всего публикаций</div>
+                                <div class="stat_count">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Всего просмотров</div>
+                                <div class="stat_count is_up">250</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Отметки «Нравится»</div>
+                                <div class="stat_count is_up">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Отметки «Не нравится»</div>
+                                <div class="stat_count is_down">-25</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Комментариев</div>
+                                <div class="stat_count is_down">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Подписчики</div>
+                                <div class="stat_count is_down">25 000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
                     <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
-                        </svg>
+                        Ok
                     </button>
-                    #}
                 </div>
             </div>
         </div>

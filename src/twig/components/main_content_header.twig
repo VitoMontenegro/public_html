@@ -37,7 +37,7 @@
 												{% if value[1] == 'link' %}
 				                                	<a href="{{value[2]}}" class="alphabet">
 												{% else %}
-				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+				                                	<a href="javascript:void(0);" class="alphabet" data-bs-toggle="modal" data-bs-target="#{{value[2]}}" aria-label="{{value[2]}}">
 												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
 				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
@@ -56,7 +56,7 @@
 												{% if value[1] == 'link' %}
 				                                	<a href="{{value[2]}}" class="alphabet">
 												{% else %}
-				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+				                                	<a href="javascript:void(0);" class="alphabet" data-bs-toggle="modal" data-bs-target="#{{value[2]}}" aria-label="{{value[2]}}">
 												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
 				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
@@ -90,7 +90,7 @@
 												{% if value[1] == 'link' %}
 				                                	<a href="{{value[2]}}" class="alphabet">
 												{% else %}
-				                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+				                                	<a href="javascript:void(0);" class="alphabet" data-bs-toggle="modal" data-bs-target="#{{value[2]}}" aria-label="{{value[2]}}">
 												{% endif %}
 				                                    <svg class="icon" aria-hidden="true" focusable="false">
 				                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>
@@ -107,7 +107,7 @@
 													{% if value[1] == 'link' %}
 					                                	<a href="{{value[2]}}" class="alphabet">
 													{% else %}
-					                                	<a href="javascript:void(0);$('#{{value[2]}}').modal();" class="alphabet">
+					                                	<a href="javascript:void(0);" class="alphabet" data-bs-toggle="modal" data-bs-target="#{{value[2]}}" aria-label="{{value[2]}}">
 													{% endif %}
 					                                    <svg class="icon" aria-hidden="true" focusable="false">
 					                                        <use href="/assets/sprite/sprite.svg#icon-{{value[0]}}"></use>

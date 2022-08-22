@@ -76,7 +76,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   width: auto;
 
   @include media-breakpoint-up(md) {
-    margin: ($size-line * 2) auto;
+    margin: ($size-line) auto;
     width: var(--size-width-md);
     // BS override
     max-width: var(--size-width-md);
@@ -423,7 +423,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
 }
 .modal-scroll {
-    max-height: 70vh;
+    height: 82vh;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -435,4 +435,32 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 .modal-scroll::-webkit-scrollbar-thumb {
   width: 0;
 }
+.stat__body__list {
+    display: grid;
+    grid-column-gap: 2.4rem;
+    grid-row-gap: 2.4rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+.stat_title {
+  font-size: 17px;
+  line-height: 24px;
+  color: #475F85;
+  margin-bottom: 0.8rem;
+}
+.stat_count {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
 
+  &.is_up {
+    color: #189B1B;
+  }
+  &.is_down {
+    color: #E55E5C
+  }
+}
+.stat__body__list__item {
+  padding: 1.6rem 2rem;
+}
