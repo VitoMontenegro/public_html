@@ -1,10 +1,10 @@
 
-    <div class="modal fade" id="editCommunity" aria-labelledby="community-selector-title" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="editCommunity"  aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
                 <div class="modal-scroll">
                     <div class="modal__header">
-                        <h2 class="modal__title" id="community-selector-title">Edit community page</h2>
+                        <h2 class="modal__title">Edit community page</h2>
                    
                         <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
                             <svg class="icon" aria-hidden="true" focusable="false">
@@ -17,7 +17,7 @@
                         Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
                     </div>
                     
-                    <form class="modal__body" id="edit_community">
+                    <form class="modal__body">
                         <div class="flex edit__images">
                             <div class="edit__images__ava">
                                 <div class="entety__avatar">
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="file-upload">
                                     <label>
-                                        <input id="uploaded-avatar" type="file" name="file" onchange="getFileParam();">
+                                        <input type="file" name="file" onchange="getFileParam();">
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use href="/assets/sprite/sprite.svg#icon-camera"></use>
                                         </svg>
@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="file-upload">
                                     <label>
-                                        <input id="uploaded-images__bg" type="file" name="file" onchange="getFileParam();">
+                                        <input type="file" name="file" onchange="getFileParam();">
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use href="/assets/sprite/sprite.svg#icon-camera"></use>
                                         </svg>
@@ -220,7 +220,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="editProfile" aria-labelledby="profile-selector-title" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="editProfile" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
                 <div class="modal-scroll">
@@ -247,7 +247,7 @@
                                 </div>
                                 <div class="file-upload">
                                     <label>
-                                        <input id="uploaded-avatar" type="file" name="file" onchange="getFileParam();">
+                                        <input type="file" name="file" onchange="getFileParam();">
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use href="/assets/sprite/sprite.svg#icon-camera"></use>
                                         </svg>
@@ -260,7 +260,7 @@
                                 </div>
                                 <div class="file-upload">
                                     <label>
-                                        <input id="uploaded-images__bg" type="file" name="file" onchange="getFileParam();">
+                                        <input type="file" name="file" onchange="getFileParam();">
                                         <svg class="icon" aria-hidden="true" focusable="false">
                                             <use href="/assets/sprite/sprite.svg#icon-camera"></use>
                                         </svg>
@@ -540,7 +540,7 @@
                                             </button>
                                             <div class="file-upload menu__link">
                                                 <label>
-                                                    <input id="uploaded-images__bg" type="file" name="file" onchange="getFileParam();">
+                                                    <input type="file" name="file" onchange="getFileParam();">
                                                     <span>Add file</span>
                                                 </label>
                                             </div>
@@ -661,12 +661,12 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="createPost" aria-labelledby="community-selector-title" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="createPost"  aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
                 <div class="modal-scroll">
                     <div class="modal__header justify-between relative border-bottom">
-                        <h2 class="modal__title" id="community-selector-title">Create a post</h2>
+                        <h2 class="modal__title">Create a post</h2>
                    
                         <button class="btn is_rubber no_bg open" id="publicationType" type="button" aria-label="Settings">
                             <span>Available to everyone</span>
@@ -688,7 +688,7 @@
                             </ul>
                         </div>
                     </div>
-                    <form class="modal__body" id="edit_community">
+                    <form class="modal__body">
                         <textarea rows="30" class="no-bg no-border" name="createPostContent"></textarea>
                     </form>
                 </div>
@@ -735,32 +735,13 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="broadcastModal" aria-labelledby="community-selector-title" aria-hidden="true" tabindex="-1">
+    <div class="modal fade" id="broadcastModal"  aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
                 <div class="modal-scroll">
                     <div class="modal__header">
-                        <h2 class="modal__title" id="community-selector-title">Broadcast</h2>
+                        <h2 class="modal__title">Broadcast</h2>
                    
-                        <button class="btn menu__link is_rubber no_bg open" id="addID" type="button" aria-label="Settings">
-                            <span>Passport</span>
-                        </button>
-                        <div id="typeID" class="search__filter has-shadow has-border-radius-base is_modal">
-                            <ul class="no_list_style typeIdCheck">
-                                <li class="custom-radio"> 
-                                    <label>
-                                        <input type="radio" name="myIdoc" value="Passport" checked=""> 
-                                        <span>Passport</span>                        
-                                    </label>
-                                </li>
-                                <li class="custom-radio"> 
-                                    <label>  
-                                        <input type="radio" name="myIdoc" value="Smth else"> 
-                                        <span>Smth else</span>
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
                       
                     </div>
                     <div class="modal__subheader">
