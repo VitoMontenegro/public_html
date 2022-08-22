@@ -11,7 +11,7 @@
 
 $modal-header-padding:                  $size-line var(--size-padding-x-box) 0;
 $modal-body-padding:                    0 var(--size-padding-x-box) $size-line;
-$modal-footer-padding:                  $size-2 var(--size-padding-x-box) var(--size-padding-x-box);
+$modal-footer-padding:                  $size-2p5 var(--size-padding-x-box);
 $modal-combined-padding:                $size-line var(--size-padding-x-box) var(--size-padding-x-box);
 
 // Kill the scroll on the body
@@ -37,6 +37,10 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   left: 0;
   z-index: var(--layer-zindex-modal);
 
+  input, select, textarea {
+    background: var(--color-background-alt);
+  }
+
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
 
@@ -48,8 +52,22 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   }
 
   &.show { opacity: 1; }
-}
 
+  .menu__link {
+    margin-top: $size-3;  
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+}
+.search__filter.is_modal {
+    right: auto;
+    padding: 0.5rem 3.2rem 1.3rem;
+    min-width: 28rem;
+    top: auto;
+    bottom: 4rem;
+}
 
 // Shell div to position the modal with bottom padding
 .modal-dialog {
@@ -102,15 +120,22 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: $modal-header-padding;
+}
+.modal__subheader {
+  padding: $modal-body-padding;
 }
 
 .modal__title,
 .modal-title {
-  @extend %h2;
-
+  @extend %h1;
   padding-right: $size-1;
+}
+.modal__subheader {
+    line-height: var(--font-line-height-middle);
+    color: var(--color-ink-2ry);
+    text-align: center;
 }
 
 // Tab pane toggles
@@ -138,24 +163,99 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 // Modal body
 .modal__body,
 .modal-body {
-  position: relative;
   padding: $modal-body-padding;
-
-  .avatar.is-large {
-    width: auto;
-    max-width: var(--size-width-sm);
-    min-height: 0;
+  position: relative;
+  margin-top: $size-1;
+  .edit__images {
+    flex-wrap:wrap;
+        justify-content: center;
+  }
+  .entety__avatar {
+    border-radius: 50%;
+    transition: 0.3s;
+    height: auto;
+    overflow: hidden;
+    max-width: var(--size-width-base);
+    width: 12rem;
+  }
+  .edit__images__bg__slider {
+      border-radius: var(--shape-border-radius-lg);
+      overflow: hidden;
   }
 
-  .avatar.is-large img {
+  .entety__avatar img {
     object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 
-  @include media-breakpoint-up(sm) {
-    .avatar.is-large {
-      max-width: var(--size-width-base);
+
+  .file-upload {
+    background-color: var(--color-background-base);
+    box-shadow: 0px 0px 0px 1px rgb(56 49 46 / 4%), 0px 2px 2px rgb(56 49 46 / 4%), 0px 5px 7px rgb(56 49 46 / 6%), 0px 20px 36px rgb(56 49 46 / 10%);
+    position: relative;
+    border-radius: var(--shape-border-radius-lg);
+  }
+  .file-upload input[type="file"] {
+    display: none;
+  }
+  .file-upload label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 96%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: var(--font-size-small);
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: var(--color-ink-2ry);
+    font-weight: var(--font-weight-big);
+  }
+  .edit__images__ava {
+    margin-right: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      width: 20%;
+    }
+
+    .file-upload {
+      width: 5.6rem;
+      height: 4rem;
+      left: 3.3rem;
+      top: -1.6rem;
     }
   }
+  .edit__images__bg {
+    width: 100%;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      width: 70%;
+    }
+    .file-upload {
+      width: 20rem;
+      height: 4rem;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      margin: auto;
+      position: absolute;
+    }
+    .icon {
+      margin-right: 1rem;
+    }
+  }
+
 }
 
 // Footer (for actions)
@@ -171,6 +271,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   flex-shrink: 0;
   gap: $size-1;
   padding: $modal-footer-padding;
+  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.04), 1px 0px 0px rgba(0, 0, 0, 0.04), 0px -1px 0px rgba(0, 0, 0, 0.04), 0px 1px 0px 1px rgba(0, 0, 0, 0.04), 0px 10px 20px rgba(0, 0, 0, 0.100345), 0px 6px 6px rgba(0, 0, 0, 0.06);
 }
 
 .modal__footer.has-add-on {
@@ -280,6 +381,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
+  z-index: 2;
 }
 
 .dm-modal {
@@ -299,6 +401,38 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     width: var(--size-width-md);
   }
 }
-
+.education__content__text {
+  line-height: 2.2rem;  
+}
 // #endregion
+
+.file-upload.menu__link {
+    width: auto;
+    min-width: unset;
+    background-color: var(--color-ink-accent);
+    border-radius: var(--shape-border-radius-base);
+    position: relative;
+    box-shadow: none;
+    label {
+      position: unset;
+      width: 100%;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem ;
+    }
+}
+.modal-scroll {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.modal-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  width: 0;
+}
 

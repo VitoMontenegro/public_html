@@ -81,3 +81,12 @@
     opacity: 1;
   }
 }
+.font-size-small,
+%font-size-small {
+  font-size: var(--font-size-small);
+  line-height: var(--font-line-height-base);
+}
+.no_bg,
+%no_bg {
+  background: unset;
+}

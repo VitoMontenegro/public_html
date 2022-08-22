@@ -68,10 +68,54 @@ textarea,
 %input {
   // override lastpass inline styles
   background-image: none !important;
+  border: 1px solid var(--color-ink-border);
+  min-width: 100%;
 }
 
+input[type=checkbox] {
+  width: 2rem;
+  height: 2rem; 
+  margin-right: 1rem;
+}
+select {
+  background-image: none !important;
+  border: 1px solid var(--color-ink-border);
+}
+.flex .form-label__title {
+  margin-right: $size-2;
+}
+.form-label__title,
+.form__item > label {
+  display: flex;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--color-ink-2ry);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
 // Input container
 .form__item,
 .filter__item {
   position: relative;
+}
+.form__item {
+  margin-top: 3rem;
+}
+.form__item_notice, .form__item_notice p {
+    font-size: var(--font-size-small);
+    margin-top: $size-1;    
+    color: var(--color-ink-2ry);
+    letter-spacing: 0.05rem;
+    line-height: var(--font-line-height-small);
+}
+.flex > label {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 49%;
+  }
+}
+.columns .form-check {
+  margin-bottom: 1rem;
 }

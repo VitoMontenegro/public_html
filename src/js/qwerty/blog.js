@@ -22,6 +22,7 @@ jQuery(document).ready(function($){
 		var div = $( ".dropdown-menu, .dropdown__menu" ),
 			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
 			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
+			typeID = $('#typeID'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
@@ -32,6 +33,12 @@ jQuery(document).ready(function($){
 			smartSearchInner.hide(); // скрываем его
 			smartSearchBtnr.removeClass('open');
 		}
+		if ( !typeID.is(e.target) // если клик был не по нашему блоку
+		    && typeID.has(e.target).length === 0 
+		    && !typeID.is(e.target)) { // и не по его дочерним элементам
+			typeID.hide(); // скрываем его
+			typeID.removeClass('open');
+		}
 	});
 	
 	$('.dropdown-menu_wrap').on('click', function(event) {
@@ -41,6 +48,11 @@ jQuery(document).ready(function($){
 	$('#smart-search-btn').on('click', function() {
 		$(this).toggleClass('open');
 		$('#smartSearchInner').toggle();
+	});
+
+	$('#addID').on('click', function() {
+		$(this).toggleClass('open');
+		$('#typeID').toggle();
 	});
 
 	$('.items_scroll:not(.select_all)').on('click', function(){
@@ -60,18 +72,30 @@ jQuery(document).ready(function($){
 	});
 
 
-	myFunc.call();
+	changeHeaderFormView.call();
+	changeModalFormView.call();
 
  	$(".intervalcheck").change(function(){
-   		myFunc.call();
+   		changeHeaderFormView.call();
+ 	});
+ 	$(".typeIdCheck").change(function(){
+   		changeModalFormView.call();
  	});
  
-	function myFunc(){
+	function changeHeaderFormView(){
 	  	var intervalCheck = $("input[name='search_from']:checked").val();
 	 
 	  	$("#smart-search-btn span" ).empty();
 	  	$("#smart-search-btn span" ).append(intervalCheck);
 	}
+ 
+	function changeModalFormView(){
+	  	var typeIdCheck = $("input[name='myIdoc']:checked").val();
+	 
+	  	$("#addID span" ).empty();
+	  	$("#addID span" ).append(typeIdCheck);
+	}
+
 	$('.custom-radio').on('click', function() {
 		console.log($(this).find('input'));
 	});
