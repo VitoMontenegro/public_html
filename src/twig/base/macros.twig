@@ -79,7 +79,7 @@
                 <a class="main__content__body__list__link" href="#">
                     {% if entetyAvatarImg|length > 0 %}
                         <figure class="entety__avatar">
-                            <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="sidebar__entety__avatar_img">
+                            <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                         </figure>  
                     {% endif %}
                     <div class="main__content__body__list__link__desc">
@@ -236,7 +236,7 @@
                 </div>
             </div>
             <div class="group__body__list__title">
-                <div class="group__name"><a href="#" class="user__title link is-wrapper">{{ entetyTitle }}</a></div>
+                <div class="group__name"><a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a></div>
             </div>
 
 
@@ -257,7 +257,7 @@
         <a class="main__sidebar__group__list__link" href="{{ sidebarEntetyLink }}">
             {% if  sidebarEntetyAvatar|length > 0 %}
                 <figure class="entety__avatar">
-                    <img src="{{ sidebarEntetyAvatar }}" alt="" class="sidebar__entety__avatar_img">
+                    <img src="{{ sidebarEntetyAvatar }}" alt="" class="entety__avatar_img">
                 </figure>                
             {% endif %}
             <div class="sidebar__entety__desc">

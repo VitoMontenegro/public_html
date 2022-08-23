@@ -738,24 +738,218 @@
     <div class="modal fade" id="broadcastModal"  aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
-                <div class="modal-scroll">
-                    <div class="modal__header">
-                        <h2 class="modal__title">Broadcast</h2>
-                   
-                      
-                    </div>
-                    <div class="modal__subheader">
-                        Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
-                    </div>
-                </div>
+                <div class="form-fields-wrapper tabs_steps">
+                    <div class="tabs_step stepbystep_1">
+                        <div class="modal-scroll">
+                            <div class="modal__header">
+                                <h3 class="modal__title__small">Request permission to use the camera</h3>
+                            </div>
+                            <div class="modal__subheader">
+                                <ul class="modal__header__list__menu">
+                                    <li class="expand__action__item active">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Video</span>
+                                        </button>                       
+                                    </li>
+                                    <li class="expand__action__item">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Audio</span>
+                                        </button>                       
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal__body">
+                                <div class="flex direction-column justify-between align-center text-center">
+                                    <div class="camera__icon">                              
+                                        <svg class="icon icon-backround" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                                        </svg>
+                                    </div> 
+                                    <div class="access_title">Allow access to the camera</div>               
+                                    <div class="access_desc">
+                                        The social network cannot access your camera.<br>
+                                        Open system settings and provide <br>
+                                        browser access to the camera.
+                                    </div>  
 
-                <div class="modal__footer has-dual-purpose">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Cancel
-                    </button>
-                   <a class="btn is-primary iconFix" href="/ru/editpost">
-                        Save
-                    </a>
+                                    <button class="btn connect_camera" type="button" data-step="stepbystep_2">
+                                        Try again
+                                    </button>       
+                                </div> 
+
+                                <div class="flex align-center alert">
+                                    <div class="type__equipment">Camera</div>
+                                    <div class="name__equipment">Not available</div>
+                                    <div class="ready__equipment">
+                                        <svg class="icon icon-alert" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-close"></use>
+                                        </svg>
+                                    </div>
+                                </div>  
+
+                                <div class="access_notice">If the user has not previously configured the use of the built-in camera or external webcam by the browser, a warning appears in the broadcast creation window about the need to give the system such permission - immediately below the broadcast type switcher.</div>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs_step stepbystep_2 hidden">
+                        <div class="modal-scroll">
+                            <div class="modal__header">
+                                <h2 class="modal__title">Live</h2>
+                            </div>
+                            <div class="modal__subheader">
+                                <ul class="modal__header__list__menu">
+                                    <li class="expand__action__item active">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Video</span>
+                                        </button>                       
+                                    </li>
+                                    <li class="expand__action__item">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Audio</span>
+                                        </button>                       
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal__body">
+                                <div class="equipment__setup">
+                                    <div class="flex align-center">
+                                        <div class="type__equipment">Camera</div>
+                                        <div class="name__equipment">FaceTime HD Camera</div>
+                                        <div class="ready__equipment">                                
+                                            <svg class="icon icon-ready" aria-hidden="true" focusable="false">
+                                                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="flex align-center">
+                                        <div class="type__equipment">audioinput</div>
+                                        <div class="name__equipment">Vladimir’s Sony (Bluetooth) — default </div>
+                                        <div class="ready__equipment">
+                                            <span class="else">else 1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="stream-start__form">
+                                    <div class="form__item">
+                                        <label for="streamName">Stream name</label>
+                                        <input class="form__control" id="streamName" name="streamName" type="text" placeholder="What will the stream be about?">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="streamSescription">Stream description</label>
+                                        <textarea name="streamSescription" id="streamSescription" cols="20" rows="6" placeholder="Now - in more detail"></textarea>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="streamThemes">Themes</label>
+                                        <input class="form__control" id="streamThemes" name="streamThemes" type="text" placeholder="Start typing and select from the list">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="streamStart">Start</label>
+                                        <input class="form__control" id="streamStart" name="streamStart" type="text" placeholder="Start typing and select from the list">
+                                        <div class="form__item_notice">Specify the exact time so that invitees receive notifications in advance</div>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal__footer has-dual-purpose">
+                            <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                                Cancel
+                            </button>
+                            <div class="left">
+                                <button class="btn is-close invite_btn" type="button" data-step="stepbystep_3">
+                                    Invite friends
+                                </button>
+                                <a class="btn is-primary iconFix is-disabled" href="/ru/editpost">
+                                    Go live
+                                </a>
+                            </div>
+                        </div>        
+                    </div>
+                    <div class="tabs_step stepbystep_3 hidden">
+                        <div class="modal-scroll">
+                            <div class="modal__header">
+                                <h2 class="modal__title">Пригласить</h2>
+                            </div>
+                            <div class="modal__subheader">
+                                <ul class="modal__header__list__menu">
+                                    <li class="expand__action__item active">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Viewers</span>
+                                        </button>                       
+                                    </li>
+                                    <li class="expand__action__item">
+                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                            <span>Co-hosts</span>
+                                        </button>                       
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal__body">
+                                <div class="form__item">
+                                    <input class="form__control" id="streamName" name="streamName" type="text" placeholder="Find friends">
+                                </div>
+                                <ul class="invite__list">
+                                    <li>
+                                        <label class="flex align-center">
+                                        <div class="invite_all">
+                                            <input type="checkbox"> 
+                                        </div>
+                                               
+                                            <div class="invite__list__desc">
+                                                <div class="invite__list__desc__title">Online only</div>
+                                            </div> 
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="flex align-center">
+                                            <figure class="entety__avatar__small">
+                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                            </figure>      
+                                            <div class="invite__list__desc">
+                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="flex align-center">
+                                            <figure class="entety__avatar__small">
+                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                            </figure>      
+                                            <div class="invite__list__desc">
+                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="flex align-center">
+                                            <figure class="entety__avatar__small">
+                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                            </figure>      
+                                            <div class="invite__list__desc">
+                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                            </div>
+                                            <input type="checkbox">
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal__footer has-dual-purpose">
+                            <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                                Cancel
+                            </button>
+                            <div class="left">
+                                <button class="btn is-close invite_btn" type="button">
+                                    Description and settings
+                                </button>
+                                <a class="btn is-primary iconFix" href="javascript:void(0)" data-step="stepbystep_2">
+                                    Invite
+                                </a>
+                            </div>
+                        </div>        
+                    </div>
                 </div>
             </div>
         </div>

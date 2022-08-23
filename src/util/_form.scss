@@ -21,3 +21,6 @@ textarea {
 .modal textarea.no-bg {
 	background: inherit;
 }
+.modal,.modal-open {
+	padding-right: 0!important;
+}

@@ -119,3 +119,8 @@ select {
 .columns .form-check {
   margin-bottom: 1rem;
 }
+
+.is-disabled {
+    opacity: .5;
+    pointer-events: none;
+  }

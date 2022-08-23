@@ -167,6 +167,12 @@ jQuery(document).ready(function($){
 		});		
 	}
 
+	$('[data-step]').on('click', function(){
+		let target = $(this).attr('data-step');
+		$('.tabs_step').addClass('hidden');
+		$('.'+target).removeClass('hidden');
+	});
+
 
 
 });

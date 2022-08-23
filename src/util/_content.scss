@@ -6,6 +6,7 @@
 
 .flex {
   display: flex;
+  flex-wrap:wrap;
 }
 .align-center {
   align-items:center;
@@ -17,11 +18,19 @@
 .justify-between {
   justify-content:space-between;
 }
+.justify-center {
+  justify-content:center;
+}
 
 .is_link {
   cursor: pointer;
 }
-
+.direction-column {
+  flex-direction:column;
+}
+.text-center {
+  text-align: center;
+}
 
 .sm_hidden {
   display: none;

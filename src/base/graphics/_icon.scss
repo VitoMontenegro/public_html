@@ -31,10 +31,29 @@
   width: var(--size-height-icon-md);
 }
 
-%icon-active {
+%icon-active,
+.icon-active {
   --icon-stroke: var(--color-ink-inverse-base);
   filter: drop-shadow(var(--layer-box-shadow-z1));
 }
+%icon-alert,
+.icon-alert {
+  --icon-stroke: var(--color-ink-error-base);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
+%icon-ready,
+.icon-ready {
+  --icon-stroke: var(--color-ink-success-fill);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
+%icon-backround,
+.icon-backround {
+  --icon-stroke: var(--color-background-base);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
 
 
 // -----------------------------------------------------------------------------
