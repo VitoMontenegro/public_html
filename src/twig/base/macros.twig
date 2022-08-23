@@ -38,42 +38,7 @@
         </div>
 {% endmacro %}
 
-{% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle,enterySubtitleLast) %}
-
-        <div class="group__body__list__item">
-            <div class="group__body__list__ava">
-                {% if entetyAvatarImg|length > 0 %}
-                    <figure class="entety__avatar">
-                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
-                    </figure>                
-                {% endif %}
-                <button class="entety__btns">
-                    <svg class="icon" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="group__body__list__title">
-                <div class="group__name"><a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a></div>
-            </div>
-
-
-
-            <div class="group__body__list__captio">
-                {% if entetySubTytle|length > 0 %}
-                    <div class="list__captio__item">{{ entetySubTytle }}</div>
-                {% endif %}
-
-                {% if enterySubtitleLast|length > 0 %}
-                    <div class="list__captio__item">{{ enterySubtitleLast }}</div>
-                {% endif %}
-                
-            </div>
-        </div>
-{% endmacro %}
-
 {% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent) %}
-
         <div class="main__content__body__item has-shadow has-border-radius-lg">
             <div class="main__content__body__item__header">
                 <a class="main__content__body__list__link" href="#">
@@ -248,6 +213,157 @@
 
                 <button class="btn user__btn-overflow"></button>
                 
+            </div>
+        </div>
+{% endmacro %}
+
+{% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle,enterySubtitleLast) %}
+        <div class="group__body__list__item">
+            <div class="group__body__list__ava">
+                {% if entetyAvatarImg|length > 0 %}
+                    <figure class="entety__avatar">
+                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                    </figure>                
+                {% endif %}
+                <button class="entety__btns">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="group__body__list__title">
+                <div class="group__name"><a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a></div>
+            </div>
+
+
+
+            <div class="group__body__list__captio">
+                {% if entetySubTytle|length > 0 %}
+                    <div class="list__captio__item">{{ entetySubTytle }}</div>
+                {% endif %}
+
+                {% if enterySubtitleLast|length > 0 %}
+                    <div class="list__captio__item">{{ enterySubtitleLast }}</div>
+                {% endif %}
+                
+            </div>
+        </div>
+{% endmacro %}
+
+{% macro promo(entetyAvatarImg, entetyCategory,entetyTitle,enterySubtitleLast,enteryPoint) %}
+        <div class="event__body__list__item has-shadow has-border-radius-base">
+            <div class="event__body__list__ava">
+                {% if entetyAvatarImg|length > 0 %}
+                    <figure class="entety__bg">
+                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                    </figure>                
+                {% endif %}
+            </div>
+            <div class="event__body__list__body">
+                <div class="event__body__list__category">
+                    <div class="event__category__name">
+                        <a href="single.html" class="user__title link is-wrapper">{{ entetyCategory }}</a>
+                    </div>
+                </div>
+                <div class="event__body__list__title">
+                    <div class="event__name">
+                        <a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a>
+                    </div>
+                </div>
+
+                <div class="group__body__list__captio">
+                    {% if enterySubtitleLast|length > 0 %}
+                        <div class="list__captio__item">{{ enterySubtitleLast }}</div>
+                    {% endif %}
+                    
+                </div>
+                <div class="main__content__body__list__captio">
+                    <div class="btn is-ghost sm_hidden">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-eye"></use>
+                        </svg>
+                        <span>{{ enteryPoint }}</span>
+                    </div>
+                   <div class="btn is-ghost count_btn">
+                        <span class="reduce">-1</span>
+                        <div class="dropdown-menu_wrap">
+                            <ul class="dropdown-menu"> 
+                                <li><span class="menu__title"></span></li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>                
+            </div>
+    
+        </div>
+{% endmacro %}
+
+{% macro event(entetyAvatarImg, entetyCategory,entetyTitle,enterySubtitleLast,enteryPoint) %}
+        <div class="event__body__list__item has-shadow has-border-radius-base">
+            <div class="event__body__list__ava">
+                {% if entetyAvatarImg|length > 0 %}
+                    <figure class="entety__bg">
+                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                    </figure>           
+                {% endif %}
+                <div class="round_circle dropdown">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-calendar-plus"></use>
+                    </svg>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li>
+                                <a href="" class="alphabet">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
+                                    </svg>
+                                    <span>item 1</span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="" class="calendar">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                                    </svg>
+                                    <span>item 2</span>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="" class="likebig">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
+                                    </svg>
+                                    <span>item 3</span>
+                                </a>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+            <div class="event__body__list__body">
+                <div class="event__body__list__category">
+                    <div class="event__category__name">
+                        <a href="single.html" class="user__title link is-wrapper">{{ entetyCategory }}</a>
+                    </div>
+                </div>
+                <div class="event__body__list__title">
+                    <div class="event__name">
+                        <a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a>
+                    </div>
+                </div>
+
+                <div class="group__body__list__captio">
+                    {% if enterySubtitleLast|length > 0 %}
+                        <div class="list__captio__item">{{ enterySubtitleLast }}</div>
+                    {% endif %}
+                    
+                </div>
+                <div class="main__content__body__list__captio">
+                    
+                        <span>{{ enteryPoint }}</span>
+                </div>
             </div>
         </div>
 {% endmacro %}

@@ -12,6 +12,16 @@
     grid-row-gap: 3.9rem;
     grid-template-columns: repeat(auto-fill, minmax(16rem,1fr));    
 }
+.column-2 {
+    .group__body__list {
+        grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));    
+    }
+}
+.column-3 {
+    .group__body__list {
+        grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));    
+    }
+}
 .group__body__list__item {
     display: flex;
     flex-direction:column;
@@ -92,8 +102,34 @@
     text-align: center;
     color: var(--color-ink-2ry);
 }
+.event__body__list__ava {
+    position: relative;
+    .entety__bg {
+        overflow: hidden;
+        border-radius: var(--shape-border-radius-base) var(--shape-border-radius-base) 0 0;
+    }
+}
+.event__body__list__body {
+    padding: 1.2rem 2.4rem;
+}
+.round_circle,
+.round_circle.dropdown {
+    background: var(--color-background-base);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -19px;
+    right: 22px;
+    box-shadow: 0px 0px 0px 1px rgb(142 157 180 / 4%), 0px 1px 2px rgb(142 157 180 / 14%), 0px 2px 4px -1px rgb(142 157 180 / 14%), 0px 4px 8px -1px rgb(142 157 180 / 14%);
 
-
+}
 
 
 
