@@ -345,23 +345,22 @@
             <div class="event__body__list__body">
                 <div class="event__body__list__category">
                     <div class="event__category__name">
-                        <a href="single.html" class="user__title link is-wrapper">{{ entetyCategory }}</a>
+                        <a href="single.html" class="user__title">{{ entetyCategory }}</a>
                     </div>
                 </div>
                 <div class="event__body__list__title">
                     <div class="event__name">
-                        <a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a>
+                        <a href="single.html" class="user__title">{{ entetyTitle }}</a>
                     </div>
                 </div>
 
-                <div class="group__body__list__captio">
+                <div class="event__body__list__captio">
                     {% if enterySubtitleLast|length > 0 %}
-                        <div class="list__captio__item">{{ enterySubtitleLast }}</div>
+                        <div class="event__captio__item">{{ enterySubtitleLast }}</div>
                     {% endif %}
                     
                 </div>
-                <div class="main__content__body__list__captio">
-                    
+                <div class="event__body__list_date">
                         <span>{{ enteryPoint }}</span>
                 </div>
             </div>
