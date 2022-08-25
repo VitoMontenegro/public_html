@@ -88,6 +88,37 @@
     url('/assets/fonts/SF-Pro-Display-Bold.otf') format('opentype'),
 }
 
+.small,
+%small {
+  font-size: var(--font-size-small);
+  font-weight: normal;
+  line-height: var(--font-line-height-small); 
+
+  &.is-bolder {
+    font-weight: bold;
+  }
+}
+
+.big,
+%big {
+  font-size: var(--font-size-big);
+  line-height: var(--font-line-height-big);
+  @include media-breakpoint-down(sm) {
+    &, &.is-md{
+      font-weight: 600;
+    }   
+  }
+
+  &.is-md {
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+    @include media-breakpoint-down(sm) {
+      letter-spacing: normal  ;   
+    }
+  }
+
+}
+
 
 
 // -----------------------------------------------------------------------------

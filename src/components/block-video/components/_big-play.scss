@@ -1,0 +1,35 @@
+@use "sass:math";
+
+.video-js .vjs-big-play-button, .play, %play {
+  
+  cursor: pointer;
+
+	width: $size-6;
+	height: $size-6;
+	backdrop-filter: var(--filter-acrylic);
+	border-radius: var(--shape-border-radius-round);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  background: var(--asset-data-image-play) center / $size-2 $size-2 no-repeat, var(--color-transparent-overlay);
+}
+
+.video-js:hover .vjs-big-play-button,
+.video-js .vjs-big-play-button:focus {
+
+}
+
+// Hide if controls are disabled, the video is playing, or native controls are used.
+.vjs-controls-disabled .vjs-big-play-button,
+.vjs-has-started .vjs-big-play-button,
+.vjs-using-native-controls .vjs-big-play-button,
+.vjs-error .vjs-big-play-button {
+  display: none;
+}
+
+// Show big play button if video is paused and .vjs-show-big-play-button-on-pause is set on video element
+.vjs-has-started.vjs-paused.vjs-show-big-play-button-on-pause .vjs-big-play-button {
+  display: block;
+}

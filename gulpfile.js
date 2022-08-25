@@ -36,7 +36,7 @@ const path = {
     src: {
         html:   srcPath + "twig/**/*.twig",
         js:     srcPath + "js/**/*.js",
-        css:    srcPath + "**/*.scss",
+        css:    srcPath + "**/*.{scss,sass}",
         images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg,otf}",
         sprite: srcPath + "base/graphics/sprite/*.svg"
@@ -44,7 +44,7 @@ const path = {
     watch: {
         html:   srcPath + "**/*.twig",
         js:     srcPath + "js/**/*.js",
-        css:    srcPath + "**/*.scss",
+        css:    srcPath + "**/*.{scss,sass}",
         images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg,otf}",
         sprite: srcPath + "base/graphics/sprite/*.svg"
@@ -145,11 +145,16 @@ function js(cb) {
                 this.emit('end');
             }
         }))
+
         .pipe(webpackStream({
           mode: "production",
           output: {
             filename: 'app.js',
           }
+          ,performance: {
+                maxEntrypointSize: 512000,
+                maxAssetSize: 512000
+           },  
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));

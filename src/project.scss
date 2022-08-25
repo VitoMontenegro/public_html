@@ -32,6 +32,7 @@
 // @import 'components/content/kpi';
 // @import 'components/input/combobox';
 // @import 'components/structure-card/product-tile';
+@import 'components/structure-post-card/post-card';
 // @import 'components/actions-rating/rating';
 @import 'components/attribution-avatar/avatar';
 // @import 'components/attribution-tag/tag';
@@ -67,7 +68,7 @@
 // @import 'components/structure-hero/hero';
 // @import 'components/structure-section/section';
 // @import 'components/view-list/list';
-
+// Video.js
 
 // Pages
 // @import 'pages/blog/blog';
@@ -87,6 +88,8 @@
 @import "./node_modules/bootstrap/scss/maps";
 @import './node_modules/bootstrap/scss/utilities';
 
+
+@import 'components/block-video/video-js';
 
 // Only use the utilities we need
 $utilities: map-get-multiple(

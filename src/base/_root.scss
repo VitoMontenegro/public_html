@@ -102,6 +102,15 @@
   --color-brightness-hover:             1.2;
   --color-sidebar-count:                hsl(var(--h), 30%, 62%);
   --icon-fill-blue:                     hsl(var(--h), var(--s), 60%);
+  --color-transparent-overlay:          hsl(var(--h), var(--s), 10%, .5);
+  --color-ink-light-2ry:                hsla(0, 0%, 100%, .54);
+  --color-primary-muted:                hsl(var(--h), 30%, var(--l));
+  --color-primary:                      hsl(var(--h), var(--s), var(--l));
+    --color-primary-gradient-base:
+    linear-gradient(
+      hsl(var(--h), var(--s), 62%),
+      hsl(var(--h), var(--s), 58%)
+    );
   // #endregion
 
   // ---------------------------------------------------------------------------
@@ -232,6 +241,7 @@
   // BOX BORDER RADIUS
 
   // Alerts, Cards, Rectangular Images
+  --shape-border-radius-round:          .667rem;
   --shape-border-radius-sm:             .667rem;
 
   // Buttons
@@ -251,6 +261,7 @@
 
   // Buttons, Cards, Alerts, App Bar, Tab Bar, Switches
   --layer-box-shadow-z1:                0 .1rem 0 hsl(var(--color-ink-shadow) / .16);
+  --layer-box-shadow-text: 0px 1px 0px rgba(0, 0, 0, 0.12);
 
   // FAB, Buttons hover, Snackbars
   --layer-box-shadow-z2:
@@ -349,6 +360,9 @@
   --asset-data-image-facebook:          url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010V14H10V21H14V14H17L18%2010H14V8C14%207.73478%2014.1054%207.48043%2014.2929%207.29289C14.4804%207.10536%2014.7348%207%2015%207H18V3H15C13.6739%203%2012.4021%203.52678%2011.4645%204.46447C10.5268%205.40215%2010%206.67392%2010%208V10H7Z%22%20stroke%3D%22%235d85ac%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A');
   --asset-data-image-telegram:          url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M15%2010L11%2014L17%2020L21%204L3%2011L7%2013L9%2019L12%2015%22%20stroke%3D%22%235d85ac%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A');
   --asset-data-image-vk:                url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10%206H12V18C7.5%2017%204%2011.5%203%206M20%206C19%208%2017%2011%2015%2012M15%2012H12M15%2012C17%2013%2019%2016%2020%2018%22%20stroke%3D%22%235d85ac%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A');
+  --asset-data-image-play: url('data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2216%22%20height%3D%2218%22%20viewBox%3D%220%200%2016%2018%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0D%0A%3Cpath%20d%3D%22M15%207.26807C16.3333%208.03787%2016.3333%209.96237%2015%2010.7322L3%2017.6604C1.66667%2018.4302%20-8.94676e-07%2017.4679%20-8.27378e-07%2015.9283L-2.21695e-07%202.07192C-1.54397e-07%200.532318%201.66667%20-0.429933%203%200.339868L15%207.26807Z%22%20fill%3D%22white%22%2F%3E%0D%0A%3C%2Fsvg%3E');
+
+
 
   --asset-data-image-check:             url("data:image/svg+xml,%3Csvg width='17' height='12' viewBox='0 0 17 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 6L6 11L16 1' stroke='%238197BB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   --asset-data-image-down:              url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%238197BB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");

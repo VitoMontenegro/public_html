@@ -1,0 +1,70 @@
+// vjs-control might be better named vjs-button now.
+// It's used on both real buttons (play button)
+// and div buttons (menu buttons)
+.video-js .vjs-control {
+  @extend %small;
+  @include flex(none);
+
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: $size-5;
+  width: $size-5;
+  min-height: auto;
+  .icon {
+    color: var(--color-ink-light-2ry);
+  }
+
+  &:hover:not(.vjs-play-control) {
+    .icon {
+      color: var(--color-ink-dark-3ry);
+    }
+  }
+}
+
+.video-js.is-sm:not(.vjs-fullscreen) .vjs-control {
+  width: $size-4;
+  height: $size-4;
+  .icon {
+    /* @extend .icon.is-sm; */
+  }
+  .icon.is-play {
+    width: $size-1p5;
+    height: $size-1p5;
+  }
+}
+
+.video-js .vjs-control.vjs-visible-text {
+  width: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.vjs-button > .vjs-icon-placeholder:before {
+  font-size: 1.8em;
+  line-height: 1.67;
+
+  @extend %icon-default;
+}
+
+.vjs-button > .vjs-icon-placeholder {
+    display: block;
+}
+
+// Replacement for focus outline
+.video-js .vjs-control:focus:before,
+.video-js .vjs-control:hover:before,
+.video-js .vjs-control:focus {
+  text-shadow: 0em 0em 1em rgba($primary-foreground-color, 1);
+}
+
+// Hide control text visually, but have it available for screenreaders
+.video-js *:not(.vjs-visible-text) > .vjs-control-text {
+  @include hide-visually;
+}
+
+.vjs-no-flex .vjs-control {
+  display: table-cell;
+  vertical-align: middle;
+}

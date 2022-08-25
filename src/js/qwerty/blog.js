@@ -173,6 +173,92 @@ jQuery(document).ready(function($){
 		$('.'+target).removeClass('hidden');
 	});
 
-
+	// Videojs
+	document.querySelectorAll('.vjs-video').forEach((video) => {
+		console.log(video)
+		if(video.id) {
+			var player = videojs(video.id, {
+				controlBar: {
+					children: [
+						"playToggle",
+						"progressControl",
+						"currentTimeDisplay",
+						"timeDivider",
+						"durationDisplay",
+						"volumePanel",
+						"fullscreenToggle",
+					],
+					volumePanel: {
+						inline: false
+					}
+				}
+			});
+	
+			// Replace default button with custom button.
+			function replaceComponent(component, placement, classes = [], innerHTML = '', order = 0) {
+				var defaultComponent = videojs.getComponent(component);
+				var customComponent = videojs.extend(defaultComponent);
+	
+				player.getChild(placement).removeChild(component, {});
+				videojs.registerComponent(component, customComponent);
+	
+				var customComponentInstance = player.getChild(placement).addChild(component, {}, order);
+	
+				classes.forEach((clazz) => {
+					customComponentInstance.addClass(clazz);
+				});
+	
+				var customComponentEl = customComponentInstance.el();
+	
+				customComponentEl.insertAdjacentHTML('beforeend', innerHTML);
+			}
+	
+			replaceComponent('playToggle', 'controlBar', [
+				'button',
+				'is-primary',
+				'is-icon'
+			],`
+				<svg role="img" class="icon is-pause">
+					<use href="/assets/sprite/sprite.svg#pause" />
+				</svg>
+				<svg role="img" class="icon is-play">
+					<use href="/assets/sprite/sprite.svg#play" />
+				</svg>
+			`, 0);
+	
+			replaceComponent('fullscreenToggle', 'controlBar', [
+				'button',
+				'is-icon'
+			],`
+				<svg role="img" class="icon">
+					<use href="/assets/sprite/sprite.svg#fullscreen" />
+				</svg>
+			`, 6);
+	
+			// Replace default volumePanel button with custom button.
+			var defaultVolumePanel = videojs.getComponent('volumePanel');
+			var customVolumePanel = videojs.extend(defaultVolumePanel);
+	
+			player.getChild('controlBar').removeChild('volumePanel', {});
+			videojs.registerComponent('volumePanel', customVolumePanel);
+	
+			var customVolumePanelInstance = player.getChild('controlBar').addChild('volumePanel', {
+				inline: false
+			}, 5);
+	
+			var customVolumePanelEl = customVolumePanelInstance.el();
+			var customVolumePanelBtn = customVolumePanelEl.querySelector('.vjs-mute-control');
+	
+			customVolumePanelBtn.classList.add('button');
+			customVolumePanelBtn.classList.add('is-icon');
+	
+			customVolumePanelBtn.insertAdjacentHTML('beforeend', `
+				<svg role="img" class="icon">
+					<use href="/assets/sprite/sprite.svg#volume" />
+				</svg>
+			`);
+	
+		}
+	});
 
 });

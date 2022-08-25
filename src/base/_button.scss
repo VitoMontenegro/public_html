@@ -142,3 +142,12 @@
 .reduce {
   color: #D42421;
 }
+.button.is-primary {
+    text-shadow: var(--layer-box-shadow-text);
+    background: var(--color-primary-gradient-base);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--shape-border-radius-sm);
+}

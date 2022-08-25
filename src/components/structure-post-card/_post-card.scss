@@ -1,0 +1,106 @@
+.post-card {
+  background-color: var(color-background-base);
+  border-radius: var(shape-border-radius-lg);
+  padding: $size-2 $size-4 $size-5;
+
+  @include media-breakpoint-down(sm) {
+    padding: $size-2 $size-2 $size-5;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .2rem;
+  }
+  &__line-cell {
+    margin: 0 $size-1;
+  }
+  &__dropdown {
+    margin-right: $size-2;
+  }
+  &__content,
+  &__video,
+  &__img {
+    padding-top: var(--size-padding-top-base);
+    padding-bottom: var(--size-padding-bottom-base);
+  }
+  &__video,
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+  &__meta {
+    display: flex;
+    align-items: center;
+    padding-top: $size-2p5;
+  }
+  &__tag {
+    margin-right: $size-2;
+  }
+  &__title {
+    
+    font-size: var(--font-size-big);
+    line-height: var(--font-line-height-big);
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+
+		color: var(--color-ink-dark-base-light);
+    padding-top: $size-2p5;
+    padding-bottom: $size-1p5;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: $size-1p5 - .2rem;
+    }
+  }
+  &__more {
+    background: none;
+    padding: 0;
+    border: none;
+    font-weight: 600;
+    color: var(--color-ink-dark-2ry);
+  }
+  &__more-text {
+    display: none;
+  }
+  &__footer {
+    display: flex;
+  }
+  &__rating-buttons {
+    margin-right: $size-3;
+  }
+  &__action {
+    &:not(:last-child) {
+      margin-right: $size-3;
+    }
+  }
+  &__block {
+    padding-top: var(--size-padding-top-base);
+    padding-bottom: var(--size-padding-bottom-base);
+  }
+  &__comments {
+    margin-top: 4.3rem;
+  }
+}
+.posts {
+  &__post-card {
+    margin-bottom: $size-3;
+  }
+}
+.rating-buttons {
+  display: flex;
+  .button {
+    min-width: $size-5;
+    font-weight: bold;
+    border-radius: var(--shape-border-radius-sm);
+    &:not(:last-child) {
+      margin-right: $size-1;
+    }
+    &.is-like {
+      color: var(--color-ink-success-text);
+    }
+    &.is-dislike {
+      color: var(--color-ink-danger-text);
+    }
+  }
+}

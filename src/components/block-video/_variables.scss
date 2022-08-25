@@ -1,0 +1,37 @@
+$icon-font-path: 'font' !default;
+
+$size-half:                             .4rem;
+$size-1:                                .8rem;
+$size-1p5:                              1rem; // 12px
+$size-2:                                $size-1 * 2;
+$size-2p5:                              $size-1 * 2.5; // 20px
+$size-3:                                $size-1 * 3;
+$size-4:                                $size-1 * 4;
+$size-4p5:                              3rem;
+$size-5:                                $size-1 * 5;
+$size-6:                                $size-1 * 6;
+$size-7:                                $size-1 * 7;
+$size-8:                                $size-1 * 8;
+
+.small,
+%small {
+  font-size: var(--font-size-small);
+  font-weight: normal;
+  line-height: var(--font-line-height-small); 
+
+  &.is-bolder {
+    font-weight: bold;
+  }
+}
+
+.big,
+%big {
+  font-size: var(--font-size-big);
+  line-height: var(--font-line-height-big);
+
+  &.is-md {
+    font-weight: 500;
+    letter-spacing: -0.05rem;
+  }
+
+}

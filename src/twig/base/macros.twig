@@ -15,7 +15,7 @@
 {% endmacro %}
 
 {% macro isIcon(name, icon, list, nameList) %}
-        <div class="btn is-ghost dropdown">
+        <div class="btn is-ghost dropdown is-right">
             <svg class="icon" aria-hidden="true" focusable="false">
                 <use href="/assets/sprite/sprite.svg#icon-{{ icon }}"></use>
             </svg>
@@ -38,7 +38,7 @@
         </div>
 {% endmacro %}
 
-{% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent) %}
+{% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent, entetyVideo) %}
         <div class="main__content__body__item has-shadow has-border-radius-lg">
             <div class="main__content__body__item__header">
                 <a class="main__content__body__list__link" href="#">
@@ -52,7 +52,7 @@
                         <div class="main__content__entety__subtitle"><span>{{entetySubTytle}}</span></div>
                     </div>
                 </a>     
-                <div class="is_link dropdown">
+                <div class="is_link dropdown is-right">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-more"></use>
                     </svg>
@@ -89,7 +89,27 @@
                 </div>       
             </div>
 
-            {% if entetyMainImg|length > 0 %}
+            {% if entetyVideo|length > 0 %}
+                
+                            <div class="post-card__video video">
+                                <video
+                                    id="modal-video01"
+                                    class="vjs-video vjs-16-9 video-js"
+                                    controls
+                                    preload="auto"
+                                    poster="/assets/images/{{ entetyMainImg }}"
+                                    >
+                                    <source src="//{{ entetyVideo }}.mp4" type="video/mp4" />
+                                    <source src="//{{ entetyVideo }}.webm" type="video/webm" />
+                                    <source src="//{{ entetyVideo }}.ogv" type="video/ogg" />
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a
+                                        web browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                    </p>
+                                </video>
+                            </div>
+            {% elseif entetyMainImg|length > 0 %}22
                 <div class="main__content__body__image">
                     <figure class="entety__avatar">
                         <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
@@ -173,8 +193,8 @@
                 </div>
             </div>
        #}
-        <div class="group__body__list__item">
-            <div class="group__body__list__ava dropdown">
+        <div class="group__body__list__item is-center">
+            <div class="group__body__list__ava dropdown is-center">
                 {% if entetyAvatarImg|length > 0 %}
                     <figure class="entety__avatar">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
@@ -219,7 +239,7 @@
 
 {% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle,enterySubtitleLast) %}
         <div class="group__body__list__item">
-            <div class="group__body__list__ava">
+            <div class="group__body__list__ava is-center">
                 {% if entetyAvatarImg|length > 0 %}
                     <figure class="entety__avatar">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">

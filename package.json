@@ -30,7 +30,9 @@
         "webpack-stream": "^7.0.0"
     },
     "dependencies": {
-        "bootstrap": "^5.2.0"
+        "bootstrap": "^5.2.0",
+        "bulma-scss": "^0.9.4",
+        "video.js": ""
     },
     "browserslist": [
         "last 1 version",
