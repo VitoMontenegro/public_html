@@ -254,12 +254,14 @@
         <div class="event__body__list__item has-shadow has-border-radius-base">
             <div class="event__body__list__ava">
                 {% if entetyAvatarImg|length > 0 %}
-                    <figure class="entety__bg">
-                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
-                    </figure>                
+                    <a href="single.html">
+                        <figure class="entety__bg">
+                            <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                        </figure>  
+                    </a>              
                 {% endif %}
             </div>
-            <div class="event__body__list__body">
+            <div class="event__body__list__content is_promo">
                 <div class="event__body__list__category">
                     <div class="event__category__name">
                         <a href="single.html" class="user__title link is-wrapper">{{ entetyCategory }}</a>
@@ -271,20 +273,20 @@
                     </div>
                 </div>
 
-                <div class="group__body__list__captio">
+                <div class="event__body__list__captio">
                     {% if enterySubtitleLast|length > 0 %}
-                        <div class="list__captio__item">{{ enterySubtitleLast }}</div>
+                        <div class="event_list__captio__item">{{ enterySubtitleLast }}</div>
                     {% endif %}
                     
                 </div>
-                <div class="main__content__body__list__captio">
-                    <div class="btn is-ghost sm_hidden">
+                <div class="event__body__list__captio promo_address flex justify-between">
+                    <div class="is-ghost">
                         <svg class="icon" aria-hidden="true" focusable="false">
                             <use href="/assets/sprite/sprite.svg#icon-eye"></use>
                         </svg>
                         <span>{{ enteryPoint }}</span>
                     </div>
-                   <div class="btn is-ghost count_btn">
+                    <div class="btn is-ghost count_btn">
                         <span class="reduce">-1</span>
                         <div class="dropdown-menu_wrap">
                             <ul class="dropdown-menu"> 
@@ -302,9 +304,11 @@
         <div class="event__body__list__item has-shadow has-border-radius-base">
             <div class="event__body__list__ava">
                 {% if entetyAvatarImg|length > 0 %}
-                    <figure class="entety__bg">
-                        <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
-                    </figure>           
+                    <a href="single.html">
+                        <figure class="entety__bg">
+                            <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                        </figure>   
+                    </a>        
                 {% endif %}
                 <div class="round_circle dropdown">
                     <svg class="icon" aria-hidden="true" focusable="false">
@@ -342,7 +346,7 @@
                     </div>
                 </div>
             </div>
-            <div class="event__body__list__body">
+            <div class="event__body__list__content">
                 <div class="event__body__list__category">
                     <div class="event__category__name">
                         <a href="single.html" class="user__title">{{ entetyCategory }}</a>

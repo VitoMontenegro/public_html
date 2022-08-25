@@ -120,13 +120,18 @@
   border: 1px solid #D1D9E6;
 }
 .main__content__body__list__captio {
-
+  display: flex;
+  align-items:center;
+  flex-wrap:wrap;
   margin-top: 1.6rem;
-  .btn span {    
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-  }
+  .btn {
+    margin-right: 0.5rem;
+    span {    
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  } 
   .icon {
     margin-right: 1.3rem;
   }

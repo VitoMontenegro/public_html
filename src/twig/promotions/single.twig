@@ -1,0 +1,41 @@
+{% extends "../index.twig" %}
+{% set title = 'Single Promo' %}
+{% set profileCoverImg = '/assets/images/osetinskiy.jpg' %}
+{% set entetyAvatarImg = '/assets/images/avatarCake.jpg' %}
+{% set groupNameH = "Осетинские пироги от пекарни «ИрПирог»" %}
+{% set groupNameInfo = 'г. Москва, м. Преображенская площадь, 1-я ул. Бухвостова, д. 12/11' %}
+{% set headerActions = {
+	editProfile: "editProfile",
+	stats: "statisticForm",
+} %}
+
+{% set mainSidebarList = [
+	['news', 'link','#', "Newsline", '2', 'active'],
+	['camera', 'link','#', "Photo and video", '12'],
+	['tag', 'link','#', "Organizer", ''],
+	['archive', 'link','#', "going to go", '204']
+] %}
+{% set headerActionsList = [
+	['stats', 'toggle', 'statisticForm', 'Stats']
+] %}
+
+
+{% set mainContentList = [
+	['eventAvatar.jpg', "Róisín Murphy - Murphy's Law Tour", "10 minuts ago", 'eventPost.jpg', 'Новый клип Рошин'],
+	['avatar.jpg', 'Владимир Никшин', "2 days ago", '', '-А можете дать маленькую бесплатную консультацию по продаже квартиры? Так-то я по образованию юрист и сама все знаю, просто хочу уточнить. -Ну ок. <br>
+	Через день:<br>
+	-А наши покупатели хотят с нами рассчитаться таким-то образом, но я боюсь мошенничества. Скажите, как правильно сделать в нашей ситуации?<br>
+	-Возьмите у меня платную консультацию и я вам под запись пошагово расскажу, что надо и чего не надо делать' ]
+] %}
+
+{% block content %}
+	{% include '../components/main_content_header.twig' %}
+	{% include '../components/main_content_body.twig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+	{% include '../components/main_sidebar_item.twig' %}
+</div>
+{% endblock %}
