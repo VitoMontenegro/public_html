@@ -21,8 +21,37 @@
   height: var(--size-height-icon);
 
   &.is-lg,
-  .icon-badge.is-lg & {
+  .icon-badge.is-lg {
     --size-height-icon: 4.4rem;
+  }
+  &.is-left{
+    margin-right: $size-1;
+  }
+  &.is-right{
+    margin-left: $size-1;
+  }
+    
+  &.is-left-xl {
+    @include media-breakpoint-up(xl) {
+      margin-right: $size-1;
+    }
+  }
+
+
+  // Sizes
+  &.is-sm {
+    width: $size-2p5;
+    height: $size-2p5;
+  }
+
+
+  // Colors
+  &.is-primary {
+    color: var(--color-primary);
+  }
+
+  &.is-danger{
+    color: var(--color-ink-danger-fill);
   }
 
 }

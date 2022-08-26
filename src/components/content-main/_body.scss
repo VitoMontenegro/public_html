@@ -2,8 +2,12 @@
 	margin-bottom: 5rem;
 }
 .main__content__body__item {
-	padding: 1.6rem 3.2rem;
+	padding: 1.6rem;
 	margin-top: 3.2rem;
+
+    @include media-breakpoint-up(md) {
+      padding: 1.6rem 3.2rem;
+    }
 
 	.main__content__body__item__header {
 		display: flex;

@@ -38,6 +38,7 @@
       var(--color-primary-base),
       var(--color-primary-base)
     );
+  --color-ink-danger-fill:              hsl(var(--h-red), var(--s), 59%);
 
   // BASE BACKGROUNDS
   // For the sake of design, we can violate the recommendations in contrast, but

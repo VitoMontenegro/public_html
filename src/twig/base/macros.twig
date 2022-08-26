@@ -231,13 +231,20 @@
                     <div class="list__captio__item">{{ entetySubTytle }}</div>
                 {% endif %}
 
-                <button class="btn user__btn-overflow"></button>
+                <div class="card-friend__actions">
+                    <button class="card-friend__action is-friend button is-outline btn" type="button">
+                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                        </svg>
+                        <span class="label is-bolder">friend</span>
+                    </button>
+              </div>
                 
             </div>
         </div>
 {% endmacro %}
 
-{% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle,enterySubtitleLast) %}
+{% macro groups(entetyAvatarImg, entetyTitle,entetySubTytle, enterySubtitleLast, enteryIcon) %}
         <div class="group__body__list__item">
             <div class="group__body__list__ava is-center">
                 {% if entetyAvatarImg|length > 0 %}
@@ -263,9 +270,15 @@
                 {% endif %}
 
                 {% if enterySubtitleLast|length > 0 %}
-                    <div class="list__captio__item">{{ enterySubtitleLast }}</div>
-                {% endif %}
-                
+                    <div class="list__captio__item">
+                        {% if enteryIcon|length > 0 %}
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-{{ enteryIcon }}"></use>
+                            </svg>
+                        {% endif %} 
+                        {{ enterySubtitleLast }}
+                    </div>
+                {% endif %}                
             </div>
         </div>
 {% endmacro %}

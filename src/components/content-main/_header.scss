@@ -137,7 +137,6 @@
 	  	}
   	}
 
-
   	&.likeblue {
   		&.active {
 	  		button {
@@ -147,6 +146,7 @@
 	  		}
   		}
   	}
+
   	.dropdown-menu {
   		@include media-breakpoint-up(md) {
   			left: -22rem;
@@ -169,20 +169,27 @@
     margin-bottom: $size-4
   }
 }
+.main__content__header__list {
+	position: relative;
+}
 .main__content__header__list__menu {
 	display: none;
     padding: 0;
     border-radius: var(--shape-border-radius-base);
     position: absolute;
     background-color: var(--color-background-base);;
-    width: 100%;
+    width: 60vw;
     z-index: 1;
     overflow: hidden;
     left: 0;
     right: 0;
+    top: 3rem;
     margin: auto;
+    box-shadow: var( --layer-box-shadow-contour);
     @include media-breakpoint-up(sm) {
+    	box-shadow: none;
     	margin-top: 3rem;
+    	top: 0;
     	background-color: var(--color-ink-accent);
     	position: relative;
     	width: auto;
@@ -195,9 +202,6 @@
 				button {
 					background: #DCE7F9;
 				}			
-			}
-			&:not(:first-child):before {
-				display: block;
 			}
 	    }
     }
@@ -214,6 +218,10 @@
     	}
 		&:not(:first-child):before {
 			display: none;
+
+		    @include media-breakpoint-up(sm) {
+		    	display: block;
+		    }
 		}
 
     }
