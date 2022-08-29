@@ -1,4 +1,6 @@
-
+.post__comments {
+  display: none;
+}
 .comments {
   margin-top: $size-line * 3;
   &__title {

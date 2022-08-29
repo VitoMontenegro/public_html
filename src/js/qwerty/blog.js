@@ -249,4 +249,8 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	$('.comments_toggle').on('click', function(){
+		$(this).closest('.main__content__body__item').find('.post__comments').toggle();
+	});
+
 });

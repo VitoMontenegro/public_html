@@ -1,8 +1,12 @@
 {% extends "../index.twig" %}
 
 {% block title %}Feed + stories{% endblock %}
-
+{% set title = 'News' %}
 
 {% block content %}
-<h2>Feed + stories</h2>
+	<div class="main__body main__content__body">
+		{% include '../components/group_content_header.twig' %}
+		{% include '../components/content_stories.twig' %}
+		{% include '../components/content_post_full.twig' %}
+	</div>
 {% endblock %}

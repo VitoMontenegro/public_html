@@ -1,679 +1,10 @@
-    <div class="modal fade is-lg" id="modal-edit-post" tabindex="-1" aria-labelledby="modal-edit-post-title" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <form class="modal-content modal__box">
-                <div class="modal-body modal__body">
-                    <div class="modal__content">
-                        <div class="edit-post">
-                            <div class="edit-post__body">
-                                <div class="modal__header is-border-st is-flexed">
-                                    <div class="left">
-                                        <div class="header_photo">
-                                            <img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
-                                        </div>
-                                        <div class="edit__title">Edit post</div>                                    
-                                    </div>
-
-                                    <div class="right">
-                                        <button class="btn is_rubber no_bg publicationType" type="button" aria-label="Settings">
-                                            <span>Available to everyone</span>
-                                        </button>
-                                        <div class="publicationPrivate has-shadow has-border-radius-base is_publication">
-                                            <ul class="no_list_style publicationCheck">
-                                                <li class="custom-radio"> 
-                                                    <label>
-                                                        <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
-                                                        <span>Available to everyone</span>                        
-                                                    </label>
-                                                </li>
-                                                <li class="custom-radio"> 
-                                                    <label>  
-                                                        <input type="radio" name="publicationPrivate" value="Smth else"> 
-                                                        <span>Smth else</span>
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story...">
-                                    <p>
-                                        <img src="/assets/images/imageVolga.jpg" alt="alt">
-                                    </p>
-                                    <p>В 2019 году в Японии было больше 33 тысяч компаний старше 100 лет — их называют «шинисе», что дословно означает «старый магазин». Среди них:</p>
-                                    <ul>
-                                    <li>Старейший в мире отель «Нисияма Онсэн Кэюнкан», открытый в 705 году в префектуре Яманаси.</li>
-                                    <li>Кондитерская «Ишимондзия васукэ» в Киото, сладости в которой продают с 1000 года.</li>
-                                    <li>Строительная компания Takenaka из Осаки, созданная в 1610 году.</li>
-                                    </ul>
-
-                                    <p>Tsuen Tea — старейший чайный дом, открывшийся в 1160 году в пригороде Киото. Его нынешний владелец Юсуке Цуен говорит, что он не мог не взять на себя управление семейным бизнесом.</p>
-                                    <p>«Компания сосредоточена на чае, а не на расширении бизнеса, — говорит Цуен. — Поэтому она до сих пор существует».  По словам предпринимателя, он никогда не сомневался, что продолжит семейное дело. «Сейчас я управляю компанией, которую создали мои предки. Иначе наследию пришёл бы конец. В детстве нас спрашивали про работу мечты, и уже тогда я знал, что приму руководство», — рассказывает Цуен.</p>
-                                    <p>В стране много компаний-долгожителей, похожих на Tsuen Tea. Многие из них — небольшие семейные предприятия, которые занимаются гостиничным бизнесом или производством пищевых продуктов.</p>
-                                    <p>Для японцев важнее стабильность, а не рост прибыли, говорит профессор Высшей школы менеджмента Киотского университета Ёсинори Хара, десять лет проработавший в Кремниевой долине. По его мнению, это главная причина, почему в Японии так много компаний-«шинисе».</p>
-                                    <p>В Японии существует культура уважения предков и их традиций. Более того, это островное государство, которое долгое время было изолировано от остального мира. Поэтому в стране как можно дольше используют имеющиеся ресурсы — в том числе сохраняют небольшие фирмы.</p>
-                                    <p>Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес. Так поступали, например, в Suzuki и Panasonic.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="modal__footer has-dual-purpose">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Cancel
-                    </button>
-
-                    <div class="right flex justify-between align-center">
-                        <div class="flex justify-between align-center edit__icons">
-                            <div>
-                                Add:
-                            </div>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-tag"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <a class="btn is-primary iconFix" href="/ru/editpost">
-                            Save
-                        </a>                        
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal fade is-lg" id="editCommunity"  aria-hidden="true" tabindex="-1">
-         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <form class="modal-content modal__box">
-                <div class="modal-body modal__body">
-                    <div class="modal__content">
-                        <div class="modal__header">
-                            <h3 class="modal__title">Edit community page</h3>
-                        </div>
-                        <div class="modal__subheader">
-                            Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
-                        </div>
-                        <div class="flex edit__images">
-                            <div class="edit__images__ava">
-                                <div class="entety__avatar">
-                                    <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
-                                </div>
-                                <div class="file-upload">
-                                    <label>
-                                        <input type="file" name="file" onchange="getFileParam();">
-                                        <svg class="icon" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-camera"></use>
-                                        </svg>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="edit__images__bg">
-                                <div class="edit__images__bg__slider">
-                                    <img src="/assets/images/mybg.jpg" alt="" class="edit__images__bg_img">
-                                </div>
-                                <div class="file-upload">
-                                    <label>
-                                        <input type="file" name="file" onchange="getFileParam();">
-                                        <svg class="icon" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-camera"></use>
-                                        </svg>
-                                        <span>Background photo</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>      
-
-                        <div class="accordion">
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseOne" aria-expanded="true" aria-controls="editCommunitycollapseOne">
-                                        General information
-                                    </div>
-                                </div>
-                                <div id="editCommunitycollapseOne" class="accordion-collapse collapse show"  data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-                                        <div class="form__item">
-                                            <label for="communityName">Country:</label>
-                                            <input class="form__control" id="communityName" name="communityName" type="text" placeholder="add Name">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="communityDescription">Description:</label>
-                                            <textarea name="communityDescription" id="communityDescription" cols="20" ></textarea>
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="communitySubject">Subject:</label>
-                                            <input class="form__control" id="communitySubject" name="communitySubject" type="text" placeholder="add Name">
-                                        </div>
-                                        <div class="form__item has-checkbox">
-                                            <label class="flex align-center">
-                                                <input type="checkbox"> 
-                                                The community contains content for adults
-                                            </label>
-                                        </div>
-                                        <div class="form__item radio_select columns">
-                                            <div class="form-label__title">Type of community</div>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityType" value="public">
-                                                    <span><b>Publications.</b> Articles, user publications, reviews</span>
-                                                </label>
-                                            </div>             
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityType" value="closest">
-                                                    <span><b>Closed publications.</b> Closed community (member approval)</span>
-                                                </label>
-                                            </div> 
-                                            <div class="form__item_notice">
-                                                Changing the community type is only allowed when it is created!
-                                            </div>                
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="communitySite">Site:</label>
-                                            <input class="form__control" id="communitySite" name="communityUrl" type="text" placeholder="add url">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="communityPhone">Phone:</label>
-                                            <input class="form__control" id="communityPhone" name="communityPhonet" type="text" placeholder="add phone">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseTwo" aria-expanded="true" aria-controls="editCommunitycollapseTwo">
-                                        Roles and Security
-                                    </div>
-                                </div> 
-                                <div id="editCommunitycollapseTwo" class="accordion-collapse collapse show"  data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-                                        <div class="form__item">
-                                            <div class="form-label__title">Administrators and moderators:</div>
-                                            <div class="search__filter__item__items">
-                                                <div class="items_scroll select_all" data-select="" data-id="">
-                                                    <span>Владимир Никишкин</span>
-                                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-                                                    </svg>
-                                                </div>
-                                                <div class="items_scroll" data-select="" data-id="">
-                                                    <span>Татьяна Сергеева</span>
-                                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    
-                                        <div class="form__item radio_select columns">
-                                            <div class="form-label__title">Access</div>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityAccess" value="any">
-                                                    <span>Community is open to everyone</span>
-                                                </label>
-                                            </div>             
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityAccess" value="password">
-                                                    <span>Password access</span>
-                                                </label>
-                                            </div>            
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityAccess" value="private">
-                                                    <span>Only available to me</span>
-                                                </label>
-                                            </div>           
-                                        </div>
-                                    
-                                        <div class="form__item radio_select columns">
-                                            <div class="form-label__title">Who can visit the community</div>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityVisit" value="any">
-                                                    <span>All community members</span>
-                                                </label>
-                                            </div>             
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityVisit" value="admins">
-                                                    <span>Only moderators and administrators </span>
-                                                </label>
-                                            </div>            
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityVisit" value="private">
-                                                    <span>Only me</span>
-                                                </label>
-                                            </div>           
-                                        </div>
-                                    
-                                        <div class="form__item radio_select columns">
-                                            <div class="form-label__title">Moderation</div>
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityModeration" value="moderate">
-                                                    <span>Moderate before posting</span>
-                                                </label>
-                                            </div>             
-                                            <div class="form-check form-check-inline">
-                                                <label class="form-check-label flex align-center">
-                                                    <input type="radio" class="form-check-input" name="communityModeration" value="publish">
-                                                    <span>Publish immediately</span>
-                                                </label>
-                                            </div>    
-                                        </div>
-                                    </div>
-                                </div>                           
-                            </div>
-
-                            <div class="accordion-item">
-                                <div class="accordion-header" >
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseThree" aria-expanded="true" aria-controls="editCommunitycollapseThree">
-                                        Blocked Users
-                                    </div>
-                                </div> 
-                                <div id="editCommunitycollapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-
-                                    </div>
-                                </div>                           
-                            </div>
-                        </div>                    
-                    </div>
-                </div>
-
-                <div class="modal-footer modal__footer  has-dual-purpose">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Cancel
-                    </button>
-                   <a class="btn is-primary iconFix" href="/ru/editpost">
-                        Save
-                    </a>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal fade is-lg" id="editProfile" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <form class="modal-content modal__box" id="edit_profile">
-                <div class="modal-body modal__body">
-                    <div class="modal__content">
-                        <div class="modal__header">
-                            <h3 class="modal__title" id="profile-selector-title">Profile</h3>
-                        </div>
-                        
-                        <div class="modal__subheader">
-                            Tell us about yourself. This information will be displayed on your personal page. Required fields are marked with asterisks *.
-                        </div>
-
-                        <div class="flex edit__images">
-                            <div class="edit__images__ava">
-                                <div class="entety__avatar">
-                                    <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
-                                </div>
-                                <div class="file-upload">
-                                    <label>
-                                        <input type="file" name="file" onchange="getFileParam();">
-                                        <svg class="icon" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-camera"></use>
-                                        </svg>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="edit__images__bg">
-                                <div class="edit__images__bg__slider">
-                                    <img src="/assets/images/mybg.jpg" alt="" class="edit__images__bg_img">
-                                </div>
-                                <div class="file-upload">
-                                    <label>
-                                        <input type="file" name="file" onchange="getFileParam();">
-                                        <svg class="icon" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-camera"></use>
-                                        </svg>
-                                        <span>Background photo</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>     
-
-                        <div class="accordion" id="accordionProfileInfo">
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfilecollapseOne" aria-expanded="true" aria-controls="editProfilecollapseOne">
-                                        General information
-                                    </div>
-                                </div>
-                                <div id="editProfilecollapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProfileInfo">
-                                    <div class="accordion-body">
-                                        <div class="accordion-body__info">
-                                            <div class="accordion-body__info__title">Владимир Никишин</div>
-                                            <div class="font-size-small">
-                                                The registered name and surname cannot be changed. But you can indicate in the motto field if you have changed your passport data
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form__item">
-                                            <label for="profileMotto">Your motto:</label>
-                                            <input class="form__control" id="profileMotto" name="profileMotto" type="text" placeholder="A phrase that conveys your essence or mood">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profileAbout">Tell us briefly about yourself:</label>
-                                            <textarea name="profileAbout" id="profileAbout" cols="20" rows="6" placeholder="Your short biography and personal qualities"></textarea>
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profileEmail">Email *:</label>
-                                            <input class="form__control" id="profileEmail" name="profileEmail" type="text" placeholder="add Email">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profilePhone">Your phone:</label>
-                                            <input class="form__control" id="profilePhone" name="profilePhone" type="text" placeholder="add phone">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profileSite">Personal website / portfolio:</label>
-                                            <input class="form__control" id="profileSite" name="profileSite" type="text" placeholder="add url">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profileUsername">Username:</label>
-                                            <input class="form__control" id="profileUsername" name="profileUsername" type="text" placeholder="add your name">
-                                        </div>
-                                        <div class="form__item">
-                                            <label for="profileBirthday">Your birthday:</label>
-                                            <input class="form__control" id="profileBirthday" name="profileBirthday" type="text" placeholder="add your name">
-                                        </div>
-                                        <div class="form__item ">
-                                            <div class="form-label__title">Sex:</div>
-                                            <div class="flex align-justyfy">
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label flex align-center">
-                                                        <input type="radio" class="form-check-input" name="profileSex" value="female">
-                                                        <span>Female</span>
-                                                    </label>
-                                                </div>             
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label flex align-center">
-                                                        <input type="radio" class="form-check-input" name="profileSex" value="male">
-                                                        <span>Male</span>
-                                                    </label>
-                                                </div>     
-                                            </div>               
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseTwo" aria-expanded="true" aria-controls="editProfileCollapseTwo">
-                                        Address of residence
-                                    </div>
-                                </div> 
-                                <div id="editProfileCollapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-                                        <div class="form__item">
-                                            <span class="flex select__age">
-                                                <label for="profileStreet">
-                                                    <span class="form-label__title">Street, house, flat</span>
-                                                    <input class="form__control" id="profileStreet" name="profileStreet" type="text" placeholder="">
-                                                </label>
-                                                <label for="profilePostcode">
-                                                    <span class="form-label__title">Postcode *</span>
-                                                    <input class="form__control" id="profilePostcode" name="profilePostcode" type="text" placeholder="">
-                                                </label>
-                                            </span>
-                                        </div>
-                                        <div class="form__item">
-                                            <span class="flex select__age">
-                                                <label for="profileCity">
-                                                    <span class="form-label__title">City *</span>
-                                                    <input class="form__control" id="profileCity" name="profileCity" type="text" placeholder="">
-                                                </label>
-                                                <label for="profileCountry">
-                                                    <span class="form-label__title">Country *</span>
-                                                    <input class="form__control" id="profileCountry" name="profileCountry" type="text" placeholder="">
-                                                </label>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>                           
-                            </div>
-
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseThree" aria-expanded="true" aria-controls="editProfileCollapseThree">
-                                        Education
-                                    </div>
-                                </div> 
-                                <div id="editProfileCollapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-                                        <div class="education__name flex justify-between align-center">
-                                            <div class="title">Journalist</div>
-                                            <button class="btn is-ghost is-details" type="button" >   
-                                                <svg class="icon" aria-hidden="true" focusable="false">
-                                                    <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        <div class="education__content flex justify-between align-center">
-                                            <div class="education__content__text">
-                                                <div class="specialty">Высшее II степени – специалитет, магистратура.</div>
-                                                <div class="department">Дальневосточный государственный университет, Владивосток</div>
-                                                <div class="studyDates">Сентябрь 1987 – июнь 1992</div>
-                                            </div>
-                                            <div class="education__content__icon">
-                                                <button class="btn is-ghost is-details" type="button">   
-                                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                                        <use href="/assets/sprite/sprite.svg#icon-cart"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                        <a class="btn menu__link" href="#" target="_blank">
-                                            <svg class="icon is-left" aria-hidden="true" focusable="false">
-                                                <use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
-                                            </svg>
-                                            add another university
-                                        </a>
-                                    </div>
-                                </div>                           
-                            </div>
-
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseFour" aria-expanded="true" aria-controls="editProfileCollapseFour">
-                                        Work or business
-                                    </div>
-                                </div> 
-                                <div id="editProfileCollapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">
-                                        <div class="form__item">
-                                            <label for="fieldActivity">Field of activity *:</label>
-                                            <select class="select" id="fieldActivity" name="fieldActivity">
-                                                <option disabled="" selected="" hidden="">Choose</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <label for="professionPosition">Profession by position *:</label>
-                                            <input class="form__control" id="professionPosition" name="professionPosition" type="text" placeholder="">
-                                        </div>
-
-                                        <div class="form__item">
-                                            <label for="positionCompany">Position in the company *:</label>
-                                            <select class="select" id="positionCompany" name="positionCompany">
-                                                <option disabled="" selected="" hidden="">Choose</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <label for="companyInfo">Company *:</label>
-                                            <input class="form__control" id="companyInfo" name="companyInfo" type="text" placeholder="">
-                                            <div class="form__item_notice">
-                                                Specify the company or TIN - it is possible to create a company page right away or select from the drop-down list of companies on the network
-                                            </div>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <span class="flex justify-between">
-                                                <label for="companyCity">
-                                                    <span class="form-label__title">City *</span>
-                                                    <input class="form__control" id="companyCity" name="companyCity" type="text" placeholder="">
-                                                </label>
-                                                <label for="companyCountry">
-                                                    <span class="form-label__title">Country *</span>
-                                                    <input class="form__control" id="companyCountry" name="companyCountry" type="text" placeholder="">
-                                                </label>
-                                            </span>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <span class="form-label__title">Start date:</span>
-                                            <span class="flex justify-between">
-                                                <label for="startWorkDateMounth">
-                                                    <input class="form__control" id="startWorkDateMounth" name="startWorkDateMounth" type="text" placeholder="">
-                                                </label>
-                                                <label for="startWorkDateYear">
-                                                    <input class="form__control" id="startWorkDateYear" name="startWorkDateYear" type="text" placeholder="">
-                                                </label>
-                                            </span>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <span class="form-label__title">End date:</span>
-                                            <span class="flex justify-between">
-                                                <label for="endWorkDateMounth">
-                                                    <input class="form__control" id="endWorkDateMounth" name="endWorkDateMounth" type="text" placeholder="">
-                                                </label>
-                                                <label for="endWorkDateYear">
-                                                    <input class="form__control" id="endWorkDateYear" name="endWorkDateYear" type="text" placeholder="">
-                                                </label>
-                                            </span>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <label class="flex align-center">
-                                                <input type="checkbox" name="stillWork"> 
-                                                I still work here
-                                            </label>
-                                        </div>
-
-                                        <div class="form__item">
-                                            <label for="jobDescription">Description:</label>
-                                            <textarea name="jobDescription" id="jobDescription" cols="20" rows="6" placeholder="Job responsibilities, achievements"></textarea>
-                                        </div>
-
-
-
-                                        <a class="btn menu__link" href="#" target="_blank">
-                                            <svg class="icon is-left" aria-hidden="true" focusable="false">
-                                                <use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
-                                            </svg>
-                                            Add another company
-                                        </a>
-                                    </div>
-                                </div>
-                            </div> 
-
-
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseFive" aria-expanded="true" aria-controls="editProfileCollapseFive">
-                                        ID confirmation
-                                    </div>
-                                </div> 
-                                <div id="editProfileCollapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
-                                    <div class="accordion-body">  
-                                        <div class="form__item form__item_notice">
-                                            <p>If you would like to receive a public identity star or verified user badge, you will need to upload a photocopy of your ID.</p>
-                                            <ul>
-                                                <li>The data on the document must match the information on the form.</li>
-                                                <li>You can upload JPG or PNG files up to 20MB in size.</li>
-                                                <li>Your document will be approved or rejected within 48 hours. </li>
-                                                <li>If the document is rejected due to poor photo quality, upload a new one.</li>
-                                                <li>The status of the check can be found on your page in the same form.</li>
-                                                <li>Once the ID has been approved, you won't be able to delete or change the verification.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex justify-between">
-                                            <button class="btn menu__link is_rubber no_bg" id="addID" type="button" aria-label="Settings">
-                                                <span>The passport</span>
-                                            </button>
-                                            <div class="file-upload menu__link">
-                                                <label>
-                                                    <input type="file" name="file" onchange="getFileParam();">
-                                                    <span>Add file</span>
-                                                </label>
-                                            </div>
-
-                                            <div id="typeID" class="search__filter has-shadow has-border-radius-base is_modal">
-                                                <ul class="no_list_style typeIdCheck">
-                                                    <li class="custom-radio"> 
-                                                        <label>
-                                                            <input type="radio" name="myIdoc" value="Passport" checked=""> 
-                                                            <span>Passport</span>                        
-                                                        </label>
-                                                    </li>
-                                                    <li class="custom-radio"> 
-                                                        <label>  
-                                                            <input type="radio" name="myIdoc"  value="Smth else"> 
-                                                            <span>Smth else</span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>                         
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer modal__footer has-dual-purpose">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Cancel
-                    </button>
-                   <a class="btn is-primary iconFix" href="/ru/editpost">
-                        Save
-                    </a>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="modal fade is-lg" id="createPost" tabindex="-1"  aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <form class="modal-content modal__box">
-                <div class="modal-body modal__body">
-                    <div class="modal__content">
-                        <div class="edit-post">
-                            <div class="edit-post__body">
+<div class="modal fade is-lg" id="modal-edit-post" tabindex="-1" aria-labelledby="modal-edit-post-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="edit-post">
+                        <div class="edit-post__body">
                             <div class="modal__header is-border-st is-flexed">
                                 <div class="left">
                                     <div class="header_photo">
@@ -683,7 +14,6 @@
                                 </div>
 
                                 <div class="right">
-                   
                                     <button class="btn is_rubber no_bg publicationType" type="button" aria-label="Settings">
                                         <span>Available to everyone</span>
                                     </button>
@@ -703,356 +33,1030 @@
                                             </li>
                                         </ul>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story...">
+                                <p>
+                                    <img src="/assets/images/imageVolga.jpg" alt="alt">
+                                </p>
+                                <p>В 2019 году в Японии было больше 33 тысяч компаний старше 100 лет — их называют «шинисе», что дословно означает «старый магазин». Среди них:</p>
+                                <ul>
+                                <li>Старейший в мире отель «Нисияма Онсэн Кэюнкан», открытый в 705 году в префектуре Яманаси.</li>
+                                <li>Кондитерская «Ишимондзия васукэ» в Киото, сладости в которой продают с 1000 года.</li>
+                                <li>Строительная компания Takenaka из Осаки, созданная в 1610 году.</li>
+                                </ul>
+
+                                <p>Tsuen Tea — старейший чайный дом, открывшийся в 1160 году в пригороде Киото. Его нынешний владелец Юсуке Цуен говорит, что он не мог не взять на себя управление семейным бизнесом.</p>
+                                <p>«Компания сосредоточена на чае, а не на расширении бизнеса, — говорит Цуен. — Поэтому она до сих пор существует».  По словам предпринимателя, он никогда не сомневался, что продолжит семейное дело. «Сейчас я управляю компанией, которую создали мои предки. Иначе наследию пришёл бы конец. В детстве нас спрашивали про работу мечты, и уже тогда я знал, что приму руководство», — рассказывает Цуен.</p>
+                                <p>В стране много компаний-долгожителей, похожих на Tsuen Tea. Многие из них — небольшие семейные предприятия, которые занимаются гостиничным бизнесом или производством пищевых продуктов.</p>
+                                <p>Для японцев важнее стабильность, а не рост прибыли, говорит профессор Высшей школы менеджмента Киотского университета Ёсинори Хара, десять лет проработавший в Кремниевой долине. По его мнению, это главная причина, почему в Японии так много компаний-«шинисе».</p>
+                                <p>В Японии существует культура уважения предков и их традиций. Более того, это островное государство, которое долгое время было изолировано от остального мира. Поэтому в стране как можно дольше используют имеющиеся ресурсы — в том числе сохраняют небольшие фирмы.</p>
+                                <p>Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес. Так поступали, например, в Suzuki и Panasonic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal__footer has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+
+                <div class="right flex justify-between align-center">
+                    <div class="flex justify-between align-center edit__icons">
+                        <div>
+                            Add:
+                        </div>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-tag"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <a class="btn is-primary iconFix" href="/ru/editpost">
+                        Save
+                    </a>                        
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="editCommunity"  aria-hidden="true" tabindex="-1">
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Edit community page</h3>
+                    </div>
+                    <div class="modal__subheader">
+                        Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
+                    </div>
+                    <div class="flex edit__images">
+                        <div class="edit__images__ava">
+                            <div class="entety__avatar">
+                                <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit__images__bg">
+                            <div class="edit__images__bg__slider">
+                                <img src="/assets/images/mybg.jpg" alt="" class="edit__images__bg_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                    <span>Background photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseOne" aria-expanded="true" aria-controls="editCommunitycollapseOne">
+                                    General information
+                                </div>
+                            </div>
+                            <div id="editCommunitycollapseOne" class="accordion-collapse collapse show"  data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <label for="communityName">Country:</label>
+                                        <input class="form__control" id="communityName" name="communityName" type="text" placeholder="add Name">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityDescription">Description:</label>
+                                        <textarea name="communityDescription" id="communityDescription" cols="20" ></textarea>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communitySubject">Subject:</label>
+                                        <input class="form__control" id="communitySubject" name="communitySubject" type="text" placeholder="add Name">
+                                    </div>
+                                    <div class="form__item has-checkbox">
+                                        <label class="flex align-center">
+                                            <input type="checkbox"> 
+                                            The community contains content for adults
+                                        </label>
+                                    </div>
+                                    <div class="form__item radio_select columns">
+                                        <div class="form-label__title">Type of community</div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityType" value="public">
+                                                <span><b>Publications.</b> Articles, user publications, reviews</span>
+                                            </label>
+                                        </div>             
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityType" value="closest">
+                                                <span><b>Closed publications.</b> Closed community (member approval)</span>
+                                            </label>
+                                        </div> 
+                                        <div class="form__item_notice">
+                                            Changing the community type is only allowed when it is created!
+                                        </div>                
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communitySite">Site:</label>
+                                        <input class="form__control" id="communitySite" name="communityUrl" type="text" placeholder="add url">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityPhone">Phone:</label>
+                                        <input class="form__control" id="communityPhone" name="communityPhonet" type="text" placeholder="add phone">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseTwo" aria-expanded="true" aria-controls="editCommunitycollapseTwo">
+                                    Roles and Security
+                                </div>
+                            </div> 
+                            <div id="editCommunitycollapseTwo" class="accordion-collapse collapse show"  data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <div class="form-label__title">Administrators and moderators:</div>
+                                        <div class="search__filter__item__items">
+                                            <div class="items_scroll select_all" data-select="" data-id="">
+                                                <span>Владимир Никишкин</span>
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="items_scroll" data-select="" data-id="">
+                                                <span>Татьяна Сергеева</span>
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="form__item radio_select columns">
+                                        <div class="form-label__title">Access</div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityAccess" value="any">
+                                                <span>Community is open to everyone</span>
+                                            </label>
+                                        </div>             
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityAccess" value="password">
+                                                <span>Password access</span>
+                                            </label>
+                                        </div>            
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityAccess" value="private">
+                                                <span>Only available to me</span>
+                                            </label>
+                                        </div>           
+                                    </div>
+                                
+                                    <div class="form__item radio_select columns">
+                                        <div class="form-label__title">Who can visit the community</div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityVisit" value="any">
+                                                <span>All community members</span>
+                                            </label>
+                                        </div>             
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityVisit" value="admins">
+                                                <span>Only moderators and administrators </span>
+                                            </label>
+                                        </div>            
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityVisit" value="private">
+                                                <span>Only me</span>
+                                            </label>
+                                        </div>           
+                                    </div>
+                                
+                                    <div class="form__item radio_select columns">
+                                        <div class="form-label__title">Moderation</div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityModeration" value="moderate">
+                                                <span>Moderate before posting</span>
+                                            </label>
+                                        </div>             
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label flex align-center">
+                                                <input type="radio" class="form-check-input" name="communityModeration" value="publish">
+                                                <span>Publish immediately</span>
+                                            </label>
+                                        </div>    
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" >
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseThree" aria-expanded="true" aria-controls="editCommunitycollapseThree">
+                                    Blocked Users
+                                </div>
+                            </div> 
+                            <div id="editCommunitycollapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="modal-footer modal__footer  has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary iconFix" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="editProfile" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <form class="modal-content modal__box" id="edit_profile">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title" id="profile-selector-title">Profile</h3>
+                    </div>
+                    
+                    <div class="modal__subheader">
+                        Tell us about yourself. This information will be displayed on your personal page. Required fields are marked with asterisks *.
+                    </div>
+
+                    <div class="flex edit__images">
+                        <div class="edit__images__ava">
+                            <div class="entety__avatar">
+                                <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit__images__bg">
+                            <div class="edit__images__bg__slider">
+                                <img src="/assets/images/mybg.jpg" alt="" class="edit__images__bg_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                    <span>Background photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>     
+
+                    <div class="accordion" id="accordionProfileInfo">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfilecollapseOne" aria-expanded="true" aria-controls="editProfilecollapseOne">
+                                    General information
+                                </div>
+                            </div>
+                            <div id="editProfilecollapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProfileInfo">
+                                <div class="accordion-body">
+                                    <div class="accordion-body__info">
+                                        <div class="accordion-body__info__title">Владимир Никишин</div>
+                                        <div class="font-size-small">
+                                            The registered name and surname cannot be changed. But you can indicate in the motto field if you have changed your passport data
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form__item">
+                                        <label for="profileMotto">Your motto:</label>
+                                        <input class="form__control" id="profileMotto" name="profileMotto" type="text" placeholder="A phrase that conveys your essence or mood">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profileAbout">Tell us briefly about yourself:</label>
+                                        <textarea name="profileAbout" id="profileAbout" cols="20" rows="6" placeholder="Your short biography and personal qualities"></textarea>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profileEmail">Email *:</label>
+                                        <input class="form__control" id="profileEmail" name="profileEmail" type="text" placeholder="add Email">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profilePhone">Your phone:</label>
+                                        <input class="form__control" id="profilePhone" name="profilePhone" type="text" placeholder="add phone">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profileSite">Personal website / portfolio:</label>
+                                        <input class="form__control" id="profileSite" name="profileSite" type="text" placeholder="add url">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profileUsername">Username:</label>
+                                        <input class="form__control" id="profileUsername" name="profileUsername" type="text" placeholder="add your name">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="profileBirthday">Your birthday:</label>
+                                        <input class="form__control" id="profileBirthday" name="profileBirthday" type="text" placeholder="add your name">
+                                    </div>
+                                    <div class="form__item ">
+                                        <div class="form-label__title">Sex:</div>
+                                        <div class="flex align-justyfy">
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label flex align-center">
+                                                    <input type="radio" class="form-check-input" name="profileSex" value="female">
+                                                    <span>Female</span>
+                                                </label>
+                                            </div>             
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label flex align-center">
+                                                    <input type="radio" class="form-check-input" name="profileSex" value="male">
+                                                    <span>Male</span>
+                                                </label>
+                                            </div>     
+                                        </div>               
+                                    </div>
 
 
                                 </div>
+                            </div>
+                        </div>
 
-                                
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseTwo" aria-expanded="true" aria-controls="editProfileCollapseTwo">
+                                    Address of residence
+                                </div>
+                            </div> 
+                            <div id="editProfileCollapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <span class="flex select__age">
+                                            <label for="profileStreet">
+                                                <span class="form-label__title">Street, house, flat</span>
+                                                <input class="form__control" id="profileStreet" name="profileStreet" type="text" placeholder="">
+                                            </label>
+                                            <label for="profilePostcode">
+                                                <span class="form-label__title">Postcode *</span>
+                                                <input class="form__control" id="profilePostcode" name="profilePostcode" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <div class="form__item">
+                                        <span class="flex select__age">
+                                            <label for="profileCity">
+                                                <span class="form-label__title">City *</span>
+                                                <input class="form__control" id="profileCity" name="profileCity" type="text" placeholder="">
+                                            </label>
+                                            <label for="profileCountry">
+                                                <span class="form-label__title">Country *</span>
+                                                <input class="form__control" id="profileCountry" name="profileCountry" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseThree" aria-expanded="true" aria-controls="editProfileCollapseThree">
+                                    Education
+                                </div>
+                            </div> 
+                            <div id="editProfileCollapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+                                    <div class="education__name flex justify-between align-center">
+                                        <div class="title">Journalist</div>
+                                        <button class="btn is-ghost is-details" type="button" >   
+                                            <svg class="icon" aria-hidden="true" focusable="false">
+                                                <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="education__content flex justify-between align-center">
+                                        <div class="education__content__text">
+                                            <div class="specialty">Высшее II степени – специалитет, магистратура.</div>
+                                            <div class="department">Дальневосточный государственный университет, Владивосток</div>
+                                            <div class="studyDates">Сентябрь 1987 – июнь 1992</div>
+                                        </div>
+                                        <div class="education__content__icon">
+                                            <button class="btn is-ghost is-details" type="button">   
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <a class="btn menu__link" href="#" target="_blank">
+                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
+                                        </svg>
+                                        add another university
+                                    </a>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseFour" aria-expanded="true" aria-controls="editProfileCollapseFour">
+                                    Work or business
+                                </div>
+                            </div> 
+                            <div id="editProfileCollapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <label for="fieldActivity">Field of activity *:</label>
+                                        <select class="select" id="fieldActivity" name="fieldActivity">
+                                            <option disabled="" selected="" hidden="">Choose</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <label for="professionPosition">Profession by position *:</label>
+                                        <input class="form__control" id="professionPosition" name="professionPosition" type="text" placeholder="">
+                                    </div>
+
+                                    <div class="form__item">
+                                        <label for="positionCompany">Position in the company *:</label>
+                                        <select class="select" id="positionCompany" name="positionCompany">
+                                            <option disabled="" selected="" hidden="">Choose</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <label for="companyInfo">Company *:</label>
+                                        <input class="form__control" id="companyInfo" name="companyInfo" type="text" placeholder="">
+                                        <div class="form__item_notice">
+                                            Specify the company or TIN - it is possible to create a company page right away or select from the drop-down list of companies on the network
+                                        </div>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <span class="flex justify-between">
+                                            <label for="companyCity">
+                                                <span class="form-label__title">City *</span>
+                                                <input class="form__control" id="companyCity" name="companyCity" type="text" placeholder="">
+                                            </label>
+                                            <label for="companyCountry">
+                                                <span class="form-label__title">Country *</span>
+                                                <input class="form__control" id="companyCountry" name="companyCountry" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <span class="form-label__title">Start date:</span>
+                                        <span class="flex justify-between">
+                                            <label for="startWorkDateMounth">
+                                                <input class="form__control" id="startWorkDateMounth" name="startWorkDateMounth" type="text" placeholder="">
+                                            </label>
+                                            <label for="startWorkDateYear">
+                                                <input class="form__control" id="startWorkDateYear" name="startWorkDateYear" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <span class="form-label__title">End date:</span>
+                                        <span class="flex justify-between">
+                                            <label for="endWorkDateMounth">
+                                                <input class="form__control" id="endWorkDateMounth" name="endWorkDateMounth" type="text" placeholder="">
+                                            </label>
+                                            <label for="endWorkDateYear">
+                                                <input class="form__control" id="endWorkDateYear" name="endWorkDateYear" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <label class="flex align-center">
+                                            <input type="checkbox" name="stillWork"> 
+                                            I still work here
+                                        </label>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <label for="jobDescription">Description:</label>
+                                        <textarea name="jobDescription" id="jobDescription" cols="20" rows="6" placeholder="Job responsibilities, achievements"></textarea>
+                                    </div>
+
+
+
+                                    <a class="btn menu__link" href="#" target="_blank">
+                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
+                                        </svg>
+                                        Add another company
+                                    </a>
+                                </div>
                             </div>
-                                <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story…"></div>
+                        </div> 
+
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editProfileCollapseFive" aria-expanded="true" aria-controls="editProfileCollapseFive">
+                                    ID confirmation
+                                </div>
+                            </div> 
+                            <div id="editProfileCollapseFive" class="accordion-collapse collapse show" data-bs-parent="#accordionGeneralInfo">
+                                <div class="accordion-body">  
+                                    <div class="form__item form__item_notice">
+                                        <p>If you would like to receive a public identity star or verified user badge, you will need to upload a photocopy of your ID.</p>
+                                        <ul>
+                                            <li>The data on the document must match the information on the form.</li>
+                                            <li>You can upload JPG or PNG files up to 20MB in size.</li>
+                                            <li>Your document will be approved or rejected within 48 hours. </li>
+                                            <li>If the document is rejected due to poor photo quality, upload a new one.</li>
+                                            <li>The status of the check can be found on your page in the same form.</li>
+                                            <li>Once the ID has been approved, you won't be able to delete or change the verification.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <button class="btn menu__link is_rubber no_bg" id="addID" type="button" aria-label="Settings">
+                                            <span>The passport</span>
+                                        </button>
+                                        <div class="file-upload menu__link">
+                                            <label>
+                                                <input type="file" name="file" onchange="getFileParam();">
+                                                <span>Add file</span>
+                                            </label>
+                                        </div>
+
+                                        <div id="typeID" class="search__filter has-shadow has-border-radius-base is_modal">
+                                            <ul class="no_list_style typeIdCheck">
+                                                <li class="custom-radio"> 
+                                                    <label>
+                                                        <input type="radio" name="myIdoc" value="Passport" checked=""> 
+                                                        <span>Passport</span>                        
+                                                    </label>
+                                                </li>
+                                                <li class="custom-radio"> 
+                                                    <label>  
+                                                        <input type="radio" name="myIdoc"  value="Smth else"> 
+                                                        <span>Smth else</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>                         
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer modal__footer has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary iconFix" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="createPost" tabindex="-1"  aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="edit-post">
+                        <div class="edit-post__body">
+                        <div class="modal__header is-border-st is-flexed">
+                            <div class="left">
+                                <div class="header_photo">
+                                    <img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
+                                </div>
+                                <div class="edit__title">Edit post</div>                                    
                             </div>
+
+                            <div class="right">
+               
+                                <button class="btn is_rubber no_bg publicationType" type="button" aria-label="Settings">
+                                    <span>Available to everyone</span>
+                                </button>
+                                <div class="publicationPrivate has-shadow has-border-radius-base is_publication">
+                                    <ul class="no_list_style publicationCheck">
+                                        <li class="custom-radio"> 
+                                            <label>
+                                                <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
+                                                <span>Available to everyone</span>                        
+                                            </label>
+                                        </li>
+                                        <li class="custom-radio"> 
+                                            <label>  
+                                                <input type="radio" name="publicationPrivate" value="Smth else"> 
+                                                <span>Smth else</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                            
+                        </div>
+                            <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story…"></div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="modal__footer has-dual-purpose">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Cancel
-                    </button>
+            <div class="modal__footer has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
 
-                    <div class="right flex justify-between align-center">
-                        <div class="flex justify-between align-center edit__icons">
-                            <div>
-                                Add:
-                            </div>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-tag"></use>
-                                </svg>
-                            </button>
-                            <button class="is-ghost">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
-                                </svg>
-                            </button>
+                <div class="right flex justify-between align-center">
+                    <div class="flex justify-between align-center edit__icons">
+                        <div>
+                            Add:
                         </div>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-tag"></use>
+                            </svg>
+                        </button>
+                        <button class="is-ghost">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
+                            </svg>
+                        </button>
+                    </div>
 
-                        <a class="btn is-primary iconFix" href="/ru/editpost">
-                            Save
-                        </a>                        
+                    <a class="btn is-primary iconFix" href="/ru/editpost">
+                        Save
+                    </a>                        
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="statisticForm" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <div class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__header is-flexed">
+                    <div class="left">
+                        <h3 class="modal__title">Statistic</h3>
+                    </div>
+                    <div class="right">
+                        <ul class="popup__header__list__menu flex">
+                            <li class="expand__action__item active">
+                                <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                    <span>24 hours</span>
+                                </button>                       
+                            </li>
+                            <li class="expand__action__item">
+                                <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                    <span>48 hours</span>
+                                </button>                       
+                            </li>
+                            <li class="expand__action__item">
+                                <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                    <span>30 days</span>
+                                </button>                       
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="modal__body">
+                    <div class="stat__body__list">
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Всего публикаций</div>
+                            <div class="stat_count">25 000</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Всего просмотров</div>
+                            <div class="stat_count is_up">250</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Отметки «Нравится»</div>
+                            <div class="stat_count is_up">25 000</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Отметки «Не нравится»</div>
+                            <div class="stat_count is_down">-25</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Комментариев</div>
+                            <div class="stat_count is_down">25 000</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Подписчики</div>
+                            <div class="stat_count is_down">25 000</div>
+                        </div>
                     </div>
                 </div>
-            </form>
+            </div>
+            <div class="modal__footer">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Ok
+                </button>
+            </div>
         </div>
     </div>
+</div>
 
-    <div class="modal fade is-lg" id="statisticForm" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <div class="modal-content modal__box">
-                <div class="modal-body modal__body">
-                    <div class="modal__header is-flexed">
-                        <div class="left">
-                            <h3 class="modal__title">Statistic</h3>
+<div class="modal fade" id="modal-notify" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal__box">
+            <div class="modal__header">
+                <h3 class="modal__title">Statistic</h3>
+                {#
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
+                    </svg>
+                </button>
+                #}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="broadcastModal"  aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+        <div class="modal-content modal__box">
+            <div class="tabs_steps">
+                <div class="tabs_step stepbystep_1">
+                        <div class="modal__header flex justify-center">
+                            <h3 class="modal__title__small">Request permission to use the camera</h3>
                         </div>
-                        <div class="right">
-                            <ul class="popup__header__list__menu flex">
+                        <div class="modal__subheader">
+                            <ul class="modal__header__list__menu">
                                 <li class="expand__action__item active">
                                     <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                        <span>24 hours</span>
+                                        <span>Video</span>
                                     </button>                       
                                 </li>
                                 <li class="expand__action__item">
                                     <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                        <span>48 hours</span>
-                                    </button>                       
-                                </li>
-                                <li class="expand__action__item">
-                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                        <span>30 days</span>
+                                        <span>Audio</span>
                                     </button>                       
                                 </li>
                             </ul>
-                        </div> 
-                    </div>
-                    <div class="modal__body">
-                        <div class="stat__body__list">
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Всего публикаций</div>
-                                <div class="stat_count">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Всего просмотров</div>
-                                <div class="stat_count is_up">250</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Отметки «Нравится»</div>
-                                <div class="stat_count is_up">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Отметки «Не нравится»</div>
-                                <div class="stat_count is_down">-25</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Комментариев</div>
-                                <div class="stat_count is_down">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Подписчики</div>
-                                <div class="stat_count is_down">25 000</div>
-                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="modal__footer">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Ok
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modal-notify" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal__header">
-                    <h3 class="modal__title">Statistic</h3>
-                    {#
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                    #}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade is-lg" id="broadcastModal"  aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-            <div class="modal-content modal__box">
-                <div class="tabs_steps">
-                    <div class="tabs_step stepbystep_1">
-                            <div class="modal__header flex justify-center">
-                                <h3 class="modal__title__small">Request permission to use the camera</h3>
-                            </div>
-                            <div class="modal__subheader">
-                                <ul class="modal__header__list__menu">
-                                    <li class="expand__action__item active">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Video</span>
-                                        </button>                       
-                                    </li>
-                                    <li class="expand__action__item">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Audio</span>
-                                        </button>                       
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="modal__body">
-                                <div class="flex direction-column justify-between align-center text-center">
-                                    <div class="camera__icon">                              
-                                        <svg class="icon icon-backround" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
-                                        </svg>
-                                    </div> 
-                                    <div class="access_title">Allow access to the camera</div>               
-                                    <div class="access_desc">
-                                        The social network cannot access your camera.<br>
-                                        Open system settings and provide <br>
-                                        browser access to the camera.
-                                    </div>  
-
-                                    <button class="btn connect_camera" type="button" data-step="stepbystep_2">
-                                        Try again
-                                    </button>       
+                        <div class="modal__body">
+                            <div class="flex direction-column justify-between align-center text-center">
+                                <div class="camera__icon">                              
+                                    <svg class="icon icon-backround" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                                    </svg>
                                 </div> 
-
-                                <div class="flex align-center alert">
-                                    <div class="type__equipment">Camera</div>
-                                    <div class="name__equipment">Not available</div>
-                                    <div class="ready__equipment">
-                                        <svg class="icon icon-alert" aria-hidden="true" focusable="false">
-                                            <use href="/assets/sprite/sprite.svg#icon-close"></use>
-                                        </svg>
-                                    </div>
+                                <div class="access_title">Allow access to the camera</div>               
+                                <div class="access_desc">
+                                    The social network cannot access your camera.<br>
+                                    Open system settings and provide <br>
+                                    browser access to the camera.
                                 </div>  
 
-                                <div class="access_notice">If the user has not previously configured the use of the built-in camera or external webcam by the browser, a warning appears in the broadcast creation window about the need to give the system such permission - immediately below the broadcast type switcher.</div>   
-                            </div>
-                    </div>
-                    <div class="tabs_step stepbystep_2 hidden">
-                        <div class="modal-scroll">
-                            <div class="modal__header">
-                                <h2 class="modal__title">Live</h2>
-                            </div>
-                            <div class="modal__subheader">
-                                <ul class="modal__header__list__menu">
-                                    <li class="expand__action__item active">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Video</span>
-                                        </button>                       
-                                    </li>
-                                    <li class="expand__action__item">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Audio</span>
-                                        </button>                       
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="modal__body">
-                                <div class="equipment__setup">
-                                    <div class="flex align-center">
-                                        <div class="type__equipment">Camera</div>
-                                        <div class="name__equipment">FaceTime HD Camera</div>
-                                        <div class="ready__equipment">                                
-                                            <svg class="icon icon-ready" aria-hidden="true" focusable="false">
-                                                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div class="flex align-center">
-                                        <div class="type__equipment">audioinput</div>
-                                        <div class="name__equipment">Vladimir’s Sony (Bluetooth) — default </div>
-                                        <div class="ready__equipment">
-                                            <span class="else">else 1</span>
-                                        </div>
+                                <button class="btn connect_camera" type="button" data-step="stepbystep_2">
+                                    Try again
+                                </button>       
+                            </div> 
+
+                            <div class="flex align-center alert">
+                                <div class="type__equipment">Camera</div>
+                                <div class="name__equipment">Not available</div>
+                                <div class="ready__equipment">
+                                    <svg class="icon icon-alert" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-close"></use>
+                                    </svg>
+                                </div>
+                            </div>  
+
+                            <div class="access_notice">If the user has not previously configured the use of the built-in camera or external webcam by the browser, a warning appears in the broadcast creation window about the need to give the system such permission - immediately below the broadcast type switcher.</div>   
+                        </div>
+                </div>
+                <div class="tabs_step stepbystep_2 hidden">
+                    <div class="modal-scroll">
+                        <div class="modal__header">
+                            <h2 class="modal__title">Live</h2>
+                        </div>
+                        <div class="modal__subheader">
+                            <ul class="modal__header__list__menu">
+                                <li class="expand__action__item active">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>Video</span>
+                                    </button>                       
+                                </li>
+                                <li class="expand__action__item">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>Audio</span>
+                                    </button>                       
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__body">
+                            <div class="equipment__setup">
+                                <div class="flex align-center">
+                                    <div class="type__equipment">Camera</div>
+                                    <div class="name__equipment">FaceTime HD Camera</div>
+                                    <div class="ready__equipment">                                
+                                        <svg class="icon icon-ready" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                        </svg>
                                     </div>
                                 </div>
-                                <form class="stream-start__form">
-                                    <div class="form__item">
-                                        <label for="streamName">Stream name</label>
-                                        <input class="form__control" id="streamName" name="streamName" type="text" placeholder="What will the stream be about?">
+                                <div class="flex align-center">
+                                    <div class="type__equipment">audioinput</div>
+                                    <div class="name__equipment">Vladimir’s Sony (Bluetooth) — default </div>
+                                    <div class="ready__equipment">
+                                        <span class="else">else 1</span>
                                     </div>
-                                    <div class="form__item">
-                                        <label for="streamSescription">Stream description</label>
-                                        <textarea name="streamSescription" id="streamSescription" cols="20" rows="6" placeholder="Now - in more detail"></textarea>
-                                    </div>
-                                    <div class="form__item">
-                                        <label for="streamThemes">Themes</label>
-                                        <input class="form__control" id="streamThemes" name="streamThemes" type="text" placeholder="Start typing and select from the list">
-                                    </div>
-                                    <div class="form__item">
-                                        <label for="streamStart">Start</label>
-                                        <input class="form__control" id="streamStart" name="streamStart" type="text" placeholder="Start typing and select from the list">
-                                        <div class="form__item_notice">Specify the exact time so that invitees receive notifications in advance</div>
-                                        
-                                    </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal__footer has-dual-purpose">
-                            <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                                Cancel
-                            </button>
-                            <div class="left">
-                                <button class="btn is-close invite_btn" type="button" data-step="stepbystep_3">
-                                    Invite friends
-                                </button>
-                                <a class="btn is-primary iconFix is-disabled" href="/ru/editpost">
-                                    Go live
-                                </a>
-                            </div>
-                        </div>        
-                    </div>
-                    <div class="tabs_step stepbystep_3 hidden">
-                        <div class="modal-scroll">
-                            <div class="modal__header">
-                                <h2 class="modal__title">Пригласить</h2>
-                            </div>
-                            <div class="modal__subheader">
-                                <ul class="modal__header__list__menu">
-                                    <li class="expand__action__item active">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Viewers</span>
-                                        </button>                       
-                                    </li>
-                                    <li class="expand__action__item">
-                                        <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
-                                            <span>Co-hosts</span>
-                                        </button>                       
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="modal__body">
+                            <form class="stream-start__form">
                                 <div class="form__item">
-                                    <input class="form__control" id="streamName" name="streamName" type="text" placeholder="Find friends">
+                                    <label for="streamName">Stream name</label>
+                                    <input class="form__control" id="streamName" name="streamName" type="text" placeholder="What will the stream be about?">
                                 </div>
-                                <ul class="invite__list">
-                                    <li>
-                                        <label class="flex align-center">
-                                        <div class="invite_all">
-                                            <input type="checkbox"> 
-                                        </div>
-                                               
-                                            <div class="invite__list__desc">
-                                                <div class="invite__list__desc__title">Online only</div>
-                                            </div> 
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="flex align-center">
-                                            <figure class="entety__avatar__small">
-                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
-                                            </figure>      
-                                            <div class="invite__list__desc">
-                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                            </div>
-                                            <input type="checkbox">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="flex align-center">
-                                            <figure class="entety__avatar__small">
-                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
-                                            </figure>      
-                                            <div class="invite__list__desc">
-                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                            </div>
-                                            <input type="checkbox">
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label class="flex align-center">
-                                            <figure class="entety__avatar__small">
-                                                <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
-                                            </figure>      
-                                            <div class="invite__list__desc">
-                                                <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                            </div>
-                                            <input type="checkbox">
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
+                                <div class="form__item">
+                                    <label for="streamSescription">Stream description</label>
+                                    <textarea name="streamSescription" id="streamSescription" cols="20" rows="6" placeholder="Now - in more detail"></textarea>
+                                </div>
+                                <div class="form__item">
+                                    <label for="streamThemes">Themes</label>
+                                    <input class="form__control" id="streamThemes" name="streamThemes" type="text" placeholder="Start typing and select from the list">
+                                </div>
+                                <div class="form__item">
+                                    <label for="streamStart">Start</label>
+                                    <input class="form__control" id="streamStart" name="streamStart" type="text" placeholder="Start typing and select from the list">
+                                    <div class="form__item_notice">Specify the exact time so that invitees receive notifications in advance</div>
+                                    
+                                </div>
+                            </form>
                         </div>
-                        <div class="modal__footer has-dual-purpose">
-                            <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                                Cancel
-                            </button>
-                            <div class="left">
-                                <button class="btn is-close invite_btn" type="button">
-                                    Description and settings
-                                </button>
-                                <a class="btn is-primary iconFix" href="javascript:void(0)" data-step="stepbystep_2">
-                                    Invite
-                                </a>
-                            </div>
-                        </div>        
                     </div>
+                    <div class="modal__footer has-dual-purpose">
+                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                            Cancel
+                        </button>
+                        <div class="left">
+                            <button class="btn is-close invite_btn" type="button" data-step="stepbystep_3">
+                                Invite friends
+                            </button>
+                            <a class="btn is-primary iconFix is-disabled" href="/ru/editpost">
+                                Go live
+                            </a>
+                        </div>
+                    </div>        
+                </div>
+                <div class="tabs_step stepbystep_3 hidden">
+                    <div class="modal-scroll">
+                        <div class="modal__header">
+                            <h2 class="modal__title">Пригласить</h2>
+                        </div>
+                        <div class="modal__subheader">
+                            <ul class="modal__header__list__menu">
+                                <li class="expand__action__item active">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>Viewers</span>
+                                    </button>                       
+                                </li>
+                                <li class="expand__action__item">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>Co-hosts</span>
+                                    </button>                       
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal__body">
+                            <div class="form__item">
+                                <input class="form__control" id="streamName" name="streamName" type="text" placeholder="Find friends">
+                            </div>
+                            <ul class="invite__list">
+                                <li>
+                                    <label class="flex align-center">
+                                    <div class="invite_all">
+                                        <input type="checkbox"> 
+                                    </div>
+                                           
+                                        <div class="invite__list__desc">
+                                            <div class="invite__list__desc__title">Online only</div>
+                                        </div> 
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex align-center">
+                                        <figure class="entety__avatar__small">
+                                            <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                        </figure>      
+                                        <div class="invite__list__desc">
+                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                        </div>
+                                        <input type="checkbox">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex align-center">
+                                        <figure class="entety__avatar__small">
+                                            <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                        </figure>      
+                                        <div class="invite__list__desc">
+                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                        </div>
+                                        <input type="checkbox">
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="flex align-center">
+                                        <figure class="entety__avatar__small">
+                                            <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                        </figure>      
+                                        <div class="invite__list__desc">
+                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
+                                        </div>
+                                        <input type="checkbox">
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal__footer has-dual-purpose">
+                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                            Cancel
+                        </button>
+                        <div class="left">
+                            <button class="btn is-close invite_btn" type="button">
+                                Description and settings
+                            </button>
+                            <a class="btn is-primary iconFix" href="javascript:void(0)" data-step="stepbystep_2">
+                                Invite
+                            </a>
+                        </div>
+                    </div>        
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade is-lg" id="getStories"  aria-hidden="true" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg"></div>
+</div>
