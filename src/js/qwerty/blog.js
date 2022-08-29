@@ -1,17 +1,3 @@
-// function searchblog() {
-//   // prettier-ignore
-//   if ({$user_id} === 0) {
-//     //quickreg();
-//     return;
-//   }
-//   const searchstr = document.getElementById('blogsearch').value;
-//   if (searchstr === '') {
-//     window.location.href = '{$addpath}{$blogpath}';
-//   } else {
-//     window.location.href = `{$addpath}/search/${searchstr}`;
-//   }
-// }
-
 jQuery(document).ready(function($){
 	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
@@ -21,8 +7,8 @@ jQuery(document).ready(function($){
 	$(document).mouseup( function(e){ // событие клика по веб-документу
 		var div = $( ".dropdown-menu, .dropdown__menu" ),
 			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
-			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
-			typeID = $('#typeID'); // тут указываем ID элемента
+			smartSearchBtnr = $('#smart-search-btn'), // тут указываем ID элемента
+			typeID = $('#typeID'), // тут указываем ID элемента
 			publicationPrivate = $('.publicationPrivate'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
@@ -139,8 +125,6 @@ jQuery(document).ready(function($){
 			$(this).html(html);
 		}
 	});
-
-
 	
 	if ($(window).width() < 568) {
 		$('#statisticBtn').on('click', function(){
@@ -251,6 +235,48 @@ jQuery(document).ready(function($){
 
 	$('.comments_toggle').on('click', function(){
 		$(this).closest('.main__content__body__item').find('.post__comments').toggle();
+	});
+
+	$('.story-slider').slick({
+		dots: false,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 4.5,
+		slidesToScroll: 1,
+  		lazyLoad: 'ondemand',
+		responsive: [
+		{
+		  	breakpoint: 1024,
+		  	settings: {
+			    slidesToShow: 3,
+			    slidesToScroll: 3,
+			    infinite: true,
+			    dots: true
+		  	}
+		},
+		{
+		  	breakpoint: 600,
+		  	settings: {
+		    	slidesToShow: 2,
+		    	slidesToScroll: 2
+		  	}
+		},
+		{
+		  	breakpoint: 480,
+		  	settings: {
+			    slidesToShow: 1,
+			    slidesToScroll: 1
+		  	}
+		}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+	});
+
+	$('.story-card').each(function (index) {
+	    var slide = $(this);
+	    slide.css('background-image', 'url(' + slide.data('src') + ')');
 	});
 
 });

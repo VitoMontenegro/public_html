@@ -136,6 +136,19 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
         padding: $size-2;
       }
     }
+  }  
+  &.is-full {
+    .modal-dialog {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      height: 100%;
+      border-radius: 0;
+    }
+    .modal__body {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 
