@@ -16,7 +16,7 @@
     li {
       &.active{
         .pull-right {
-            padding: $size-half $size-1;
+            padding: $size-half 1.3rem;
             background: var(--color-sidebar-count);
             border-radius: var(--shape-border-radius-pill);
             color: var(--color-ink-inverse-max);
@@ -106,4 +106,38 @@
   width: 4rem;
   height: 4rem;
   margin-right: 1.7rem;
+}
+
+
+.main__sidebar__footer {
+  // main.css override
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  line-height: var(--font-line-height-small);
+  padding-bottom: calc(var(--size-space-base) * 4);  
+  text-align: center;
+  &,
+  ul {
+    font-weight: normal;
+  }
+  @include media-breakpoint-up(md) {
+    padding-bottom: var(--size-space-base);
+        margin-top: 5.6rem;
+  }
+  .footer__meta-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      flex-direction: column;
+
+      li {
+        margin-bottom: 0.8rem;
+      }
+  }
+  .footer__logo {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
 }

@@ -20,7 +20,7 @@ $size-8:                                $size-1 * 8;
   line-height: var(--font-line-height-small); 
 
   &.is-bolder {
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 

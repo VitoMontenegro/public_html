@@ -186,6 +186,7 @@
     top: 3rem;
     margin: auto;
     box-shadow: var( --layer-box-shadow-contour);
+
     @include media-breakpoint-up(sm) {
     	box-shadow: none;
     	margin-top: 3rem;
@@ -198,11 +199,6 @@
 	    justify-content: space-between;
 	    li {
 	    	width: 25%;
-			&.active {
-				button {
-					background: #DCE7F9;
-				}			
-			}
 	    }
     }
     @include media-breakpoint-up(md) {
@@ -225,6 +221,13 @@
 		}
 
     }
+}
+.expand__action__item {
+	&.active {
+		button {
+			background: #DCE7F9;
+		}			
+	}
 }
 .main__content__search-submit {
     display: flex;

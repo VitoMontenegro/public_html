@@ -17,11 +17,16 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
+  max-height: 100vh;
 
   .modal {
     overflow-x: hidden;
     overflow-y: auto;
   }
+}
+// Overlay
+.modal-backdrop {
+  @extend %backdrop;
 }
 
 // Container
@@ -61,6 +66,79 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
   }
 }
+.modal {
+  &.is-auto-height {
+    .modal__box {
+      height: auto;
+    }
+  }
+  &.is-base {
+    .modal-dialog {
+      @include media-breakpoint-up(md) {
+        width: var(size-width-md);
+        // BS override
+        max-width: var(size-width-md);
+      }
+    }
+    .modal__body,
+    .modal-body {
+      padding: $size-3 $size-3 $size-4;
+
+      @include media-breakpoint-down(sm) {
+        padding: $size-2;
+      }
+    }
+    .modal__header,
+    .modal-header {
+      padding: 0 0 0 $size-2;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+    }
+    .modal__content {
+      padding: 0 $size-2;
+
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
+    }
+    .modal__footer,
+    .modal-footer {
+      padding: $size-3 $size-5;
+
+      @include media-breakpoint-down(sm) {
+        padding: $size-2;
+      }
+    }
+  }
+  &.is-lg {
+    .modal-dialog {
+      @include media-breakpoint-up(md) {
+        width: var(--size-width-lg);
+        // BS override
+        max-width: var(--size-width-lg);
+      }
+    }
+    .modal__body,
+    .modal-body {
+      padding: $size-3 $size-4 $size-4;
+
+      @include media-breakpoint-down(sm) {
+        padding: $size-2;
+      }
+    }
+    .modal__footer,
+    .modal-footer {
+      padding: $size-2 $size-4 $size-3;
+
+      @include media-breakpoint-down(sm) {
+        padding: $size-2;
+      }
+    }
+  }
+}
+
 .search__filter.is_modal {
     right: auto;
     padding: 0.5rem 3.2rem 1.3rem;
@@ -74,6 +152,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   margin: $size-2;
   position: relative;
   width: auto;
+  overflow: hidden;
 
   @include media-breakpoint-up(md) {
     margin: ($size-line) auto;
@@ -94,6 +173,27 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
   }
 }
+.modal-dialog-scrollable {
+  height: calc(100% - 2rem);
+  @include media-breakpoint-up(md) {
+        height: calc(100% - 5.5rem);
+  }
+  .modal-content {
+      height: 100%;
+      overflow: hidden;
+  }
+  .modal-body {
+      overflow-y: auto;
+      flex: 1 1 auto;
+  }
+}
+
+#broadcastModal {
+  .modal-dialog-scrollable {
+    height: auto;
+    max-height: calc(100% - 5.5rem);
+  }
+}
 
 // Actual modal (.modal-content in BS)
 .modal__box,
@@ -106,21 +206,44 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   outline: 0;
   position: relative;
 }
-
-// Overlay
-.modal-backdrop {
-  @extend %backdrop;
+.modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
 }
 
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal__header,
 .modal-header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: $modal-header-padding;
+
+  > div {
+    display: flex;
+    align-items:center;
+  }
+  .header_photo {
+    margin-right: 1rem;
+  }
+  &.is-border-st {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #D1D9E6;
+  }
+  &.is-flexed {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 .modal__subheader {
   padding: $modal-body-padding;
@@ -131,12 +254,20 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   @extend %h1;
   padding-right: $size-1;
 }
+.edit__title {
+  font-weight: 500;
+  font-size: var(--font-size-big);
+}
 .modal__subheader {
     line-height: var(--font-line-height-middle);
     color: var(--color-ink-2ry);
     text-align: center;
 }
-
+.popup__header__list__menu {
+  padding: 0;
+  border-radius: var(--shape-border-radius-base);
+  background-color: var(--color-ink-accent);
+}
 // Tab pane toggles
 .modal__tab-toggle {
   // position: absolute;
@@ -437,7 +568,6 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 .is_publication {
     top: 77px;
     right: 6rem;
-    display: block;
     left: auto;
     padding: 0.5rem 3.2rem 1.3rem;
     min-width: 28rem;

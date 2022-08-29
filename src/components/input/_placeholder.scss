@@ -1,0 +1,11 @@
+
+.placeholder {
+  &:empty::before {
+    content: attr(data-placeholder);
+    pointer-events: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+

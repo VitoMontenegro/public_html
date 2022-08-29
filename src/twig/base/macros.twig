@@ -109,7 +109,7 @@
                                     </p>
                                 </video>
                             </div>
-            {% elseif entetyMainImg|length > 0 %}22
+            {% elseif entetyMainImg|length > 0 %}
                 <div class="main__content__body__image">
                     <figure class="entety__avatar">
                         <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
@@ -118,7 +118,7 @@
             {% endif %}
             {% if entetyMainContent|length > 0 %}
                 <div class="main__content__body__txt crop-height">
-                    <div class="crop-height__txt">{{entetyMainContent}}</div> 
+                    <a href="/post" class="crop-height__txt">{{entetyMainContent}}</a> 
                 </div>
             {% endif %}
 
@@ -141,8 +141,8 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost sm_hidden">
-                    <svg class="icon" aria-hidden="true" focusable="false">
+               <div class="btn is-compact is-ghost sm_hidden">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-eye"></use>
                     </svg>
                     <span>120 040</span>
@@ -152,8 +152,8 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost">
-                    <svg class="icon" aria-hidden="true" focusable="false">
+               <div class="btn is-compact is-ghost">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-comment"></use>
                     </svg>
                     <span>89+3</span>
@@ -163,8 +163,8 @@
                         </ul>  
                     </div>
                 </div>
-               <div class="btn is-ghost sm_hidden">
-                    <svg class="icon" aria-hidden="true" focusable="false">
+               <div class="btn is-compact is-ghost sm_hidden">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
                     </svg>
                     <span>2</span>

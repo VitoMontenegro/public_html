@@ -1,6 +1,8 @@
 @use 'sass:math';
 
 .icon {
+
+  color: var(--color-ink-3ry);
   --icon-stroke: var(--color-ink-3ry);
   --icon-stroke-width: 2;
   --icon-fill: var(--color-background-alt);
@@ -43,6 +45,10 @@
     width: $size-2p5;
     height: $size-2p5;
   }
+  &.is-md {
+    width: $size-3;
+    height: $size-3;
+  }
 
 
   // Colors
@@ -79,6 +85,7 @@
 
 %icon-backround,
 .icon-backround {
+  color: var(--color-background-base);
   --icon-stroke: var(--color-background-base);
   filter: drop-shadow(var(--layer-box-shadow-z1));
 }

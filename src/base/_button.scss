@@ -132,15 +132,12 @@
       line-height: 16px;
     }
   } 
-  .icon {
-    margin-right: 1.3rem;
-  }
 }
 .grow {
-  color:#148016;
+  color:var(--color-btn-grow);
 }
 .reduce {
-  color: #D42421;
+  color: var(--color-btn-reduce);
 }
 .button.is-primary {
     text-shadow: var(--layer-box-shadow-text);

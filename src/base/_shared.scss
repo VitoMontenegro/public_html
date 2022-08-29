@@ -98,6 +98,12 @@
 .hidden {
   display: none;
 }
+.entety__avatar {
+  &.is-md {
+      width: 4rem;
+      height: 4rem;
+  }
+}
 .entety__avatar_img {
   width: 100%;
   height: 100%;
@@ -108,10 +114,11 @@
 %small {
   font-size: var(--font-size-small);
   font-weight: normal;
-  line-height: var(--font-line-height-small); 
+  line-height: var(--font-line-height-small);
+  text-transform: none; 
 
   &.is-bolder {
-    font-weight: bold;
+    font-weight: 600;
   }
 }
 
@@ -119,10 +126,18 @@
 %big {
   font-size: var(--font-size-big);
   line-height: var(--font-line-height-big);
+  @include media-breakpoint-down(sm) {
+    &, &.is-md{
+      font-weight: 600;
+    }   
+  }
 
   &.is-md {
     font-weight: 500;
     letter-spacing: -0.05rem;
+    @include media-breakpoint-down(sm) {
+      letter-spacing: normal  ;   
+    }
   }
 
 }

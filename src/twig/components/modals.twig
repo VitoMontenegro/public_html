@@ -1,23 +1,116 @@
+    <div class="modal fade is-lg" id="modal-edit-post" tabindex="-1" aria-labelledby="modal-edit-post-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <form class="modal-content modal__box">
+                <div class="modal-body modal__body">
+                    <div class="modal__content">
+                        <div class="edit-post">
+                            <div class="edit-post__body">
+                                <div class="modal__header is-border-st is-flexed">
+                                    <div class="left">
+                                        <div class="header_photo">
+                                            <img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
+                                        </div>
+                                        <div class="edit__title">Edit post</div>                                    
+                                    </div>
 
-    <div class="modal fade" id="editCommunity"  aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal-scroll">
-                    <div class="modal__header">
-                        <h2 class="modal__title">Edit community page</h2>
-                   
-                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                      
+                                    <div class="right">
+                                        <button class="btn is_rubber no_bg publicationType" type="button" aria-label="Settings">
+                                            <span>Available to everyone</span>
+                                        </button>
+                                        <div class="publicationPrivate has-shadow has-border-radius-base is_publication">
+                                            <ul class="no_list_style publicationCheck">
+                                                <li class="custom-radio"> 
+                                                    <label>
+                                                        <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
+                                                        <span>Available to everyone</span>                        
+                                                    </label>
+                                                </li>
+                                                <li class="custom-radio"> 
+                                                    <label>  
+                                                        <input type="radio" name="publicationPrivate" value="Smth else"> 
+                                                        <span>Smth else</span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story...">
+                                    <p>
+                                        <img src="/assets/images/imageVolga.jpg" alt="alt">
+                                    </p>
+                                    <p>В 2019 году в Японии было больше 33 тысяч компаний старше 100 лет — их называют «шинисе», что дословно означает «старый магазин». Среди них:</p>
+                                    <ul>
+                                    <li>Старейший в мире отель «Нисияма Онсэн Кэюнкан», открытый в 705 году в префектуре Яманаси.</li>
+                                    <li>Кондитерская «Ишимондзия васукэ» в Киото, сладости в которой продают с 1000 года.</li>
+                                    <li>Строительная компания Takenaka из Осаки, созданная в 1610 году.</li>
+                                    </ul>
+
+                                    <p>Tsuen Tea — старейший чайный дом, открывшийся в 1160 году в пригороде Киото. Его нынешний владелец Юсуке Цуен говорит, что он не мог не взять на себя управление семейным бизнесом.</p>
+                                    <p>«Компания сосредоточена на чае, а не на расширении бизнеса, — говорит Цуен. — Поэтому она до сих пор существует».  По словам предпринимателя, он никогда не сомневался, что продолжит семейное дело. «Сейчас я управляю компанией, которую создали мои предки. Иначе наследию пришёл бы конец. В детстве нас спрашивали про работу мечты, и уже тогда я знал, что приму руководство», — рассказывает Цуен.</p>
+                                    <p>В стране много компаний-долгожителей, похожих на Tsuen Tea. Многие из них — небольшие семейные предприятия, которые занимаются гостиничным бизнесом или производством пищевых продуктов.</p>
+                                    <p>Для японцев важнее стабильность, а не рост прибыли, говорит профессор Высшей школы менеджмента Киотского университета Ёсинори Хара, десять лет проработавший в Кремниевой долине. По его мнению, это главная причина, почему в Японии так много компаний-«шинисе».</p>
+                                    <p>В Японии существует культура уважения предков и их традиций. Более того, это островное государство, которое долгое время было изолировано от остального мира. Поэтому в стране как можно дольше используют имеющиеся ресурсы — в том числе сохраняют небольшие фирмы.</p>
+                                    <p>Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес. Так поступали, например, в Suzuki и Panasonic.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal__subheader">
-                        Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
+                </div>
+
+                <div class="modal__footer has-dual-purpose">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        Cancel
+                    </button>
+
+                    <div class="right flex justify-between align-center">
+                        <div class="flex justify-between align-center edit__icons">
+                            <div>
+                                Add:
+                            </div>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-vcamera"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-tag"></use>
+                                </svg>
+                            </button>
+                            <button class="is-ghost">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-geotag"></use>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <a class="btn is-primary iconFix" href="/ru/editpost">
+                            Save
+                        </a>                        
                     </div>
-                    
-                    <form class="modal__body">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade is-lg" id="editCommunity"  aria-hidden="true" tabindex="-1">
+         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <form class="modal-content modal__box">
+                <div class="modal-body modal__body">
+                    <div class="modal__content">
+                        <div class="modal__header">
+                            <h3 class="modal__title">Edit community page</h3>
+                        </div>
+                        <div class="modal__subheader">
+                            Choose photos for your avatar and cover. Tell about the community. Required fields are marked with asterisks *.
+                        </div>
                         <div class="flex edit__images">
                             <div class="edit__images__ava">
                                 <div class="entety__avatar">
@@ -205,11 +298,11 @@
                                     </div>
                                 </div>                           
                             </div>
-                        </div>
-                    </form>
+                        </div>                    
+                    </div>
                 </div>
 
-                <div class="modal__footer has-dual-purpose">
+                <div class="modal-footer modal__footer  has-dual-purpose">
                     <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
                         Cancel
                     </button>
@@ -217,29 +310,23 @@
                         Save
                     </a>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-    <div class="modal fade" id="editProfile" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal-scroll">
-                    <div class="modal__header">
-                        <h3 class="modal__title" id="profile-selector-title">Profile</h3>
-                       
-                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                       
-                    </div>
-                    
-                    <div class="modal__subheader">
-                        Tell us about yourself. This information will be displayed on your personal page. Required fields are marked with asterisks *.
-                    </div>
-                    
-                    <form class="modal__body" id="edit_profile">
+
+    <div class="modal fade is-lg" id="editProfile" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <form class="modal-content modal__box" id="edit_profile">
+                <div class="modal-body modal__body">
+                    <div class="modal__content">
+                        <div class="modal__header">
+                            <h3 class="modal__title" id="profile-selector-title">Profile</h3>
+                        </div>
+                        
+                        <div class="modal__subheader">
+                            Tell us about yourself. This information will be displayed on your personal page. Required fields are marked with asterisks *.
+                        </div>
+
                         <div class="flex edit__images">
                             <div class="edit__images__ava">
                                 <div class="entety__avatar">
@@ -566,10 +653,9 @@
                                 </div> 
                             </div>                         
                         </div>
-                    </form>                    
+                    </div>
                 </div>
-
-                <div class="modal__footer has-dual-purpose">
+                <div class="modal-footer modal__footer has-dual-purpose">
                     <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
                         Cancel
                     </button>
@@ -577,120 +663,56 @@
                         Save
                     </a>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
-    <div class="modal fade" id="inviteForm" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal__header">
-                    <h3 class="modal__title">Invite</h3>
-                    {#
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                    #}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="statisticForm" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal-scroll">
-                    <div class="modal__header">
-                        <h3 class="modal__title">Statistic</h3>
-                        <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="modal__body">
-                        <div class="stat__body__list">
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Всего публикаций</div>
-                                <div class="stat_count">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Всего просмотров</div>
-                                <div class="stat_count is_up">250</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Отметки «Нравится»</div>
-                                <div class="stat_count is_up">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Отметки «Не нравится»</div>
-                                <div class="stat_count is_down">-25</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Комментариев</div>
-                                <div class="stat_count is_down">25 000</div>
-                            </div>
-                            <div class="stat__body__list__item has-shadow has-border-radius-base">
-                                <div class="stat_title">Подписчики</div>
-                                <div class="stat_count is_down">25 000</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal__footer">
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        Ok
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal-notify" aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal__header">
-                    <h3 class="modal__title">Statistic</h3>
-                    {#
-                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                    #}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="createPost"  aria-hidden="true" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal__box">
-                <div class="modal-scroll">
-                    <div class="modal__header justify-between relative border-bottom">
-                        <h2 class="modal__title">Create a post</h2>
+
+    <div class="modal fade is-lg" id="createPost" tabindex="-1"  aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <form class="modal-content modal__box">
+                <div class="modal-body modal__body">
+                    <div class="modal__content">
+                        <div class="edit-post">
+                            <div class="edit-post__body">
+                            <div class="modal__header is-border-st is-flexed">
+                                <div class="left">
+                                    <div class="header_photo">
+                                        <img src="/assets/images/avatar.jpg" alt="Владимир Никишин">
+                                    </div>
+                                    <div class="edit__title">Edit post</div>                                    
+                                </div>
+
+                                <div class="right">
                    
-                        <button class="btn is_rubber no_bg open" id="publicationType" type="button" aria-label="Settings">
-                            <span>Available to everyone</span>
-                        </button>
-                        <div id="publicationPrivate" class=" has-shadow has-border-radius-base is_publication">
-                            <ul class="no_list_style publicationCheck">
-                                <li class="custom-radio"> 
-                                    <label>
-                                        <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
-                                        <span>Available to everyone</span>                        
-                                    </label>
-                                </li>
-                                <li class="custom-radio"> 
-                                    <label>  
-                                        <input type="radio" name="publicationPrivate" value="Smth else"> 
-                                        <span>Smth else</span>
-                                    </label>
-                                </li>
-                            </ul>
+                                    <button class="btn is_rubber no_bg publicationType" type="button" aria-label="Settings">
+                                        <span>Available to everyone</span>
+                                    </button>
+                                    <div class="publicationPrivate has-shadow has-border-radius-base is_publication">
+                                        <ul class="no_list_style publicationCheck">
+                                            <li class="custom-radio"> 
+                                                <label>
+                                                    <input type="radio" name="publicationPrivate" value="Available to everyone" checked=""> 
+                                                    <span>Available to everyone</span>                        
+                                                </label>
+                                            </li>
+                                            <li class="custom-radio"> 
+                                                <label>  
+                                                    <input type="radio" name="publicationPrivate" value="Smth else"> 
+                                                    <span>Smth else</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+                                
+                            </div>
+                                <div class="edit-post__text placeholder" contenteditable="true" data-placeholder="Tell your story…"></div>
+                            </div>
                         </div>
                     </div>
-                    <form class="modal__body">
-                        <textarea rows="30" class="no-bg no-border" name="createPostContent"></textarea>
-                    </form>
                 </div>
 
                 <div class="modal__footer has-dual-purpose">
@@ -729,19 +751,100 @@
                             Save
                         </a>                        
                     </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
-
+    <div class="modal fade is-lg" id="statisticForm" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <div class="modal-content modal__box">
+                <div class="modal-body modal__body">
+                    <div class="modal__header is-flexed">
+                        <div class="left">
+                            <h3 class="modal__title">Statistic</h3>
+                        </div>
+                        <div class="right">
+                            <ul class="popup__header__list__menu flex">
+                                <li class="expand__action__item active">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>24 hours</span>
+                                    </button>                       
+                                </li>
+                                <li class="expand__action__item">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>48 hours</span>
+                                    </button>                       
+                                </li>
+                                <li class="expand__action__item">
+                                    <button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+                                        <span>30 days</span>
+                                    </button>                       
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                    <div class="modal__body">
+                        <div class="stat__body__list">
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Всего публикаций</div>
+                                <div class="stat_count">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Всего просмотров</div>
+                                <div class="stat_count is_up">250</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Отметки «Нравится»</div>
+                                <div class="stat_count is_up">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Отметки «Не нравится»</div>
+                                <div class="stat_count is_down">-25</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Комментариев</div>
+                                <div class="stat_count is_down">25 000</div>
+                            </div>
+                            <div class="stat__body__list__item has-shadow has-border-radius-base">
+                                <div class="stat_title">Подписчики</div>
+                                <div class="stat_count is_down">25 000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        Ok
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="broadcastModal"  aria-hidden="true" tabindex="-1">
+
+    <div class="modal fade" id="modal-notify" aria-hidden="true" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal__box">
-                <div class="form-fields-wrapper tabs_steps">
+                <div class="modal__header">
+                    <h3 class="modal__title">Statistic</h3>
+                    {#
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/projects/#{ExtraData.domain}/images/base/graphics/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    #}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade is-lg" id="broadcastModal"  aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+            <div class="modal-content modal__box">
+                <div class="tabs_steps">
                     <div class="tabs_step stepbystep_1">
-                        <div class="modal-scroll">
-                            <div class="modal__header">
+                            <div class="modal__header flex justify-center">
                                 <h3 class="modal__title__small">Request permission to use the camera</h3>
                             </div>
                             <div class="modal__subheader">
@@ -789,7 +892,6 @@
 
                                 <div class="access_notice">If the user has not previously configured the use of the built-in camera or external webcam by the browser, a warning appears in the broadcast creation window about the need to give the system such permission - immediately below the broadcast type switcher.</div>   
                             </div>
-                        </div>
                     </div>
                     <div class="tabs_step stepbystep_2 hidden">
                         <div class="modal-scroll">

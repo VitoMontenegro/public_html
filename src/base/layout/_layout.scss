@@ -74,30 +74,44 @@
   grid-area: main;
   background-color: var(--color-background-base);
   width: 100%;
-      margin-top: 5rem;
+  margin-top: 5rem;
 
   @include media-breakpoint-up(md) {
-
-      margin-top: 0;
-  }
-  @include media-breakpoint-up(lg) {
-    --gap: #{$size-3};
-
-    display: grid;
-    gap: var(--gap, 1.6rem);
-    grid-template-columns: repeat(var(--columns, 12), 1fr);
-
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-.main__content {
-
-  @include media-breakpoint-up(md) {
-    grid-column: 1/span 8;
+    margin-top: 0;
   }
 
 }
+.is_aside {
+  .main {
+    @include media-breakpoint-up(lg) {
+      --gap: #{$size-3};
+      display: grid;
+      gap: var(--gap, 1.6rem);
+      grid-template-columns: repeat(var(--columns, 12), 1fr);
+
+      margin-right: auto;
+      margin-left: auto;
+    }    
+  }
+  .main__content {
+    @include media-breakpoint-up(md) {
+      grid-column: 1/span 8;
+    }
+  }  
+}
+.is_single {
+  .main {
+    @include media-breakpoint-up(lg) {
+      display: grid;
+      gap: var(--gap, 1.6rem);
+      grid-template-columns: repeat(var(--columns, 12), 1fr);
+      .main__content {
+            grid-column: 3/span 8;
+      }
+    }
+  }
+}
+
 .main__sidebar {
   display: none;
   @include media-breakpoint-up(md) {

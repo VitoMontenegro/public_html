@@ -23,6 +23,11 @@
                     {% set searchFrom = 'User' %}
                     <span>{{ searchFrom }}</span>
                 </button>
+            {% elseif title == 'Single Post' %}
+                <button class="header__search-submit is_rubber" id="smart-search-btn" type="submit" aria-label="Settings">
+                    {% set searchFrom = 'In post' %}
+                    <span>{{ searchFrom }}</span>
+                </button>
             {% elseif title == 'Single Organization' %}
                 <button class="header__search-submit is_rubber" id="smart-search-btn" type="submit" aria-label="Settings">
                     {% set searchFrom = 'In organization' %}
@@ -195,7 +200,7 @@
                         </div>
                     {% endif %}
                 </div>
-            {% elseif title == 'Single Community' or title == 'My Page' or title == 'Single Organization' %}
+            {% elseif title == 'Single Community' or title == 'My Page' or title == 'Single Organization' or title == 'Single Post' %}
             <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base is_small">
                 <ul class="no_list_style intervalcheck">
                     <li class="custom-radio"> 

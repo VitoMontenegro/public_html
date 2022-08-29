@@ -25,7 +25,7 @@
     <script src="/assets/js/app.js"></script>
 </head>
 <body>
-	<div class="wrapper is_aside">
+	<div class="wrapper is_single">
         <div class="header" id="header">
 			<a class="header__logo logo" href="/">
 				<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
@@ -92,12 +92,14 @@
 					    <li><a href="/promotions/">promotions</a></li>
 					    <li><a href="/promotions/single.html">promotion single</a></li>
 					    <li><a href="/advertising/">advertising single</a></li>
-						<li><a href="/post/">Single post</a></li>
 					</ul>
 					<br>
 					<br>
 					<ul>
+						<li><a href="/post/">post</a></li>
 						<li><a href="/news/">Feed + stories</a></li>
+						<li><a href="/live_video/">live video</a></li>
+						<li><a href="/live_audio/">live audio</a></li>
 						<li><a href="/profile_special/">profile special</a></li>
 						<li><a href="/profile_boocmark/">profile Bookmarks</a></li>
 						<li><a href="/profile_photo/">profile photos</a></li>
@@ -105,44 +107,11 @@
 						<li><a href="/home/">home</a></li>
 						<li><a href="/sign in/">sign in<sign in/a></li>
 					    <li><a href="/messenger/">messenger (не нашел верстку этой страницы)</a></li>
-						<li><a href="/live_video/">live video</a></li>
-						<li><a href="/live_audio/">live audio</a></li>
 					</ul>        	
 				{% endblock %}
 
 
 				{% include 'components/modals.twig' %}
-	        </div>
-
-	        <div class="main__sidebar">    	
-	        	{% block sidebar %}
-	        	{% endblock %}
-	        	<div class="main__sidebar__footer">
-	        		<ul class="footer__meta-nav">
-	        			<li>
-	        				<a href="#">Help</a>
-	        			</li>
-	        			<li>
-	        				<a href="#">Feedback</a>
-	        			</li>
-	        			<li>
-	        				<a href="#">About us</a>
-	        			</li>
-	        			<li>
-	        				<a href="#">Agreement</a>
-	        			</li>
-	        			<li>
-	        				<a href="#">Confidentiality</a>
-	        			</li>
-	        		</ul>
-		        	<div class="footer__logo">
-		        		<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
-		        	</div>
-	        		<div class="footer__site-credits">
-	      				<div class="nottranslate">Copyright ©&nbsp;2022, <br>Social movement of entrepreneurs&nbsp;™</div>
-	      				<a href="https://qwertynetworks.com/ru/create_social_networks" target="_blank">Powered by Qwerty Social Network Engine</a>
-					</div>
-	        	</div>
 	        </div>
 
         </div>
@@ -279,6 +248,78 @@
 				</li>
 			</ul>         
         </nav>
+
+		<footer class="footer">
+			<div class="footer__container container">
+				<nav class="footer__nav">
+					<ul>
+						<li><a href="#">Справка</a></li>
+						<li><a href="#">Обратная связь</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Соглашение</a></li>
+						<li><a href="#">Конфиденциальность</a></li>
+					</ul>
+				</nav>
+
+				<img src="/assets/images/logo/logomark.svg" alt="alt" class="footer__logo img-r">
+
+				<div class="footer__language-toggle dropdown is-top is-languages">
+					<button class="button is-ghost dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+						<svg role="img" class="icon is-left">
+							<use href="/assets/images/flags.svg#icon-flag-ru"></use>
+						</svg>
+
+						<span>Русский</span>
+
+						<svg role="img" class="icon is-sm">
+							<use href="/assets/sprite/sprite.svg#icon-chevron-down-sm"></use>
+						</svg>
+					</button>
+					<div class="footer__languages languages dropdown-menu">
+					<ul class="languages__list">  
+						{% set languages = {
+						af: "Afrikaans",
+						de: "Deutsch",
+						en: "English",
+						es: "Español",
+						fr: "Français",
+						it: "Italiano",
+						pl: "Polski",
+						pt: "Português",
+						hr: "Srpsko-hrvatski",
+						fi: "Suomi",
+						tr: "Türkçe",
+						ru: "Русский",
+						uk: "Українська",
+						hy: "Հայերեն",
+						he: "עִברִית",
+						ar: "العربية",
+						hi: "हिन्दी",
+						th: "ภาษาไทย",
+						zh: "中文",
+						ja: "日本語"
+						} %}  
+
+						{% for key, value in languages %}
+							<li>
+								<a href="#" lang="{{ key }}" class="languages__link">
+									<svg class="icon" aria-hidden="true" focusable="false">
+										<use href="/assets/images/flags.svg#icon-flag-{{ key }}"></use>
+									</svg>
+									{{ value }}
+								</a>
+							</li>
+						{% endfor %} 
+					</ul>
+					</div>
+				</div>
+
+				<div class="footer__site-credits">
+					<p class="footer__copyright">Social movement of entrepreneurs ™</p>
+					<a href="#" class="footer__link">Powered by Qwerty Social Network Engine</a>
+				</div>
+			</div>
+		</footer>
     </div>
 </body>
 </html>

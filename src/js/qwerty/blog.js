@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
 			smartSearchBtnr = $('#smart-search-btn'); // тут указываем ID элемента
 			typeID = $('#typeID'); // тут указываем ID элемента
-			publicationPrivate = $('#publicationPrivate'); // тут указываем ID элемента
+			publicationPrivate = $('.publicationPrivate'); // тут указываем ID элемента
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
@@ -62,20 +62,20 @@ jQuery(document).ready(function($){
 		$('#typeID').toggle();
 	});
 
-	$('#publicationType').on('click', function() {
+	$('.publicationType').on('click', function() {
 		$(this).toggleClass('open');
-		$('#publicationPrivate').toggle();
+		$(this).closest('.modal__header').find('.publicationPrivate').toggle();
 	});
 
-	$('.items_scroll:not(.select_all)').on('click', function(){
+	$('.search__filter__item__items .items_scroll:not(.select_all)').on('click', function(){
 		$(this).toggleClass('active');
 	});
 
-	$('.select_all').on('click',function() {
+	$('.search__filter__item__items .select_all').on('click',function() {
 		if ($(this).hasClass('active')) {
-			$('.items_scroll').removeClass('active');
+			$('.search__filter__item__items .items_scroll').removeClass('active');
 		} else {
-			$('.items_scroll').addClass('active');
+			$('.search__filter__item__items .items_scroll').addClass('active');
 		}
 		
 	});
@@ -125,8 +125,7 @@ jQuery(document).ready(function($){
 
 	var showChar = 357,
 		ellipsestext = "...",
-		moretext = "More",
-		lesstext = "Less";
+		moretext = "More";
 	$('.crop-height__txt').each(function() {
 		var content = $(this).html();
 
@@ -135,24 +134,13 @@ jQuery(document).ready(function($){
 			var c = content.substr(0, showChar);
 			var h = content.substr(showChar-1, content.length - showChar);
 
-			var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+			var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<b class="morelink">' + moretext + '</b></span>';
 
 			$(this).html(html);
 		}
 	});
 
-	$(".morelink").click(function(){
-		if($(this).hasClass("less")) {
-			$(this).removeClass("less");
-			$(this).html(moretext);
-		} else {
-			$(this).addClass("less");
-			$(this).html(lesstext);
-		}
-		$(this).parent().prev().toggle();
-		$(this).prev().toggle();
-		return false;
-	});
+
 	
 	if ($(window).width() < 568) {
 		$('#statisticBtn').on('click', function(){

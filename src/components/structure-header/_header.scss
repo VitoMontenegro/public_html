@@ -67,8 +67,8 @@
     right: 0;
     transform: translateY(-$size-line);
     transition:
-      opacity var(--motion-duration-sm) var(--motion-easing-base),
-      transform var(--motion-duration-sm) var(--motion-easing-base);
+    opacity var(--motion-duration-sm) var(--motion-easing-base),
+    transform var(--motion-duration-sm) var(--motion-easing-base);
     height: $size-1 * 10;
     z-index: var(--layer-zindex-drawer);
 
@@ -83,11 +83,17 @@
     display: block;
     transform: none;
     height: auto;
-
     grid-column: 1/span 7;
   }
   @include media-breakpoint-up(lg) {
     grid-column: 1/span 8;
+  }
+}
+.is_single {
+  .header__search {
+    @include media-breakpoint-up(lg) {
+      grid-column: 3/span 7;
+    }
   }
 }
 
@@ -274,6 +280,13 @@
   }
 }
 
+.is_single {
+  .header__menu {
+    @include media-breakpoint-up(lg) {
+      grid-column: 10/span 3;
+    }
+  }
+}
 
 // -----------------------------------------------------------------------------
 // AVATAR
