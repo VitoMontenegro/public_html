@@ -234,7 +234,7 @@ jQuery(document).ready(function($){
 	});
 
 	$('.comments_toggle').on('click', function(){
-		$(this).closest('.main__content__body__item').find('.post__comments').toggle();
+		$(this).closest('.content-card').find('.post__comments').toggle();
 	});
 
 	$('.story-slider').slick({
@@ -278,5 +278,7 @@ jQuery(document).ready(function($){
 	    var slide = $(this);
 	    slide.css('background-image', 'url(' + slide.data('src') + ')');
 	});
+
+
 
 });

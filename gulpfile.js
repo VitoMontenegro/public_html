@@ -37,7 +37,7 @@ const path = {
         html:   srcPath + "twig/**/*.twig",
         js:     srcPath + "js/**/*.js",
         css:    srcPath + "**/*.{scss,sass}",
-        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json,video/mp4,mp4}",
         fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg,otf}",
         sprite: srcPath + "base/graphics/sprite/*.svg"
     },
@@ -45,7 +45,7 @@ const path = {
         html:   srcPath + "**/*.twig",
         js:     srcPath + "js/**/*.js",
         css:    srcPath + "**/*.{scss,sass}",
-        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
+        images: srcPath + "images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json,video/mp4,mp4}",
         fonts:  srcPath + "fonts/**/*.{eot,woff,woff2,ttf,svg,otf}",
         sprite: srcPath + "base/graphics/sprite/*.svg"
     },

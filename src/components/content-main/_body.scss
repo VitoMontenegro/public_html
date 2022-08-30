@@ -59,6 +59,14 @@
   }
 }
 
+.img-wrapper {
+	img {
+		object-fit: contain;
+    width: 100%;
+    height: auto;
+	}
+}
+
 .main__content__body__txt {
 	margin-top: 1.6rem;
 	font-family: 'SF Pro Text';

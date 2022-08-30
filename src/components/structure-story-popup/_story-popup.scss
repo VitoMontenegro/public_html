@@ -1,13 +1,25 @@
 .story-pop {
-    grid-template-columns: clamp(27.2rem, 16.6666666667%, 32rem) 1fr;
+    background: rgba(0, 0, 0, 0.68);
     display: grid;
     grid-column-gap: var(--size-gutter-xl);
     grid-row-gap: 2.4rem;
     padding-left: 0;
+    height: 100%;
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: clamp(27.2rem, 16.6666666667%, 32rem) 1fr;
+    }
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
 
     &__side {
         min-height: 100vh;
         background: #fff;
+        display: none;
+        @include media-breakpoint-up(md) {
+            display: block;
+        }
 
         &__content {
             margin-top: $size-3;        
@@ -20,8 +32,170 @@
             padding: 3rem 2rem 2.4rem 3rem;
         }      
     }
+
+    &__content {
+
+    }
+    &__slider {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: auto;
+        padding: 0;
+        @include media-breakpoint-up(sm) {
+            margin-top: 10px;
+            max-width: 360px;
+            height: 80vh;
+        }
+    }
+    .border-right {
+        border-left: 1px solid var(--color-ink-border);
+        padding: 0.2rem 0 0.2rem 1rem;
+    }
 }
-.border-right {
-    border-left: 1px solid var(--color-ink-border);
-    padding: 0.2rem 0 0.2rem 1rem;
+.pop-slider {
+    &__nav {
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 24px;
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+
+        li {
+            flex: 1;
+            padding: 0 0.1rem;
+        }
+        
+    }
+    &__toggle {
+        display: none;
+        position: relative;
+        height: 100%;
+        padding: 0;
+    }
+    &__progress {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 0.4rem;
+        overflow: hidden;
+        font-size: .75rem;
+        background-color: hsl(220deg 20% 97% / 27%);
+        border-radius: 0.25rem;
+        overflow: hidden;
+        border-radius: 99rem;
+    }
+    &__progress-bar {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--color-background-alt);
+    }
+    &__items {
+        list-style: none;
+        padding: 0;
+        height: 100%;
+
+        li {
+            display: none;
+            height: 100%;
+            padding: 0;
+        }
+
+        &__content {
+            height: 100%;
+            @include media-breakpoint-up(sm) {
+                border-radius: 22px;
+                overflow: hidden;
+            }
+            img {
+                height: 100%;
+                object-fit:cover;
+            }
+            video {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .visible-toggle {
+        height: 100%;
+    }
+}
+.story-slidenav-prev {
+    left: -60px;
+}
+.story-slidenav-next {
+    right: -60px;
+}
+.story-slidenav-prev, .story-slidenav-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+}
+.story-slidenav-next:before {
+    content: "›";
+    font-size: 42px;
+    color: white;
+    height: 48px;
+    width: 48px;
+    background: transparent;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: monospace;
+    position: relative;
+    top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+}
+.story-slidenav-prev:before {
+    content: "‹";
+    font-size: 42px;
+    color: white;
+    height: 48px;
+    width: 48px;
+    background: transparent;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: monospace;
+    position: relative;
+    top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.38);
 }
