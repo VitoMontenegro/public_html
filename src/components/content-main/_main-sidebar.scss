@@ -80,33 +80,8 @@
 
 .main__sidebar__group__list li {
     margin-bottom: $size-1;
-    
-    .main__sidebar__group__list__link {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    
-
-    .sidebar__entety__title {
-      font-weight: 500;
-      font-size: var(--font-size-small);
-      line-height: 16px;
-      color: hsl(var(--h), var(--s), 12%);
-      color: #081935;
-    }
-    .sidebar__entety__subtitle {
-      font-size: var(--font-size-small);
-      line-height: 1.6rem;
-      color: var(--color-ink-2ry);
-    }
 }
 
-.main__sidebar__group__list__link figure {
-  width: 4rem;
-  height: 4rem;
-  margin-right: 1.7rem;
-}
 
 
 .main__sidebar__footer {

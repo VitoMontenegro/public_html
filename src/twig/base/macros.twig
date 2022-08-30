@@ -39,17 +39,17 @@
 {% endmacro %}
 
 {% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent, entetyVideo) %}
-        <div class="main__content__body__item has-shadow has-border-radius-lg">
-            <div class="main__content__body__item__header">
-                <a class="main__content__body__list__link" href="#">
+        <div class="content-card has-shadow has-border-radius-lg">
+            <div class="content-card__header">
+                <a class="content-card__line-cell line-cell" href="#">
                     {% if entetyAvatarImg|length > 0 %}
                         <figure class="entety__avatar">
                             <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                         </figure>  
                     {% endif %}
-                    <div class="main__content__body__list__link__desc">
-                        <div class="main__content__entety__title">{{ entetyTitle }}</div>
-                        <div class="main__content__entety__subtitle"><span>{{entetySubTytle}}</span></div>
+                    <div class="line-cell__content">
+                        <div class="line-cell__title">{{ entetyTitle }}</div>
+                        <div class="line-cell__subtitles"><span>{{entetySubTytle}}</span></div>
                     </div>
                 </a>     
                 <div class="is_link dropdown is-right">
@@ -110,7 +110,7 @@
                 </div>
             {% elseif entetyMainImg|length > 0 %}
                 <div class="main__content__body__image">
-                    <figure class="entety__avatar">
+                    <figure class="img-wrapper">
                         <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
                     </figure>    
                 </div>
@@ -481,7 +481,7 @@
         <div class="group__body__list__item is-center">
             <div class="group__body__list__ava dropdown is-center">
                 {% if entetyAvatarImg|length > 0 %}
-                    <figure class="entety__avatar">
+                    <figure class="entety__avatar is-lg">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                     </figure>                
                 {% endif %}
@@ -533,7 +533,7 @@
         <div class="group__body__list__item">
             <div class="group__body__list__ava is-center">
                 {% if entetyAvatarImg|length > 0 %}
-                    <figure class="entety__avatar">
+                    <figure class="entety__avatar is-lg">
                         <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                     </figure>                
                 {% endif %}
@@ -691,15 +691,15 @@
 
 {% macro sidebarGroupList(sidebarEntetyAvatar, sidebarEntetyTitle, sidebarEntetySubTitle, sidebarEntetyLink) %}
     <li>
-        <a class="main__sidebar__group__list__link" href="{{ sidebarEntetyLink }}">
+        <a class="line-cell" href="{{ sidebarEntetyLink }}">
             {% if  sidebarEntetyAvatar|length > 0 %}
                 <figure class="entety__avatar">
                     <img src="{{ sidebarEntetyAvatar }}" alt="" class="entety__avatar_img">
                 </figure>                
             {% endif %}
-            <div class="sidebar__entety__desc">
-                <div class="sidebar__entety__title">{{ sidebarEntetyTitle }}</div>
-                <div class="sidebar__entety__subtitle">{{ sidebarEntetySubTitle }}</div>
+            <div class="line-cell__content">
+                <div class="line-cell__title">{{ sidebarEntetyTitle }}</div>
+                <div class="line-cell__subtitles">{{ sidebarEntetySubTitle }}</div>
             </div>
         </a>
     </li>

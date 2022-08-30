@@ -22,6 +22,13 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   .modal {
     overflow-x: hidden;
     overflow-y: auto;
+    
+    .btn.is-close.is-top {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        z-index: 1;
+    }
   }
 }
 // Overlay
@@ -186,6 +193,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
   }
 }
+
 .modal-dialog-scrollable {
   height: calc(100% - 2rem);
   @include media-breakpoint-up(md) {
@@ -267,6 +275,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   @extend %h1;
   padding-right: $size-1;
 }
+
 .edit__title {
   font-weight: 500;
   font-size: var(--font-size-big);
@@ -314,23 +323,14 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
         justify-content: center;
   }
   .entety__avatar {
-    border-radius: 50%;
-    transition: 0.3s;
-    height: auto;
     overflow: hidden;
-    max-width: var(--size-width-base);
-    width: 12rem;
   }
   .edit__images__bg__slider {
       border-radius: var(--shape-border-radius-lg);
       overflow: hidden;
   }
 
-  .entety__avatar img {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-  }
+
 
 
   .file-upload {
@@ -590,11 +590,12 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 }
 .edit__icons {
   margin-right: 2rem;
-button {
+  button {
     padding: 0 1rem;
     background: inherit;
   }
 } 
+
 .modal__header__list__menu {
     display: none;
     padding: 0;
@@ -643,6 +644,7 @@ button {
 
     }
 }
+
 .equipment__setup {
   >div {
     margin-bottom: 3rem;
@@ -657,6 +659,7 @@ button {
     cursor: pointer;
   }
 }
+
 .type__equipment {
     font-size: var(--font-size-small);
     font-weight: 400;
@@ -671,6 +674,7 @@ button {
       margin-bottom: 0;
     }
 }
+
 .name__equipment {
   width: 75%;
   color: var(--color-ink-title);
@@ -678,6 +682,7 @@ button {
       width: 65%;
     }
 }
+
 .ready__equipment {
   text-align: right;
   width: 25%;
@@ -685,9 +690,11 @@ button {
       width: 15%;
     }
 }
+
 .invite_btn {
   margin-right: 1rem;
 }
+
 .camera__icon {
     background: #E55E5C;
     border-radius: 100px;
@@ -697,10 +704,12 @@ button {
     align-items: center;
     justify-content: center;
 }
+
 .entety__avatar__small {
   border-radius: var(--shape-border-radius-pill);
   overflow: hidden;
 }
+
 .invite__list {
   max-width: 304px;
   margin:3rem auto;

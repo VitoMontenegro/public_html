@@ -98,17 +98,7 @@
 .hidden {
   display: none;
 }
-.entety__avatar {
-  &.is-md {
-      width: 4rem;
-      height: 4rem;
-  }
-}
-.entety__avatar_img {
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-}
+
 
 .small,
 %small {
@@ -140,4 +130,19 @@
     }
   }
 
+}
+
+.color-2ry,
+%color-2ry {
+  color: var(--color-ink-2ry);
+}
+
+.color-3ry,
+%color-3ry {
+  color: var(--color-ink-3ry);
+}
+.font-small,
+%font-small {
+  font-size: var(--font-size-small);
+  line-height: var(--font-line-height-small);
 }
