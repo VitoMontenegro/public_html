@@ -26,10 +26,7 @@ jQuery(document).ready(function($){
 	showProgress = function() {
 		progressBar.eq( slideIndex-1 ).css('width', 0);
 
-		console.log('slideIndex: ' + slideIndex);
-
 		id = setInterval(progress, (slideDuration / 100) * 1000);
-		console.log('id:' + id);
 
 		function progress() {
 			if (width >= 100 && slideIndex >= totalImages) {
@@ -69,6 +66,14 @@ jQuery(document).ready(function($){
 		}
 
 		slides[slideIndex - 1].style.display = "block";
+		let video = slides[slideIndex - 1].querySelector('video');
+
+		if(video) {
+			
+	        video.muted = true;
+	        video.play();
+		}
+		
 
 		if (slideIndex <= totalImages) {
 			showProgress();
@@ -83,34 +88,49 @@ jQuery(document).ready(function($){
 
 		clearInterval(id);
 		clearInterval(sid);
+
+		progressBar.each(function(){
+			$(this).css('width', 0);
+		});
+
+		progressBar.eq( slideIndex-1 ).css('width', 0);
 	});
 
 	$('.story-slidenav-prev').on('click', function() {
-		progressBar.eq( slideIndex-1 ).css('width', 0);
-		clearInterval(sid);
-		plusSlides(-1);
-		sid = setInterval(function() {
-			if (mouseOnContainer == false && width >= 100) {
-				plusSlides(1);
-				if (slideIndex == totalImages) {
-					clearInterval(sid);
+		if (slideIndex <= 1) {
+			// Смена пользователя
+		} else {
+			progressBar.eq( slideIndex-1 ).css('width', 0);
+			clearInterval(sid);
+			plusSlides(-1);
+			sid = setInterval(function() {
+				if (mouseOnContainer == false && width >= 100) {
+					plusSlides(1);
+					if (slideIndex == totalImages) {
+						clearInterval(sid);
+					}
 				}
-			}
-		}, 100);
+			}, 100);
+		}
 	});
 
 	$('.story-slidenav-next').on('click', function() {
-		progressBar.eq( slideIndex-1 ).css('width', "100%");
-		clearInterval(sid);
-		plusSlides(1);
-		sid = setInterval(function() {
-			if (mouseOnContainer == false && width >= 100) {
-				plusSlides(1);
-				if (slideIndex == totalImages) {
-					clearInterval(sid);
+		if (slideIndex >= totalImages) {
+			// Смена пользователя
+		} else {
+			progressBar.eq( slideIndex-1 ).css('width', "100%");
+			clearInterval(sid);
+			plusSlides(1);
+			sid = setInterval(function() {
+				if (mouseOnContainer == false && width >= 100) {
+					plusSlides(1);
+					if (slideIndex == totalImages) {
+						clearInterval(sid);
+					}
 				}
-			}
-		}, 100);
+			}, 100);			
+		}
+
 	});
 
 	$('.story-slider .slick-slide a').on('click', function(){
