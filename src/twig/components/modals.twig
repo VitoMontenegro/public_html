@@ -1057,21 +1057,6 @@
     </div>
 </div>
 
-<div class="modal fade is-full" id="addStories"  aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
-        <div class="modal-body modal__body">
-            <div class="modal-body modal__body">
-                <div class="story-pop">
-                    <div class="story-pop__side">
-                        <div class="primary-nav">story-pop__side</div>
-                    </div>
-                    <div class="story-pop__content">story-pop__content</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="modal fade is-full" id="getStories"  aria-hidden="true" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
        <button class="btn is-close is-top" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
@@ -1181,7 +1166,143 @@
                 </div>
                 <div class="story-pop__content">
                     <ul id="story-slider-switcher" class="story-pop__slider pop-slider">
-                        <li class="pop-slider__toggle" data-items="5" style="display: block;">
+                        <li class="pop-slider__toggle current" data-items="5" style="display: block;">
+                            <!-- slider navigation -->
+                            <a href="javascript:void(0)" data-item="previous" class="story-slidenav-prev"></a>
+                            <a href="javascript:void(0)" data-item="next" class="story-slidenav-next"></a>
+                            <div class="visible-toggle">
+                                <!-- navigation -->
+                                <ul class="pop-slider__nav flex">
+                                    <li>
+                                        <div class="pop-slider__progress">
+                                            <div class="pop-slider__progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pop-slider__progress">
+                                            <div class="pop-slider__progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pop-slider__progress">
+                                            <div class="pop-slider__progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pop-slider__progress">
+                                            <div class="pop-slider__progress-bar"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pop-slider__progress">
+                                            <div class="pop-slider__progress-bar"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- Story posted image -->
+                                <ul class="pop-slider__items">
+
+                                    <li data-slideIndex="1" style="display: block;">
+                                        <div class="pop-slider__items__content  ">
+                                            <video
+                                                class="vjs-video  video-js"
+                                                >
+                                                <source src="/assets/images/video.mp4" type="video/mp4" />
+                                                <p class="vjs-no-js">
+                                                    To view this video please enable JavaScript, and consider upgrading to a
+                                                    web browser that
+                                                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                                </p>
+                                            </video>
+                                            <a class="content-card__line-cell line-cell" href="#">
+                                                <figure class="entety__avatar">
+                                                    <img src="/assets/images/avatarnew.jpg" alt="" class="entety__avatar_img">
+                                                </figure>  
+
+                                                <div class="line-cell__content">
+                                                    <div class="line-cell__title">Olga Arah</div>
+                                                    <div class="line-cell__subtitles"><span>10 minuts ago</span></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li data-slideIndex="2">
+                                        <div class="pop-slider__items__content">
+                                            <img src="/assets/images/imageVolga.jpg" alt="">
+                                            <a class="content-card__line-cell line-cell" href="#">
+                                                <figure class="entety__avatar">
+                                                    <img src="/assets/images/avatarnew.jpg" alt="" class="entety__avatar_img">
+                                                </figure>  
+
+                                                <div class="line-cell__content">
+                                                    <div class="line-cell__title">Olga Arah</div>
+                                                    <div class="line-cell__subtitles"><span>10 minuts ago</span></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li data-slideIndex="3" style="display: block;">
+                                        <div class="pop-slider__items__content  ">
+                                            <video
+                                                class="vjs-video  video-js"
+                                                >
+                                                <source src="/assets/images/video2.mp4" type="video/mp4" />
+                                                <p class="vjs-no-js">
+                                                    To view this video please enable JavaScript, and consider upgrading to a
+                                                    web browser that
+                                                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                                </p>
+                                            </video>
+                                            <a class="content-card__line-cell line-cell" href="#">
+                                                <figure class="entety__avatar">
+                                                    <img src="/assets/images/avatarnew.jpg" alt="" class="entety__avatar_img">
+                                                </figure>  
+
+                                                <div class="line-cell__content">
+                                                    <div class="line-cell__title">Olga Arah</div>
+                                                    <div class="line-cell__subtitles"><span>10 minuts ago</span></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li data-slideIndex="4">
+                                        <div class="pop-slider__items__content">
+                                            <img src="/assets/images/mybg2.jpg" alt="">
+                                            <a class="content-card__line-cell line-cell" href="#">
+                                                <figure class="entety__avatar">
+                                                    <img src="/assets/images/avatarnew.jpg" alt="" class="entety__avatar_img">
+                                                </figure>  
+
+                                                <div class="line-cell__content">
+                                                    <div class="line-cell__title">Olga Arah</div>
+                                                    <div class="line-cell__subtitles"><span>20 minuts ago</span></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li data-slideIndex="5">
+                                        <div class="pop-slider__items__content">
+                                            <img src="/assets/images/mybghome.jpg" alt="">
+                                            <a class="content-card__line-cell line-cell" href="#">
+                                                <figure class="entety__avatar">
+                                                    <img src="/assets/images/avatarnew.jpg" alt="" class="entety__avatar_img">
+                                                </figure>  
+
+                                                <div class="line-cell__content">
+                                                    <div class="line-cell__title">Olga Arah</div>
+                                                    <div class="line-cell__subtitles"><span>10 minuts ago</span></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="pop-slider__toggle" data-items="5">
                             <!-- slider navigation -->
                             <a href="javascript:void(0)" data-item="previous" class="story-slidenav-prev"></a>
                             <a href="javascript:void(0)" data-item="next" class="story-slidenav-next"></a>
@@ -1342,6 +1463,175 @@
                                     <use href="/assets/sprite/sprite.svg#icon-likeblue"></use>
                                 </svg>
                             </button>
+                        </form>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade is-full" id="addStories"  aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
+       <button class="btn is-close is-top" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="modal-body modal__body">
+            <div class="story-pop">
+                <div class="story-pop__side">
+                    <div class="story-pop__nav">
+                        <a class="story-pop__logo" href="/">
+                            <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+                            <div class="logo__copy">                    
+                                <div class="tagline">Social movement of entrepreneurs</div>
+                            </div>
+                        </a>
+                        <div class="story-pop__side__content">
+                            <div class="story-pop__side__title">
+                                Your story
+                            </div>
+
+                            <div class="flex align-center justify-between">
+                                <a class="content-card__line-cell line-cell" href="#">
+                                    <figure class="entety__avatar">
+                                        <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                                    </figure>  
+
+                                    <div class="line-cell__content">
+                                        <div class="line-cell__title">Владимир Никшин</div>
+                                        <div class="line-cell__subtitles"><span>Add your story</span></div>
+                                    </div>
+                                </a>     
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="story-pop__content">
+                    <div class="story-pop__slider add-story">
+                        <div class="add-story__content" style="background: linear-gradient(135deg, #EBD57F 0%, #EE95E1 100%);">
+                            <div class="visible-toggle">
+                                <!-- Story posted image -->
+                                <div class="pop-slider__items flex align-center justify-center">
+                                    <div class="content text-center">
+                                    <b>Choose a colored background <br>
+                                    photo or video</b>
+                                    And then add, <br>
+                                    text if needed
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="story-pop__react pop_react">
+                        <form class="pop_react__form flex align-center justify-center">
+
+                            <button class="btn is-ghost is-details mx-1s" type="button" data-bs-toggle="" data-bs-target="" aria-label="">   
+                                <svg class="icon is-like" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-landscape"></use>
+                                </svg>
+                            </button>
+
+                            <div class="dropdown is-top-center">
+                                <button class="btn is-ghost is-details mx-1s" type="button"  aria-label="">   
+                                    <span class="btn-circle"></span>
+                                </button>
+                                <div class="dropdown-menu_wrap">
+                                    <div class="dropdown-menu size_xs">
+                                        <div class="colorPicker">
+                                            <div class="colorPicker__color colorPicker__color--selected" style="background-color: rgb(249, 216, 39);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(255, 51, 1);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(255, 140, 73);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(0, 0, 0);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(46, 186, 72);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(65, 137, 232);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(159, 75, 237);"></div>
+                                            <div class="colorPicker__color" style="background-color: rgb(236, 60, 98);"></div>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex btn_split mx-1s">
+                                <div class="is-top-center">
+                                    <button class="btn is-ghost is-details btn_split__left" type="button" aria-label="">
+                                        <svg class="icon" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-text"></use>
+                                        </svg>
+                                    </button>
+                                </div>          
+                                <div class="dropdown is-top-center">
+                                    <button class="btn is-ghost is-details btn_split__right" type="button" aria-label="statisticForm">
+                                        <svg class="icon" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-menu_wrap">
+                                        <div class="dropdown-menu size_xs">
+                                            <div class="editor__tooltip tooltip-editor is_separate">
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-header" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-textsmall"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-header" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-textbig"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-bold" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-textbold"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="editor__tooltip tooltip-editor">
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-italic" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-alignleft"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-link" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-aligncenter"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="tooltip-editor__button btn is-square is-ghost is-icon ql-strike" type="button">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-alignright"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="colorPicker">
+                                                <div class="colorPicker__color" style="background-color: rgb(249, 216, 39);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(255, 51, 1);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(255, 140, 73);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(0, 0, 0);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(46, 186, 72);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(65, 137, 232);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(159, 75, 237);"></div>
+                                                <div class="colorPicker__color" style="background-color: rgb(236, 60, 98);"></div>
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                </div>  
+                            </div>
                         </form>
                     </div>  
                 </div>

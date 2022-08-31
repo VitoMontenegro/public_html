@@ -1,12 +1,47 @@
 {% extends "../index.twig" %}
 
 {% block title %}Feed + stories{% endblock %}
+
 {% set title = 'News' %}
+
+{% set captionActions = [
+	['dropText', "All", 'Sort', [
+			['all', 'All'],
+			['news', 'Text'],
+			['landscape', 'Photo'],
+			['vcamera', 'Video'],
+			['broadcast', 'Broadcast']
+		], ''
+	]
+] %}
+
+{% set asideActions = [
+	['dropText', "All comments", 'Sort', [
+			['all', 'All comments'],
+			['friends', 'Friends comments']
+		], ''
+	]
+] %}
+
+{% set asideComments = [
+	['/assets/images/avatar2.jpg', "Как приготовить вкусный шашлык в духовке: 3 проверенных способа", 'Edmon Dantes', 'Только что', 'Много толковых комментариев, согласен с остальными! А вообще, лучше шашлыка на мангале ничего не бывает. Мясо на открытом огне - это мясо на костре и никаким жидким дымом его не сымитировать.'],
+	['/assets/images/avatar2.jpg', "ВОЗ: за два года пандемии от COVID-19 умерли около 15 млн…", 'Александр Филоненко', '3 минуты назад', 'Полезно было бы увидеть похожую статью с метриками по трупам по странам.'],
+	['/assets/images/avatar2.jpg', "Где знакомиться в 2022 году", 'Sasha Kotova', '19 минут назад', 'Где найти партнёра на всю жизнь, ответить, к сожалению, не могу, мне это пока не светит вообще.'],
+] %}
+
+{% set mainContentList = [
+	['alpha.jpg', 'Альфа-Банк', "10 minuts ago", 'mybg3.jpg', 'Зарплаты резать точно не буду — не хочу потерять людей.Так решил Александр, владелец небольшой мебельной мастерской. Алёна, хозяйка кофейни, сокращает меню. А Сергей, совладелец автосервиса, планирует закупиться запчастями. Вместе с Яндекс Бизнесом мы сняли ролик про предпринимателей, которые перестраивают бизнес в кризис. А чтобы помочь им не на словах, а на деле, запускаем акцию — даём деньги на развитие'],
+	['alpha.jpg', 'Альфа-Банк', "2 hours ago", 'mybg4.jpg', ]
+] %}
 
 {% block content %}
 	<div class="main__body main__content__body">
 		{% include '../components/group_content_header.twig' %}
 		{% include '../components/content_stories.twig' %}
-		{% include '../components/content_post_full.twig' %}
+		{% include '../components/main_content_body.twig' %}
 	</div>
+{% endblock %}
+
+{% block sidebar %}
+	{% include '../components/sidebar_news_list.twig' %}
 {% endblock %}

@@ -72,6 +72,9 @@
     @extend %float-open;
     display: block;
   }
+  &.size_xs {
+    width: var(--size-width-xs);
+  }
 }
 
 .dropdown-menu,
@@ -118,6 +121,12 @@
 .dropdown__menu li,
 .dropdown-menu > li {
   @extend %menu-item;
+
+  &.custom-radio {
+    padding-top: 0.6rem;
+    padding-bottom: 0.2rem;
+        margin: 1rem 0;
+  }
 }
 
 .dropdown__link,

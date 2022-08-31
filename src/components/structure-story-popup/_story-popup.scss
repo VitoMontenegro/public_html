@@ -141,8 +141,21 @@
             }
             .btn {
                 --padding: 0 1.6rem;
-                background: #fff;
+                background: var(--color-background-alt);
                 height: 4.6rem;
+            }
+            .editor__tooltip {
+                .btn {
+                    --padding: 0 0.8rem;
+                }
+            }            
+            .btn_split {
+                &__left {
+                    --padding: 0 0.2rem 0 1.6rem;
+                }
+                &__right {
+                    --padding: 0 1.6rem 0 0.2rem;
+                }
             }
             input[type=text] {
                 padding-top: 0;

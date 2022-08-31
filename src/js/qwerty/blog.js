@@ -70,48 +70,44 @@ jQuery(document).ready(function($){
 	});
 
 
-	changeHeaderFormView.call();
-	changeModalFormView.call();
-	changePublicationPrivate.call();
+	function selectOption(target, option) {
+	  	target.empty();
+	  	target.append(option);
+	}
 
- 	$(".intervalcheck").change(function(){
-   		changeHeaderFormView.call();
+ 	$(".intervalcheck").change(function() {
+ 		var option = $("input[name='search_from']:checked").val(),
+ 		    target = $("#smart-search-btn span" );
+   		selectOption(target, option);
  	});
  	$(".typeIdCheck").change(function(){
-   		changeModalFormView.call();
+ 		var option = $("input[name='myIdoc']:checked").val(),
+ 		    target = $("#addID span" );
+   		selectOption(target, option);
  	});
  	$(".publicationCheck").change(function(){
-   		changePublicationPrivate.call();
+ 		var option = $("input[name='publicationPrivate']:checked").val(),
+ 		    target = $("#publicationType span" );
+   		selectOption(target, option);
  	});
- 
-	function changeHeaderFormView(){
-	  	var intervalCheck = $("input[name='search_from']:checked").val();
-	 
-	  	$("#smart-search-btn span" ).empty();
-	  	$("#smart-search-btn span" ).append(intervalCheck);
-	}
- 
-	function changeModalFormView(){
-	  	var typeIdCheck = $("input[name='myIdoc']:checked").val();
-	 
-	  	$("#addID span" ).empty();
-	  	$("#addID span" ).append(typeIdCheck);
-	}
- 
-	function changePublicationPrivate(){
-	  	var publicationCheck = $("input[name='publicationPrivate']:checked").val();
-	 
-	  	$("#publicationType span" ).empty();
-	  	$("#publicationType span" ).append(publicationCheck);
-	}
 
-	$('.custom-radio').on('click', function() {
-		console.log($(this).find('input'));
-	});
+ 	$(".feed_select").change(function(){
+ 		var option = $(this).closest('.dropdown').find("input[name='feed_check']:checked").val(),
+ 		    target = $(this).closest('.dropdown').find(".feed_target span" );
+   		selectOption(target, option);
+ 	});
+
+ 	$(".block-aside__select").change(function(){
+ 		var option = $(this).closest('.dropdown').find("input[name='block-aside-check']:checked").val(),
+ 		    target = $(this).closest('.dropdown').find(".block-aside_target span" );
+   		selectOption(target, option);
+ 	});
 
 	var showChar = 357,
+		showCharShort = 100,
 		ellipsestext = "...",
 		moretext = "More";
+
 	$('.crop-height__txt').each(function() {
 		var content = $(this).html();
 
@@ -124,6 +120,26 @@ jQuery(document).ready(function($){
 
 			$(this).html(html);
 		}
+	});
+
+	$('.crop-height__txt_short').each(function() {
+		var content = $(this).html();
+
+		if(content.length > showCharShort) {
+
+			var c = content.substr(0, showCharShort);
+			var h = content.substr(showCharShort, content.length - showCharShort);
+
+			var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span></span>';
+
+			$(this).html(html);
+		}
+	});
+
+	$('.crop-height__txt_short').on('click', function(){
+		$(this).find('.moreellipses').hide();
+		$(this).find('.morecontent span').show();
+		$(this).find('.comment-aside__form').show();
 	});
 	
 	if ($(window).width() < 568) {

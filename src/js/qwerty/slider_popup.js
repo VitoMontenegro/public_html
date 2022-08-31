@@ -9,17 +9,17 @@ jQuery(document).ready(function($){
 	//время проигрывания
 	var slideDuration = 5;
 	// количество изображений
-	var	totalImages = $('.pop-slider__toggle').attr('data-items');
+	var	totalImages = $('.pop-slider__toggle.current').attr('data-items');
 	//шкала прогресса
-	var	progressBar = $(".pop-slider__progress-bar");
+	var	progressBar = $(".pop-slider__toggle.current .pop-slider__progress-bar");
 	// пауза
 	var mouseOnContainer = false;
 
 
-	$('body').on('mousedown', '.pop-slider__items__content', function() {
+	$('body').on('mousedown', '.pop-slider__toggle.current .pop-slider__items__content', function() {
 		mouseOnContainer = true;
 	});
-	$('body').on('mouseup', '.pop-slider__items__content', function() {
+	$('body').on('mouseup', '.pop-slider__toggle.current .pop-slider__items__content', function() {
 		mouseOnContainer = false;
 	});
 
@@ -52,7 +52,7 @@ jQuery(document).ready(function($){
 
 	function showSlides(n) {
 		var i;
-		var slides = $(".pop-slider__toggle .pop-slider__items li");
+		var slides = $(".pop-slider__toggle.current .pop-slider__items li");
 
 		if (n > slides.length) {
 			//in case viewing last slide then keep it on that slide.
@@ -145,10 +145,10 @@ jQuery(document).ready(function($){
 		var width = 1;
 
 		// количество изображений
-		var	totalImages = $('.pop-slider__toggle:visible').attr('data-items'); 
+		var	totalImages = $('.pop-slider__toggle.current').attr('data-items'); 
 
 		//шкала прогресса
-		var	progressBar = $(".pop-slider__progress-bar");
+		var	progressBar = $(".pop-slider__toggle.current .pop-slider__progress-bar");
 
 		showSlides(slideIndex);
 	});	

@@ -82,8 +82,6 @@
     margin-bottom: $size-1;
 }
 
-
-
 .main__sidebar__footer {
   // main.css override
   font-family: var(--font-family-base);
@@ -114,5 +112,57 @@
   .footer__logo {
     margin-top: 1.5rem;
     margin-bottom: 3rem;
+  }
+}
+
+.comment-aside {
+  padding-bottom: $size-5;
+
+  &__box {
+    color: var(--color-ink-dark-base);
+    padding: $size-1p5 + .2rem $size-2 $size-2p5 - .2rem;
+    border: 1px solid var(--color-ink-border);
+    border-radius: var(--shape-border-radius-base);
+    position: relative;
+    margin-top: 1rem;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-left: .7rem solid transparent;
+      border-right: .7rem solid transparent;
+      border-bottom: .7rem solid var(--color-background-base);
+      bottom: 100%;
+      left: 2.7rem;
+    }
+
+    &::before {
+      border-left: .9rem solid transparent;
+      border-right: .9rem solid transparent;
+      border-bottom: .9rem solid;
+      border-bottom-color: var(--color-ink-border);
+      bottom: calc(100%);
+      left: calc(2.7rem - .2rem); 
+    }
+  }
+  &__article {
+    color: var(--color-ink-dark-2ry);
+    display: flex;
+    align-items: center;
+    margin-top: $size-1p5;
+    padding: 0 0 0 $size-1p5;
+    .icon {
+      margin-right: $size-1p5;
+    }
+  }
+  &__form {
+    margin-top: 1rem;
+    display: none;
+  }
+}
+.block-aside {
+  &__actions {
+        margin: 2.2rem 0 5rem;
   }
 }

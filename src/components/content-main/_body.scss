@@ -23,7 +23,8 @@
 		display: flex;
     flex-wrap: wrap;
 		align-items: center;
-	&__title {
+	&__title,
+	&__title a {
 	    font-weight: 500;
 	    font-size: var(--font-size-small);
 	    line-height: var(--font-line-height-small);

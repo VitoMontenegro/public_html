@@ -38,6 +38,35 @@
         </div>
 {% endmacro %}
 
+{% macro dropText(name, text, list, nameList) %}
+    <div class="dropdown is-right">
+        <a href="javascript:void(0)" class="dropdown-toggle feed_target is_rubber" data-toggle="dropdown" aria-expanded="false">
+            <div class="">
+                <span>{{name}}</span>
+            </div>
+        </a>
+        <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+                {% for keylist, valuelist in list %}                        
+                    <li class="dropdown custom-radio"> 
+                        <label>
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-{{ valuelist[0] }}"></use>
+                            </svg>
+                            {% if keylist < 1 %}
+                                <input type="radio" name="feed_check" id="rb{{ keylist }}" value="{{ valuelist[1] }}" checked> 
+                            {% else %}
+                                <input type="radio" name="feed_check" id="rb{{ keylist }}" value="{{ valuelist[1] }}"> 
+                            {% endif %}
+                            <span>{{ valuelist[1] }}</span>                        
+                        </label>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endmacro %}
+
 {% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent, entetyVideo) %}
         <div class="content-card has-shadow has-border-radius-lg">
             <div class="content-card__header">
@@ -720,4 +749,45 @@
 
         </a>
     </li>
+{% endmacro %}
+
+{% macro asideComments(entetyAvatarImg, entetyCategory, entetyTitle, enterySubtitle, enteryContent) %}
+    
+        <div class="block-aside__comment comment-aside">
+            <div class="comment-aside__line-cell line-cell">
+                <a href="#" class="line-cell__avatar entety__avatar is-md is-round">
+                <img src="{{entetyAvatarImg}}" alt="alt" class="img-r">
+                </a>
+                <div class="line-cell__content">
+                    <div class="line-cell__title small is-bolder text-truncate"><a href="#">{{entetyTitle}}</a></div>
+                    <div class="line-cell__subtitles">
+                        <div class="line-cell__subtitle one-liner">
+                            <span class="small">{{enterySubtitle}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-aside__box crop-height__txt_short">
+                {{enteryContent}}
+                <form class="comment-aside__form">
+                    <div class="form__item">
+                        <div class="form__control-group">
+                            <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                                <svg role="img" class="icon is-md">
+                                    <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                            <input type="text" class="form__control has-icon-right" required="" placeholder="Reply">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="/post#comments__items" class="comment-aside__article">
+                <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-direction-down-right"></use>
+                </svg>
+                <span class="small color-2ry">{{entetyCategory}}</span>
+            </a>
+        </div>
+       
 {% endmacro %}
