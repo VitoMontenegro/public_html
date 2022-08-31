@@ -1082,8 +1082,8 @@
         <div class="modal-body modal__body">
             <div class="story-pop">
                 <div class="story-pop__side">
-                    <div class="primary-nav">
-                        <a class="primary-nav__logo logo" href="/">
+                    <div class="story-pop__nav">
+                        <a class="story-pop__logo" href="/">
                             <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
                             <div class="logo__copy">                    
                                 <div class="tagline">Social movement of entrepreneurs</div>
@@ -1106,7 +1106,7 @@
                                     </div>
                                 </a>   
 
-                                <a href="javascript:void(0)" class="is_link is-right border-right">
+                                <a href="javascript:void(0)" class="is_link is-right border-right md_hidden">
                                     <svg class="icon" aria-hidden="true" focusable="false">
                                         <use href="/assets/sprite/sprite.svg#icon-more"></use>
                                     </svg>
@@ -1181,7 +1181,6 @@
                 </div>
                 <div class="story-pop__content">
                     <ul id="story-slider-switcher" class="story-pop__slider pop-slider">
-
                         <li class="pop-slider__toggle" data-items="5" style="display: block;">
                             <!-- slider navigation -->
                             <a href="javascript:void(0)" data-item="previous" class="story-slidenav-prev"></a>
@@ -1318,7 +1317,33 @@
                                 </ul>
                             </div>
                         </li>
-                    </ul>   
+                    </ul> 
+                    <div class="story-pop__react pop_react">
+                        <form class="pop_react__form flex align-center justify-between">
+                            <div class="form__item">
+                                <div class="form__control-group">
+                                    <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                                        <svg role="img" class="icon is-md">
+                                            <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                                        </svg>
+                                    </button>
+                                    <input type="text" class="form__control has-icon-right" required="" placeholder="Your comment">
+                                </div>
+                            </div>
+
+                            <button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#Like" aria-label="Like">   
+                                <svg class="icon is-like" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-likeblue"></use>
+                                </svg>
+                            </button>
+
+                            <button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#Like" aria-label="Like">   
+                                <svg class="icon is-danger is_rotate" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-likeblue"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>  
                 </div>
             </div>
         </div>

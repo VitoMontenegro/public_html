@@ -60,6 +60,10 @@
     color: var(--color-ink-danger-fill);
   }
 
+  &.is_rotate {
+    transform: rotate(180deg);
+  }
+
 }
 .header__language-toggle .icon {
   height: var(--size-height-icon-md);

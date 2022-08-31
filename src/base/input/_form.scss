@@ -1,4 +1,33 @@
-lect,
+%control-icon-left {
+  left: $size-1p5;
+  margin: 0;
+}
+
+%control-icon-right {
+  right: $size-1p5;
+  margin: 0;  
+}
+
+
+.form {
+  &__control-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    &.is-left {
+      @extend %control-icon-left;
+    }
+    &.is-right{
+      @extend %control-icon-right;
+    }
+  }
+}
+
+
+
+
+select,
 textarea,
 select,
 input[type='text'],

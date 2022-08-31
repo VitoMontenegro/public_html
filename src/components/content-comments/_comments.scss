@@ -45,20 +45,7 @@
           padding-right: 5.2rem;
         }
       }
-      .form__control-icon {
-          background: transparent;
-          position: absolute;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-        &.is-left {
-          left: $size-2p5;
-        }
-        &.is-right {
-          right: $size-2p5;
 
-        }
-      }
     }    
 
 

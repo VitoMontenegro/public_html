@@ -1,7 +1,10 @@
 .story-slider {
-	
 	.slick-list {
-		overflow: visible;
+	    @include media-breakpoint-up(sm) {
+	        overflow: visible;
+			max-width: calc(100vw - 24rem);
+	    }
+		
 	}
 	.slick-prev, .slick-next {
 		z-index: 1;
@@ -23,6 +26,10 @@
 	    font-family: monospace;
 	    position: relative;
 	    top: -15px;
+	    display: none;
+	    @include media-breakpoint-up(lg) {
+	        display: block;
+	    }
 	}   
 
 	.slick-prev:before { 
