@@ -1,28 +1,29 @@
 {% extends "../index.twig" %}
 {% set title = 'My Page' %}
-{% set profileCoverImg = '/assets/images/mybg.jpg' %}
-{% set entetyAvatarImg = '/assets/images/avatar.jpg' %}
-{% set groupNameH = 'Владимир Никишин' %}
-{% set groupNameInfo = 'Что нам с этих 300г будет? Мы же гипербореи' %}
+{% set profileCoverImg = '/assets/images/specialBg.jpg' %}
+{% set entetyAvatarImg = '/assets/images/avatarF.jpg' %}
+{% set groupNameH = 'Андрей Ковалёв' %}
+{% set groupNameInfo = 'Председатель Общероссийского Движения предпринимателей' %}
 {% set headerActions = {
-	editProfile: "editProfile",
-	stats: "statisticForm",
+	likeblue: "Like",
+	more: "Edit profile",
 } %}
 
 {% set mainSidebarList = [
-	['info', 'link','#', "About me", '', 'active'],
+	['info', 'link','#', "About Andrey", '', 'active'],
 	['news', 'link','#', "Newsline", ''],
 	['camera', 'link','#', "Photo and video", '204'],
 	['tag', 'link','#', "Favorites", '248'],
 	['archive', 'link','#', "Stories archive", '3']
 ] %}
 {% set headerActionsList = [
-	['stats', 'toggle', 'statisticForm', 'Stats']
+	['messenger', 'link','#', 'Message'],
+	['blocked', 'link','#', 'Block'],
 ] %}
 
 
 {% set mainContentList = [
-	['avatar.jpg', 'Владимир Никшин', "Hannah Coates - 10 minuts ago", 'mybghome.jpg', 'Ну и в ближайшую службу зачитывают эти записки и молятся об исполнении загаданного.<br> Место у питерцев популярное: это и музей, и церковь, и выставка, и фотозона, и кофейня, и концертный зал одновременно. Потому и в сети оказалось очень много рыбок, ожидающих молитвы. Надписи открыты и все проходящие об исполнении загаданного. Место у питерцев популярное: это и музей, и церковь, и выставка, и фотозона', 'vjs.zencdn.net/v/oceans'],
+	['avatarF.jpg', 'Андрей Ковалёв', "Hannah Coates - 10 minuts ago", 'mybghome.jpg', 'Ну и в ближайшую службу зачитывают эти записки и молятся об исполнении загаданного.<br> Место у питерцев популярное: это и музей, и церковь, и выставка, и фотозона, и кофейня, и концертный зал одновременно. Потому и в сети оказалось очень много рыбок, ожидающих молитвы. Надписи открыты и все проходящие об исполнении загаданного. Место у питерцев популярное: это и музей, и церковь, и выставка, и фотозона', 'vjs.zencdn.net/v/oceans'],
 	['avatar.jpg', 'Владимир Никшин', "2 days ago", '', '-А можете дать маленькую бесплатную консультацию по продаже квартиры? Так-то я по образованию юрист и сама все знаю, просто хочу уточнить. -Ну ок. <br>
 	Через день:<br>
 	-А наши покупатели хотят с нами рассчитаться таким-то образом, но я боюсь мошенничества. Скажите, как правильно сделать в нашей ситуации?<br>
@@ -46,7 +47,7 @@
 					<svg role="img" class="icon is-left">
 						<use href="/assets/sprite/sprite.svg#icon-geotag"></use>
 					</svg> 
-					<span>Херцег-Нови, Черногория </span>
+					<span>Москва</span>
 					
 				</a>
 			</div>
@@ -56,7 +57,7 @@
 					<svg role="img" class="icon is-left">
 						<use href="/assets/sprite/sprite.svg#icon-work"></use>
 					</svg> 
-					<span>Qwerty Networks, product designer</span>
+					<span>Общероссийское движение предпринимателей</span>
 					 
 				</a>
 			</div>
@@ -66,7 +67,7 @@
 					<svg role="img" class="icon is-left">
 					<use href="/assets/sprite/sprite.svg#icon-education"></use>
 					</svg>  
-					<span>Дальневосточный государс…</span>
+					<span>Московский автомобильно…</span>
 					 
 				</a>
 			</div>
@@ -76,7 +77,7 @@
 					<svg role="img" class="icon is-left">
 					<use href="/assets/sprite/sprite.svg#icon-birthday"></use>
 					</svg>  
-					<span>31 октября 1970</span>
+					<span>7 июня 1957</span>
 					 
 				</a>
 			</div>
@@ -84,53 +85,7 @@
 	</div>
 
 	<div class="main__sidebar__section crop-height__txt_short">
-		Журналист по образованию. Начинал в редколлегиях крупнейших газет Владивостока.
-		23 года в диджитал-индустрии. За эти годы стал универсалом
-	</div>
-
-	<div class="main__sidebar__section">
-		<div class="main__sidebar__header">
-			<div class="main__sidebar__title label is-bolder">Friends within a radius of 1 km</div>
-			<div class="main__sidebar__count label">5</div>
-		</div>
-		<div class="main__sidebar__map has-border-radius-base has-shadow">
-			<iframe src="https://yandex.ru/map-widget/v1/-/CCUVY0ET~A"  style="position:relative;width: 100%;height: 26.2rem;"></iframe>
-		</div>
-	</div>
-
-	<div class="main__sidebar__section">
-	    <div class="people__list">
-	        <a href="/profile_special" class="people__item item-people">
-	            <div class="item-people__avatar entety__avatar is-md is-round">
-	                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-	            </div>
-	            <div class="item-people__name">1. Андрей</div>
-	        </a>
-	        <a href="/profile_special" class="people__item item-people">
-	            <div class="item-people__avatar entety__avatar is-md is-round">
-	                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-	            </div>
-	            <div class="item-people__name">2. Ксения</div>
-	        </a>
-	        <a href="/profile_special" class="people__item item-people">
-	            <div class="item-people__avatar entety__avatar is-md is-round">
-	                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-	            </div>
-	            <div class="item-people__name">3. Евгений</div>
-	        </a>
-	        <a href="/profile_special" class="people__item item-people">
-	            <div class="item-people__avatar entety__avatar is-md is-round">
-	                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-	            </div>
-	            <div class="item-people__name">4. Мария</div>
-	        </a>
-	        <a href="/profile_special" class="people__item item-people">
-	            <div class="item-people__avatar entety__avatar is-md is-round">
-	                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-	            </div>
-	            <div class="item-people__name">5. Анна</div>
-	        </a>
-	    </div>
+		С 1979 года занимался производством эксклюзивной мебели на заказ для частных лиц, баров и ресторанов. После принятия закона о коопер.… Ещё
 	</div>
 
 	<div class="main__sidebar__section">

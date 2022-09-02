@@ -39,6 +39,7 @@
             line-height: var(--font-line-height-small);
             text-align: center;
             @include media-breakpoint-up(md) {
+                text-align: left;
                 margin-bottom: $size-3;  
                 margin-top: $size-5;
                 font-size: var(--font-size-base);
@@ -106,6 +107,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        .dropdown-menu {
+            position: absolute;
+            border-radius: var(--shape-border-radius-base);
+        }
     }
 
     &__slider {
@@ -136,8 +142,11 @@
     .pop_react {
         &__form {
             .form__item {
-                width: 68%;
+                width: 63%;
                 margin-top: 0;
+                @include media-breakpoint-up(sm) {
+                    width: 68%;
+                }
             }
             .btn {
                 --padding: 0 1.6rem;

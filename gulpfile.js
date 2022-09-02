@@ -150,11 +150,7 @@ function js(cb) {
           mode: "production",
           output: {
             filename: 'app.js',
-          }
-          ,performance: {
-                maxEntrypointSize: 512000,
-                maxAssetSize: 512000
-           },  
+          },  
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));

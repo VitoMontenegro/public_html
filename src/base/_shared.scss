@@ -150,3 +150,7 @@ body .is_open {
   font-size: var(--font-size-small);
   line-height: var(--font-line-height-small);
 }
+
+.deg90 {
+  transform: rotate(90deg);
+}

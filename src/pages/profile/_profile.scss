@@ -1,0 +1,20 @@
+.profile-info {
+	&__detail {
+	  .one-liner {
+	    color: var(--color-ink-dark-2ry);
+	  }
+	  &:not(:last-child) {
+	    margin-bottom: $size-1;
+	  }
+	}
+	&__about {
+		
+	}
+	&__kpis {
+	  margin-top: auto;
+
+	  @include media-breakpoint-down(md) {
+	    display: none;
+	  }
+	}	
+}

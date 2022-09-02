@@ -99,16 +99,25 @@
 
 // ITEMS
 
-.primary-nav .menu__item {
-  z-index: 2;
-  @include media-breakpoint-down(md) {
-    width: clamp(8rem, 25%, 16.8rem);
-  }
+.primary-nav {
+  .menu__item {
+    z-index: 2;
+    @include media-breakpoint-down(md) {
+      width: clamp(8rem, 25%, 16.8rem);
+    }
 
-  @include media-breakpoint-up(md) {
-    margin-bottom: $size-1;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: $size-1;
+    }
   }
+  .dropdown__menu {
+    .menu__item {
+      width: 100%;
+    }
+  }  
 }
+
 .is-mypage {
   display: block;
 

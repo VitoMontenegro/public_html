@@ -1,0 +1,34 @@
+.people {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__item {
+    width: 23%;
+    margin-bottom: $size-2p5;
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+.item-people {
+  display: block;
+  text-align: center;
+  &:hover {
+    text-decoration: none;
+  }
+  &__avatar {
+    margin: 0 auto $size-1p5;
+  }
+  &__name {
+    font-size: var(--font-size-small);
+    font-weight: 400;
+    line-height: var(--font-line-height-small);
+  }
+}

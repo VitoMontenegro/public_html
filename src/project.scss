@@ -28,6 +28,7 @@
 
 // Components
 // @import 'components/actions-cta/cta';
+@import 'components/block-people/people';
 // @import 'components/content/featurette';
 @import 'components/content-comments/comments';
 // @import 'components/content/kpi';
@@ -80,7 +81,7 @@
 // Pages
 // @import 'pages/blog/blog';
 // @import 'pages/official/contacts';
-// @import 'pages/user/profile';
+@import 'pages/profile/profile';
 // @import 'pages/communities/communities';
 // @import 'pages/job/job';
 // @import 'pages/tweaks';
