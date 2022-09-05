@@ -14,7 +14,11 @@
   }
     
   .burger_btn {
-    margin-right: $size-3;
+      display: none;
+    @include media-breakpoint-up(sm) {
+      margin-right: $size-3;
+      display: block;
+    }
   }
 
   &:not(.is-home)  {
@@ -40,6 +44,17 @@
 
   &.is-home {
     border-bottom: none;
+    .is-logo {
+      margin:auto;
+    }
+    .logo {
+      margin:$size-1 auto;
+      max-width: 60%;
+      &__mark {
+        width: $size-5;
+        margin-right: $size-1;        
+      }
+    }
 
     @include media-breakpoint-up(sm) {
       padding: $size-5 0 $size-4;
@@ -47,10 +62,6 @@
     }
 
     @include media-breakpoint-down(sm) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
       .header__col {
         &.is-buttons {
           display: none;

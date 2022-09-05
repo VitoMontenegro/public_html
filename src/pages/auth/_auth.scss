@@ -1,0 +1,217 @@
+// Page Auth
+.page-auth {
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-up(sm) {
+    min-height: calc(100vh - ((#{$size-3} + .2rem) + #{$size-2}));
+    height: 1px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-color: var(color-background-alt);
+    min-height: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
+
+  &__form {
+    text-align: left;
+    vertical-align: middle;
+    margin: $size-5 0;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__language-toggle {
+    padding-bottom: $size-2;
+
+    .dropdown-toggle {
+      .icon {
+        &.is-left {
+          margin-left: 0;
+        }
+        &.is-sm {
+          margin-left: $size-half;
+        }
+      }
+    }
+  }
+
+  &__logo-wrap {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 4rem;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &__wrap  {
+    padding-left: 11rem;
+    padding-right: 8rem;
+    @include media-breakpoint-down(lg) {
+      padding-right: 4rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: left;
+    margin-bottom: 1rem;
+    opacity: 0.87;
+  }
+  &__title {
+    text-align: left;
+    margin-bottom: 6rem;
+    opacity: 0.87;
+  }
+
+  &__content {
+    text-align: left;
+    opacity: 0.54;
+  }
+
+  .right {
+      height: 100vh;
+      overflow: auto;
+
+    @include media-breakpoint-up(sm) {
+      width: 50%;
+    }
+  }
+
+  .left {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    background-image: url(/assets/images/main/sign-bg.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    * {
+      color: #fff;
+    }
+    
+    @include media-breakpoint-up(sm) {
+      width: 50%;
+    }
+
+    .team {
+      margin-bottom: 2rem;
+      margin-top: 14rem;
+      margin-right: 15.5rem;
+      justify-content: flex-end;
+    }
+    .team_desc {
+      text-align: right;
+      margin-right: 3.2rem;
+
+      &___name {
+        opacity: 0.87;
+      }
+
+      &___about {
+        opacity: 0.54;
+      }
+    }
+  }
+}
+
+.form-auth {
+    width: 100%;
+    max-width: 44.8rem;
+    padding: 4.8rem 3.7rem 6.4rem;
+
+  @include media-breakpoint-down(sm) {
+    border-radius: 0;
+    max-width: none;
+    padding: $size-6 $size-2p5;
+  }
+  &__title {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 2.5rem;
+  }
+  &__auth-methods {
+    margin-bottom: 2.2rem;
+  }
+  &__controls {
+    margin-bottom: 4.1rem;
+  }
+  &__controls-title {
+    text-align: left;
+    margin-bottom: 2.3rem;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: $size-3;
+  }
+  &__link {
+    color: var(color-ink-dark-2ry);
+    margin-right: $size-2;
+  }
+  &__submit {
+    margin-left: auto;
+  }
+  &__back {
+    .icon {
+      margin-right: $size-1;
+    }
+  }
+  &__accept {
+    text-align: center;
+    margin-top: $size-4;
+  }
+}
+
+.auth-methods {
+  &__title {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -$size-half;
+    margin-right: -$size-half;
+    margin-bottom: -$size-1;
+  }
+  &__button {
+    margin: 0 $size-half $size-1;
+  }
+}
+
+.team_image {
+  width: 151px;
+  height: 160px;
+  position: relative;
+  border-radius: 22rem;
+  background: #1C55B0;
+  border-radius: 10px;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 151px;
+    border-radius: 0 0 10px 10px;
+  }
+}

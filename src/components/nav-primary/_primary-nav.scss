@@ -80,31 +80,27 @@
     }
   }
 
-}
-// #endregion
 
-// -----------------------------------------------------------------------------
-// LOGO
-// -----------------------------------------------------------------------------
-// #region
+  &__logo {
+    display: none;
 
-.primary-nav__logo {
-  display: none;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      border-radius: var(--shape-border-radius-base);
 
-  @include media-breakpoint-up(md) {
-    display: flex;
-    border-radius: var(--shape-border-radius-base);
+      &:focus {
+        background: var(--color-background-alt);
+      }
+    }
 
-    &:focus {
-      background: var(--color-background-alt);
+    @include media-breakpoint-up(xl) {
+      margin-left: -$size-1;
     }
   }
 
-  @include media-breakpoint-up(xl) {
-    margin-left: -$size-1;
-  }
 }
 // #endregion
+
 
 // -----------------------------------------------------------------------------
 // MENU

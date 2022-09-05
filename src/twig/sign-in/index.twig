@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="preload" href="/assets/fonts/Roboto-Regular.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Medium.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Black.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Italic.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/PT-Root-UI_Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Thin.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Regular.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Medium.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Semibold.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Bold.otf" as="font">
+
+    <link rel="stylesheet" href="/project.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+  		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  		crossorigin="anonymous"></script>
+	<!--script src="/assets/js/video.core.novtt.min.js"></script--> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</head>
+<body>
+	<div class="page-auth">
+		<div class="page-auth__container container">
+
+			<div class="flex">
+				<div class="left">
+					<div class="page-auth__logo-wrap">
+						<a href="/"><img src="/assets/images/logo/logomark.svg" alt="alt" class="form-auth__logo img-r"></a>
+					</div>
+					<div class="page-auth__wrap">
+						<h1 class="page-auth__title">
+							Welcome back
+						</h1>
+						<div class="page-auth__subtitle big">
+							Don't miss the next Movement event
+						</div>
+						<div class="page-auth__content">
+							June 11–13. Business picnic in the estate "Grebnevo" (Shchelkovsky district, Moscow region)
+						</div>						
+					</div>
+
+					
+					<div class="team flex">
+						<div class="team_desc">
+							<div class="team_desc___name">Андрей Ковалев</div>
+							<div class="team_desc___about">
+								Председатель<br>
+								Общероссийского<br>
+								движения<br>
+								предпринимателей
+							</div>
+						</div>
+
+						<div class="team_image">
+							<img width="227" height="300" src="/assets/images/main/main_profile.png">
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<form class="page-auth__form form-auth form">
+						<h1 class="form-auth__title">Авторизация</h1>
+						<div class="form-auth__auth-methods auth-methods">
+							<div class="auth-methods__title">Войдите как пользователь</div>
+							<div class="auth-methods__items">
+								<a href="#" class="auth-methods__button button is-outline is-icon">
+									<svg role="img" class="icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#google" />
+									</svg>
+								</a>
+								<a href="#" class="auth-methods__button button is-outline is-icon">
+									<svg role="img" class="icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#yandex" />
+									</svg>
+								</a>
+								<a href="#" class="auth-methods__button button is-outline is-icon">
+									<svg role="img" class="icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#viber" />
+									</svg>
+								</a>
+								<a href="#" class="auth-methods__button button is-outline is-icon">
+									<svg role="img" class="icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#telegram" />
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="form-auth__controls">
+							<div class="form-auth__controls-title">или так:</div>
+							<div class="form__item">
+								<div class="form__control-group">
+									<input type="email" class="form__control is-border-st has-icon-left" required placeholder="Email">
+									<svg role="img" class="form__control-icon is-left icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#email" />
+									</svg>
+								</div>
+							</div>
+							<div class="form__item">
+								<div class="form__control-group">
+									<input type="password" class="form__control is-border-st has-icon-left has-icon-right" required placeholder="Пароль">
+									<svg role="img" class="form__control-icon is-left icon">
+										<use href="/assets/img/svg-sprite/sprite.svg#lock" />
+									</svg>
+									<button class="form__control-icon form__password-toggle is-right button is-bare is-icon" type="button">
+										<svg role="img" class="icon">
+											<use href="/assets/img/svg-sprite/sprite.svg#eye" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="form-auth__footer">
+							<div class="form-auth__links">
+								<a href="/sign-up/" class="form-auth__link label is-bolder d-none d-sm-block">регистрация</a>
+								<a href="/reset" class="form-auth__link label">забыли пароль?</a>
+							</div>
+							<button type="submit" class="form-auth__submit button is-primary">
+								<span class="label is-bolder">вход</span>
+							</button>
+						</div>
+					</form>
+
+					<div class="page-auth__language-toggle dropdown is-top-center is-languages">
+						<button class="button is-bare dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+							<svg role="img" class="icon is-left">
+								<use href="/assets/img/svg-sprite/sprite.svg#flag-ru"/>
+							</svg>
+							<span class="label">Русский</span>
+							<svg role="img" class="icon is-sm">
+								<use href="/assets/img/svg-sprite/sprite.svg#chevron-down-sm"/>
+							</svg>
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-af" />
+									</svg>
+									<span class="label is-bolder">Afrikaans</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-it" />
+									</svg>
+									<span class="label is-bolder">Italiano</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-tr" />
+									</svg>
+									<span class="label is-bolder">Türkçe</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-ar" />
+									</svg>
+									<span class="label is-bolder">العربية</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-de" />
+									</svg>
+									<span class="label is-bolder">Deutsch</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-pl" />
+									</svg>
+									<span class="label is-bolder">Polski</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-ru" />
+									</svg>
+									<span class="label is-bolder">Русский</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-hi" />
+									</svg>
+									<span class="label is-bolder">हिन्दी</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-en" />
+									</svg>
+									<span class="label is-bolder">English</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-pt" />
+									</svg>
+									<span class="label is-bolder">Português</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-uk" />
+									</svg>
+									<span class="label is-bolder">Українська</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-th" />
+									</svg>
+									<span class="label is-bolder">ภาษาไทย</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-es" />
+									</svg>
+									<span class="label is-bolder">Español</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-hr" />
+									</svg>
+									<span class="label is-bolder">Srpsko-hrvatski</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-hy" />
+									</svg>
+									<span class="label is-bolder">Հայերեն</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-zh" />
+									</svg>
+									<span class="label is-bolder">中文</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-fr" />
+									</svg>
+									<span class="label is-bolder">Français</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-fi" />
+									</svg>
+									<span class="label is-bolder">Suomi</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-hi" />
+									</svg>
+									<span class="label is-bolder">עִברִית</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<svg role="img" class="icon is-left">
+										<use href="/assets/img/svg-sprite/sprite.svg#flag-ja" />
+									</svg>
+									<span class="label is-bolder">日本語</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
