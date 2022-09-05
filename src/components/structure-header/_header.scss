@@ -86,7 +86,7 @@
 // #region
 .has-search-button {
   display: inline-block;
-  margin-left: auto;
+  margin-left: $size-1;
   .btn {    
     background-color: var(--color-background-base);
   }
@@ -123,6 +123,7 @@
       pointer-events: auto;
       transform: translateY(0);
     }
+ 
   }
 
   @include media-breakpoint-up(md) {
@@ -143,6 +144,12 @@
   }
 }
 
+.header__search-cancel {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+} 
 // Input and its container
 .header__search [type='text'],
 .header__search .input,

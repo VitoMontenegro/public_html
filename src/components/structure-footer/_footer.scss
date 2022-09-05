@@ -60,10 +60,10 @@
   }
   &__site-credits {
     text-align: center;
+      font-size: var(--font-size-small);
+      line-height: 1.6rem;
 
     @include media-breakpoint-down(sm) {
-      font-size: var(font-size-small);
-      line-height: var(font-line-height-small);
     }
   }
   &__copyright {

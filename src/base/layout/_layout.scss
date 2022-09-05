@@ -89,7 +89,9 @@
     }    
   }
   .main__content {
+    margin-bottom: 7.2rem;
     @include media-breakpoint-up(md) {
+      margin-bottom: 0;
       grid-column: 1/span 8;
     }
   }  

@@ -144,7 +144,7 @@
 .primary-nav .menu .menu__item,
 .primary-nav .dropdown__item {
   @include media-breakpoint-down(md) {
-    padding: $size-half;
+    padding: $size-half 0;
   }
 }
 
@@ -155,11 +155,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding:
-    $size-half
-    $size-1
-    0
-    0;
+  padding: 0.4rem;
 
   &.is-active {
     background-color: var(--color-ink-accent);
@@ -197,7 +193,12 @@
     text-transform: none;
   }
 }
+.primary-nav .label {
 
+  @include media-breakpoint-down(sm) {
+  padding-top: .4rem;
+  }
+}
 // ICONS
 
 .primary-nav .menu__link .icon,

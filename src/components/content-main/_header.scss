@@ -123,6 +123,7 @@
 
   	&:not(:first-child) {
   		position: relative;
+
 	  	&:before {
 		    background: var(--color-ink-border);
 		    content: "";
@@ -136,6 +137,12 @@
 		    width: 0.1rem;
 	  	}
   	}
+  	
+	&.active {
+		button {
+			background: #DCE7F9;
+		}			
+	}
 
   	&.likeblue {
 		.icon{
@@ -165,7 +172,9 @@
   		}
   	}
 }
-
+.expand__action__item.active + .expand__action__item:before {
+  display: none;
+}
 // SINGLE ACTION
 
 .main__header.has-single-action {
@@ -229,13 +238,7 @@
 
     }
 }
-.expand__action__item {
-	&.active {
-		button {
-			background: #DCE7F9;
-		}			
-	}
-}
+
 .main__content__search-submit {
     display: flex;
     align-items: center;

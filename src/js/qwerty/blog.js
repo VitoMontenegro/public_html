@@ -303,5 +303,32 @@ jQuery(document).ready(function($){
 	});
 
 
+	/**
+	* ---------------------------------------------------------------------------
+	* TOGGLE SEARCH FORM ON MOBILES
+	* ---------------------------------------------------------------------------
+	*/
+
+	var headerSearchForm = $('#header-search-form');
+
+    $('.header__search-toggle').on('click', function(){
+
+    	if (headerSearchForm.hasClass('is-open')) return;
+
+    	headerSearchForm.addClass('is-open');
+    	$('body').append('<div class="backdrop is-on"></div>');
+    });
+
+	$(document).mouseup( function(e){ // событие клика по веб-документу
+		if ( !headerSearchForm.is(e.target) && headerSearchForm.has(e.target).length === 0 ) {
+			$('.backdrop').remove();
+			headerSearchForm.removeClass('is-open');
+		}
+	});
+
+	$('.header__search-cancel').on('click', function(){
+			$('.backdrop').remove();
+			headerSearchForm.removeClass('is-open');
+	});
 
 });
