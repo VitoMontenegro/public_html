@@ -1,4 +1,4 @@
-<div class="modal fade is-lg" id="modal-edit-post" tabindex="-1" aria-labelledby="modal-edit-post-title" aria-hidden="true">
+<div class="modal fade is-lg" id="modal-edit-post" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <form class="modal-content modal__box">
             <div class="modal-body modal__body">
@@ -100,7 +100,7 @@
     </div>
 </div>
 
-<div class="modal fade is-lg" id="editCommunity"  aria-hidden="true" tabindex="-1">
+<div class="modal fade is-lg" id="editCommunity" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <form class="modal-content modal__box">
             <div class="modal-body modal__body">
@@ -314,7 +314,7 @@
     </div>
 </div>
 
-<div class="modal fade is-lg" id="editProfile" aria-hidden="true" tabindex="-1">
+<div class="modal fade is-lg" id="editProfile" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <form class="modal-content modal__box" id="edit_profile">
             <div class="modal-body modal__body">
@@ -667,7 +667,7 @@
     </div>
 </div>
 
-<div class="modal fade is-lg" id="createPost" tabindex="-1"  aria-hidden="true" tabindex="-1">
+<div class="modal fade is-lg" id="createPost"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <form class="modal-content modal__box">
             <div class="modal-body modal__body">
@@ -756,7 +756,7 @@
     </div>
 </div>
 
-<div class="modal fade is-lg" id="statisticForm" aria-hidden="true" tabindex="-1">
+<div class="modal fade is-lg" id="statisticForm" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <div class="modal-content modal__box">
             <div class="modal-body modal__body">
@@ -822,7 +822,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="modal-notify" aria-hidden="true" tabindex="-1">
+<div class="modal fade" id="modal-notify" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal__box">
             <div class="modal__header">
@@ -839,7 +839,7 @@
     </div>
 </div>
 
-<div class="modal fade is-lg" id="broadcastModal"  aria-hidden="true" tabindex="-1">
+<div class="modal fade is-lg" id="broadcastModal"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
         <div class="modal-content modal__box">
             <div class="tabs_steps">
@@ -988,52 +988,71 @@
                         </div>
                         <div class="modal__body">
                             <div class="form__item">
-                                <input class="form__control" id="streamName" name="streamName" type="text" placeholder="Find friends">
+                                <input class="form__control" id="findFriends" name="findFriends" type="text" placeholder="Find friends">
                             </div>
                             <ul class="invite__list">
                                 <li>
                                     <label class="flex align-center">
-                                    <div class="invite_all">
-                                        <input type="checkbox"> 
-                                    </div>
+                                        <span class="invite_all">
+                                            <input type="checkbox"> 
+                                        </span>
                                            
-                                        <div class="invite__list__desc">
-                                            <div class="invite__list__desc__title">Online only</div>
-                                        </div> 
+                                        <span class="invite__list__desc">
+                                            <span class="invite__list__desc__title">Online only</span>
+                                        </span> 
                                     </label>
                                 </li>
                                 <li>
-                                    <label class="flex align-center">
+                                    <div class="flex align-center">
                                         <figure class="entety__avatar">
                                             <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
                                         </figure>      
-                                        <div class="invite__list__desc">
-                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                        </div>
-                                        <input type="checkbox">
-                                    </label>
+                                        <label class="flex align-center">
+                                            <span class="invite__list__desc">
+                                                <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                            </span>
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
                                 </li>
                                 <li>
-                                    <label class="flex align-center">
+                                    <div class="flex align-center">
                                         <figure class="entety__avatar">
                                             <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
                                         </figure>      
-                                        <div class="invite__list__desc">
-                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                        </div>
-                                        <input type="checkbox">
-                                    </label>
+                                        <label class="flex align-center">
+                                            <span class="invite__list__desc">
+                                                <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                            </span>
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
                                 </li>
                                 <li>
-                                    <label class="flex align-center">
+                                    <div class="flex align-center">
                                         <figure class="entety__avatar">
                                             <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
                                         </figure>      
-                                        <div class="invite__list__desc">
-                                            <div class="invite__list__desc__title">Anna Chernopyatova</div>
-                                        </div>
-                                        <input type="checkbox">
-                                    </label>
+                                        <label class="flex align-center">
+                                            <span class="invite__list__desc">
+                                                <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                            </span>
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex align-center">
+                                        <figure class="entety__avatar">
+                                            <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                        </figure>      
+                                        <label class="flex align-center">
+                                            <span class="invite__list__desc">
+                                                <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                            </span>
+                                            <input type="checkbox">
+                                        </label>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -1057,7 +1076,7 @@
     </div>
 </div>
 
-<div class="modal fade is-full" id="getStories"  aria-hidden="true" tabindex="-1">
+<div class="modal fade is-full" id="getStories"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
        <button class="btn is-close is-top" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
             <svg class="icon" aria-hidden="true" focusable="false">
@@ -1486,7 +1505,7 @@
 
 
 
-<div class="modal fade is-full" id="addStories"  aria-hidden="true" tabindex="-1">
+<div class="modal fade is-full" id="addStories"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable has-border-radius-lg">
        <button class="btn is-close is-top" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
             <svg class="icon" aria-hidden="true" focusable="false">

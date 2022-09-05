@@ -779,3 +779,14 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     color: #475F85;
     margin-top: 3.2rem;
 }
+
+.has-open-modal {
+  padding-right: 0;
+  padding-inline-end: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  .dropdown-menu_wrap {
+    pointer-events: auto;
+  }
+}

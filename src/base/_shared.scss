@@ -154,3 +154,9 @@ body .is_open {
 .deg90 {
   transform: rotate(90deg);
 }
+
+@media  screen and (max-height: 200px) {
+  body {
+    display: none;
+  }
+}

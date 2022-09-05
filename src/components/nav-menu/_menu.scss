@@ -52,12 +52,55 @@
 
 .is-friends {
   display: none;
+
   @include media-breakpoint-up(sm) {
+    display: block;
+    &__copy {
+      display: none;
+    }
+  }
+}
+
+.is-community,
+.is-organizations,
+.is-events,
+.is-promotions,
+.is-advertising {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    &__copy {
+      display: none;
+    }
+  }
+}
+
+
+.for_tablet {
+  display: none;
+  @include media-breakpoint-up(md) {
     display: block;
   }
 }
-.is-friends_copy {
-  @include media-breakpoint-up(sm) {
-    display: none;
+
+.primary-nav .is-more.for_tablet.open .menu {
+    position: fixed;
+    background: #fff;
+    left: 11.2rem;
+    width: 20rem;
+    border-radius: var(--shape-border-radius-lg);;
+    display: block;
+    top: 55rem;
+    bottom: auto;
+    padding: 2rem;
+}
+.primary-nav .is-more.for_tablet .menu {
+  @include media-breakpoint-between(sm, xl) {
+    display:none;
   }
+       
+}
+.primary-nav .is-more.for_tablet.open .menu .dropdown__link {
+    justify-content:flex-start;
 }

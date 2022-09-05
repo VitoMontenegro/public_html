@@ -15,12 +15,11 @@
   width: 100%;
   height: 5.6rem;
   background-color: var(--color-background-base);
-  z-index: var(--layer-zindex-header);
+  z-index: 2;
 
   @include media-breakpoint-up(md) {
     border-top: .8rem solid var(--color-ink-border);
     background-color: var(--color-background-alt);
-    //background-color: var(--color-background-alt);
     backdrop-filter: none;
     display: flex;
     flex-direction: column;
@@ -405,15 +404,21 @@
 //   }
 // }
 
-.primary-nav .menu__item.is-more {
+.primary-nav .menu__item.is-more.for_mobile {
   @include media-breakpoint-up(md) {
     padding: 0;
   }
 }
 
-.primary-nav .is-more > .menu__link {
+.primary-nav .is-more.for_mobile > .menu__link {
   @include media-breakpoint-up(md) {
     display: none;
+  }
+}
+.primary-nav .is-more.for_tablet > .menu__link {
+  display: none;
+  @include media-breakpoint-between(md, xl) {
+    display: block;
   }
 }
 // #endregion
@@ -436,3 +441,5 @@
   }
 
 }
+
+
