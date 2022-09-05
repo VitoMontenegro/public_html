@@ -33,6 +33,15 @@ jQuery(document).ready(function($){
 			publicationPrivate.removeClass('open');
 		}
 	});
+	$('#showMenu').on('click', function(){
+		$('.mask').toggle();
+		$('.primary-nav-home').addClass('active');
+	});
+
+	$('.mask').on('click', function(){
+		$(this).hide();
+		$('.primary-nav-home').removeClass('active');
+	});
 	
 	$('.dropdown-menu_wrap').on('click', function(event) {
 	    event.stopPropagation();

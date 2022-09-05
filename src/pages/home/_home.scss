@@ -1,0 +1,45 @@
+.hero {
+	background-color: var(--color-background-hero);
+	background-image: url(/assets/images/main/bg-hero.png);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 75.6rem;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	padding: 10rem 28rem;
+	margin-bottom: 7.2rem;
+	background-size: auto;
+
+  @include media-breakpoint-up(md) {
+    margin-right: -$size-5;
+    margin-left: -$size-5;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-radius: var(--shape-border-radius-lg);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &__title {
+  	color: var(--color-primary-base);
+  	text-transform: uppercase;
+  	span {
+  		color: var(--color-primary-red);
+  	}
+  }
+  &__text {
+    padding: 1rem 6rem;
+		font-size: 23px;
+		line-height: 24px;
+		color: #475F85;
+		text-align: center;
+	}
+
+	&__button {
+    max-width: 18rem;
+    min-height: 5.6rem;
+    margin: 6.6rem auto;
+	}
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title}}</title>
+    <link rel="preload" href="/assets/fonts/Roboto-Regular.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Medium.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Black.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/Roboto-Italic.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/PT-Root-UI_Bold.ttf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Thin.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Regular.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Medium.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Semibold.otf" as="font">
+    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Bold.otf" as="font">
+
+    <link rel="stylesheet" href="/project.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"
+  		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  		crossorigin="anonymous"></script>
+	<!--script src="/assets/js/video.core.novtt.min.js"></script--> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+</head>
+<body>
+    <div class="wrapper home-wrapper">
+        <header class="header is-default is-home">
+            <div class="header__container container">
+                <div class="header__row flex justify-between align-center">
+                    <div class="header__col flex align-center">
+                        <button type="button" id="showMenu" class="burger_btn">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-burger"></use>
+                            </svg>
+                        </button>
+                        <div class="is-logo">
+                            <a class="primary-nav__logo logo" href="/">
+                                <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="">
+                                <div class="logo__copy">                    
+                                    <div class="tagline">Social movement of entrepreneurs</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__col is-buttons">
+                        <ul class="header__menu header__buttons" id="header-menu">
+                            <li class="header__button">
+                                <a href="#" class="btn is-outline">
+                                    <span class="label is-bolder">зарегистрироваться</span>
+                                </a>
+                            </li>
+                            
+                            <li class="header__button">
+                                <a href="#" class="btn is-ghost">
+                                    <span class="label is-bolder">войти</span>
+                                </a>
+                            </li>
+                              
+                            <li class="header__language-toggle dropdown">
+                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/images/flags.svg#icon-flag-ru"></use>
+                                    </svg>
+                                </button>
+                                {% include "components/languages.twig" %}
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="primary-nav-home primary-nav is-on-home" aria-label="Main">
+            <a class="primary-nav__logo logo" href="/">
+                <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
+                <div class="logo__copy">                    
+                    <div class="tagline">Social movement of entrepreneurs</div>
+                </div>
+            </a>
+
+            <ul class="menu" role="menu">
+                <li class="menu__item is-mypage">
+                    <a class="menu__link active" href="/mypage/" role="menuitem">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                        </svg>
+                        <span class="label">My page</span>
+                    </a>
+                </li>
+                <li class="menu__item is-news">
+                    <a class="menu__link" href="/news/" role="menuitem">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-news"></use>
+                        </svg>
+                        <span class="label">News</span>
+                    </a>
+                </li>
+                <li class="menu__item is-add">
+                    <a class="menu__link active" href="javascript:void(0)" role="menuitem">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-plus-gray"></use>
+                        </svg>
+                        <span class="label">Add</span>
+                    </a>
+                </li>
+                <li class="menu__item is-messenger">
+                    <a class="menu__link" href="/messenger/" role="menuitem">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+                        </svg>
+                        <span class="label">Messenger</span>
+                    </a>
+                </li>
+                <li class="menu__item is-friends">
+                    <a class="menu__link" href="/friends/" role="menuitem">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-friends"></use>
+                        </svg>
+                        <span class="label">Friends</span>
+                    </a>
+                </li>
+                <li class="menu__item dropdown is-more">
+                    <a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menuitem" >
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                        </svg>
+                        <span class="label">More</span>
+                    </a>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown__menu menu" role="menu" aria-label="More">
+
+                            <li class="menu__item is-friends_copy">
+                                <a class="dropdown__link" href="#" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-friends"></use>
+                                    </svg>
+                                    <span class="label">Friends</span>
+                                </a>
+                            </li>
+                            <li class="menu__item is-community">
+                                <a class="dropdown__link" href="/community" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-community"></use>
+                                    </svg>
+                                    <span class="label">Community</span>
+                                </a>
+                            </li>
+                            <li class="menu__item is-organizations">
+                                <a class="dropdown__link" href="/organizations" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-organizations"></use>
+                                    </svg>
+                                    <span class="label">Organizations</span>
+                                </a>
+                            </li>
+                            <li class="menu__item is-events">
+                                <a class="dropdown__link" href="/events" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-events"></use>
+                                    </svg>
+                                    <span class="label">Events</span>
+                                </a>
+                            </li>
+                            <li class="menu__item is-promotions">
+                                <a class="dropdown__link" href="/promotions" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-promotions"></use>
+                                    </svg>
+                                    <span class="label">Promotions</span>
+                                </a>
+                            </li>
+                            <li class="menu__item is-advertising">
+                                <a class="dropdown__link" href="/advertising/" role="menuitem">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-advertising"></use>
+                                    </svg>
+                                    <span class="label">Advertising</span>
+                                </a>
+                            </li>
+                        </ul>                       
+                    </div>
+
+                </li>
+            </ul> 
+
+            <ul class="buttons sm_hidden">
+                <li>
+                    <button class="btn menu__link menu__link is-primary iconFix" type="button" data-bs-toggle="modal" data-bs-target="#createPost" aria-label="createPost">   
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+                        </svg>
+                        <span>Publication</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn menu__link is-details" type="button" data-bs-toggle="modal" data-bs-target="#broadcastModal" aria-label="broadcastModal">   
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
+                        </svg>
+                        <span>Broadcast</span>
+                    </button>
+                </li>
+            </ul>         
+        </nav> 
+
+        <section class="hero">
+            <div class="container">
+
+                <h1 class="hero__title hero-title">
+                    Together we are busines<span>strength</span> 
+                </h1>
+
+                <p class="hero__text big">
+                    Ecosystem "Business" - communication and business relations in the usual formats. Text, photo, multi-user video and audio chats, messenger
+                </p>
+
+                <a href="#" class="hero__button button is-primary">
+                    <span class="label is-bolder">Register</span>
+                </a>
+
+            </div>
+        </section>        
+    </div>
+
+
+        <footer class="footer">
+            <div class="footer__container container">
+                <nav class="footer__nav">
+                    <ul>
+                        <li><a href="#">Справка</a></li>
+                        <li><a href="#">Обратная связь</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Соглашение</a></li>
+                        <li><a href="#">Конфиденциальность</a></li>
+                    </ul>
+                </nav>
+
+                <img src="/assets/images/logo/logomark.svg" alt="alt" class="footer__logo img-r">
+
+                <div class="footer__language-toggle dropdown is-top is-languages">
+                    <button class="button is-ghost dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+                        <svg role="img" class="icon is-left">
+                            <use href="/assets/images/flags.svg#icon-flag-ru"></use>
+                        </svg>
+
+                        <span>Русский</span>
+
+                        <svg role="img" class="icon is-sm">
+                            <use href="/assets/sprite/sprite.svg#icon-chevron-down-sm"></use>
+                        </svg>
+                    </button>
+                    <div class="footer__languages languages dropdown-menu">
+                    <ul class="languages__list">  
+                        {% set languages = {
+                        af: "Afrikaans",
+                        de: "Deutsch",
+                        en: "English",
+                        es: "Español",
+                        fr: "Français",
+                        it: "Italiano",
+                        pl: "Polski",
+                        pt: "Português",
+                        hr: "Srpsko-hrvatski",
+                        fi: "Suomi",
+                        tr: "Türkçe",
+                        ru: "Русский",
+                        uk: "Українська",
+                        hy: "Հայերեն",
+                        he: "עִברִית",
+                        ar: "العربية",
+                        hi: "हिन्दी",
+                        th: "ภาษาไทย",
+                        zh: "中文",
+                        ja: "日本語"
+                        } %}  
+
+                        {% for key, value in languages %}
+                            <li>
+                                <a href="#" lang="{{ key }}" class="languages__link">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/images/flags.svg#icon-flag-{{ key }}"></use>
+                                    </svg>
+                                    {{ value }}
+                                </a>
+                            </li>
+                        {% endfor %} 
+                    </ul>
+                    </div>
+                </div>
+
+                <div class="footer__site-credits">
+                    <p class="footer__copyright">Social movement of entrepreneurs ™</p>
+                    <a href="#" class="footer__link">Powered by Qwerty Social Network Engine</a>
+                </div>
+            </div>
+        </footer>
+    <div class="mask"></div>
+</body>
+</html>

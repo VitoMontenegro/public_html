@@ -3,27 +3,63 @@
 // -----------------------------------------------------------------------------
 // #region
 
+
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: $size-line;
-  position: relative;
-  width: 100%;
+  grid-area: header;
+  background-color: var(--color-background-base);
 
-  @include media-breakpoint-up(md) {
-    --gap: #{$size-2};
 
-    @include grid();
-
-    margin-right: auto;
-    margin-left: auto;
-
-    padding: $size-5 0 0;
-    z-index: 3;
+  button {
+    background-color: transparent;
+  }
+    
+  .burger_btn {
+    margin-right: $size-3;
   }
 
+  &:not(.is-home)  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: $size-line;
+    position: relative;
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+      --gap: #{$size-2};
+
+      @include grid();
+
+      margin-right: auto;
+      margin-left: auto;
+
+      padding: $size-5 0 0;
+      z-index: 3;
+    }
+  }
+
+  &.is-home {
+    border-bottom: none;
+
+    @include media-breakpoint-up(sm) {
+      padding: $size-5 0 $size-4;
+      z-index: var(--layer-zindex-header);
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .header__col {
+        &.is-buttons {
+          display: none;
+        }        
+      }      
+    }
+  }
 }
+
 // #endregion
 
 // -----------------------------------------------------------------------------

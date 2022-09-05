@@ -23,6 +23,7 @@
 
   // BRAND
   --color-primary-base:           hsl(var(--h), var(--s), var(--l));
+  --color-primary-red:            hsl(var(--h-red), 72%, 63%);
   --color-primary-gradient-dark:
     linear-gradient(
       hsl(var(--h), var(--s), 44%),
@@ -44,6 +45,7 @@
   // For the sake of design, we can violate the recommendations in contrast, but
   // only where, it will not spoil the UX.
   --color-background-hover:             hsl(var(--h), var(--s), 97%);
+  --color-background-hero:              hsl(218, 73%, 97%);
   --color-background-base:              hsl(var(--h-red), 100%, 100%);
   --color-background-alt:               hsl(220, 20%, 97%);
   --color-background-inverse:           hsl(var(--h), 74%, 12%);
@@ -52,7 +54,7 @@
 
   // BASE INKS
   // Inks are foreground colors for headlines, body copy and icons.
-  --color-ink-base:                     var(--color-background-inverse);
+  --color-ink-base:                     hsl(var(--h), 74%, 12%);
   --color-ink-title:                    var(--color-ink-base);
   --color-ink-2ry:                      hsl(var(--h), 30%, 40%);
   --color-ink-3ry:                      hsl(var(--h), 30%, 62%);
