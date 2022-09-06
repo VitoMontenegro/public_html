@@ -18,3 +18,17 @@
 	  }
 	}	
 }
+.back_profile {
+	a {
+		display: flex;
+		align-items:center;
+		margin-right: 2rem;
+		height: 7.2rem;
+	}
+	.entety__avatar {
+		margin: 0 0 0 1rem;
+	}
+	h1 {
+		padding: 0;
+	}
+}

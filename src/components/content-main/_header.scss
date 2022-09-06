@@ -255,6 +255,7 @@
 	text-align: center;
 	.btn {
 		padding: 0 $size-1;
+		text-transform: uppercase;
 
 		@include media-breakpoint-up(sm) {
 			padding: 0 $size-1p5;

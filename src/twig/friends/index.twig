@@ -1,13 +1,13 @@
 {% extends "../index.twig" %}
 
 {% set title = 'Friends' %}
+{% set avatar = 'avatar.jpg' %}
 
 {% set captionActions = [
 	['dropText', "All", 'Sort', [
 			['all', 'All'],
 			['favorites', 'Close friends'],
 			['portfolio', 'Scope'],
-			['community', 'portfolio'],
 			['friends', 'Mutual friends'],
 			['geotag', 'Native city'],
 			['geotag', 'Current city'],
@@ -20,7 +20,7 @@
 		], ''
 	],
 ] %}
-
+{% set countCols = 'column-3' %}
 {# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
 {% set friendList = [
 	['/assets/images/profile_friend.png', "Eugene Potapenko", 'Petrovac'],

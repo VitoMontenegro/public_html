@@ -10,7 +10,7 @@
     display: grid;
     grid-column-gap: $size-line;
     grid-row-gap: 3.9rem;
-    grid-template-columns: repeat(auto-fill, minmax(16rem,1fr));    
+    grid-template-columns: repeat(auto-fill, minmax(14.7rem,1fr));    
 }
 .event__body__list {
     display: grid;
@@ -26,7 +26,7 @@
 }
 .column-3 {
     .group__body__list {
-        grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));    
+        grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));    
     }
 }
 .group__body__list__item {
@@ -83,7 +83,7 @@
         font-weight: var(--font-weight-title);
         font-size: var(--font-size-middle);
         line-height: var(--font-line-height-middle);
-        color: var(--color-ink-2ry);
+        color: var(--color-ink-base);
 
         &:hover {
             text-decoration: none;
@@ -161,16 +161,6 @@
     padding: 1.2rem 2.4rem;
     display: flex;
     flex-direction: column;
-    height: 14rem;
-    @include media-breakpoint-up(sm) {
-        height: 12rem;
-    }
-    &.is_promo {
-        height: 17rem;
-        @include media-breakpoint-up(sm) {
-            height: 14rem;
-        }
-    }
 }
 .event__category__name {
     .user__title {
@@ -215,7 +205,6 @@
 .promo_address {
     font-weight: 500;
     font-size: var(--font-size-small);
-    line-height: var(--font-line-height-small);
     color: var(--color-ink-2ry);
     display: flex;
     align-items: center;

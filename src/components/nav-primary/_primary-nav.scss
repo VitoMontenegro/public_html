@@ -115,9 +115,11 @@
       width: clamp(8rem, 25%, 16.8rem);
     }
 
-
     @include media-breakpoint-up(md) {
       margin-bottom: $size-1;
+    }
+    .btn {
+      text-transform: uppercase;
     }
   }
   .dropdown__menu {

@@ -135,24 +135,26 @@
 		</div>
 	</div>	
 	
-	<div class="stat__body__list stat__body__list_big">
-		<div class="stat__body__list__item has-shadow has-border-radius-base">
-            <div class="stat_count">105000</div>
-            <div class="stat_title">Posts</div>
-        </div>
-		<div class="stat__body__list__item has-shadow has-border-radius-base">
-            <div class="stat_count">5</div>
-            <div class="stat_title">Friends</div>
-        </div>
-		<div class="stat__body__list__item has-shadow has-border-radius-base sm_hidden">
-            <div class="stat_count">440</div>
-            <div class="stat_title">Folowers</div>
-        </div>
-		<div class="stat__body__list__item has-shadow has-border-radius-base sm_hidden">
-            <div class="stat_count">2</div>
-            <div class="stat_title">Subscriptions</div>
-        </div>
-	</div>
+	{% if statList|length > 0 %}
+		<div class="stat__body__list stat__body__list_big">
+			<div class="stat__body__list__item has-shadow has-border-radius-base">
+	            <div class="stat_count">105000</div>
+	            <div class="stat_title">Posts</div>
+	        </div>
+			<div class="stat__body__list__item has-shadow has-border-radius-base">
+	            <div class="stat_count">5</div>
+	            <div class="stat_title">Friends</div>
+	        </div>
+			<div class="stat__body__list__item has-shadow has-border-radius-base sm_hidden">
+	            <div class="stat_count">440</div>
+	            <div class="stat_title">Folowers</div>
+	        </div>
+			<div class="stat__body__list__item has-shadow has-border-radius-base sm_hidden">
+	            <div class="stat_count">2</div>
+	            <div class="stat_title">Subscriptions</div>
+	        </div>
+		</div>
+	{% endif %}
 	
 	<div class="main__content__header__list">
 
