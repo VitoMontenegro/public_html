@@ -6,11 +6,13 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
-		var div = $( ".dropdown-menu, .dropdown__menu" ),
-			smartSearchInner = $('#smartSearchInner'), // тут указываем ID элемента
-			smartSearchBtnr = $('#smart-search-btn'), // тут указываем ID элемента
-			typeID = $('#typeID'), // тут указываем ID элемента
-			publicationPrivate = $('.publicationPrivate'); // тут указываем ID элемента
+		var div = $( ".dropdown-menu, .dropdown__menu" ),// тут указываем ID элемента
+			smartSearchInner = $('#smartSearchInner'), 
+			smartSearchBtnr = $('#smart-search-btn'),
+			typeID = $('#typeID'),
+			publicationPrivate = $('.publicationPrivate');
+
+
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
@@ -21,21 +23,18 @@ jQuery(document).ready(function($){
 		    && !smartSearchBtnr.is(e.target)) { // и не по его дочерним элементам
 			smartSearchInner.hide(); // скрываем его
 			smartSearchBtnr.removeClass('open');
-			$('body').removeClass('modal-open');
 		}
 		if ( !typeID.is(e.target) // если клик был не по нашему блоку
 		    && typeID.has(e.target).length === 0 
 		    && !typeID.is(e.target)) { // и не по его дочерним элементам
 			typeID.hide(); // скрываем его
 			typeID.removeClass('open');
-			$('body').removeClass('modal-open');
 		}
 		if ( !publicationPrivate.is(e.target) // если клик был не по нашему блоку
 		    && publicationPrivate.has(e.target).length === 0 
 		    && !publicationPrivate.is(e.target)) { // и не по его дочерним элементам
 			publicationPrivate.hide(); // скрываем его
 			publicationPrivate.removeClass('open');
-			$('body').removeClass('modal-open');
 		}
 	});
 	$('#showMenu').on('click', function(){

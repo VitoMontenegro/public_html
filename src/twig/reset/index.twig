@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <link rel="preload" href="/assets/fonts/Roboto-Regular.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/Roboto-Medium.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/Roboto-Bold.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/Roboto-Black.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/Roboto-Italic.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/PT-Root-UI_Bold.ttf" as="font">
-    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Thin.otf" as="font">
-    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Regular.otf" as="font">
-    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Medium.otf" as="font">
-    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Semibold.otf" as="font">
-    <link rel="preload" href="/assets/fonts/SF-Pro-Display-Bold.otf" as="font">
-
-    <link rel="stylesheet" href="/project.min.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"
-  		integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-  		crossorigin="anonymous"></script>
-	<!--script src="/assets/js/video.core.novtt.min.js"></script--> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
-	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="/assets/js/app.js"></script>
-</head>
+{% include '../components/head.twig' %}
 <body>
 	<div class="page-auth">
 		<div class="page-auth__container container">
@@ -47,7 +21,7 @@
 					</div>
 
 					
-					<div class="team flex">
+					<div class="team">
 						<div class="team_desc">
 							<div class="team_desc___name">Андрей Ковалев</div>
 							<div class="team_desc___about">
@@ -64,206 +38,45 @@
 					</div>
 				</div>
 				<div class="right">
-					<form class="page-auth__form form-auth form">
-						<h1 class="form-auth__title">Забыли пароль?</h1>
+					<form class="page-auth__form form-auth form is_reset">
+						<div class="form-auth__title">Забыли пароль?</div>
 						<div class="form-auth__auth-methods auth-methods">
-							<div class="auth-methods__title">Введите свой email и мы вам вышлем ссылку длясоздания нового пароля</div>
+							<div class="auth-methods__title">Введите зарегистрированный номер телефона — мы вышлем ссылку для восстановления пароля в SMS.</div>
 						</div>
 						<div class="form-auth__controls">
 							<div class="form__item">
 								<div class="form__control-group">
-									<input type="email" class="form__control is-border-st has-icon-left" required placeholder="Email">
+									<input type="text" class="form__control is-border-st has-icon-left" required placeholder="Phone">
 									<svg role="img" class="form__control-icon is-left icon">
-										<use href="/assets/img/svg-sprite/sprite.svg#email" />
+										<use href="/assets/sprite/sprite.svg#icon-phone" />
 									</svg>
 								</div>
 							</div>
 						</div>
 						<div class="form-auth__footer">
-							<button type="submit" class="form-auth__back button is-bare is-icon-hoverable">
-								<svg role="img" class="icon">
-									<use href="/assets/img/svg-sprite/sprite.svg#chevron-left" />
+							<button type="submit" class="form-auth__back btn is-ghost is-bare is-icon-hoverable">
+								<svg role="img" class="icon deg270">
+									<use href="/assets/sprite/sprite.svg#icon-arrow"></use>
 								</svg>
-								<span class="label is-bolder">назад</span>
+								<span class="label">назад</span>
 							</button>
-							<button type="submit" class="form-auth__submit button is-primary">
+							<button type="submit" class="form-auth__submit btn is-primary">
 								<span class="label is-bolder">далее</span>
 							</button>
 						</div>
 					</form>
 
-					<div class="page-auth__language-toggle dropdown is-top-center is-languages">
+					<div class="page-auth__language-toggle dropdown is-top-center">
 						<button class="button is-bare dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
-							<svg role="img" class="icon is-left">
-								<use href="/assets/img/svg-sprite/sprite.svg#flag-ru"/>
-							</svg>
+							<svg class="icon is-left" aria-hidden="true" focusable="false">
+					      		<use href="/assets/images/flags.svg#icon-flag-ru"></use>
+					  		</svg>
 							<span class="label">Русский</span>
 							<svg role="img" class="icon is-sm">
-								<use href="/assets/img/svg-sprite/sprite.svg#chevron-down-sm"/>
+								<use href="/assets/sprite/sprite.svg#icon-arrow"></use>
 							</svg>
 						</button>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-af" />
-									</svg>
-									<span class="label is-bolder">Afrikaans</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-it" />
-									</svg>
-									<span class="label is-bolder">Italiano</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-tr" />
-									</svg>
-									<span class="label is-bolder">Türkçe</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-ar" />
-									</svg>
-									<span class="label is-bolder">العربية</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-de" />
-									</svg>
-									<span class="label is-bolder">Deutsch</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-pl" />
-									</svg>
-									<span class="label is-bolder">Polski</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-ru" />
-									</svg>
-									<span class="label is-bolder">Русский</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-hi" />
-									</svg>
-									<span class="label is-bolder">हिन्दी</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-en" />
-									</svg>
-									<span class="label is-bolder">English</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-pt" />
-									</svg>
-									<span class="label is-bolder">Português</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-uk" />
-									</svg>
-									<span class="label is-bolder">Українська</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-th" />
-									</svg>
-									<span class="label is-bolder">ภาษาไทย</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-es" />
-									</svg>
-									<span class="label is-bolder">Español</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-hr" />
-									</svg>
-									<span class="label is-bolder">Srpsko-hrvatski</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-hy" />
-									</svg>
-									<span class="label is-bolder">Հայերեն</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-zh" />
-									</svg>
-									<span class="label is-bolder">中文</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-fr" />
-									</svg>
-									<span class="label is-bolder">Français</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-fi" />
-									</svg>
-									<span class="label is-bolder">Suomi</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-hi" />
-									</svg>
-									<span class="label is-bolder">עִברִית</span>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<svg role="img" class="icon is-left">
-										<use href="/assets/img/svg-sprite/sprite.svg#flag-ja" />
-									</svg>
-									<span class="label is-bolder">日本語</span>
-								</a>
-							</li>
-						</ul>
+						{% include "../components/languages_modal.twig" %}
 					</div>
 				</div>
 			</div>

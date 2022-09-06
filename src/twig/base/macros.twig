@@ -144,31 +144,483 @@
                     </svg>
                     <div class="dropdown-menu_wrap">
                         <ul class="dropdown-menu"> 
-                            <li>
-                                <a href="" class="alphabet">
+                            <li class="custom-radio">
+                                <label>
                                     <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
+                                        <use href="/assets/sprite/sprite.svg#icon-favorites"></use>
                                     </svg>
-                                    <span>item 1</span>
-                                </a>
+                                    <input checked type="radio" name="post_reacton" value="favorites" > 
+                                    <span>Favorites</span>
+                                </label>
                             </li>
                         
-                            <li>
-                                <a href="" class="calendar">
+                            <li class="custom-radio">
+                                <label>
                                     <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                                        <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
                                     </svg>
-                                    <span>item 2</span>
-                                </a>
+                                    <input type="radio" name="post_reacton" value="copylink">
+                                    <span>Copy link</span>
+                                </label>
                             </li>
                         
-                            <li>
-                                <a href="" class="likebig">
+                            <li class="custom-radio">
+                                <label>
                                     <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
+                                        <use href="/assets/sprite/sprite.svg#icon-complain"></use>
                                     </svg>
-                                    <span>item 3</span>
-                                </a>
+                                    <input type="radio" name="post_reacton" value="complain">
+                                    <span>Complain</span>
+                                </label>
+                            </li>
+                        </ul>  
+                    </div>
+                </div>       
+            </div>
+
+            {% if entetyVideo|length > 0 %}
+                <div class="post-card__video video">
+                    <video
+                        id="modal-video01"
+                        class="vjs-video vjs-16-9 video-js"
+                        controls
+                        preload="auto"
+                        poster="/assets/images/{{ entetyMainImg }}"
+                        >
+                        <source src="//{{ entetyVideo }}.mp4" type="video/mp4" />
+                        <source src="//{{ entetyVideo }}.webm" type="video/webm" />
+                        <source src="//{{ entetyVideo }}.ogv" type="video/ogg" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                </div>
+            {% elseif entetyMainImg|length > 0 %}
+                <div class="main__content__body__image">
+                    <figure class="img-wrapper">
+                        <img src="/assets/images/{{ entetyMainImg }}" alt="" class="entety__avatar_img">
+                    </figure>    
+                </div>
+            {% endif %}
+            
+            {% if entetyMainContent|length > 0 %}
+                <div class="main__content__body__txt crop-height">
+                    <a href="/post" class="crop-height__txt">{{entetyMainContent}}</a> 
+                </div>
+            {% endif %}
+
+            
+
+            {% if posttags|length > 0 %}
+                <div class="post__tags flex">
+                    <div class="items_scroll active"><span>Bussiness</span></div>
+                    <div class="items_scroll active"><span>Japan</span></div>
+                </div>
+            {% endif %}
+
+            <div class="main__content__body__list__captio">
+               <div class="btn is-ghost count_btn">
+                    <span class="grow">+44</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-ghost count_btn">
+                    <span class="reduce">-1</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-compact is-ghost sm_hidden">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-eye"></use>
+                    </svg>
+                    <span>120 040</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-compact is-ghost comments_toggle">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                    </svg>
+                    <span>89+3</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                                <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+               <div class="btn is-compact is-ghost sm_hidden">
+                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
+                    </svg>
+                    <span>2</span>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                                <li><span class="menu__title"></span></li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="post__comments comments">
+                <h3 class="comments__title">Комментарии</h3>
+                <div class="comments__items">
+                    <div class="comments__thread thread">
+                        <div class="thread__indent-l-0">
+                            <div class="thread__comment comment">
+                                <div class="comment__body">
+                                    <div class="comment__header">
+                                        <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+                                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                        </a>
+                                        <div class="comment__info">
+                                            <div class="comment__user">
+                                                <a href="#" class="comment__author small is-bolder">Agressia</a>
+                                                <a href="#" class="comment__link small">вчера</a>
+                                            </div>
+                                            <div class="comment__dropdown dropdown is-right">
+                                                <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                            <svg role="img" class="dropdown__indicator icon">
+                                                                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown__divider"></li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__text">
+                                        <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
+                                    </div>
+                                </div>
+                                <div class="comment__footer rating-buttons">
+                                    <div class="comment__rating-buttons">
+                                        <div class="btn is-ghost count_btn">
+                                            <span class="grow">+44</span>
+                                            <div class="dropdown-menu_wrap">
+                                                <ul class="dropdown-menu"> 
+                                                    <li><span class="menu__title"></span></li>
+                                                </ul>  
+                                            </div>
+                                        </div>
+                                        <div class="btn is-ghost count_btn">
+                                            <span class="reduce">-1</span>
+                                            <div class="dropdown-menu_wrap">
+                                                <ul class="dropdown-menu"> 
+                                                    <li><span class="menu__title"></span></li>
+                                                </ul>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn is-ghost">
+                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                        </svg>
+                                        <span class="small is-bolder">Ответить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thread__children">
+                            <div class="comments__thread thread">
+                                <div class="thread__indent-l-1">
+                                    <div class="thread__comment comment">
+                                        <div class="comment__body">
+                                            <div class="comment__header">
+                                                <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+                                                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                                </a>
+                                                <div class="comment__info">
+                                                    <div class="comment__user">
+                                                        <a href="#" class="comment__author small is-bolder">Mirlan Akynbekov</a>
+                                                        <a href="#" class="comment__link small">8 ч. назад</a>
+                                                    </div>
+                                                    <div class="comment__dropdown dropdown is-right">
+                                                        <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+                                                            <svg role="img" class="icon">
+                                                                <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <svg role="img" class="icon is-left">
+                                                                        <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                                    </svg>
+                                                                    <span class="label is-bolder">все записи</span>
+                                                                    <svg role="img" class="dropdown__indicator icon">
+                                                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                                    </svg>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <svg role="img" class="icon is-left">
+                                                                        <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                                    </svg>
+                                                                    <span class="label is-bolder">все записи</span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="dropdown__divider"></li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <svg role="img" class="icon is-left">
+                                                                        <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                                    </svg>
+                                                                    <span class="label is-bolder">все записи</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment__text">
+                                                <p> Читал, что в Японии в период бурного экономического роста в крупных городах стояли автоматы по продаже чистого воздуха! </p>
+                                            </div>
+                                        </div>
+                                        <div class="comment__footer rating-buttons">
+                                            <div class="comment__rating-buttons">
+                                                <div class="btn is-ghost count_btn">
+                                                    <span class="grow">+44</span>
+                                                    <div class="dropdown-menu_wrap">
+                                                        <ul class="dropdown-menu"> 
+                                                            <li><span class="menu__title"></span></li>
+                                                        </ul>  
+                                                    </div>
+                                                </div>
+                                                <div class="btn is-ghost count_btn">
+                                                    <span class="reduce">-1</span>
+                                                    <div class="dropdown-menu_wrap">
+                                                        <ul class="dropdown-menu"> 
+                                                            <li><span class="menu__title"></span></li>
+                                                        </ul>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="btn is-ghost">
+                                                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                                </svg>
+                                                <span class="small is-bolder">Ответить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments__thread thread">
+                        <div class="thread__indent-l-0">
+                            <div class="thread__comment comment">
+                                <div class="comment__body">
+                                    <div class="comment__header">
+                                        <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+                                        <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                        </a>
+                                        <div class="comment__info">
+                                            <div class="comment__user">
+                                                <a href="#" class="comment__author small is-bolder">Андрей Борджиа</a>
+                                                <a href="#" class="comment__link small">15 мая</a>
+                                            </div>
+                                            <div class="comment__dropdown dropdown is-right">
+                                                <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+                                                    <svg role="img" class="icon">
+                                                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                            <svg role="img" class="dropdown__indicator icon">
+                                                                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="dropdown__divider"></li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <svg role="img" class="icon is-left">
+                                                                <use href="/assets/sprite/sprite.svg#icon-home"></use>
+                                                            </svg>
+                                                            <span class="label is-bolder">все записи</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__text">
+                                        <p> Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес </p>
+                                    </div>
+                                </div>
+                                <div class="comment__footer rating-buttons">
+                                    <div class="comment__rating-buttons">
+                                        <div class="btn is-ghost count_btn">
+                                            <span class="grow">+44</span>
+                                            <div class="dropdown-menu_wrap">
+                                                <ul class="dropdown-menu"> 
+                                                    <li><span class="menu__title"></span></li>
+                                                </ul>  
+                                            </div>
+                                        </div>
+                                        <div class="btn is-ghost count_btn">
+                                            <span class="reduce">-1</span>
+                                            <div class="dropdown-menu_wrap">
+                                                <ul class="dropdown-menu"> 
+                                                    <li><span class="menu__title"></span></li>
+                                                </ul>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn is-ghost">
+                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                            <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                        </svg>
+                                        <span class="small is-bolder">Ответить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="comments__form">
+                    <a href="#" class="entety__avatar is-md is-round has-overlay">
+                    <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                    </a>
+                    <div class="form__item">
+                        <div class="form__control-group">
+                            <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                                <svg role="img" class="icon is-md">
+                                    <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                            <input type="text" class="form__control has-icon-right" required="" placeholder="Добавить комментарий">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+{% endmacro %}
+
+{% macro contentListMy(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent, entetyVideo) %}
+        <div class="content-card has-shadow has-border-radius-lg">
+            <div class="content-card__header">
+                <a class="content-card__line-cell line-cell" href="#">
+                    {% if entetyAvatarImg|length > 0 %}
+                        <figure class="entety__avatar">
+                            <img src="/assets/images/{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                        </figure>  
+                    {% endif %}
+                    <div class="line-cell__content">
+                        <div class="line-cell__title">{{ entetyTitle }}</div>
+                        <div class="line-cell__subtitles"><span>{{entetySubTytle}}</span></div>
+                    </div>
+                </a>     
+                <div class="is_link dropdown is-right">
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                    </svg>
+                    <div class="dropdown-menu_wrap">
+                        <ul class="dropdown-menu"> 
+                            <li class="edit_link">
+                                <button class="button is-bare" type="button" data-bs-toggle="modal" data-bs-target="#modal-edit-post">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+                                    </svg>
+                                    <span class="label">Edit post</span>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="border_bottom_grey"></span>
+                            </li>
+                            <li class="custom-radio">
+                                <label>
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-favorites"></use>
+                                    </svg>
+                                    <input checked type="radio" name="post_reacton" value="favorites" > 
+                                    <span>Favorites</span>
+                                </label>
+                            </li>
+                        
+                            <li class="custom-radio">
+                                <label>
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
+                                    </svg>
+                                    <input type="radio" name="post_reacton" value="copylink">
+                                    <span>Copy link</span>
+                                </label>
+                            </li>
+                        
+                            <li class="custom-radio">
+                                <label>
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-messenger-block"></use>
+                                    </svg>
+                                    <input type="radio" name="post_reacton" value="messenger-block">
+                                    <span>Turn off comments</span>
+                                </label>
+                            </li>
+                        
+                            <li class="custom-radio">
+                                <label>
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+                                    </svg>
+                                    <input type="radio" name="post_reacton" value="delete">
+                                    <span>Delete</span>
+                                </label>
                             </li>
                         </ul>  
                     </div>

@@ -75,6 +75,11 @@
   &.size_xs {
     width: var(--size-width-xs);
   }
+  
+  .border_bottom_grey {
+      border-bottom: 1px solid #D1D9E6;
+      display: block;
+  }
 }
 
 .dropdown-menu,
@@ -123,9 +128,9 @@
   @extend %menu-item;
 
   &.custom-radio {
-    padding-top: 0.6rem;
-    padding-bottom: 0.2rem;
-        margin: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+        margin: 0.3rem 0;
   }
 }
 

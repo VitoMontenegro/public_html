@@ -4,7 +4,6 @@
 .content-card {
 	padding: 1.6rem;
 	margin-top: 3.2rem;
-	overflow: hidden;
 
   @include media-breakpoint-up(md) {
     padding: 1.6rem 3.2rem;
@@ -16,6 +15,10 @@
 		flex-wrap: wrap;
 		margin-bottom: 1.6rem;
 		align-items: center;
+
+		.dropdown-menu {
+			    padding: 0.5rem 3.2rem 0.5rem;
+		}
 	}
 } 
 

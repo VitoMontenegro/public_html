@@ -4,6 +4,11 @@
   font-weight: 400;
   letter-spacing: .05rem;
   line-height: var(--font-line-height-small);
+
+
+  &.is-bolder {
+    font-weight: 600;
+  }
 }
 .label {
   text-transform: uppercase;
@@ -154,6 +159,12 @@ body .is_open {
 
 .deg90 {
   transform: rotate(90deg);
+}
+.deg180 {
+  transform: rotate(180deg);
+}
+.deg270 {
+  transform: rotate(270deg);
 }
 
 @media  screen and (max-height: 200px) {

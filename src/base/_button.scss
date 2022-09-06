@@ -62,9 +62,26 @@
     color: var(--color-ink-2ry);
         background-color: transparent;
   }
+  &.is-outline {
+    box-shadow: inset 0 0 0 0.1rem var(--color-ink-primary-border);
+    background-color: transparent;
+    --padding: 0 1.6rem;
+  }
+  &.is-bare {
+    --padding: 0;
+    min-height: auto;
+    color: var(--color-ink-dark-2ry);
+  }
 
   @include media-breakpoint-up(md) {
     --padding: 0 #{$size-3};
+  }
+  &.is-icon-hoverable .icon {
+    width: calc(var(--size-height-icon) + 0.4rem * 2);
+    height: calc(var(--size-height-icon) + 0.4rem * 2);
+    padding: 0.4rem;
+    border-radius: var(--shape-border-radius-round);
+    transition: background var(--motion-duration-sm) var(--motion-easing-base),margin var(--motion-duration-sm) var(--motion-easing-base);
   }
 }
 

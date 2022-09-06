@@ -23,18 +23,61 @@
   }
 
   &__form {
+
+    padding: 3.2rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    background: #fff;
+    bottom: 0;
     text-align: left;
     vertical-align: middle;
-    margin: $size-5 0;
+    color: var(--color-ink-2ry);
+    height: 80vh;
 
-    @include media-breakpoint-down(sm) {
-      display: block;
-      margin: 0 auto;
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      border-radius: var(--shape-border-radius-lg);
+      box-shadow: var(--layer-box-shadow-z2);
+    max-width: 49rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: 60rem;
+      width: 90vw;
+    }
+
+  @include media-breakpoint-up(lg) {
+    box-shadow: none;
+    min-height: 70vh;
+    padding: 7.8rem 7.7rem 6.4rem;
+    border-radius: 0;
+    position: unset;
+    display: block;
+    margin: 0 auto;
+    margin: $size-5 0;
     }
   }
 
   &__language-toggle {
-    padding-bottom: $size-2;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 28rem;
+    padding: 1rem 7.7rem 3rem;
+
+    @include media-breakpoint-up(sm) {
+    position: absolute;
+
+    }
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
+    
 
     .dropdown-toggle {
       .icon {
@@ -52,16 +95,23 @@
     background: #fff;
     padding: 1rem;
     border-radius: 50%;
-    margin: 4rem;
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
+    margin: 1.5rem 5rem 0 4rem;
+    @include media-breakpoint-up(sm) {
+    margin: 4rem 5rem 0 4rem;
+    }
   }
 
   &__wrap  {
-    padding-left: 11rem;
+    padding-left: 15rem;
     padding-right: 8rem;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
+      padding-left: 5rem;
       padding-right: 4rem;
+    }
+    @include media-breakpoint-down(md) {
+
     }
   }
 
@@ -69,49 +119,72 @@
     text-align: left;
     margin-bottom: 1rem;
     opacity: 0.87;
+    display: none;
   }
   &__title {
     text-align: left;
     margin-bottom: 6rem;
     opacity: 0.87;
+    display: none;
   }
 
   &__content {
     text-align: left;
     opacity: 0.54;
+    display: none;
+  }
+  @include media-breakpoint-up(lg) {
+    &__subtitle,
+    &__title,
+    &__team,
+    &__content {
+      display: block;
+    }
   }
 
   .right {
-      height: 100vh;
-      overflow: auto;
+      height: 45vh;
+      width: 100%;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
       width: 50%;
+      height: 100vh;
+      min-height: 100vh;;
+      overflow: auto;
     }
   }
 
   .left {
-    position: relative;
-    height: 100vh;
-    overflow: auto;
-    background-image: url(/assets/images/main/sign-bg.png);
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: auto;
+      height: 15vh;
+      width: 100%;
+      background-image: url(/assets/images/main/sign-bg.png);
+    @include media-breakpoint-up(sm) {
+      height: 55vh;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+      position: relative;
+      height: 100vh;
+      overflow: auto;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
     * {
       color: #fff;
     }
-    
-    @include media-breakpoint-up(sm) {
-      width: 50%;
-    }
 
     .team {
+      display: none;
       margin-bottom: 2rem;
-      margin-top: 14rem;
-      margin-right: 15.5rem;
-      justify-content: flex-end;
+      margin-top: 15rem;
+      margin-left: 11.5rem;
+      margin-right: auto;
+      justify-content: flex-start;
+      @include media-breakpoint-up(lg) {
+        display: flex;
+      }
     }
     .team_desc {
       text-align: right;
@@ -129,26 +202,27 @@
 }
 
 .form-auth {
-    width: 100%;
-    max-width: 44.8rem;
-    padding: 4.8rem 3.7rem 6.4rem;
-
-  @include media-breakpoint-down(sm) {
-    border-radius: 0;
-    max-width: none;
-    padding: $size-6 $size-2p5;
-  }
   &__title {
     text-align: left;
     padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 2.5rem;
+    font-family: 'PT Root UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 32px;
+    color: #081935;
+    margin: 23px 0;
   }
   &__auth-methods {
     margin-bottom: 2.2rem;
   }
   &__controls {
-    margin-bottom: 4.1rem;
+    margin-bottom: 3.1rem;
+    color: var(--color-ink-2ry);
+
+    .form__item {
+      margin-bottom: $size-1;
+    }
   }
   &__controls-title {
     text-align: left;
@@ -159,12 +233,14 @@
     align-items: center;
   }
   &__links {
-    display: flex;
-    flex-wrap: wrap;
     margin-right: $size-3;
+
+
+    a {
+      color: var(--color-ink-2ry);
+    }
   }
   &__link {
-    color: var(color-ink-dark-2ry);
     margin-right: $size-2;
   }
   &__submit {
@@ -176,26 +252,50 @@
     }
   }
   &__accept {
-    text-align: center;
     margin-top: $size-4;
+  }
+
+  &.is_sign-up {
+    @include media-breakpoint-up(sm) {
+      height: 76rem;
+    }
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
+    
+  }
+
+  &.is_sign-in {
+    @include media-breakpoint-up(sm) {
+      height: 50rem;
+    }
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
+    
+  }
+
+  &.is_reset {
+    @include media-breakpoint-up(sm) {
+      height: 35rem;
+    }
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
+    
   }
 }
 
 .auth-methods {
+  color: var(--color-ink-2ry);
   &__title {
     text-align: left;
     margin-bottom: 1rem;
   }
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: -$size-half;
-    margin-right: -$size-half;
-    margin-bottom: -$size-1;
   }
   &__button {
-    margin: 0 $size-half $size-1;
+    margin: 0 0.2rem $size-1;
   }
 }
 
