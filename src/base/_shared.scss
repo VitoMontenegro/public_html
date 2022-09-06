@@ -166,6 +166,9 @@ body .is_open {
 .deg270 {
   transform: rotate(270deg);
 }
+.is_overflow {
+  overflow: hidden;
+}
 
 @media  screen and (max-height: 200px) {
   body {

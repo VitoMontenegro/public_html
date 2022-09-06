@@ -111,9 +111,9 @@
                                 <use href="/assets/sprite/sprite.svg#icon-{{ valuelist[0] }}"></use>
                             </svg>
                             {% if keylist < 1 %}
-                                <input type="radio" name="feed_check" id="rb{{ keylist }}" value="{{ valuelist[1] }}" checked> 
+                                <input type="radio" name="feed_check"  value="{{ valuelist[1] }}" checked> 
                             {% else %}
-                                <input type="radio" name="feed_check" id="rb{{ keylist }}" value="{{ valuelist[1] }}"> 
+                                <input type="radio" name="feed_check"  value="{{ valuelist[1] }}"> 
                             {% endif %}
                             <span>{{ valuelist[1] }}</span>                        
                         </label>
@@ -1028,20 +1028,44 @@
                         <use href="/assets/sprite/sprite.svg#icon-more"></use>
                     </svg>
                 </span>
-                {% set frienadLink = {
-                      profile: "my profile",
-                      finances: "my finances",
-                      bonuses: "bonuses and discounts",
-                      settings: "settings",
-                      exit: "exit"
-                    } %}
                 <div class="dropdown-menu_wrap">
                     <ul class="dropdown-menu">  
-                        {% for key, value in frienadLink %}
-                            <li><a href="#/{{ key }}">{{ value }}</a></li>
-                        {% endfor %}
-                    </ul>  
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-favorites"></use>
+                                </svg>
+                                <span>Close friend</span>
+                            </a>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+                                </svg>
+                                <span>Message</span>
+                            </a>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-friends"></use>
+                                </svg>
+                                <span>View friends</span>
+                            </a>
+                        </li>
+                        <li><span class="border_bottom_grey"></span></li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
+                                </svg>
+                                <span>Block</span>
+                            </a>
+                        </li>
+                    </ul>                    
                 </div>
+
             </div>
             <div class="group__body__list__title">
                 <div class="group__name"><a href="single.html" class="user__title link is-wrapper">{{ entetyTitle }}</a></div>

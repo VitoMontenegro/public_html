@@ -3,8 +3,22 @@
 {% set title = 'Friends' %}
 
 {% set captionActions = [
-	['details', "all"],
-	['details', "By name", 3]
+	['dropText', "All", 'Sort', [
+			['all', 'All'],
+			['favorites', 'Close friends'],
+			['portfolio', 'Scope'],
+			['community', 'portfolio'],
+			['friends', 'Mutual friends'],
+			['geotag', 'Native city'],
+			['geotag', 'Current city'],
+		], ''
+	],
+	['dropText', "By last name", 'Sort', [
+			['id', 'By last name'],
+			['calendar', 'By date added'],
+			['cake', 'By birthday'],
+		], ''
+	],
 ] %}
 
 {# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
