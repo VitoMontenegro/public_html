@@ -63,11 +63,14 @@
   &.is_rotate {
     transform: rotate(180deg);
   }
+  &.is_white {
+    color: #FFFFFF;
+  }
 
 }
 .header__language-toggle .icon {
-  height: var(--size-height-icon-md);
-  width: var(--size-height-icon-md);
+  height: var(--size-height-icon);
+  width: var(--size-height-icon);
 }
 
 %icon-active,

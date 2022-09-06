@@ -1,3 +1,60 @@
+{% macro mainSidebarList(sidebarListIcon, sidebarListType, sidebarListLink, sidebarListTitle, sidebarListCount, className) %}
+    {% if  className|length > 0 %}
+        <li class="{{ className }}">
+    {% else %}
+        <li>
+    {% endif %}
+    
+        <a class="main__sidebar__item__link" href="{{ sidebarListLink }}">
+            <span class="label">{{ sidebarListTitle }}</span>
+            {% if   sidebarListCount|length > 0 %}
+                <span class="badge pull-right">{{ sidebarListCount }}</span>
+            {% endif %}
+
+        </a>
+    </li>
+{% endmacro %}
+
+{% macro asideComments(entetyAvatarImg, entetyCategory, entetyTitle, enterySubtitle, enteryContent) %}
+    
+        <div class="block-aside__comment comment-aside">
+            <div class="comment-aside__line-cell line-cell">
+                <a href="#" class="line-cell__avatar entety__avatar is-md is-round">
+                <img src="{{entetyAvatarImg}}" alt="alt" class="img-r">
+                </a>
+                <div class="line-cell__content">
+                    <div class="line-cell__title small is-bolder text-truncate"><a href="#">{{entetyTitle}}</a></div>
+                    <div class="line-cell__subtitles">
+                        <div class="line-cell__subtitle one-liner">
+                            <span class="small">{{enterySubtitle}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-aside__box crop-height__txt_short">
+                {{enteryContent}}
+                <form class="comment-aside__form">
+                    <div class="form__item">
+                        <div class="form__control-group">
+                            <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                                <svg role="img" class="icon is-md">
+                                    <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                            <input type="text" class="form__control has-icon-right" required="" placeholder="Reply">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <a href="/post#comments__items" class="comment-aside__article">
+                <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-direction-down-right"></use>
+                </svg>
+                <span class="small color-2ry">{{entetyCategory}}</span>
+            </a>
+        </div>
+{% endmacro %}
+
 {% macro input(name, value, type, size) %}
     <input
         type="{{ type | default('text') }}"
@@ -657,7 +714,7 @@
                         </figure>   
                     </a>        
                 {% endif %}
-                <div class="round_circle dropdown">
+                <div class="round_circle dropdown is-top-center">
                     <svg class="icon" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-calendar-plus"></use>
                     </svg>
@@ -732,62 +789,4 @@
             </div>
         </a>
     </li>
-{% endmacro %}
-
-{% macro mainSidebarList(sidebarListIcon, sidebarListType, sidebarListLink, sidebarListTitle, sidebarListCount, className) %}
-    {% if  className|length > 0 %}
-        <li class="{{ className }}">
-    {% else %}
-        <li>
-    {% endif %}
-    
-        <a class="main__sidebar__item__link" href="{{ sidebarListLink }}">
-            <span class="label">{{ sidebarListTitle }}</span>
-            {% if   sidebarListCount|length > 0 %}
-                <span class="badge pull-right">{{ sidebarListCount }}</span>
-            {% endif %}
-
-        </a>
-    </li>
-{% endmacro %}
-
-{% macro asideComments(entetyAvatarImg, entetyCategory, entetyTitle, enterySubtitle, enteryContent) %}
-    
-        <div class="block-aside__comment comment-aside">
-            <div class="comment-aside__line-cell line-cell">
-                <a href="#" class="line-cell__avatar entety__avatar is-md is-round">
-                <img src="{{entetyAvatarImg}}" alt="alt" class="img-r">
-                </a>
-                <div class="line-cell__content">
-                    <div class="line-cell__title small is-bolder text-truncate"><a href="#">{{entetyTitle}}</a></div>
-                    <div class="line-cell__subtitles">
-                        <div class="line-cell__subtitle one-liner">
-                            <span class="small">{{enterySubtitle}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-aside__box crop-height__txt_short">
-                {{enteryContent}}
-                <form class="comment-aside__form">
-                    <div class="form__item">
-                        <div class="form__control-group">
-                            <button class="form__control-icon is-right button is-bare is-icon" type="button">
-                                <svg role="img" class="icon is-md">
-                                    <use href="/assets/sprite/sprite.svg#icon-send"></use>
-                                </svg>
-                            </button>
-                            <input type="text" class="form__control has-icon-right" required="" placeholder="Reply">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <a href="/post#comments__items" class="comment-aside__article">
-                <svg role="img" class="icon">
-                    <use href="/assets/sprite/sprite.svg#icon-direction-down-right"></use>
-                </svg>
-                <span class="small color-2ry">{{entetyCategory}}</span>
-            </a>
-        </div>
-       
 {% endmacro %}

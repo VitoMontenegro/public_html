@@ -79,7 +79,11 @@ input[type='time'],
     max-width: var(--size-width-readable);
   }
 }
-
+.placeholder {
+    color: var(--color-ink-3ry);
+    // Override Firefox's unusual default opacity
+    opacity: 1;
+}
 textarea {
   // In textarea, we cannot control the bottom padding. But we can add whitespace
   // from above
@@ -142,7 +146,7 @@ select {
 .flex > label {
   width: 100%;
   @include media-breakpoint-up(md) {
-    width: 81%;
+    width: 48%;
   }
 }
 .columns .form-check {

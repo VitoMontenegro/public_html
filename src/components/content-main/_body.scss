@@ -43,9 +43,12 @@
   overflow: hidden;
   width: 4rem;
   height: 4rem;
-  margin-right: 1.7rem;
   border-radius: 50%;
   transition: 0.3s;
+
+  &:not(.item-people__avatar) {
+  	margin-right: 1.7rem;
+  }
 
   &.is-lg {
     width: 12rem;

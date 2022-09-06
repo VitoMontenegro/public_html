@@ -30,6 +30,7 @@
     width: 100%;
 
     @include media-breakpoint-up(md) {
+      max-width: 100.8rem;
       --gap: #{$size-2};
 
       @include grid();
@@ -438,7 +439,9 @@
   margin: 2rem 0;
 
   label {
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 2.4rem;
 
     input {
       position: absolute;
@@ -468,7 +471,7 @@
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease;            
             right: -.3rem;
-            top: 1.2rem;
+            top: 1rem;
             width: 1.7rem;
             height: 1.2rem;
             background: var(--asset-data-image-check);

@@ -32,11 +32,6 @@
   .icon {
     margin-right: $size-1p5;
     transform: translateY(-.1rem);
-
-    @include media-breakpoint-up(md) {
-      width: 18px;
-      // margin-right: 0;
-    }
   }
 
   > .label {

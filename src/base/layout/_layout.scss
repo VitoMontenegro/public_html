@@ -83,10 +83,14 @@
       display: grid;
       gap: var(--gap, 1.6rem);
       grid-template-columns: repeat(var(--columns, 12), 1fr);
-
       margin-right: auto;
       margin-left: auto;
     }    
+
+    @include media-breakpoint-up(xl) {
+      max-width: 100.8rem;
+
+    }
   }
   .main__content {
     margin-bottom: 7.2rem;

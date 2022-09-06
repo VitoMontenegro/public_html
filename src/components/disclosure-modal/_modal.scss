@@ -17,7 +17,6 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
-  max-height: 100vh;
 
   .modal {
     overflow-x: hidden;
@@ -588,6 +587,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 }
 .edit__icons {
   margin-right: 2rem;
+  color: var(--color-ink-2ry);
   button {
     padding: 0 1rem;
     background: inherit;

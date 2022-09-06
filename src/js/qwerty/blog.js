@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
 		$(this).addClass('open');
+		$('body').addClass('modal-open');
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
@@ -13,24 +14,28 @@ jQuery(document).ready(function($){
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
+			$('body').removeClass('modal-open');
 		}
 		if ( !smartSearchInner.is(e.target) // если клик был не по нашему блоку
 		    && smartSearchInner.has(e.target).length === 0 
 		    && !smartSearchBtnr.is(e.target)) { // и не по его дочерним элементам
 			smartSearchInner.hide(); // скрываем его
 			smartSearchBtnr.removeClass('open');
+			$('body').removeClass('modal-open');
 		}
 		if ( !typeID.is(e.target) // если клик был не по нашему блоку
 		    && typeID.has(e.target).length === 0 
 		    && !typeID.is(e.target)) { // и не по его дочерним элементам
 			typeID.hide(); // скрываем его
 			typeID.removeClass('open');
+			$('body').removeClass('modal-open');
 		}
 		if ( !publicationPrivate.is(e.target) // если клик был не по нашему блоку
 		    && publicationPrivate.has(e.target).length === 0 
 		    && !publicationPrivate.is(e.target)) { // и не по его дочерним элементам
 			publicationPrivate.hide(); // скрываем его
 			publicationPrivate.removeClass('open');
+			$('body').removeClass('modal-open');
 		}
 	});
 	$('#showMenu').on('click', function(){

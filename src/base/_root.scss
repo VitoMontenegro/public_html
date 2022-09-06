@@ -270,9 +270,10 @@
 
   // FAB, Buttons hover, Snackbars
   --layer-box-shadow-z2:
-    0 0 0 .1rem hsl(var(--color-ink-shadow) / .06),
-    0 .3rem .3rem hsl(var(--color-ink-shadow) / .12),
-    0 1rem 1.8rem hsl(var(--color-ink-shadow) / .2);
+    0 0 0 1px hsl(var(--color-ink-shadow) / .04),
+    0 1px 2px hsl(var(--color-ink-shadow) / .14),
+    0 2px 4px -1px hsl(var(--color-ink-shadow) / .14),
+    0 4px 8px -1px hsl(var(--color-ink-shadow) / .14);
 
   // FAB hover, Drawers, Dropdowns, Modal Bottom Sheets, Pickers, Sticky Blocks
   --layer-box-shadow-z3:
@@ -336,7 +337,6 @@
   // ---------------------------------------------------------------------------
   // #region
   --size-height-icon:                   2.4rem;
-  --size-height-icon-md:                2.4rem;
   --size-height-button:                 #{$size-line * 2};
 
   --asset-data-image-list-bullet:       url('data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%228%22%20height%3D%225%22%20viewBox%3D%220%200%208%205%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%204C3.10457%204%204%203.10457%204%202C4%200.895431%203.10457%200%202%200C0.895431%200%200%200.895431%200%202C0%203.10457%200.895431%204%202%204Z%22%20fill%3D%22%232787e7%22%2F%3E%3C%2Fsvg%3E');

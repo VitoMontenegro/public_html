@@ -2,15 +2,16 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: $size-1;
+    justify-content: flex-start;
     @include media-breakpoint-down(md) {
       margin-left: 0;
       margin-right: 0;
     }
   }
   &__item {
-    width: 23%;
-    margin-bottom: $size-2p5;
+    width: 22%;
+    margin: $size-half 0;
     @include media-breakpoint-down(md) {
       margin-left: 0;
       margin-right: 0;
