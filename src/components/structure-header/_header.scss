@@ -222,18 +222,18 @@
     justify-content: flex-start;
 }
 .items_scroll {
-    padding: 5px 16px;
+    padding: 0.5rem 1.6rem;
     border: 1px solid #D1D9E6;
     border-radius: var(--shape-border-radius-xl);
     list-style: none;
-    margin: 5px 5px 5px 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     color: var(--color-ink-2ry);
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
     text-transform: uppercase;
 
     .icon {
@@ -243,6 +243,7 @@
 
     &.active {
       background: #F2F6FD;
+      padding: 0 1.6rem;
       .icon {
         display: inline;
       }
@@ -305,7 +306,7 @@
       height: 16px;
       left: 19px;
       top: -7px;
-      background: #3073DF;
+      background: var(--color-primary-base);
       border-radius: var(--shape-border-radius-pill);
 
       &.active {

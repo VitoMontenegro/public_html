@@ -1,6 +1,7 @@
 .main__sidebar {
   &__item {
     padding: 2.8rem 2.3rem;
+    margin-bottom: 2.4rem;
 
     .entety__avatar {
       overflow: hidden;
@@ -216,5 +217,34 @@
   &__form {
     margin-top: 1rem;
     display: none;
+  }
+}
+
+.sidebar_events {
+  text-align: center;
+
+  &__images {
+    background: var(--color-primary-base);
+    border-radius: 50%;
+    width: 4.8rem;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto  $size-2;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    color: var(--color-ink-base);
+    line-height: var(--font-line-height-base);
+    margin-bottom: $size-1;
+  }
+
+  &__content {
+    font-size: var(--font-size-small);
+    line-height: var(--font-line-height-middle);
+    margin-bottom: $size-1;
   }
 }

@@ -71,13 +71,13 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
       margin-right: 1rem;
     }
   }
-}
-.modal {
+
   &.is-auto-height {
     .modal__box {
       height: auto;
     }
   }
+
   &.is-base {
     .modal-dialog {
       @include media-breakpoint-up(md) {
@@ -118,6 +118,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
       }
     }
   }
+
   &.is-lg {
     .modal-dialog {
       @include media-breakpoint-up(md) {
@@ -143,6 +144,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
       }
     }
   }  
+
   &.is-full {
     .modal-dialog {
       width: 100%;
@@ -156,6 +158,9 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
       padding: 0;
       margin: 0;
     }
+  }
+  button, .button, .btn {
+    text-transform: uppercase;
   }
 }
 
@@ -278,7 +283,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   font-size: var(--font-size-big);
 }
 .modal__subheader {
-    line-height: var(--font-line-height-middle);
+    line-height: var(--font-line-height-base);
     color: var(--color-ink-2ry);
     text-align: center;
 }
@@ -586,11 +591,15 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     z-index: 2;
 }
 .edit__icons {
+  display: flex;
+  align-items:center;
   margin-right: 2rem;
   color: var(--color-ink-2ry);
   button {
-    padding: 0 1rem;
     background: inherit;
+  }
+  .button, button {
+    padding: 0 1rem;
   }
 } 
 

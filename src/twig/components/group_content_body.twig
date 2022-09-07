@@ -26,5 +26,11 @@
 			{{ nameMacro.event(value[0], value[1], value[2], value[3], value[4]) }}
 		{% endfor %}
 	{% endif %}
+
+	{% if photoList|length > 0 %}
+		{% for key, value in photoList %}
+			{{ nameMacro.photo(value[0], value[1], value[2]) }}
+		{% endfor %}
+	{% endif %}
 	</div>
 </div>

@@ -1198,28 +1198,13 @@
                         <ul class="dropdown-menu"> 
                             <li>
                                 <a href="" class="alphabet">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-alphabet"></use>
-                                    </svg>
-                                    <span>item 1</span>
+                                    <span>i'll go</span>
                                 </a>
                             </li>
                         
                             <li>
                                 <a href="" class="calendar">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
-                                    </svg>
-                                    <span>item 2</span>
-                                </a>
-                            </li>
-                        
-                            <li>
-                                <a href="" class="likebig">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-likebig"></use>
-                                    </svg>
-                                    <span>item 3</span>
+                                    <span>intresting</span>
                                 </a>
                             </li>
                         </ul>  
@@ -1265,4 +1250,57 @@
             </div>
         </a>
     </li>
+{% endmacro %}
+
+{% macro photo(entetyAvatarImg, entetyName,entetyCount) %}
+    <div class="photo-list__item">
+        <div class="photo-list__ava">
+            <a href="{{ entetyAvatarImg }}">
+                <figure class="entety__bg has-border-radius-base">
+                    <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
+                </figure>             
+            </a>
+            <div class="dropdown is-center">
+                <span class="entety__btns">
+                    <svg class="icon is_white" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                    </svg>
+                </span>
+                <div class="dropdown-menu_wrap">
+                    <ul class="dropdown-menu">  
+                        <li>
+                            <button class="button is-bare" type="button" data-bs-toggle="modal" data-bs-target="#editPhoto">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+                                </svg>
+                                <span class="label">Edit</span>
+                            </button>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-download"></use>
+                                </svg>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+                                </svg>
+                                <span class="is-danger" >Delete</span>
+                            </a>
+                        </li>
+                    </ul>                    
+                </div>                 
+            </div>
+        </div>
+        {% if entetyName|length > 0 %}
+            <div class="photo-list__name">
+                <a href="single.html" class="user__title">{{ entetyName }}</a>
+            </div>
+            <div class="small">{{entetyCount}}</div>
+        {% endif %}
+    </div>
 {% endmacro %}

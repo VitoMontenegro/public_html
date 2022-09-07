@@ -17,7 +17,7 @@
 		align-items: center;
 
 		.dropdown-menu {
-			    padding: 0.5rem 3.2rem 0.5rem;
+			    /* padding: 0.5rem 3.2rem 0.5rem; */
 		}
 	}
 } 
@@ -77,7 +77,7 @@
 .main__content__body__txt {
 	margin-top: 1.6rem;
 	font-family: 'SF Pro Text';
-	line-height: var(--font-line-height-middle);
+	line-height: var(--font-line-height-base);
 	color: var(--color-ink-2ry);
 }
 

@@ -169,6 +169,12 @@ body .is_open {
 .is_overflow {
   overflow: hidden;
 }
+.is_uppercase {
+  text-transform: uppercase;
+}
+.is-danger{
+  color: var(--color-ink-danger-fill);
+}
 
 @media  screen and (max-height: 200px) {
   body {

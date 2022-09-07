@@ -1,7 +1,7 @@
 {% extends "../index.twig" %}
-{% set title = 'Photo albums' %}
+{% set title = 'Photo list' %}
 {% set avatar = 'avatar.jpg' %}
-{% set countCols = 'photo-album-list' %}
+{% set countCols = 'photo-list' %}
 {% set captionActions = [
 	['dropText', "All", 'Sort', [
 			['all', 'All'],
@@ -21,14 +21,14 @@
 ] %}
 
 {% set photoList = [
-	['/assets/images/metalica.jpg', "Не добавленные в альбомы", '12 photos'],
-	['/assets/images/avatarnew.jpg', "Movie Posters", '12 photos'],
-	['/assets/images/lili.jpg', "Cars and motorcycles", '12 photos'],
-	['/assets/images/avatarF.jpg', "Architecture", 'DJ-сет Анфисы Летяго', '12 photos'],
-	['/assets/images/mybg1.jpg', "Animals", '12 photos'],
-	['/assets/images/specialBg.jpg', "classic illustration", '12 photos'],
-	['/assets/images/osetinskiy.jpg', "the beauty", '12 photos'],
-	['/assets/images/mybghome.jpg', "Favorite Artists", '12 photos']
+	['/assets/images/metalica.jpg'],
+	['/assets/images/avatarnew.jpg'],
+	['/assets/images/lili.jpg'],
+	['/assets/images/avatarF.jpg'],
+	['/assets/images/mybg1.jpg'],
+	['/assets/images/specialBg.jpg'],
+	['/assets/images/osetinskiy.jpg'],
+	['/assets/images/mybghome.jpg']
 ] %}
 {% set mainSidebarList = [
 	['info', 'link','#', "About me", '', 'active'],

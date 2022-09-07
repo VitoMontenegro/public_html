@@ -114,7 +114,7 @@
                     <div class="flex edit__images">
                         <div class="edit__images__ava">
                             <div class="entety__avatar is-lg">
-                                <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                                <img src="/assets/images/tailors.png" alt="" class="entety__avatar_img">
                             </div>
                             <div class="file-upload">
                                 <label>
@@ -127,7 +127,7 @@
                         </div>
                         <div class="edit__images__bg">
                             <div class="edit__images__bg__slider">
-                                <img src="/assets/images/mybg.jpg" alt="" class="edit__images__bg_img">
+                                <img src="/assets/images/tailors.jpg" alt="" class="edit__images__bg_img">
                             </div>
                             <div class="file-upload">
                                 <label>
@@ -662,6 +662,85 @@
                <a class="btn is-primary" href="/ru/editpost">
                     Save
                 </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="editPhoto" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box" id="edit_photo">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="form__photo-selectors photo-selectors">
+                        <div class="edit__images__ava">
+                            <div class="selected_photo is-lg">
+                                <img src="/assets/images/lili.jpg" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="photo-selectors__group">
+                            <div class="photo-selectors__title">Edit photo</div>
+                            <div class="form__item">
+                                <label for="profilePhotoDesc">Description:</label>
+                                <textarea name="profilePhotoDesc" id="profilePhotoDesc" rows="3" placeholder=""></textarea>
+                            </div>
+                            <div class="form__item">
+                                <label for="fieldActivity">Album:</label>
+                                <select class="select" id="fieldActivity" name="fieldActivity">
+                                    <option value="The beauty">The beauty</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="form__item">
+                                <label class="flex align-center">
+                                    <input type="checkbox" name="albumCover"> 
+                                    Set as album cover
+                                </label>
+                            </div>
+                            <div class="form__item">
+                                <label class="flex align-center">
+                                    <input type="checkbox" name="profilecover"> 
+                                    Set as profile cover
+                                </label>
+                            </div>
+                            <div class="form__item">
+                                <label class="flex align-center">
+                                    <input type="checkbox" name="profileAvatar"> 
+                                    Make a profile photo (avatar)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer modal__footer has-dual-purpose">
+                <div class="left">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                        Cancel
+                    </button>                
+                </div>
+                <div class="right edit__icons">
+                     <a href="javascript:void(0);" class="button flex align-center">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+                        </svg>
+                        <span class="is-danger button small">Delete</span>
+                    </a>
+                    <a class="btn is-primary button" href="/ru/editpost">
+                        Save
+                    </a>
+                </div>
             </div>
         </form>
     </div>
@@ -1489,21 +1568,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="modal fade is-full" id="addStories"  aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

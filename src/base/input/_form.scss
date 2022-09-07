@@ -164,3 +164,46 @@ select {
   opacity: .5;
   pointer-events: none;
 }
+.selected_photo {
+  border-radius: var(--shape-border-radius-base);
+  overflow: hidden;
+}
+.modal__body {
+  .photo-selectors {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__group {
+      @include media-breakpoint-up(md) {
+        order: -1;
+        width: 44rem;
+        margin-right: 4rem;        
+      }
+
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      letter-spacing: -1px;
+    }
+    .edit__images__ava {
+      width: 100%;
+      margin-right: 0;
+
+      @include media-breakpoint-up(md) {
+        width: calc(100% - 48rem);
+      }
+      .file-upload {
+        width: 5.6rem;
+        height: 4rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -5.6rem;
+      }
+    }
+  }  
+}

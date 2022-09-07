@@ -39,13 +39,64 @@
 
 {% block sidebar %}
 	<div class="main__sidebar__item has-shadow has-border-radius-base">
-		<div class="main__sidebar__item__title">
-			My
+		<div class="main__sidebar__section">
+			<div class="main__sidebar__header">
+				<div class="main__sidebar__item__title">
+					My
+				</div>
+			</div>
+
+			<div class="main__sidebar__events sidebar_events">
+				<div class="sidebar_events__images">
+                    <svg class="icon is_white" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-ballon"></use>
+                    </svg>
+				</div>
+
+				<div class="sidebar_events__title">
+					You don't include one event yet
+				</div>
+
+				<div class="sidebar_events__content">
+					But as a member of the EDP, you can do it
+				</div>
+				
+				<button class="btn menu__link is-details is_uppercase" type="button"> 
+	    			<span>Create</span>
+				</button>				
+			</div>
+
 		</div>
 	</div>
 	<div class="main__sidebar__item has-shadow has-border-radius-base">
-		<div class="main__sidebar__item__title">
-			I'll go / I'm interested
+		<div class="main__sidebar__section">
+			<div class="main__sidebar__header">
+				<div class="main__sidebar__item__title">
+					I'll go / I'm interested
+				</div>
+			</div>
+
+			<div class="main__sidebar__events sidebar_events">
+				<div class="sidebar_events__images">
+                    <svg class="icon is_white" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                    </svg>
+				</div>
+
+				<div class="sidebar_events__title">
+					You have not saved one event yet
+				</div>
+
+				<div class="sidebar_events__content">
+					Search our database - something will surely interest you
+				</div>
+
+				<button class="btn menu__link is-details is_uppercase" type="button"> 
+	    			<span>Find</span>
+				</button>				
+			</div>
+
+
 		</div>
 	</div>
 {% endblock %}

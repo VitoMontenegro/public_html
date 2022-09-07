@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 	});
 
 	$(document).mouseup( function(e){ // событие клика по веб-документу
-		var div = $( ".dropdown-menu, .dropdown__menu" ),// тут указываем ID элемента
+		var div = $( ".dropdown-menu, .dropdown__menu, .modal" ),// тут указываем ID элемента
 			smartSearchInner = $('#smartSearchInner'), 
 			smartSearchBtnr = $('#smart-search-btn'),
 			typeID = $('#typeID'),

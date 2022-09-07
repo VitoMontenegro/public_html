@@ -7,7 +7,7 @@
         <div class="form__item">
             <input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
 
-            {% if title == 'Community' or  title == 'Friends'  or  title == 'Organizations' %}
+            {% if title == 'Community' or  title == 'Friends'  or  title == 'Organizations'  or  title == 'Events' %}
                 <button class="header__search-submit" id="smart-search-btn" type="submit" aria-label="Settings">
                     <svg class="icon" aria-hidden="true" focusable="false">
                       <use href="/assets/sprite/sprite.svg#icon-settings"></use>
@@ -16,6 +16,11 @@
             {% elseif title == 'Single Community' %}
                 <button class="header__search-submit is_rubber" id="smart-search-btn" type="submit" aria-label="Settings">
                     {% set searchFrom = 'In community' %}
+                    <span>{{ searchFrom }}</span>
+                </button>
+            {% elseif title == 'Single Event' %}
+                <button class="header__search-submit is_rubber" id="smart-search-btn" type="submit" aria-label="Settings">
+                    {% set searchFrom = 'In Page' %}
                     <span>{{ searchFrom }}</span>
                 </button>
             {% elseif title == 'My Page' %}
@@ -41,7 +46,7 @@
                 </svg>
             </button>
 
-            {% if title == 'Community' or  title == 'Friends'  or  title == 'Organizations' %}
+            {% if title == 'Community' or  title == 'Friends'  or  title == 'Organizations'  or  title == 'Events' %}
                 <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base">
                     <div class="search__filter__item">
                         <div class="form__item has-select form__item-countries">
@@ -198,31 +203,141 @@
                                 <button class="form__btn btn is-primary" type="submit">Find</button>
                             </div>
                         </div>
+                    {% elseif title == 'Events' %}
+                        <div class="search__filter__item">
+                            <div class="form-label__title">Category:</div>
+                            <div class="search__filter__item__items">
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>any</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span> A party </span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Exhibition</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Congress</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Concert</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__filter__item">
+                            <div class="form-label__title">Category:</div>
+                            <div class="search__filter__item__items">
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>any</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span> House </span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>House</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Health</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>acquaintance</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Games</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Art</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>movie</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Literature</span>
+                                </div>
+                                <div class="items_scroll" data-select="" data-id="">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                    </svg>
+                                    <span>Music</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search__filter__item search__filter__item_footer">
+                            <div class="flex align-center justify-between">
+                                <label class="flex align-center">
+                                    <input type="checkbox" id="mpagree"> 
+                                    Only events
+                                </label>
+                                <button class="form__btn btn is-primary" type="submit">Find</button>
+                            </div>
+                        </div>
                     {% endif %}
                 </div>
-            {% elseif title == 'Single Community' or title == 'My Page' or title == 'Single Organization' or title == 'Single Post' %}
-            <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base is_small">
-                <ul class="no_list_style intervalcheck">
-                    <li class="custom-radio"> 
-                        <label>
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-user"></use>
-                            </svg>
-                            <input type="radio" name="search_from" id="rb1"  value="{{ searchFrom }}" checked> 
-                            <span>{{ searchFrom }}</span>                        
-                        </label>
-                    </li>
-                    <li class="custom-radio"> 
-                        <label>                   
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-globe"></use>
-                            </svg>
-                            <input type="radio" name="search_from" id="rb2"  value="All over site"> 
-                            <span>All over site</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
+            {% elseif title == 'Single Community' or title == 'My Page' or title == 'Single Organization' or title == 'Single Post' or title == 'Single Event' %}
+                <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base is_small">
+                    <ul class="no_list_style intervalcheck">
+                        <li class="custom-radio"> 
+                            <label>
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-user"></use>
+                                </svg>
+                                <input type="radio" name="search_from" id="rb1"  value="{{ searchFrom }}" checked> 
+                                <span>{{ searchFrom }}</span>                        
+                            </label>
+                        </li>
+                        <li class="custom-radio"> 
+                            <label>                   
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-globe"></use>
+                                </svg>
+                                <input type="radio" name="search_from" id="rb2"  value="All over site"> 
+                                <span>All over site</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             {% endif %}
         </div>
         <button class="header__search-cancel btn is-ghost" type="reset" data-role="search-cancel">
