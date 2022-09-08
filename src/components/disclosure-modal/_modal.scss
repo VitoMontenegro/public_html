@@ -818,3 +818,18 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     margin-bottom: $size-2;
   }
 }
+.location-list {
+  margin-top: $size-4;
+  li {
+    margin-bottom: $size-3;
+  }
+  
+  &__title  {
+    color: var(--color-ink-title);
+  }
+  &__subtitles {
+    color:var(--color-ink-2ry);
+  }
+
+
+}

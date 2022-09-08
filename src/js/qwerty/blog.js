@@ -13,6 +13,12 @@ jQuery(document).ready(function($){
 		}
 
 	});
+	$('.location-list a').on('click', function() {
+		let tab_content = $(this).closest('.tab_content');
+		tab_content.removeClass('active');
+		tab_content.next().addClass('active');
+
+	});
 
 	// $('.likeblue').on('click', function(){
 	// 	$(this).closest('li').toggleClass('active');
