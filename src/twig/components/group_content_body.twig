@@ -9,6 +9,12 @@
 		{% endfor %}
 	{% endif %}
 
+	{% if groupListCommunity|length > 0 %}
+		{% for key, value in groupListCommunity %}
+			{{ nameMacro.groupsCommunity(value[0], value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	{% endif %}
+
 	{% if friendList|length > 0 %}
 		{% for key, value in friendList %}
 			{{ nameMacro.friends(value[0], value[1], value[2], value[3]) }}

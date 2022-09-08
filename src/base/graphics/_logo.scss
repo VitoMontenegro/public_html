@@ -31,12 +31,12 @@
   margin-right: $size-2;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 1.4rem;
+    margin-bottom: $size-1;
     margin-right: 0;
   }
 
   @include media-breakpoint-up(xl) {
-    margin-right: 1rem;
+    margin-right: $size-2;
     margin-bottom: 0;
   }
 }
@@ -52,16 +52,19 @@
 
 .tagline {
   color: var(--color-primary-base);
-  font-size: var( --font-size-small);
-  line-height: var(--font-line-height-small);
-  font-weight: var(--font-weight-hero-title);
+  font-size: var( --font-size-base);
+  line-height: var(--font-line-height-middle);
+  font-weight: var(--font-weight-subhead-h2);
   font-family: var(--font-weight-hero-title);
   transform: translateY(-.1rem);
-  text-transform: uppercase;
   margin-top: .35rem;
+  span {
+    color: var(--color-btn-reduce);
+  }
 
   @include media-breakpoint-between(md, xl) {
-    font-size: var(--font-size-ectra-small);
+    font-size: var(--font-size-small);
+    line-height: var(--font-size-small);
   }
 }
 

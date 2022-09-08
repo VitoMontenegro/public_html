@@ -2,10 +2,7 @@
         
         
         	<a class="primary-nav__logo logo" href="/">
-			    <img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="{% block title %}{% endblock %}">
-			    <div class="logo__copy">			    	
-				    <div class="tagline">Social movement of entrepreneurs</div>
-			    </div>
+			    {% include '../components/content_logo.twig' %}
 		  	</a>
 
             <ul class="menu" role="menu">
@@ -174,7 +171,7 @@
 					<ul class="dropdown__menu buttons" style="display: block;">
 						<li>
 							<button class="btn menu__link menu__link is-primary iconFix" type="button" data-bs-toggle="modal" data-bs-target="#createPost" aria-label="createPost">   
-		            			<svg class="icon" aria-hidden="true" focusable="false">
+		            			<svg class="icon is_white" aria-hidden="true" focusable="false">
 		                			<use href="/assets/sprite/sprite.svg#icon-plus"></use>
 		            			</svg>
 		            			<span>Publication</span>

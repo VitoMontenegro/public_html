@@ -78,7 +78,7 @@ jQuery(document).ready(function($){
 		}
 		
 	});
-	$('.main__content__header__actions .expand__action__item button').on('click', function(){
+	$('.likeblue').on('click', function(){
 		$(this).closest('li').toggleClass('active');
 	});
 

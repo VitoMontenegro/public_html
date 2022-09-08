@@ -35,11 +35,11 @@
         position: absolute;
         top: 0.9rem;
         right: 0.5rem;
-        transform: rotate(-45deg) translateX(0px) translateY(0px);
         pointer-events: none;
         border-left: 2px solid var(--color-ink-2ry);
         border-bottom: 2px solid var(--color-ink-2ry);
         transition: all 0.4s ease 0s;
+        transform: rotate(137deg) translateX(0px) translateY(0px);
 
         @include media-breakpoint-up(sm) {
             top: 0.5rem;
@@ -47,7 +47,7 @@
     }
     &.collapsed {
         &:after {
-            transform: rotate(137deg) translateX(0px) translateY(0px);
+        transform: rotate(-45deg) translateX(0px) translateY(0px);
             transition: all 0.4s ease 0s;            
         }
 

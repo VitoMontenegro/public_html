@@ -107,14 +107,53 @@
                         </ul>  
                     </div>
                 </div>
-                <div class="btn is-compact is-ghost sm_hidden">
+               <div class="btn is-ghost sm_hidden dropdown is-top">
                     <svg class="icon is-left" aria-hidden="true" focusable="false">
                         <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
                     </svg>
                     <span>2</span>
                     <div class="dropdown-menu_wrap">
                         <ul class="dropdown-menu"> 
-                            <li><span class="menu__title"></span></li>
+                            <li class="edit_link">
+                                <button class="button" type="button">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-copy"></use>
+                                    </svg>
+                                    <span class="label">publish on your own</span>
+                                </button>
+                            </li>
+                            <li class="edit_link">
+                                <button class="button" type="button">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
+                                    </svg>
+                                    <span class="label">copy link</span>
+                                </button>
+                            </li>
+                            <li class="edit_link">
+                                <button class="button" type="button">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-vk"></use>
+                                    </svg>
+                                    <span class="label">vkontakte</span>
+                                </button>
+                            </li>
+                            <li class="edit_link">
+                                <button class="button" type="button">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-telegram"></use>
+                                    </svg>
+                                    <span class="label">telegram</span>
+                                </button>
+                            </li>
+                            <li class="edit_link">
+                                <button class="button" type="button">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-ok"></use>
+                                    </svg>
+                                    <span class="label">odnoklassniki</span>
+                                </button>
+                            </li>
                         </ul>  
                     </div>
                 </div>
@@ -136,43 +175,7 @@
 			                                    <a href="#" class="comment__author small is-bolder">Agressia</a>
 			                                    <a href="#" class="comment__link small">вчера</a>
 			                                </div>
-			                                <div class="comment__dropdown dropdown is-right">
-			                                    <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
-			                                        <svg role="img" class="icon">
-			                                            <use href="/assets/sprite/sprite.svg#icon-more"></use>
-			                                        </svg>
-			                                    </button>
-			                                    <ul class="dropdown-menu">
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                                <svg role="img" class="dropdown__indicator icon">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-			                                                </svg>
-			                                            </a>
-			                                        </li>
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                            </a>
-			                                        </li>
-			                                        <li class="dropdown__divider"></li>
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                            </a>
-			                                        </li>
-			                                    </ul>
-			                                </div>
+			                                {% include '../components/comments_drop.twig' %}
 			                            </div>
 			                        </div>
 			                        <div class="comment__text">
@@ -221,43 +224,7 @@
 			                                            <a href="#" class="comment__author small is-bolder">Mirlan Akynbekov</a>
 			                                            <a href="#" class="comment__link small">8 ч. назад</a>
 			                                        </div>
-			                                        <div class="comment__dropdown dropdown is-right">
-			                                            <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
-			                                                <svg role="img" class="icon">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-more"></use>
-			                                                </svg>
-			                                            </button>
-			                                            <ul class="dropdown-menu">
-			                                                <li>
-			                                                    <a href="#">
-			                                                        <svg role="img" class="icon is-left">
-			                                                            <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                        </svg>
-			                                                        <span class="label is-bolder">все записи</span>
-			                                                        <svg role="img" class="dropdown__indicator icon">
-			                                                            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-			                                                        </svg>
-			                                                    </a>
-			                                                </li>
-			                                                <li>
-			                                                    <a href="#">
-			                                                        <svg role="img" class="icon is-left">
-			                                                            <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                        </svg>
-			                                                        <span class="label is-bolder">все записи</span>
-			                                                    </a>
-			                                                </li>
-			                                                <li class="dropdown__divider"></li>
-			                                                <li>
-			                                                    <a href="#">
-			                                                        <svg role="img" class="icon is-left">
-			                                                            <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                        </svg>
-			                                                        <span class="label is-bolder">все записи</span>
-			                                                    </a>
-			                                                </li>
-			                                            </ul>
-			                                        </div>
+			                                        {% include '../components/comments_drop.twig' %}
 			                                    </div>
 			                                </div>
 			                                <div class="comment__text">
@@ -308,43 +275,7 @@
 			                                    <a href="#" class="comment__author small is-bolder">Андрей Борджиа</a>
 			                                    <a href="#" class="comment__link small">15 мая</a>
 			                                </div>
-			                                <div class="comment__dropdown dropdown is-right">
-			                                    <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
-			                                        <svg role="img" class="icon">
-			                                            <use href="/assets/sprite/sprite.svg#icon-more"></use>
-			                                        </svg>
-			                                    </button>
-			                                    <ul class="dropdown-menu">
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                                <svg role="img" class="dropdown__indicator icon">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
-			                                                </svg>
-			                                            </a>
-			                                        </li>
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                            </a>
-			                                        </li>
-			                                        <li class="dropdown__divider"></li>
-			                                        <li>
-			                                            <a href="#">
-			                                                <svg role="img" class="icon is-left">
-			                                                    <use href="/assets/sprite/sprite.svg#icon-home"></use>
-			                                                </svg>
-			                                                <span class="label is-bolder">все записи</span>
-			                                            </a>
-			                                        </li>
-			                                    </ul>
-			                                </div>
+			                                {% include '../components/comments_drop.twig' %}
 			                            </div>
 			                        </div>
 			                        <div class="comment__text">

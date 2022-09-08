@@ -142,31 +142,31 @@
 .card-friend__actions {
     margin-top: $size-2;
 }
-.link.is-wrapper {
-  text-decoration: none;
-  position: relative;
-      width: 100%;
-    display: block;
+// .link.is-wrapper {
+//   text-decoration: none;
+//   position: relative;
+//       width: 100%;
+//     display: block;
 
-  &::before {
-    border-radius: var(--shape-border-radius-lg);
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 1;
-  }
+//   &::before {
+//     border-radius: var(--shape-border-radius-lg);
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     overflow: hidden;
+//     z-index: 1;
+//   }
 
-  &:focus-visible,
-  &:hover {
-    &::before {
-      box-shadow: var(--layer-box-shadow-focus-outline);
-    }
-  }
-}
+//   &:focus-visible,
+//   &:hover {
+//     &::before {
+//       box-shadow: var(--layer-box-shadow-focus-outline);
+//     }
+//   }
+// }
 .event__body__list__content {
     padding: 1.2rem 2.4rem;
     display: flex;

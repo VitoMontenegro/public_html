@@ -10,7 +10,7 @@
         grid-row-gap: 2.4rem;
         align-items: start;
         grid-row-gap: 2.4rem;
-        grid-template-columns: 9.6rem 1fr;
+        grid-template-columns: 11.6rem 1fr;
     }
 
     @include media-breakpoint-up(md) {
@@ -38,14 +38,23 @@
             font-size: var(--font-size-small);
             line-height: var(--font-line-height-small);
             text-align: center;
+            justify-content: center;
             @include media-breakpoint-up(md) {
+                justify-content: space-between;
                 text-align: left;
                 margin-bottom: $size-3;  
                 margin-top: $size-5;
                 font-size: var(--font-size-base);
                 line-height: var(--font-line-height-base);
             }
-        }          
+        }   
+        .my_story {
+            
+            justify-content: center;
+            @include media-breakpoint-up(md) {
+                justify-content: space-between;
+            }
+        }       
 
         .line-cell__title,
         .line-cell__subtitles,
@@ -65,6 +74,17 @@
 
     &__nav { 
         padding: 3rem 2rem 2.4rem 3rem;
+
+        @include media-breakpoint-down(md) {
+            padding: 3rem 1rem 2.4rem 1rem;
+            .entety__avatar:not(.item-people__avatar) {
+                margin-right: 0;
+            }
+            .line-cell {
+                justify-content: center;
+            }
+        }
+
     }
 
     &__logo {
@@ -78,9 +98,12 @@
             }
 
         .tagline {
-            font-size: var(--font-size-ectra-small);
+            font-size: var(--font-size-small);
+            line-height: var(--font-size-small);
+
             @include media-breakpoint-up(md) {
-                font-size: var(--font-size-small);
+              font-size: var( --font-size-base);
+              line-height: var(--font-line-height-middle);
             }
         }
         .logo__copy {
@@ -94,8 +117,10 @@
             }
         }
         .logo__mark {
+                margin-bottom: $size-1;
                 margin-right: 0;
             @include media-breakpoint-up(md) {
+                margin-bottom: 0;
                 margin-right: 1.6rem;
             }
         }

@@ -3,14 +3,19 @@
 {% set title = 'Community' %}
 
 {% set captionActions = [
-	['details', "I participate", 8],
+	['details', "I participate", 8, 'active'],
 	['details', "My", 3],
-	['isIcon', "Sort", 'sort'],
-	['isIcon', "Add", 'plus']
+	['isIcon', "Sort", 'sort', [
+			['alphabet', 'alphabetically'],
+			['calendar', 'date added'],
+			['likebig', 'popularity']
+		], 'Sort by'
+	],
+	['isIcon', "Add", 'plus', '']
 ] %}
 
 {# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
-{% set groupList = [
+{% set groupListCommunity = [
 	['/assets/images/mybg.jpg', "B2B Lead Genera…", '17 th. members', 'Last publish just now'],
 	['/assets/images/mybg.jpg', "Эко-игрушки", '17 th. members', 'Last publish 1 h ago'],
 	['/assets/images/mybg.jpg', "Домострой", '17 th. members', 'Last publish yesterday'],
