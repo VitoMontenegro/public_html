@@ -4,7 +4,19 @@ jQuery(document).ready(function($){
 		$(this).addClass('open');
 		$('body').addClass('modal-open');
 	});
+	$('.is_subscribe').on('click', function(){
+		if ($(this).hasClass('active')) {
+			$('#unsubscribe').modal('show');
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		}
 
+	});
+
+	// $('.likeblue').on('click', function(){
+	// 	$(this).closest('li').toggleClass('active');
+	// });
 	$(document).mouseup( function(e){ // событие клика по веб-документу
 		var div = $( ".dropdown-menu, .dropdown__menu, .modal" ),// тут указываем ID элемента
 			smartSearchInner = $('#smartSearchInner'), 
@@ -77,9 +89,6 @@ jQuery(document).ready(function($){
 			$('.search__filter__item__items .items_scroll').addClass('active');
 		}
 		
-	});
-	$('.likeblue').on('click', function(){
-		$(this).closest('li').toggleClass('active');
 	});
 
 

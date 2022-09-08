@@ -314,6 +314,395 @@
     </div>
 </div>
 
+<div class="modal fade is-lg" id="createOrganization" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Create organization</h3>
+                    </div>
+                    <div class="modal__subheader">
+                        Upload your logo and cover photo. Tell us about your organization. Required fields are marked with asterisks *<div class=""></div>
+                    </div>
+                    <div class="flex edit__images">
+                        <div class="edit__images__ava">
+                            <div class="entety__avatar is-lg">
+                                <img src="/assets/images/tailors.png" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit__images__bg">
+                            <div class="edit__images__bg__slider">
+                                <img src="/assets/images/tailors.jpg" alt="" class="edit__images__bg_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                    <span>Background photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>      
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editOrganizationcollapseOne" aria-expanded="true" aria-controls="editOrganizationcollapseOne">
+                                    General information
+                                </div>
+                            </div>
+                            <div id="editOrganizationcollapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <label for="organizationName">Name *</label>
+                                        <input class="form__control" id="organizationName" name="organizationName" type="text" placeholder="add organization name">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Type *</label>
+                                        <input class="form__control" id="organizationType" name="communityType" type="text" placeholder="organization type">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Line of business *</label>
+                                        <input class="form__control" id="organizationBussinessLine" name="organizationBussinessLine" type="text" placeholder="Line of business">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">The number of employees *</label>
+                                        <input class="form__control" id="organizationPersonalCount" name="organizationPersonalCount" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="organizationDescription">Description:</label>
+                                        <textarea name="organizationDescription" id="organizationDescription" cols="20" ></textarea>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityStatus">Status:</label>
+                                        <input class="form__control" id="communityStatus" name="communityStatus" type="text" placeholder="">
+                                        <div class="form__item_notice">
+                                            Two or three words - displayed below the name of the organization
+                                        </div>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityStatus">Foundation date:</label>
+                                        <input type="text" placeholder="Select date" class="form__control has-icon-right js-datetimepicker">
+                                        <svg role="img" class="form__control-icon is-right icon">
+                                            <use href="/assets/images/flags.svg#icon-calendar-plus"></use>
+                                        </svg>
+                                    </div>
+
+
+                                    <div class="flex justify-between">
+                                        <div class="form__item">
+                                            <div class="form__item__name">Certificates</div>
+                                            <div class="form__item__notice">If there is. PDF, PNG or JPG</div>
+                                        </div>
+
+                                        <div class="file-upload menu__link">
+                                            <label>
+                                                <input type="file" name="file" onchange="getFileParam();">
+                                                <span>select files</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between">
+                                        <div class="form__item">
+                                            <div class="form__item__name">Awards</div>
+                                            <div class="form__item__notice">If there is. PDF, PNG or JPG</div>
+                                        </div>
+
+                                        <div class="file-upload menu__link">
+                                            <label>
+                                                <input type="file" name="file" onchange="getFileParam();">
+                                                <span>select files</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseTwo" aria-expanded="true" aria-controls="editCommunitycollapseTwo">
+                                    Contact Information
+                                </div>
+                            </div> 
+                            <div id="editCommunitycollapseTwo" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="form__item">
+                                        <div class="form-label__title">Administrators and moderators:</div>
+                                        <div class="search__filter__item__items">
+                                            <div class="items_scroll" data-select="" data-id="">
+                                                <span>Владимир Никишкин</span>
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="items_scroll" data-select="" data-id="">
+                                                <span>Татьяна Сергеева</span>
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="items_scroll add" data-select="" data-id="">
+                                                <svg class="icon" aria-hidden="true" focusable="false">
+                                                    <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+                                                </svg> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Full name manager</label>
+                                        <input class="form__control" id="organizationManager" name="organizationManager" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Mailing address</label>
+                                        <input class="form__control" id="mailingAddress" name="mailingAddress" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Site</label>
+                                        <input class="form__control" id="organizationSite" name="organizationSite" type="text" placeholder="">
+                                        <div class="form__item_notice">
+                                           The domain name (after the @ sign) must match the website address.
+                                        </div>
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Email</label>
+                                        <input class="form__control" id="organizationEmail" name="organizationEmail" type="text" placeholder="">
+                                    </div>
+                                    <div class="form__item">
+                                        <label for="communityName">Phone</label>
+                                        <input class="form__control" id="organizationPhone" name="organizationPhone" type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" >
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseThree" aria-expanded="true" aria-controls="editCommunitycollapseThree">
+                                    Company Verification
+                                </div>
+                            </div> 
+                            <div id="editCommunitycollapseThree" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="accordion-body__info">
+                                        <div class="font-size-small">
+                                            People want to interact with genuine, trustworthy companies. To ensure this, we may ask you to go through a company verification process. You will need to provide us with an extract from the Unified State Register of Legal Entities and enter the confirmation code sent to your corporate email and phone.
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between">
+                                        <div class="form__item">
+                                            <div class="form__item__name">
+                                                <span>Выписка из ЕГРЮЛ</span>
+                                                <div class="small">Можно получить в онлайн-сервисе ФСИН</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="file-upload menu__link">
+                                            <label>
+                                                <input type="file" name="file" onchange="getFileParam();">
+                                                <span>select files</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <span class="flex select__age">
+                                            <label for="organizationInn">
+                                                <span class="form-label__title">ИНН</span>
+                                                <input class="form__control" id="organizationInn" name="organizationInn" type="text" placeholder="">
+                                            </label>
+                                            <label for="organizationCpp">
+                                                <span class="form-label__title">КПП</span>
+                                                <input class="form__control" id="organizationCpp" name="organizationCpp" type="text" placeholder="">
+                                            </label>
+                                        </span>
+                                    </div>
+
+                                    <div class="form__item">
+                                        <div class="flex justify-between">
+                                            <label for="confirmationCode">
+                                                <span class="form-label__title">Confirmation code</span>
+                                                <input class="form__control" id="confirmationCode" name="confirmationCode" type="text" placeholder="">
+                                            </label>
+
+                                            <button class="btn menu__link is-details" type="button"> 
+                                                <span>Send again</span>
+                                            </button>
+                                        </div>
+                                        <div class="font-size-small">
+                                            We send it to the corporate phone number and email address above. And only if they match those indicated on the official website
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header" >
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseFour" aria-expanded="true" aria-controls="editCommunitycollapseFour">
+                                    Blocked Users
+                                </div>
+                            </div> 
+                            <div id="editCommunitycollapseFour" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="modal-footer modal__footer  has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="createEvent" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Create Event</h3>
+                    </div>
+                    <div class="modal__subheader">
+                        Upload your logo and cover photo. Tell us about the event. All fields must be filled in.
+                    </div>
+                    <div class="flex edit__images">
+                        <div class="edit__images__ava">
+                            <div class="entety__avatar is-lg">
+                                <img src="/assets/images/tailors.png" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit__images__bg">
+                            <div class="edit__images__bg__slider">
+                                <img src="/assets/images/tailors.jpg" alt="" class="edit__images__bg_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                    <span>Background photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>      
+
+          
+                    <div class="form__item">
+                        <label for="communityName">Type *</label>
+                        <input class="form__control" id="EventType" name="communityType" type="text" placeholder="Event type">
+                    </div>
+
+                    <div class="form__item">
+                        <label for="EventName">Name *</label>
+                        <input class="form__control" id="EventName" name="EventName" type="text" placeholder="add Event name">
+                    </div>
+                    <div class="form__item">
+                        <label for="EventDescription">Description:</label>
+                        <textarea name="EventDescription" id="EventDescription" rows="6" cols="20" ></textarea>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="form__item">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label flex align-center">
+                                    <input type="radio" class="form-check-input" name="eventVenue" value="city">
+                                    <span>Venue — CITY:</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__item">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label flex align-center">
+                                    <input type="radio" class="form-check-input" name="eventOnline" value="online">
+                                    <span>Online</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form__item has-select form__item-countries">
+                        <label>
+                            <select class="select" id="countries">
+                                <option value="au">Australia</option>
+                                <option value="no">Norway</option>
+                                <option value="ru" selected="">Russia</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="communityName">Address</label>
+                        <input class="form__control" id="eventAddress" name="eventAddress" type="text" placeholder="">
+                    </div>
+
+                    <div class="form__item">
+                        <span class="flex select__age">
+                            <label for="profileStreet">
+                                <span class="form-label__title">Start</span>
+                                <input type="text" placeholder="Select date" class="form__control has-icon-right js-datetimepicker">
+                            </label>
+                            <label for="profilePostcode">
+                                <span class="form-label__title">End</span>
+                                <input type="text" placeholder="Select date" class="form__control has-icon-right js-datetimepicker">
+                            </label>
+                        </span>
+                    </div>
+
+             
+
+                    <div class="form__item">
+                        <label for="EventDescription">Sponsor</label>
+                        <textarea name="EventDescription" id="EventDescription" rows="6" cols="20" placeholder="Tell us about the company or individuals who prepared the event"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer modal__footer  has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div class="modal fade is-lg" id="editProfile" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <form class="modal-content modal__box" id="edit_profile">
@@ -1713,6 +2102,27 @@
                     </div>  
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade is-base unsubscribe" id="unsubscribe"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content align-center justify-center">
+            <div class="unsubscribe__logo">
+                <img src="/assets/images/alpha.png" alt="" class="entety__avatar_img">
+            </div>
+            <div class="title">
+                Unsubscribe from Alfa-Bank?
+            </div>
+            <div class="flex align-center">
+                <button class="btn is-close invite_btn" type="button">
+                    Cancel
+                </button>
+                <button class="btn is-close invite_btn is-danger" type="button">
+                    Unsubscribe
+                </button>
+            </div>        
         </div>
     </div>
 </div>

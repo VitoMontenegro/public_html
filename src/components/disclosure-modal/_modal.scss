@@ -81,9 +81,9 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   &.is-base {
     .modal-dialog {
       @include media-breakpoint-up(md) {
-        width: var(size-width-md);
+        width: var(--size-width-md);
         // BS override
-        max-width: var(size-width-md);
+        max-width: var(--size-width-md);
       }
     }
     .modal__body,
@@ -568,7 +568,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
 }
 .modal-scroll {
-    height: 82vh;
+    height: 75vh;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -794,5 +794,22 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 
   .dropdown-menu_wrap {
     pointer-events: auto;
+  }
+}
+.unsubscribe {
+  .modal-content {
+    padding: $size-4;
+  }
+  .title {
+    font-weight: 500;
+    color: var(--color-ink-title);
+    margin-bottom: $size-4;
+  }
+  &__logo {
+    width: $size-1 * 10;
+    height: $size-1 * 10;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: $size-2;
   }
 }

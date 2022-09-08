@@ -236,18 +236,21 @@
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 
-    .icon {
-      display: none;
-      margin-right: 1rem;
-    }
-
-    &.active {
-      background: #F2F6FD;
-      padding: 0 1.6rem;
+    &:not(.add) {
       .icon {
-        display: inline;
+        display: none;
+        margin-right: 1rem;
+      }      
+      &.active {
+        background: #F2F6FD;
+        padding: 0 1.6rem;
+        .icon {
+          display: inline;
+        }
       }
     }
+
+
 }
 // Submit
 .header__search-submit {

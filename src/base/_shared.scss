@@ -90,7 +90,8 @@
 .font-size-small,
 %font-size-small {
   font-size: var(--font-size-small);
-  line-height: var(--font-line-height-base);
+  line-height: var(--font-line-height-small);
+  margin-top: $size-2;
 }
 .no_bg,
 %no_bg {
@@ -176,8 +177,38 @@ body .is_open {
   color: var(--color-ink-danger-fill);
 }
 
+.border-right {
+    border-left: 1px solid var(--color-ink-border);
+    padding: 0.2rem 0 0.2rem 1rem;
+}
 @media  screen and (max-height: 200px) {
   body {
     display: none;
+  }
+}
+.hover_in {
+  display: none;
+}
+.is_hover-in:hover {
+  .hover_in {
+    display: block;
+  }
+}
+.is_subscribe {
+  position: relative;
+  .sr-only {
+    display: none;
+  }
+  &:hover {
+    .sr-only {
+      display: block;
+      background: var(--color-background-inverse);
+      color: var(--color-ink-inverse-max);
+      position: absolute;
+      padding: $size-1 $size-2;
+      border-radius: var(--shape-border-radius-sm);
+      top: -3.8rem;
+      left: -2.5rem;
+    }    
   }
 }

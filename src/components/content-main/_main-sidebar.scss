@@ -103,13 +103,22 @@
         margin: 2.2rem 0 5rem;
   }
 
-  &__group__list {
-    list-style: none;
-    padding: 0;
-    li {
-        margin-bottom: $size-1;
+  &__group {
+    &__list {
+      margin: -0.8rem;
+      list-style: none;
+      padding: 0;
+      li {
+          padding: $size-1;
+          border-radius: 10px;
+
+          &:hover {
+            background: hsl(216deg 10% 10% / 4%);;
+          }
+      }
     }
   }
+
   
   &__footer {
     // main.css override

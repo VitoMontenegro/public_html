@@ -126,6 +126,14 @@
     </div>
 {% endmacro %}
 
+{% macro popupAction(link, icon) %}
+    <button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ link }}" aria-label="{{ link }}">   
+        <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-{{icon}}"></use>
+        </svg>
+    </button>
+{% endmacro %}
+
 {% macro contentList(entetyAvatarImg, entetyTitle, entetySubTytle, entetyMainImg, entetyMainContent, entetyVideo) %}
         <div class="content-card has-shadow has-border-radius-lg">
             <div class="content-card__header">
@@ -1196,8 +1204,8 @@
 {% endmacro %}
 
 {% macro sidebarGroupList(sidebarEntetyAvatar, sidebarEntetyTitle, sidebarEntetySubTitle, sidebarEntetyLink) %}
-    <li>
-        <a class="line-cell" href="{{ sidebarEntetyLink }}">
+    <li class="flex align-center justify-between is_hover-in">
+        <a class="line-cell main__sidebar__item__link" href="{{ sidebarEntetyLink }}">
             {% if  sidebarEntetyAvatar|length > 0 %}
                 <figure class="entety__avatar">
                     <img src="{{ sidebarEntetyAvatar }}" alt="" class="entety__avatar_img">
@@ -1207,6 +1215,11 @@
                 <div class="line-cell__title">{{ sidebarEntetyTitle }}</div>
                 <div class="line-cell__subtitles">{{ sidebarEntetySubTitle }}</div>
             </div>
+        </a>
+        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+            </svg>
         </a>
     </li>
 {% endmacro %}

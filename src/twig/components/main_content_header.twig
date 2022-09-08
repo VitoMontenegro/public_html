@@ -119,9 +119,18 @@
 			                        </ul> 
 					            </div>
 							</li>
+						{% elseif key == 'likeblue' %}
+							<li class="expand__action__item is_subscribe {{ key }}" data-tooltip="Subscribe">
+    							<button class="btn is-ghost is-details" type="button">   
+			            			<svg class="icon" aria-hidden="true" focusable="false">
+			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
+			            			</svg>
+			            			 <span class="sr-only">Subscribe</span>
+								</button>						
+							</li>
 						{% else %}
-							<li class="expand__action__item {{ key }}">
-    							<button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">   
+							<li class="expand__action__item {{ key }}" data-tooltip="Subscribe">
+    							<button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
 			            			</svg>
