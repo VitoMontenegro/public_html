@@ -249,6 +249,19 @@
         }
       }
     }
+    &.is_days {
+      .icon {
+        display: none;
+        margin-right: 0;
+      }  
+
+      &.active {
+          padding:0 0.8rem 0 1.6rem;
+        .icon {
+          display: inline;
+        }
+      }
+    }
 
 
 }

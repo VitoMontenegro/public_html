@@ -330,6 +330,11 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   .edit__images__bg__slider {
       border-radius: var(--shape-border-radius-lg);
       overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit:cover;
+      }
   }
 
 

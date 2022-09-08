@@ -314,6 +314,201 @@
     </div>
 </div>
 
+<div class="modal fade is-lg" id="editPromotion" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Edit page</h3>
+                    </div>
+                    <div class="modal__subheader">
+                        Upload your logo and cover photo. Tell us about the promotion. Fields marked with an asterisk are mandatory. The promotion is being moderated in the UDP
+                    </div>
+                    <div class="flex edit__images">
+                        <div class="edit__images__ava">
+                            <div class="entety__avatar is-lg">
+                                <img src="/assets/images/avatarCake.jpg" alt="" class="entety__avatar_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit__images__bg">
+                            <div class="edit__images__bg__slider">
+                                <img src="/assets/images/osetinskiy.jpg" alt="" class="edit__images__bg_img">
+                            </div>
+                            <div class="file-upload">
+                                <label>
+                                    <input type="file" name="file" onchange="getFileParam();">
+                                    <svg class="icon" aria-hidden="true" focusable="false">
+                                        <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                    </svg>
+                                    <span>Background photo</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>      
+
+
+                    <div class="form__item">
+                        <label for="PromotionCat">категория *</label>
+                        <input class="form__control" id="PromotionCat" name="PromotionCat" type="text" placeholder="add Promotion name">
+                    </div>
+
+                    <div class="form__item">
+                        <label for="promotionName">название акции *</label>
+                        <input class="form__control" id="PromotionType" name="promotionType" type="text" placeholder="Promotion type">
+                    </div>
+
+                    <div class="form__item">
+                        <span class="flex select__age">
+                            <label for="profileStreet">
+                                <span class="form-label__title">Размер скидки</span>
+                                <input type="number" placeholder="" class="form__control ">
+                            </label>
+                            <label for="profilePostcode">
+                                <span class="form-label__title">мин. сумма покупки</span>
+                                <input type="number" placeholder="" class="form__control ">
+                            </label>
+                        </span>
+                    </div>
+                    <div class="form__item">
+                        <label for="PromotionDescription">Description *</label>
+                        <textarea name="PromotionDescription" id="PromotionDescription" row="6" cols="20" ></textarea>
+                    </div>
+                    <div class="form__item">
+                        <label for="PromotionTerms">УСЛОВИЯ *</label>
+                        <textarea name="PromotionTerms" id="PromotionTerms" row="6" cols="20" ></textarea>
+                        <div class="small">
+                            - Use hyphens to highlight a list item; <br>
+                            - and **double asterisks** for bolding.
+                        </div>                  
+                    </div>
+
+                    <div class="form__item">
+                        <label for="promotionCity">City</label>
+                        <input class="form__control" id="promotionCity" name="promotionCity" type="text" placeholder="Promotion type">
+                    </div>
+
+                    <div class="form__item">
+                        <label for="promotionAddress">Address</label>
+                        <input class="form__control" id="promotionAddress" name="promotionAddress" type="text" placeholder="Promotion type">
+                    </div>
+
+                    <div class="form__item">
+                        <span class="flex select__age">
+                            <label for="promotionStart">
+                                <span class="form-label__title">Start</span>
+                                <input type="text" placeholder="Select date" id="promotionStart" name="promotionStart" class="form__control has-icon-right js-datetimepicker">
+                            </label>
+                            <label for="promotionEnd">
+                                <span class="form-label__title">End</span>
+                                <input type="text" placeholder="Select date" id="promotionEnd" name="promotionEnd" class="form__control has-icon-right js-datetimepicker">
+                            </label>
+                        </span>
+                    </div>
+
+                    <div class="form__item">
+                        <div class="flex justify-between">
+                            <label for="promotionCode">
+                                <span class="form-label__title">Promocode</span>
+                                <input class="form__control" id="promotionCode" name="promotionCode" type="text" placeholder="">
+                            </label>
+
+                        </div>
+                        <div class="font-size-small">
+                            A word or set of letters and numbers. By naming the promotional code when paying or by entering it in the appropriate field on the site, the consumer confirms the right to a discount.
+                        </div>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="promotionName">Company website</label>
+                        <input class="form__control" id="promoWebsite" name="promoWebsite" type="text" placeholder="">
+                    </div>
+                    <div class="form__item">
+                        <label for="promotionName">Phone</label>
+                        <input class="form__control" id="PromotionPhone" name="PromotionPhone" type="text" placeholder="">
+                    </div>
+                    <div class="form__item">
+                        <div class="form__item__name">
+                            <span>Work schedule:</span>
+                        </div>
+                        <span class="flex">
+                            <label for="profileStreet">
+                                <input class="form__control" id="profileStreet" name="profileStreet" type="text" placeholder="08:00">
+                            </label>
+                            <label for="profilePostcode">
+                                <input class="form__control" id="profilePostcode" name="profilePostcode" type="text" placeholder="19:00">
+                            </label>
+                        </span>
+                    </div>
+                    <div class="form__item">
+                        <div class="search__filter__item__items">
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>su</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>mo</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>tu</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>we</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>thu</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>fr</span>
+                            </div>
+                            <div class="items_scroll is_days" data-select="" data-id="">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                                </svg>
+                                <span>sa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+
+            <div class="modal-footer modal__footer  has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div class="modal fade is-lg" id="createOrganization" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <form class="modal-content modal__box">
