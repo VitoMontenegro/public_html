@@ -23,7 +23,7 @@
 
     &__side {
         min-height: 100vh;
-        background: #fff;
+        background: var(--color-ink-inverse-base);
         display: none;
         @include media-breakpoint-up(sm) {
             display: block;

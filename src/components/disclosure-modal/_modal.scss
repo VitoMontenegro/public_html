@@ -239,7 +239,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     flex-direction: column;
     width: 100%;
     pointer-events: auto;
-    background-color: #fff;
+    background-color: var(--color-ink-inverse-base);
     background-clip: padding-box;
     outline: 0;
 }
@@ -322,14 +322,29 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   margin-top: $size-1;
   .edit__images {
     flex-wrap:wrap;
-        justify-content: center;
+    justify-content: center;
   }
   .entety__avatar {
-    overflow: hidden;
+      overflow: hidden;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      background: #E55E5C;
+      color: var(--color-ink-inverse-base);
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
   }
   .edit__images__bg__slider {
       border-radius: var(--shape-border-radius-lg);
       overflow: hidden;
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      background: var(--color-primary-base);
+      height: 100%;
+      color: var(--color-ink-inverse-base);
+      font-size: var(--font-size-small);
+      text-transform: uppercase;
 
       img {
         width: 100%;

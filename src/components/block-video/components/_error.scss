@@ -4,7 +4,7 @@
 }
 
 .vjs-error .vjs-error-display:before {
-  color: #fff;
+  color: var(--color-ink-inverse-base);
   content: 'X';
   font-size: 4em;
   left: 0;

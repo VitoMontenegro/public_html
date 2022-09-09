@@ -284,10 +284,13 @@ jQuery(document).ready(function($){
 	$('.story-slider').slick({
 		dots: false,
 		infinite: false,
+	  	arrows: true,
 		speed: 300,
 		slidesToShow: 4.5,
 		slidesToScroll: 1,
   		lazyLoad: 'ondemand',
+  		nextArrow: '<button type="button" class="slider__control slider__control__next"><svg class="icon deg90" aria-hidden="true"><use href="/assets/sprite/sprite.svg#icon-arrow"></use></svg></button>',
+        prevArrow: '<button type="button" class="slider__control slider__control__prev"><svg class="icon deg270" aria-hidden="true"><use href="/assets/sprite/sprite.svg#icon-arrow"></use></svg></button>',
 		responsive: [
 		{
 		  	breakpoint: 1260,
@@ -298,6 +301,8 @@ jQuery(document).ready(function($){
 		},
 		{
 		  	breakpoint: 670,
+	        arrows: false,
+	        centerMode: true,
 		  	settings: {
 		    	slidesToShow: 2,
 		    	slidesToScroll: 2
@@ -305,6 +310,8 @@ jQuery(document).ready(function($){
 		},
 		{
 		  	breakpoint: 520,
+	        arrows: false,
+	        centerMode: true,
 		  	settings: {
 			    slidesToShow: 1,
 			    slidesToScroll: 1

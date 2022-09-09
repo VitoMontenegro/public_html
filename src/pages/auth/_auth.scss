@@ -30,7 +30,7 @@
     right: 0;
     top: 0;
     margin: auto;
-    background: #fff;
+    background: var(--color-ink-inverse-base);
     bottom: 0;
     text-align: left;
     vertical-align: middle;
@@ -92,7 +92,7 @@
   }
 
   &__logo-wrap {
-    background: #fff;
+    background: var(--color-ink-inverse-base);
     padding: 1rem;
     border-radius: 50%;
     width: 7rem;
@@ -172,7 +172,7 @@
     }
 
     * {
-      color: #fff;
+      color: var(--color-ink-inverse-base);
     }
 
     .team {

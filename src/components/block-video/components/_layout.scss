@@ -185,7 +185,7 @@ body.vjs-full-window {
 // about what's required to play video when JavaScript is disabled
 .vjs-no-js {
   padding: 20px;
-  color: #fff;
+  color: var(--color-ink-inverse-base);
   background-color: #000;
   font-size: 18px;
   text-align: center;

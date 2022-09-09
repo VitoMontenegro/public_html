@@ -1,0 +1,13 @@
+
+.sale_notice {
+    background-color: var(--color-background-primary-dark);
+    background-image: var(--color-primary-gradient-dark);
+    color: var(--color-ink-inverse-base);
+    filter: brightness(var(--color-brightness-hover));
+    text-shadow: none;
+    position: absolute;
+    padding: $size-half $size-2;
+    border-radius: var(--shape-border-radius-pill);
+    right: 4.8rem;
+    bottom: -14px;
+}

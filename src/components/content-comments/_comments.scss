@@ -35,7 +35,7 @@
         padding-right: $size-2p5;
         border-color: var(--color-ink-border);
         border-radius: var(--shape-border-radius-pill);
-        background-color: #fff;
+        background-color: var(--color-ink-inverse-base);
         &::placeholder {
           color: var(--color-ink-dark-3ry);
         }

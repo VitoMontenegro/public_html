@@ -75,7 +75,20 @@
   height: var(--size-height-icon);
   width: var(--size-height-icon);
 }
-
+.is-primary {
+  .icon {
+      color: var(--color-ink-inverse-base);
+  }
+  &.has_text {
+    .icon {
+      color: var(--color-ink-inverse-2ry);
+    } &:hover {
+      .icon {
+          color: var(--color-ink-inverse-base);
+      }
+    }
+  }
+}
 %icon-active,
 .icon-active {
   --icon-stroke: var(--color-ink-inverse-base);

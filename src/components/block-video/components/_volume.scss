@@ -256,6 +256,6 @@
 }
 
 .vjs-mouse-display .vjs-volume-tooltip {
-  color: #fff;
+  color: var(--color-ink-inverse-base);
   @include background-color-with-alpha(#000, 0.8);
 }

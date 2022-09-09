@@ -89,7 +89,7 @@
 .btn-primary,
 %btn-primary {
   background-color: var(--color-background-primary-dark);
-  color: var(--color-ink-inverse-base);
+  color: var(--color-ink-inverse-2ry);
   text-shadow: 0 1px 0 hsl(var(--color-ink-shadow) / .12);
   transition:
   filter var(--motion-duration-sm),
@@ -159,7 +159,7 @@
 .button.is-primary {
     text-shadow: var(--layer-box-shadow-text);
     background: var(--color-primary-gradient-base);
-    color: #fff;
+    color: var(--color-ink-inverse-base);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -21,7 +21,7 @@
   margin-bottom: 0.1em;
 }
 
-.vjs-subtitles { color: #fff; } // Subtitles are white
+.vjs-subtitles { color: var(--color-ink-inverse-base); } // Subtitles are white
 .vjs-captions { color: #fc6; } // Captions are yellow
 .vjs-tt-cue { display: block; }
 

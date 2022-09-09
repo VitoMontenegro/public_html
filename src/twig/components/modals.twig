@@ -328,7 +328,7 @@
                     <div class="flex edit__images">
                         <div class="edit__images__ava">
                             <div class="entety__avatar is-lg">
-                                <img src="/assets/images/avatarCake.jpg" alt="" class="entety__avatar_img">
+                                <span>jpg, png, gif</span>
                             </div>
                             <div class="file-upload">
                                 <label>
@@ -341,7 +341,7 @@
                         </div>
                         <div class="edit__images__bg">
                             <div class="edit__images__bg__slider">
-                                <img src="/assets/images/osetinskiy.jpg" alt="" class="edit__images__bg_img">
+                                <span>jpg, png, gif</span>
                             </div>
                             <div class="file-upload">
                                 <label>
@@ -1847,8 +1847,16 @@
                     <ul id="story-slider-switcher" class="story-pop__slider pop-slider">
                         <li class="pop-slider__toggle current" data-items="5" style="display: block;">
                             <!-- slider navigation -->
-                            <a href="javascript:void(0)" data-item="previous" class="story-slidenav-prev"></a>
-                            <a href="javascript:void(0)" data-item="next" class="story-slidenav-next"></a>
+                            <a href="javascript:void(0)" data-item="previous" class="story-slidenav-prev">
+                                <svg class="icon deg270" aria-hidden="true">
+                                    <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" data-item="next" class="story-slidenav-next">
+                                <svg class="icon deg90" aria-hidden="true">
+                                    <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </a>
                             <div class="visible-toggle">
                                 <!-- navigation -->
                                 <ul class="pop-slider__nav flex">
