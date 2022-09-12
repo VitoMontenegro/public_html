@@ -758,6 +758,9 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   .invite_all {
     min-width: 5.6rem;
   }
+  label:not(.online_only) {
+    width: calc(100% - 6rem)
+  }
 
   .invite__list__desc__title {
       font-weight: 500;

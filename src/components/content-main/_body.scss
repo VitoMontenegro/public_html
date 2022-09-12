@@ -41,8 +41,13 @@
 	}	
 
 } 
-  		
+  	
 .entety__avatar {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--color-ink-inverse-base);
   overflow: hidden;
   width: 4rem;
   height: 4rem;

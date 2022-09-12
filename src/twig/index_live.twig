@@ -24,32 +24,29 @@
 	        <main class="main__content">        	
 	        	{% block content %}
 				{% endblock %}
-
-
-				{% include 'components/modals.twig' %}
 	        </main>
 
         </div>
         
         <nav class="primary-nav l-nav">
 	        <div class="l-nav__tabs">
-		        <ul class="tab-controls">
-					<li class="tab-controls__item active">
-						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+		        <ul class="tab-controls tabs_items">
+					<li class="tabs_items__item">
+						<button class="btn is-ghost is-details" type="button">
 		        			<svg class="icon" aria-hidden="true" focusable="false">
 			                	<use href="/assets/sprite/sprite.svg#icon-messenger"></use>
 			                </svg>
 						</button>						
 					</li>
-					<li class="tab-controls__item ">
-						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+					<li class="tabs_items__item active">
+						<button class="btn is-ghost is-details" type="button">
 		        			<svg class="icon" aria-hidden="true" focusable="false">
 			                	<use href="/assets/sprite/sprite.svg#icon-community"></use>
 			                </svg>
 						</button>						
 					</li>
-					<li class="tab-controls__item">
-						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+					<li class="tabs_items__item">
+						<button class="btn is-ghost is-details" type="button">
 		        			<svg class="icon" aria-hidden="true" focusable="false">
 			                	<use href="/assets/sprite/sprite.svg#icon-invite"></use>
 			                </svg>
@@ -57,7 +54,393 @@
 					</li>
 				</ul>        	
 	        </div>
+
+	        <div class="l-nav__modals" id="inviteFriends">
+		        <div class="l-nav__modals__item l-item">
+		        	<div class="l-item__header">
+		        		<button class="btn is-ghost is_uppercase">
+		        			<span>Cancel</span>
+		        		</button>
+
+		        		<div class="title">Invite</div>
+
+		        		<button class="btn is-ghost is_uppercase">
+		        			<span>Done</span>
+		        		</button>
+		        	</div>
+
+		        	<div class="l-item__body">
+		        		<div class="form__item">
+                            <input class="form__control"  type="text" placeholder="Find">
+                        </div>
+
+		        		<div class="select_type flex align-center justify-between">
+		        			<button class="btn is-ghost is_uppercase" type="button" aria-label="Viewers">
+                    			<span>Viewers</span>
+                			</button>
+		        			<button class="btn is_uppercase" type="button" aria-label="Co-hosts">
+                    			<span>Co-hosts</span>
+                			</button>
+		        		</div>
+
+		        		<ul class="invite__list">
+                            <li>
+                                <div class="flex align-center">
+                                    <figure class="entety__avatar">
+                                        <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                    </figure>      
+                                    <label class="flex align-center">
+                                        <span class="invite__list__desc">
+                                            <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                        </span>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex align-center">
+                                    <span class="entety__avatar" style="background: #148016;">
+                                        E
+                                    </span>      
+                                    <label class="flex align-center">
+                                        <span class="invite__list__desc">
+                                            <span class="invite__list__desc__title">Eugene Potapenko</span>
+                                        </span>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex align-center">
+                                    <figure class="entety__avatar">
+                                        <img src="/assets/images/mybg.jpg" alt="" class="entety__avatar_img">
+                                    </figure>      
+                                    <label class="flex align-center">
+                                        <span class="invite__list__desc">
+                                            <span class="invite__list__desc__title">Anna Chernopyatova</span>
+                                        </span>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex align-center">
+                                    <span class="entety__avatar" style="background: #D42421;">
+                                        a
+                                    </span>      
+                                    <label class="flex align-center">
+                                        <span class="invite__list__desc">
+                                            <span class="invite__list__desc__title">Ana Pavicevic Makocevic</span>
+                                        </span>
+                                        <input type="checkbox">
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="flex align-center justify-center online_only">
+                                    <span class="flex">
+                                        <input type="checkbox"> 
+                                    </span>
+                                       
+                                    <span class="invite__list__desc__title">Search only online</span>
+                                </label>
+                            </li>
+                        </ul>
+
+                        <button class="btn is-primary is_uppercase" type="button"> 
+	            			<span>Publication</span>
+						</button>
+		        	</div>
+		        </div>
+	        </div>
+
+	        <div class="l-nav__modals" id="viewFriends">
+		        <div class="l-nav__modals__item l-item">
+
+		        	<div class="l-item__body">
+		        		<div class="l-item__section">
+		        			<div class="title">Co-hosts</div>
+			        		<ul class="stream-members">
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+			        		</ul>
+		        		</div>
+		        		<div class="l-item__section">
+		        			<div class="title">Viewers</div>
+			        		<ul class="stream-members">
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+								<li class="flex align-center justify-between is_hover-in">
+							        <a class="line-cell main__sidebar__item__link" href="#">
+							            
+							                <figure class="entety__avatar">
+							                    <img src="/assets/images/profile_friend.png" alt="" class="entety__avatar_img">
+							                </figure>                
+							            
+							            <div class="line-cell__content">
+							                <div class="line-cell__title">Оксана Терехова</div>
+							                <div class="line-cell__subtitles">today</div>
+							            </div>
+							        </a>
+							        <a href="javascript:void(0)" class="is_link is-right border-right hover_in">
+							            <svg class="icon" aria-hidden="true" focusable="false">
+							                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+							            </svg>
+							        </a>
+							    </li>
+			        		</ul>
+		        		</div>
+		        	</div>
+		        </div>
+	        </div>
+
+	        <div class="l-nav__menu">
+	        	<ul class="menu">
+	        		<li class="menu__item">
+	        			<a class="menu__link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editLiveVideo" aria-label="editLiveVideo">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+                            </svg>
+                            <span>Edit</span>
+                        </a>
+                	</li>
+
+	        		<li class="menu__item">
+	        			<a class="menu__link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editLiveVideo" aria-label="editLiveVideo">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+                            </svg>
+                            <span>Messenger</span>
+                        </a>
+                	</li>
+                	
+	        		<li class="menu__item">
+	        			<a class="menu__link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#editLiveVideo" aria-label="editLiveVideo">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-invite"></use>
+                            </svg>
+                            <span>Invite</span>
+                        </a>
+                	</li>
+                	
+	        		<li class="menu__item">
+	        			<a class="menu__link" href="javascript:void(0);">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
+                            </svg>
+                            <span>Share</span>
+                        </a>
+                	</li>
+                	
+	        		<li class="menu__item">
+
+	        			<a class="menu__link" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#statisticLive" aria-label="statisticLive">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-stats"></use>
+                            </svg>
+                            <span>Stats</span>
+                        </a>
+                	</li>
+	        	</ul>
+	        </div>
     	</nav>
     </div>
+
+
+	{% include 'components/modals.twig' %}
 </body>
 </html>

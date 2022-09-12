@@ -517,6 +517,10 @@
       }
     }
   }
+
+  &.edit_link {
+    padding-left: $size-1p5;
+  }
 }
 .is_rubber {
       font-size: var(--font-size-small);

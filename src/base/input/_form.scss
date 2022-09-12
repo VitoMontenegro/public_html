@@ -151,7 +151,7 @@ select {
     letter-spacing: 0.05rem;
     line-height: var(--font-line-height-small);
 }
-.flex > label {
+form .flex > label {
   width: 100%;
   @include media-breakpoint-up(md) {
     width: 48%;

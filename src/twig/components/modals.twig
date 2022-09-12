@@ -1485,6 +1485,62 @@
     </div>
 </div>
 
+<div class="modal fade is-lg" id="statisticLive" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__header">
+                    <div class="left">
+                        <h3 class="modal__title">Statistic</h3>
+                    </div>
+                </div>
+                <div class="modal__body">
+                    <div class="stat__body__list">
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Watching now</div>
+                            <div class="stat_count">430</div>
+                            <div class="stat_title is_down">-2% of maximum</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Air time</div>
+                            <div class="stat_count">1:04:24</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Max. number of viewers</div>
+                            <div class="stat_count">439</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Total views to this min.</div>
+                            <div class="stat_count">1298</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Average watch time</div>
+                            <div class="stat_count">00:59:17</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Likes</div>
+                            <div class="stat_count is_up">168</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">Comments</div>
+                            <div class="stat_count">128</div>
+                        </div>
+                        <div class="stat__body__list__item has-shadow has-border-radius-base">
+                            <div class="stat_title">New subscribers</div>
+                            <div class="stat_count">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="modal-notify" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal__box">
@@ -2467,6 +2523,41 @@
                     </div>
                 </div>
             
+        </form>
+    </div>
+</div>
+
+<div class="modal fade is-lg" id="editLiveVideo" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box">
+            <div class="modal-body modal__body">
+                <div class="modal__content">
+                    <div class="modal__header">
+                        <h3 class="modal__title">Live</h3>
+                    </div>
+
+                    <div class="form__item">
+                        <label for="communityName">Name</label>
+                        <input class="form__control" id="EventType" name="communityType" type="text" placeholder="Event type">
+                    </div>
+
+
+                    <div class="form__item">
+                        <label for="EventDescription">Description:</label>
+                        <textarea name="EventDescription" id="EventDescription" rows="6" cols="20" ></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal-footer modal__footer  has-dual-purpose">
+                <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть">
+                    Cancel
+                </button>
+               <a class="btn is-primary" href="/ru/editpost">
+                    Save
+                </a>
+            </div>
         </form>
     </div>
 </div>

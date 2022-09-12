@@ -19,6 +19,12 @@
       }
     }
 
+    .is_up {
+      color: #189B1B;
+    }
+    .is_down {
+      color: #E55E5C
+    }
 }
 .stat_title {
   font-size: 17px;
@@ -32,13 +38,6 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 32px;
-
-  &.is_up {
-    color: #189B1B;
-  }
-  &.is_down {
-    color: #E55E5C
-  }
 }
 .stat__body__list__item {
   padding: 1.6rem 2rem;

@@ -86,7 +86,7 @@
   }
 
   &.l-nav {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       padding:
         $size-4p5
         $size-2
@@ -112,7 +112,6 @@
       margin-left: -$size-1;
     }
   }
-
 }
 // #endregion
 
@@ -121,6 +120,20 @@
 // MENU
 // -----------------------------------------------------------------------------
 
+.l-nav {
+  &__tabs,
+  &__modals {
+    display: none;
+    @include media-breakpoint-up(lg) {
+       display: block;
+    }
+  }
+  &__menu {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
 
 // ITEMS
 

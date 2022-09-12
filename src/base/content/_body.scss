@@ -335,3 +335,16 @@ hr {
   margin-top: $size-line * 3 - .1rem;
   margin-bottom: $size-line * 3;
 }
+
+body,
+.primary-nav {
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+}
+
+body::-webkit-scrollbar,
+.primary-nav::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+}
