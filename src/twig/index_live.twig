@@ -1,0 +1,63 @@
+{% include 'components/head.twig' %}
+
+<body>
+	<div class="scroll-fix"></div>
+	<div class="wrapper live-video">
+		<header class="header is_live" id="header">
+			<div class="back_profile flex align-center">
+				<a href="javascript:void(0)" onClick="window.history.back()">
+		            <svg class="icon deg270" aria-hidden="true" focusable="false">
+		                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+		            </svg>
+				</a>
+				<a class="logo" href="/">
+					<img class="logo__mark" src="/assets/images/logo/logomark.svg" width="48" height="48" alt="">
+					<div class="logo__copy">			    	
+					    <div class="tagline">Eco<span>system</span><br><span>Business</span> Power</div>
+					    
+					</div>
+			  	</a>
+			</div>
+        </header>
+
+        <div class="main">
+	        <main class="main__content">        	
+	        	{% block content %}
+				{% endblock %}
+
+
+				{% include 'components/modals.twig' %}
+	        </main>
+
+        </div>
+        
+        <nav class="primary-nav l-nav">
+	        <div class="l-nav__tabs">
+		        <ul class="tab-controls">
+					<li class="tab-controls__item active">
+						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+		        			<svg class="icon" aria-hidden="true" focusable="false">
+			                	<use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+			                </svg>
+						</button>						
+					</li>
+					<li class="tab-controls__item ">
+						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+		        			<svg class="icon" aria-hidden="true" focusable="false">
+			                	<use href="/assets/sprite/sprite.svg#icon-community"></use>
+			                </svg>
+						</button>						
+					</li>
+					<li class="tab-controls__item">
+						<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+		        			<svg class="icon" aria-hidden="true" focusable="false">
+			                	<use href="/assets/sprite/sprite.svg#icon-invite"></use>
+			                </svg>
+						</button>						
+					</li>
+				</ul>        	
+	        </div>
+    	</nav>
+    </div>
+</body>
+</html>

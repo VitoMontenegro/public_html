@@ -21,7 +21,7 @@
     }
   }
 
-  &:not(.is-home)  {
+  &:not(.is-home, .is_live)  {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -68,6 +68,19 @@
         }        
       }      
     }
+  }
+
+  &.is_live {
+    @include media-breakpoint-up(sm) {
+      padding: $size-5 0 $size-4;
+      z-index: var(--layer-zindex-header);
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 100.8rem;
+      width: 100%;
+      margin: auto;
+    }
+    
   }
 }
 
@@ -354,7 +367,7 @@
 .is_single {
   .header__menu {
     @include media-breakpoint-up(lg) {
-      grid-column: 10/span 3;
+      grid-column: 10/span 4;
     }
   }
 }

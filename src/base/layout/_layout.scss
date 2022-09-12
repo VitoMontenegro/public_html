@@ -39,7 +39,7 @@
     @extend %q-container;
     min-height: 100vh;
 
-  &:not(.home-wrapper) {
+  &:not(.home-wrapper, .live-video) {
     @include media-breakpoint-up(md) {
       display: grid;
       align-items: start;
@@ -56,6 +56,26 @@
 
     @include media-breakpoint-up(xl) {
       grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
+    }
+  }
+
+  &.live-video {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      align-items: start;
+      grid-column-gap: var(--size-gutter-xl);
+      grid-row-gap: 2.4rem;
+      grid-template-areas:
+        'header sidebar '
+        'main sidebar '
+        'footer sidebar ';
+      grid-template-columns: 11.6rem 1fr;
+      grid-template-rows: 12rem 1fr minmax(min-content, max-content);
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns:  1fr  clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem);
     }
   }
 
@@ -94,6 +114,7 @@
   }
   .main__content {
     margin-bottom: 7.2rem;
+    max-width: 100%;
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
       grid-column: 1/span 8;
