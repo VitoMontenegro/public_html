@@ -44,17 +44,6 @@
 
   &.is-home {
     border-bottom: none;
-    .is-logo {
-      margin:auto;
-    }
-    .logo {
-      margin:$size-1 auto;
-      max-width: 60%;
-      &__mark {
-        width: $size-5;
-        margin-right: $size-1;        
-      }
-    }
 
     @include media-breakpoint-up(sm) {
       padding: $size-5 0 $size-4;
@@ -71,11 +60,13 @@
   }
 
   &.is_live {
+    display: none;
     @include media-breakpoint-up(sm) {
-      padding: $size-5 0 $size-4;
+      padding: $size-3 0 $size-3;
       z-index: var(--layer-zindex-header);
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
+      display: block;
       max-width: 100.8rem;
       width: 100%;
       margin: auto;

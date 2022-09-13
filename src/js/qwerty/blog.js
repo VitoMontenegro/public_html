@@ -19,6 +19,18 @@ jQuery(document).ready(function($){
 		tab_content.next().addClass('active');
 
 	});
+	$('#getLiveInfo').on('click', function(){
+		$('.content-card.modal-card').show();
+	});
+	$('.content-card.modal-card').click(function(){
+		if ($(window).width() < 1024) {
+			$(this).hide();
+		}
+    	
+    });
+ 	// $('.modal-card__wrap').on('click', function(event) {
+	//     event.stopPropagation();
+	// });
 
 	// $('.likeblue').on('click', function(){
 	// 	$(this).closest('li').toggleClass('active');

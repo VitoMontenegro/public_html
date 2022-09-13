@@ -121,6 +121,10 @@
 // -----------------------------------------------------------------------------
 
 .l-nav {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
   &__tabs,
   &__modals {
     display: none;
@@ -129,6 +133,13 @@
     }
   }
   &__menu {
+    height: 100%;
+    margin-top: $size-5;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  .logo {
     @include media-breakpoint-up(lg) {
       display: none;
     }
@@ -149,6 +160,13 @@
     }
     .btn {
       text-transform: uppercase;
+    }
+    &--bottom {
+      @media screen and (min-height: 553px) {
+        position: absolute;
+        bottom: $size-2;        
+      }
+
     }
   }
   .dropdown__menu {

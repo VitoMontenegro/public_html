@@ -38,6 +38,7 @@
     display: var(--display);
   }
 }
+
 .md_hidden {
   display: none;
   @include media-breakpoint-up(md) {
@@ -58,18 +59,21 @@
     display: none;
   }
 }
+
 .md_visible {
   display: var(--display);
   @include media-breakpoint-up(md) {        
     display: none;
   }
 }
+
 .lg_visible {
   display: var(--display);
   @include media-breakpoint-up(lg) {        
     display: none;
   }
 }
+
 .relative,
 %relative {
   position: relative;
