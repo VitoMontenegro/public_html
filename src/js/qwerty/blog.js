@@ -28,6 +28,18 @@ jQuery(document).ready(function($){
 		}
     	
     });
+    $('.l-comment__children-count').on('click', function(){
+    	$(this).closest('.l-thread').find('.l-thread__children').toggle();
+    });
+
+    $('.tabs_items__item button').on('click', function() {
+    	let $target = $(this).attr('data-target');
+    	let $theParent = $(this).closest('.tabs_items__item');
+    	$('.tabs_items__item').removeClass('active');
+    	$('.l-nav__modals').hide();
+    	$($target).show();
+    	$theParent.addClass('active');
+    });
  	// $('.modal-card__wrap').on('click', function(event) {
 	//     event.stopPropagation();
 	// });

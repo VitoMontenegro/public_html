@@ -22,6 +22,9 @@
       @extend %control-icon-right;
     }
   }
+  &__control-group {
+    position: relative;
+  }
 }
   
 

@@ -125,11 +125,18 @@
   @include media-breakpoint-up(md) {
     display: flex;
   }
-  &__tabs,
+  &__tabs {
+    display: none;    
+    @include media-breakpoint-up(lg) {
+       display: block;
+    }
+  }
   &__modals {
     display: none;
     @include media-breakpoint-up(lg) {
-       display: block;
+      &:first-child {
+        display: block;
+      }
     }
   }
   &__menu {
