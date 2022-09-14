@@ -363,16 +363,16 @@
 
                     <div class="form__item">
                         <label for="promotionName">название акции *</label>
-                        <input class="form__control" id="PromotionType" name="promotionType" type="text" placeholder="Promotion type">
+                        <input class="form__control" id="promotionName" name="promotionName" type="text" placeholder="Promotion type">
                     </div>
 
                     <div class="form__item">
                         <span class="flex select__age">
-                            <label for="profileStreet">
+                            <label>
                                 <span class="form-label__title">Размер скидки</span>
                                 <input type="number" placeholder="" class="form__control ">
                             </label>
-                            <label for="profilePostcode">
+                            <label>
                                 <span class="form-label__title">мин. сумма покупки</span>
                                 <input type="number" placeholder="" class="form__control ">
                             </label>
@@ -380,11 +380,11 @@
                     </div>
                     <div class="form__item">
                         <label for="PromotionDescription">Description *</label>
-                        <textarea name="PromotionDescription" id="PromotionDescription" row="6" cols="20" ></textarea>
+                        <textarea name="PromotionDescription" id="PromotionDescription" rows="6" cols="20" ></textarea>
                     </div>
                     <div class="form__item">
                         <label for="PromotionTerms">УСЛОВИЯ *</label>
-                        <textarea name="PromotionTerms" id="PromotionTerms" row="6" cols="20" ></textarea>
+                        <textarea name="PromotionTerms" id="PromotionTerms" rows="6" cols="20" ></textarea>
                         <div class="small">
                             - Use hyphens to highlight a list item; <br>
                             - and **double asterisks** for bolding.
@@ -428,23 +428,23 @@
                     </div>
 
                     <div class="form__item">
-                        <label for="promotionName">Company website</label>
+                        <label for="promoWebsite">Company website</label>
                         <input class="form__control" id="promoWebsite" name="promoWebsite" type="text" placeholder="">
                     </div>
                     <div class="form__item">
-                        <label for="promotionName">Phone</label>
-                        <input class="form__control" id="PromotionPhone" name="PromotionPhone" type="text" placeholder="">
+                        <label for="promotionPhone">Phone</label>
+                        <input class="form__control" id="promotionPhone" name="promotionPhone" type="text" placeholder="">
                     </div>
                     <div class="form__item">
                         <div class="form__item__name">
                             <span>Work schedule:</span>
                         </div>
                         <span class="flex">
-                            <label for="profileStreet">
-                                <input class="form__control" id="profileStreet" name="profileStreet" type="text" placeholder="08:00">
+                            <label for="promoStreet">
+                                <input class="form__control" id="promoStreet" name="promoStreet" type="text" placeholder="08:00">
                             </label>
-                            <label for="profilePostcode">
-                                <input class="form__control" id="profilePostcode" name="profilePostcode" type="text" placeholder="19:00">
+                            <label for="promoPostcode">
+                                <input class="form__control" id="promoPostcode" name="promoPostcode" type="text" placeholder="19:00">
                             </label>
                         </span>
                     </div>
@@ -628,11 +628,11 @@
 
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseTwo" aria-expanded="true" aria-controls="editCommunitycollapseTwo">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editOrganizationcollapseTwo" aria-expanded="true" aria-controls="editOrganizationcollapseTwo">
                                     Contact Information
                                 </div>
                             </div> 
-                            <div id="editCommunitycollapseTwo" class="accordion-collapse collapse show">
+                            <div id="editOrganizationcollapseTwo" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <div class="form__item">
                                         <div class="form-label__title">Administrators and moderators:</div>
@@ -685,11 +685,11 @@
 
                         <div class="accordion-item">
                             <div class="accordion-header" >
-                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editCommunitycollapseThree" aria-expanded="true" aria-controls="editCommunitycollapseThree">
+                                <div class="accordion-button" data-bs-toggle="collapse" role="button" data-bs-target="#editOrganizationcollapseThree" aria-expanded="true" aria-controls="editOrganizationcollapseThree">
                                     Company Verification
                                 </div>
                             </div> 
-                            <div id="editCommunitycollapseThree" class="accordion-collapse collapse show">
+                            <div id="editOrganizationcollapseThree" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <div class="accordion-body__info">
                                         <div class="font-size-small">
@@ -865,11 +865,11 @@
 
                     <div class="form__item">
                         <span class="flex select__age">
-                            <label for="profileStreet">
+                            <label>
                                 <span class="form-label__title">Start</span>
                                 <input type="text" placeholder="Select date" class="form__control has-icon-right js-datetimepicker">
                             </label>
-                            <label for="profilePostcode">
+                            <label>
                                 <span class="form-label__title">End</span>
                                 <input type="text" placeholder="Select date" class="form__control has-icon-right js-datetimepicker">
                             </label>
@@ -879,8 +879,8 @@
              
 
                     <div class="form__item">
-                        <label for="EventDescription">Sponsor</label>
-                        <textarea name="EventDescription" id="EventDescription" rows="6" cols="20" placeholder="Tell us about the company or individuals who prepared the event"></textarea>
+                        <label for="textSponsor">Sponsor</label>
+                        <textarea name="textSponsor" id="textSponsor" rows="6" cols="20" placeholder="Tell us about the company or individuals who prepared the event"></textarea>
                     </div>
 
                 </div>
@@ -1277,8 +1277,8 @@
                                 <textarea name="profilePhotoDesc" id="profilePhotoDesc" rows="3" placeholder=""></textarea>
                             </div>
                             <div class="form__item">
-                                <label for="fieldActivity">Album:</label>
-                                <select class="select" id="fieldActivity" name="fieldActivity">
+                                <label for="fieldlbum">Album:</label>
+                                <select class="select" id="fieldlbum" name="fieldlbum">
                                     <option value="The beauty">The beauty</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -2538,13 +2538,13 @@
 
                     <div class="form__item">
                         <label for="communityName">Name</label>
-                        <input class="form__control" id="EventType" name="communityType" type="text" placeholder="Event type">
+                        <input class="form__control" id="liveName" name="liveName" type="text" placeholder="Event type">
                     </div>
 
 
                     <div class="form__item">
-                        <label for="EventDescription">Description:</label>
-                        <textarea name="EventDescription" id="EventDescription" rows="6" cols="20" ></textarea>
+                        <label for="liveDescription">Description:</label>
+                        <textarea name="liveDescription" id="liveDescription" rows="6" cols="20" ></textarea>
                     </div>
 
                 </div>

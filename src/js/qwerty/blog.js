@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
 		$(this).addClass('open');
-		$('body').addClass('modal-open');
+		$('body').addClass('dropdown-open');
 	});
 	$('.is_subscribe').on('click', function(){
 		if ($(this).hasClass('active')) {
@@ -12,6 +12,9 @@ jQuery(document).ready(function($){
 			$(this).addClass('active');
 		}
 
+	});
+	$('#getliveMenu').on('click', function(){
+		$('.l-nav__menu').show();
 	});
 	$('.location-list a').on('click', function() {
 		let tab_content = $(this).closest('.tab_content');
@@ -40,6 +43,20 @@ jQuery(document).ready(function($){
     	$($target).show();
     	$theParent.addClass('active');
     });
+
+    if ($(window).width() < 1024) {
+	    $('.menu__link').on('click', function() {
+	    	let $target = $(this).attr('data-target');
+	    	$('.l-nav__modals').hide();
+	    	console.log($target);
+	    	$($target).show();
+	    });
+
+	    $('.l-nav__modals .is_close').on('click', function(){
+	    	$(this).closest('.l-nav__modals').hide();
+	    });
+    }
+
  	// $('.modal-card__wrap').on('click', function(event) {
 	//     event.stopPropagation();
 	// });
@@ -47,18 +64,27 @@ jQuery(document).ready(function($){
 	// $('.likeblue').on('click', function(){
 	// 	$(this).closest('li').toggleClass('active');
 	// });
+
+
 	$(document).mouseup( function(e){ // событие клика по веб-документу
-		var div = $( ".dropdown-menu, .dropdown__menu, .modal" ),// тут указываем ID элемента
-			smartSearchInner = $('#smartSearchInner'), 
+		var div = $( ".dropdown-menu, .dropdown__menu" ),// тут указываем ID элемента
+			divModal = $('.modal'), 
+			smartSearchInner = $('#smartSearchInner'),
+    		lNavMenu = $('.l-nav__menu'),
+    		lNavModals = $('.l-nav__modals'),
 			smartSearchBtnr = $('#smart-search-btn'),
 			typeID = $('#typeID'),
 			publicationPrivate = $('.publicationPrivate');
 
 
+		if ( !divModal.is(e.target) // если клик был не по нашему блоку
+		    && divModal.has(e.target).length === 0 ) { // и не по его дочерним элементам
+			$('body').removeClass('modal-open');
+		}
 		if ( !div.is(e.target) // если клик был не по нашему блоку
 		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
 			div.closest('.dropdown').removeClass('open'); // скрываем его
-			$('body').removeClass('modal-open');
+			$('body').removeClass('dropdown-open');
 		}
 		if ( !smartSearchInner.is(e.target) // если клик был не по нашему блоку
 		    && smartSearchInner.has(e.target).length === 0 
@@ -78,7 +104,20 @@ jQuery(document).ready(function($){
 			publicationPrivate.hide(); // скрываем его
 			publicationPrivate.removeClass('open');
 		}
+		if ( !lNavMenu.is(e.target) // если клик был не по нашему блоку
+		    && lNavMenu.has(e.target).length === 0 
+		    && !lNavMenu.is(e.target)
+		    &&($(window).width() < 768)) { // и не по его дочерним элементам
+			lNavMenu.hide(); // скрываем его
+		}
+		if ( !lNavModals.is(e.target) // если клик был не по нашему блоку
+		    && lNavModals.has(e.target).length === 0 
+		    && !lNavModals.is(e.target)
+		    &&($(window).width() < 1024)) { // и не по его дочерним элементам
+			lNavModals.hide(); // скрываем его
+		}
 	});
+
 	$('#showMenu').on('click', function(){
 		$('.mask').toggle();
 		$('.primary-nav-home').addClass('active');

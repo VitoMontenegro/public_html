@@ -1,6 +1,7 @@
 <div class="l-video">
 	<div class="l-video__frame">
 		<img src="/assets/images/video.jpg" alt="">
+
         <ul class="co-hosts">
             <li class="co-hosts__item">
                 <div class="co-hosts__avatar">
@@ -27,6 +28,7 @@
                 </div>
             </li>
         </ul>
+
 		<div class="l-video__control-bar control-bar">
 			<div class="control-bar__indicators">
 				<div class="control-bar__items is_uppercase indicators">
@@ -45,10 +47,10 @@
 				</div>
 
 				<div class="control-bar__items">
-                    <div class="is_white line-cell" href="#">
-                            <figure class="entety__avatar">
-                                <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
-                            </figure>  
+                    <div class="control-bar__item is_white line-cell owner-views">
+                        <figure class="entety__avatar">
+                            <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                        </figure>  
                         
                         <div class="line-cell__content">
                             <div class="name is-bolder">Владимир Никшин</div>
@@ -56,27 +58,112 @@
                                 <svg class="icon is-sm is_white is-left" aria-hidden="true" focusable="false">
                                     <use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
                                 </svg>
-                                live —
+                                <div class="is_live">live  <span>&nbsp; — &nbsp;</span> </div>
+                                
+                                <div class="timer">1:04:24</div>
                             </div>
                         </div>
                     </div>
-					<div class="control-bar__item is_timer">
-						<div class="timer">1:04:24</div>
-					</div>
-                    <div class="flex align-center">
+
+                    <div class="control-bar__item views_count">
                         <svg class="icon is-left is_white" aria-hidden="true" focusable="false">
                             <use href="/assets/sprite/sprite.svg#icon-eye"></use>
                         </svg>
-                        <span class=" is_white">120 040</span>
+                        <span class=" is_white">12 040</span>
                     </div>
-					<div class="control-bar__item">
+
+					<div class="control-bar__item is_close">
 						<button class="btn menu__link menu__link is_reduce is_uppercase" type="button"> 
 	            			<span>Finish broadcast</span>
+                            <svg class="icon icon-alert" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-close"></use>
+                            </svg>
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
+        <div class="l-comments l-comments--last">
+            <ul class="l-comments__items">
+                <li class="l-comments__thread l-thread">
+                    <div class="l-thread__indent-l-0">
+                        <div class="l-thread__comment l-comment">
+                            <div class="l-comment__body">
+                                <div class="l-comment__header">
+                                    <a href="#" class="l-comment__avatar avatar is-md is-round has-overlay" style="background: #148016;">Д</a>
+                                </div>
+                                <div class="l-comment__text">
+                                    <a href="#" class="l-comment__author">
+                                        Душ Сантуш
+                                        <span>(Special)</span>
+                                    </a>
+                                    <span class="l-comment__message">Where is everyone?</span>  
+                                    <a href="javascript:void(0)" class="l-comment__children-count"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-thread__children"></div>
+                </li>
+                <li class="l-comments__thread l-thread">
+                    <div class="l-thread__indent-l-0">
+                        <div class="l-thread__comment l-comment">
+                            <div class="l-comment__body">
+                                <div class="l-comment__header">
+                                    <a href="#" class="l-comment__avatar avatar is-md is-round has-overlay">
+                                        <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                    </a>
+                                </div>
+                                <div class="l-comment__text">
+                                    <a href="#" class="l-comment__author">
+                                        Юша Б
+                                        <span class="l-comment__status"></span>
+                                    </a>
+                                    <span class="l-comment__message">I'm here</span>
+                                    <a href="javascript:void(0)" class="l-comment__children-count"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-thread__children"></div>
+                </li>
+            </ul>
+
+            <div class="l-comments__bottom">
+                <div class="form__control-group">
+                    <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                        <svg role="img" class="icon is-md">
+                            <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                    <input type="text" class="form__control has-icon-right" required="" placeholder="Your comment">
+                </div> 
+
+                <button class="btn menu__link menu__link is_reduce is_uppercase" type="button"> 
+                    <span>Finish broadcast</span>
+                </button> 
+
+                <ul class="l-comments__actions">
+                    <li class="expand__action__item likeblue">
+                        <button class="btn is-ghost is-details" type="button">   
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-likeblue"></use>
+                            </svg>
+                        </button>                       
+                    </li>
+                    <li class="expand__action__item">
+                        <button class="btn is-ghost is-details" type="button" id="getliveMenu">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                            </svg>
+                        </button>           
+                    </li>
+                </ul> 
+            </div>
+
+
+        </div>
 	</div>
 
 	<div class="content-card modal-card">
@@ -161,7 +248,7 @@
             
             <div class="main__content__body__txt crop-height">
             	<h2>Life in Montenegro: pros, cons, pitfalls</h2>
-                <span href="/post" class="crop-height__txt">Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. </span> 
+                <span class="crop-height__txt">Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. Отвечаю на вопросы, пока пью ракию и закусываю мясным ассорти с картошкой фри. </span> 
             </div>
         </div>
     </div>

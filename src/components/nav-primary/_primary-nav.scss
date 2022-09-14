@@ -119,12 +119,107 @@
 // -----------------------------------------------------------------------------
 // MENU
 // -----------------------------------------------------------------------------
+.primary-nav.l-nav {
+  display: block; 
+  @include media-breakpoint-down(md) {
+    height: 0;
+  }
+  .l-nav__tabs {
+    // display: none;
+  }
 
+  .l-nav__menu {
+    @include media-breakpoint-down(md) {
+      display: none;
+      position: fixed;
+      bottom: 3.2rem;
+      z-index: 1;
+      height: auto;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 28rem;
+      border-radius: var(--shape-border-radius-lg);
+      box-shadow: 0px 0px 0px 1px rgba(142, 157, 180, 0.04), 0px 1px 2px rgba(142, 157, 180, 0.14), 0px 2px 4px -1px rgba(142, 157, 180, 0.14), 0px 4px 8px -1px rgba(142, 157, 180, 0.14), 0px 8px 16px -2px rgba(142, 157, 180, 0.14), 0px 16px 32px -2px rgba(142, 157, 180, 0.14), 0px 32px 64px -2px rgba(142, 157, 180, 0.14);
+      background-color: var(--color-background-base);
+      .menu {
+        display: block;
+      }
+      .l-nav__menu {
+        margin-top: 0; 
+        padding: 1rem;     
+      }
+      .menu__link {
+          flex-direction: row;
+
+          .icon {
+            width: 3rem;
+            margin: 1rem;
+          }
+      }
+      .menu__item {
+        width: auto;
+      }
+      .menu__item--bottom {
+        position: unset;
+      }
+    }    
+  }
+      .l-nav__modals {
+        @include media-breakpoint-down(lg) {
+          position: fixed;
+          bottom: 4rem;
+          right: 4rem;
+          left: auto;
+          width: calc(100% - 20rem);
+          border-radius: var(--shape-border-radius-lg);
+          background-color: var(--color-background-base);
+          min-height: 75vh;
+
+        }
+        @include media-breakpoint-down(md) {
+          position: fixed;
+          overflow-x: hidden;
+          overflow-y: auto;
+          top: auto;
+          bottom: 0;
+          height: 93%;
+          right: 0;
+          left: 0;
+          width: 100%;
+          z-index: var(--layer-zindex-modal);
+          background-color: var(--color-background-base);
+          
+          border-radius: 
+            var(--shape-border-radius-xl)
+            var(--shape-border-radius-xl)
+            0
+            0;
+
+          .l-item__body {
+            padding: 2.1rem;
+          }
+
+          .l-item__header {
+            padding: 0.8rem 2.1rem;
+            box-shadow: 0px 1px 0px rgb(23 25 28 / 4%);
+          }
+          .hover_in {
+            display: block;
+          }
+        }
+      }
+
+}
 .l-nav {
   display: none;
+
+
+
   @include media-breakpoint-up(md) {
     display: flex;
   }
+
   &__tabs {
     display: none;    
     @include media-breakpoint-up(lg) {

@@ -1,14 +1,28 @@
 .co-hosts {
 	display: flex;
 	align-items:center;
-	justify-content:flex-end;
+	justify-content:center;
 	position: absolute;
-	bottom: $size-1*15;
-	right: $size-1*6;
-	margin: -$size-1;
+    bottom: 23rem;
+    bottom: $size-1*30;
+    left: 0;
+    right: 0;
 	padding: 0;
 	text-align: center;
     color: var(--color-ink-inverse-base);
+
+    @include media-breakpoint-up(sm) {
+		justify-content:flex-end;
+		margin: -$size-1;
+		right: $size-1*6;
+		list-style: auto;
+    }
+    @include media-breakpoint-up(md) {
+    	bottom: $size-1*35;
+    }
+    @include media-breakpoint-up(lg) {
+		bottom: $size-1*15;    	
+    }
 
 	&__item {
 		list-style:none;
