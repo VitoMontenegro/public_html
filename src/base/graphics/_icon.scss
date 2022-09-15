@@ -66,8 +66,13 @@
   &.is_rotate {
     transform: rotate(180deg);
   }
+  
   &.is_white {
     color: #FFFFFF;
+  }
+  
+  &.is_blue {
+    color: var(--icon-fill-blue);
   }
 
 }

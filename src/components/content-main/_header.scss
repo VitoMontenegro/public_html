@@ -144,23 +144,6 @@
 		}			
 	}
 
-  	&.likeblue {
-		.icon{
-			color: var(--icon-fill-blue);
-		}
-		
-  		&.active {
-	  		button {
-			    background:  var(--color-background-primary-dark);
-	    		box-shadow: inset 0px 4px 8px rgb(8 25 53 / 24%), inset 0px 2px 4px rgb(8 25 53 / 24%);
-
-	    		.icon {
-	    			color: var(--color-ink-inverse-base);
-	    		}
-	  		}
-  		}
-  	}
-
   	.dropdown-menu {
   		@include media-breakpoint-up(md) {
   			left: -22rem;

@@ -230,6 +230,9 @@
 	    text-align: center;
     	.btn {
     		height: 3.2rem;
+    		.icon {
+    			margin: auto;
+    		}
     	}
     	&:not(:first-child, .active):before {
 		    background: var(--color-ink-border);

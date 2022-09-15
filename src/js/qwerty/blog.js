@@ -13,6 +13,12 @@ jQuery(document).ready(function($){
 		}
 
 	});
+	$('.show_lside').on('click',function(){
+		$('.is_audio').addClass('active');
+		let $target = $(this).attr('data-target');
+    	$('.l-nav__modals').hide();
+    	$($target).show();
+	});
 	$('#getliveMenu').on('click', function(){
 		$('.l-nav__menu').show();
 	});
@@ -71,51 +77,66 @@ jQuery(document).ready(function($){
 			divModal = $('.modal'), 
 			smartSearchInner = $('#smartSearchInner'),
     		lNavMenu = $('.l-nav__menu'),
+    		isAudio = $('.is_audio'),
     		lNavModals = $('.l-nav__modals'),
 			smartSearchBtnr = $('#smart-search-btn'),
 			typeID = $('#typeID'),
 			publicationPrivate = $('.publicationPrivate');
 
 
-		if ( !divModal.is(e.target) // если клик был не по нашему блоку
-		    && divModal.has(e.target).length === 0 ) { // и не по его дочерним элементам
+		if ( (!divModal.is(e.target))  &&// если клик был не по нашему блоку
+		(divModal.has(e.target).length === 0 ) &&
+     	(!isAudio.is(e.target)) ) { // и не по его дочерним элементам
 			$('body').removeClass('modal-open');
 		}
-		if ( !div.is(e.target) // если клик был не по нашему блоку
-		    && div.has(e.target).length === 0 ) { // и не по его дочерним элементам
-			div.closest('.dropdown').removeClass('open'); // скрываем его
+
+		if ( !div.is(e.target) && 
+	    (div.has(e.target).length === 0) && 
+	    (!isAudio.is(e.target) ) &&
+	    isAudio.has(e.target).length === 0 ) { // и не по его дочерним элементам
+		div.closest('.dropdown').removeClass('open'); // скрываем его
 			$('body').removeClass('dropdown-open');
 		}
-		if ( !smartSearchInner.is(e.target) // если клик был не по нашему блоку
-		    && smartSearchInner.has(e.target).length === 0 
-		    && !smartSearchBtnr.is(e.target)) { // и не по его дочерним элементам
+
+		if ( !isAudio.is(e.target) && // если клик был не по нашему блоку
+	    isAudio.has(e.target).length === 0 ) { // и не по его дочерним элементам
+		isAudio.removeClass('active');
+		}
+
+		if ( !smartSearchInner.is(e.target) && // если клик был не по нашему блоку
+	    smartSearchInner.has(e.target).length === 0 && 
+	    !smartSearchBtnr.is(e.target)) { // и не по его дочерним элементам
 			smartSearchInner.hide(); // скрываем его
 			smartSearchBtnr.removeClass('open');
 		}
-		if ( !typeID.is(e.target) // если клик был не по нашему блоку
-		    && typeID.has(e.target).length === 0 
-		    && !typeID.is(e.target)) { // и не по его дочерним элементам
+
+		if ( !typeID.is(e.target) && // если клик был не по нашему блоку
+		    typeID.has(e.target).length === 0 && 
+		    !typeID.is(e.target)) { // и не по его дочерним элементам
 			typeID.hide(); // скрываем его
 			typeID.removeClass('open');
 		}
-		if ( !publicationPrivate.is(e.target) // если клик был не по нашему блоку
-		    && publicationPrivate.has(e.target).length === 0 
-		    && !publicationPrivate.is(e.target)) { // и не по его дочерним элементам
+
+		if ( !publicationPrivate.is(e.target) && // если клик был не по нашему блоку
+	    publicationPrivate.has(e.target).length === 0 && 
+	    !publicationPrivate.is(e.target)) { // и не по его дочерним элементам
 			publicationPrivate.hide(); // скрываем его
 			publicationPrivate.removeClass('open');
 		}
-		if ( !lNavMenu.is(e.target) // если клик был не по нашему блоку
-		    && lNavMenu.has(e.target).length === 0 
-		    && !lNavMenu.is(e.target)
-		    &&($(window).width() < 768)) { // и не по его дочерним элементам
+
+		if ( !lNavMenu.is(e.target) && // если клик был не по нашему блоку
+	    lNavMenu.has(e.target).length === 0 && 
+	    !lNavMenu.is(e.target) &&
+	    ($(window).width() < 768)) { // и не по его дочерним элементам
 			lNavMenu.hide(); // скрываем его
 		}
-		if ( !lNavModals.is(e.target) // если клик был не по нашему блоку
-		    && lNavModals.has(e.target).length === 0 
-		    && !lNavModals.is(e.target)
-		    &&($(window).width() < 1024)) { // и не по его дочерним элементам
-			lNavModals.hide(); // скрываем его
-		}
+
+		// if ( !lNavModals.is(e.target) && // если клик был не по нашему блоку
+	 	//	lNavModals.has(e.target).length === 0 && 
+	 	//	!lNavModals.is(e.target)&&
+	 	//	($(window).width() < 1024)) { // и не по его дочерним элементам
+		// 	lNavModals.hide(); // скрываем его
+		// }
 	});
 
 	$('#showMenu').on('click', function(){

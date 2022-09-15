@@ -73,6 +73,18 @@
     }
     
   }
+  &.is_audio {
+    @include media-breakpoint-up(sm) {
+      max-width: 59.2rem;
+      margin: auto;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 69.2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 79.2rem;
+    }
+  }
 }
 
 // #endregion
@@ -141,11 +153,22 @@
     grid-column: 1/span 8;
   }
 }
+
 .is_single {
   .header__search {
     @include media-breakpoint-up(lg) {
       grid-column: 3/span 7;
     }
+  }
+}
+
+.is_audio {
+      gap: 0;
+  .header__search {
+        grid-column: 1/span 9;
+  }
+  .header__menu {
+        grid-column: 10/span 4;
   }
 }
 

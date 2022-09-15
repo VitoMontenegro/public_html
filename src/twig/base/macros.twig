@@ -64,7 +64,7 @@
 {% endmacro %}
 
 {% macro details(name, count, active) %}
-        <button class="btn {% if active|length < 1 %} is-ghost {% endif %} is-details" type="button" aria-label="{{ name }}">
+        <button class="btn {% if active|length < 1 %} is-ghost {% endif %}" type="button" aria-label="{{ name }}">
             <span class="text-truncate">
                 {{ name }} ({{ count }})
             </span>
@@ -127,7 +127,7 @@
 {% endmacro %}
 
 {% macro popupAction(link, icon) %}
-    <button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ link }}" aria-label="{{ link }}">   
+    <button class="btn is-ghost" type="button" data-bs-toggle="modal" data-bs-target="#{{ link }}" aria-label="{{ link }}">   
         <svg class="icon" aria-hidden="true" focusable="false">
             <use href="/assets/sprite/sprite.svg#icon-{{icon}}"></use>
         </svg>

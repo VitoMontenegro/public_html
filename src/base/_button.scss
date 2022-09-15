@@ -169,3 +169,8 @@
     justify-content: center;
     border-radius: var(--shape-border-radius-sm);
 }
+.btns_block {
+  .btn {
+        padding: 0 1.2rem;
+  }
+}

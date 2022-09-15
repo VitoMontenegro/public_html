@@ -39,7 +39,7 @@
     @extend %q-container;
     min-height: 100vh;
 
-  &:not(.home-wrapper, .live-video) {
+  &:not(.home-wrapper, .live-video, .live-audio) {
     @include media-breakpoint-up(md) {
       display: grid;
       align-items: start;
@@ -60,8 +60,8 @@
   }
 
   &.live-video {
-      padding-left: 0;
-      padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
     @include media-breakpoint-up(md) {
       display: grid;
       align-items: start;
@@ -83,10 +83,47 @@
     }
   }
 
+  &.live-audio {
+    @include media-breakpoint-up(md) {
+      padding-left: 0;
+      grid-column-gap: var(--size-gutter-xl);
+      display: grid;
+      grid-template-areas:
+        'sidebar header '
+        'sidebar main '
+        'sidebar footer ';
+      grid-template-rows: 12rem 1fr minmax(min-content, max-content);
+      grid-template-columns: 11.6rem  1fr;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-right: 0;
+      grid-template-areas:
+        'sidebar header toggle '
+        'sidebar main toggle '
+        'sidebar footer toggle ';
+      grid-template-columns: 11.6rem  1fr  clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem);
+      grid-row-gap: 2.4rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem)  1fr  clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem);
+    }
+  }
+
 }
 
 .primary-nav {
   grid-area: sidebar;
+}
+
+.is_audio {
+  grid-area: toggle;
+  position: fixed;
+  transition: all 0.4s ease;
+
+  @include media-breakpoint-up(lg) {
+    position: unset;
+  }
 }
 
 .main {
@@ -103,6 +140,20 @@
 .live-video {
   .main {
     margin-top: 0;
+  }
+}
+.live-audio {
+  .main {
+    @include media-breakpoint-up(sm) {
+      max-width: 59.2rem;
+      margin: auto;
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 69.2rem;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 79.2rem;
+    }
   }
 }
 
@@ -131,6 +182,7 @@
     }
   }  
 }
+
 .is_single {
   .main {
     @include media-breakpoint-up(lg) {
@@ -144,14 +196,15 @@
   }
 }
 
+
 .main__sidebar {
   display: none;
   @include media-breakpoint-up(lg) {
     display: block;
     grid-column: 9/span 4
   }
-
 }
+
 .footer {
   grid-area: footer;
 }

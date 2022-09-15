@@ -24,7 +24,7 @@
 					{% for key, value in headerActions %}
 						{% if key == 'more' %}
 							<li class="expand__action__item dropdown {{ key }}">
-								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+								<button class="btn is-ghost" type="button" aria-label="{{ value }}">
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
 			            			</svg>
@@ -71,14 +71,14 @@
 							</li>
 						{% elseif key == 'stats'%}
 							<li class="expand__action__item stats lg_hidden">
-    							<button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">   
+    							<button class="btn is-ghost" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">   
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-stats"></use>
 			            			</svg>
 								</button>								
 							</li>			
 							<li class="expand__action__item dropdown lg_visible">
-								<button class="btn is-ghost is-details" type="button" aria-label="{{ value }}">
+								<button class="btn is-ghost" type="button" aria-label="{{ value }}">
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-more"></use>
 			            			</svg>
@@ -120,17 +120,17 @@
 					            </div>
 							</li>
 						{% elseif key == 'likeblue' %}
-							<li class="expand__action__item is_subscribe {{ key }}" data-tooltip="Subscribe">
-    							<button class="btn is-ghost is-details" type="button">   
+							<li class="expand__action__item is_subscribe has_notice {{ key }}" data-tooltip="Subscribe">
+    							<button class="btn is-ghost" type="button">   
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
 			            			</svg>
-			            			 <span class="sr-only">Subscribe</span>
+			            			 <span class="nt-only">Subscribe</span>
 								</button>						
 							</li>
 						{% else %}
 							<li class="expand__action__item {{ key }}" data-tooltip="Subscribe">
-    							<button class="btn is-ghost is-details" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">
+    							<button class="btn is-ghost" type="button" data-bs-toggle="modal" data-bs-target="#{{ value }}" aria-label="{{ value }}">
 			            			<svg class="icon" aria-hidden="true" focusable="false">
 			                			<use href="/assets/sprite/sprite.svg#icon-{{ key }}"></use>
 			            			</svg>
@@ -172,22 +172,22 @@
         </button>
 		<ul class="main__content__header__list__menu">
 			<li class="expand__action__item active">
-				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+				<button class="btn is-ghost" type="button" aria-label="Edit profile">
         			<span>All</span>
 				</button>						
 			</li>
 			<li class="expand__action__item">
-				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+				<button class="btn is-ghost" type="button" aria-label="Edit profile">
         			<span>Broadcasts</span>
 				</button>						
 			</li>
 			<li class="expand__action__item">
-				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+				<button class="btn is-ghost" type="button" aria-label="Edit profile">
         			<span>Photos</span>
 				</button>						
 			</li>
 			<li class="expand__action__item">
-				<button class="btn is-ghost is-details" type="button" aria-label="Edit profile">
+				<button class="btn is-ghost" type="button" aria-label="Edit profile">
         			<span>Videos</span>
 				</button>						
 			</li>

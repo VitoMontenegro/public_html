@@ -194,21 +194,21 @@ body .is_open {
     display: block;
   }
 }
-.is_subscribe {
+.has_notice {
   position: relative;
-  .sr-only {
+  .nt-only {
     display: none;
   }
   &:hover {
-    .sr-only {
+    .nt-only {
       display: block;
       background: var(--color-background-inverse);
       color: var(--color-ink-inverse-max);
       position: absolute;
       padding: $size-1 $size-2;
       border-radius: var(--shape-border-radius-sm);
-      top: -3.8rem;
-      left: -2.5rem;
+      bottom: 4.2rem;
+      left: -50%;
     }    
   }
 }

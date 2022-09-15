@@ -16,6 +16,10 @@
 		margin-bottom: 1.6rem;
 		align-items: center;
 
+		h2{
+			max-width: 85%;
+		}
+
 		.dropdown-menu {
 			    /* padding: 0.5rem 3.2rem 0.5rem; */
 		}
@@ -73,6 +77,7 @@
 
 .img-wrapper {
 	img {
+    border-radius: var(--shape-border-radius-lg);
 		object-fit: contain;
     width: 100%;
     height: auto;
