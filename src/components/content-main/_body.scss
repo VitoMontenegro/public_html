@@ -6,7 +6,7 @@
 	margin-top: 3.2rem;
 
   @include media-breakpoint-up(md) {
-    padding: 1.6rem 3.2rem;
+    padding: $size-2 $size-4 $size-4;
   }
 
 	&__header {

@@ -151,7 +151,10 @@
   } 
 }
 .grow {
-  color:var(--color-btn-grow);
+  color:var(--color-ink-success-text);
+}
+.is_success {
+  color:var(--color-ink-success-text);
 }
 .reduce {
   color: var(--color-btn-reduce);

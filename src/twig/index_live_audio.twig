@@ -3,13 +3,80 @@
 <body>
 	<div class="scroll-fix"></div>
 	<div class="wrapper live-audio">
-        <header class="header is_audio" id="header">
+        <header class="header is_audio_header" id="header">
 			<a href="javascript:void(0)" onClick="window.history.back()" class="sm_visible">
 	            <svg class="icon deg270" aria-hidden="true" focusable="false">
 	                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
 	            </svg>
 			</a>
-			{% include './components/search_form.twig' %}
+
+		    <form class="header__search" id="header-search-form" action="/search" role="search" onsubmit="return false;">
+		        <div class="form__item">
+		            <input class="form__control" id="header-search-input" name="blogsearch" type="search" dir="auto" autocomplete="off" aria-label="within mybusines.app" placeholder="Search">
+		                <button class="header__search-submit is_rubber" id="smart-search-btn" type="submit" aria-label="Settings">
+		                    <span>Audio broadcasts</span>
+		                </button>
+
+
+			            <button class="header__search-submit" id="header-search-submit" type="submit" aria-label="Submit Search">
+			                <svg class="icon" aria-hidden="true" focusable="false">
+			                    <use href="/assets/sprite/sprite.svg#icon-search"></use>
+			                </svg>
+			            </button>
+
+			                <div id="smartSearchInner" class="search__filter has-shadow has-border-radius-base is_small">
+			                    <ul class="no_list_style intervalcheck">
+			                        <li class="custom-radio edit_link"> 
+			                            <label>
+			                                <svg class="icon" aria-hidden="true" focusable="false">
+			                                    <use href="/assets/sprite/sprite.svg#icon-community"></use>
+			                                </svg>
+			                                <input type="radio" name="search_from"  value="Audio broadcasts" checked> 
+			                                <span>Audio broadcasts</span>                        
+			                            </label>
+			                        </li>
+			                        <li class="custom-radio edit_link"> 
+			                            <label>                   
+			                                <svg class="icon" aria-hidden="true" focusable="false">
+			                                    <use href="/assets/sprite/sprite.svg#icon-globe"></use>
+			                                </svg>
+			                                <input type="radio" name="search_from"  value="All over site"> 
+			                                <span>All over site</span>
+			                            </label>
+			                        </li>
+			                    </ul>
+			                    <ul class="no_list_style liveCheck">
+		                            <li class="form-check form-check-inline">
+		                                <label class="form-check-label flex align-center">
+		                                    <input type="radio" class="form-check-input" name="searchFrom" value="All">
+		                                    <span>All</span>
+		                                </label>
+		                            </li>             
+		                            <li class="form-check form-check-inline">
+		                                <label class="form-check-label flex align-center">
+		                                    <input type="radio" class="form-check-input" name="searchFrom" value="female">
+		                                    <span>Live</span>
+		                                </label>
+		                            </li>             
+		                            <li class="form-check form-check-inline">
+		                                <label class="form-check-label flex align-center">
+		                                    <input type="radio" class="form-check-input" name="searchFrom" value="male">
+		                                    <span>In recording</span>
+		                                </label>
+		                            </li>                  
+		                            <li class="form-check form-check-inline">
+		                                <label class="form-check-label flex align-center">
+		                                    <input type="radio" class="form-check-input" name="searchFrom" value="male">
+		                                    <span>Planned</span>
+		                                </label>
+		                            </li>                    
+		                        </ul>
+			                </div>
+		        </div>
+		        <button class="header__search-cancel btn is-ghost" type="reset" data-role="search-cancel">
+		            <span class="label is-bolder">Cancel</span>
+		        </button>
+		    </form>
 
 			<ul class="header__menu" id="header-menu">
 			    <li class="header__notify">

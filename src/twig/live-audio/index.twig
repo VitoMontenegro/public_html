@@ -9,38 +9,10 @@
 	['details', "By name", 3]
 ] %}
 
-{# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
-{% set friendList = [
-	['/assets/images/profile_friend.png', "Eugene Potapenko", 'Petrovac'],
-	['/assets/images/profile_friend.png', "Mia Suono-Oro", 'Moscow'],
-	['/assets/images/profile_friend.png', "Александр Бойко", 'Moscow'],
-	['/assets/images/profile_friend.png', "Екатерина Велик…", 'Moscow'],
-	['/assets/images/profile_friend.png', "Валентина Ветер", 'Moscow'],
-	['/assets/images/profile_friend.png', "Design Inspiration", 'Kyiv'],
-	['/assets/images/profile_friend.png', "Павел Дорошенко", 'Moscow'],
-] %}
 
 
-{% set mainSidebarList = [
-	['info', 'link', '#', "Лариса Куликова", '825', 'active'],
-	['info', 'link', '#', "Nearby", '2'],
-	['info', 'link', '#', "Friend requests", '135'],
-	['info', 'link', '#', "Recommendations", ''],
-	['info', 'link', '#', "Subscriptions", '20'],
-	['info', 'link', '#', "Subscribers", '3']
-] %}
 
 {% block content %}
 	{% include '../components/live_audio.twig' %}
 {% endblock %}
 
-
-{% block sidebar %}
-	<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
-		{% include '../components/main_sidebar_item.twig' %}
-		<div class="main__sidebar__item__title is_birthday">
-			Birthdays
-		</div>
-		{% include '../components/sidebar_group_list.twig' %}
-	</div>
-{% endblock %}

@@ -79,6 +79,10 @@
   .border_bottom_grey {
       border-bottom: 1px solid #D1D9E6;
       display: block;
+
+      &.bold_border {
+        margin: 1rem 0;
+      }
   }
 }
 

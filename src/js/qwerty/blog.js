@@ -1,8 +1,11 @@
 jQuery(document).ready(function($){
 	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
+
+		if (!$(this).hasClass('not_fixed')) {
+			$('body').addClass('dropdown-open');
+		}
 		$(this).addClass('open');
-		$('body').addClass('dropdown-open');
 	});
 	$('.is_subscribe').on('click', function(){
 		if ($(this).hasClass('active')) {

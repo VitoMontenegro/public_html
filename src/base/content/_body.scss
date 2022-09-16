@@ -42,17 +42,25 @@
   font-display: swap;
   font-family: 'PT Root UI';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   src:
-    url('/assets/fonts/PT-Root-UI_Bold.ttf') format('truetype'),
+    url('/assets/fonts/PT-Root-UI_Regular.ttf') format('truetype'),
 }
 @font-face {
   font-display: swap;
   font-family: 'PT Root UI';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   src:
-    url('/assets/fonts/PT-Root-UI_Regular.ttf') format('truetype'),
+    url('/assets/fonts/PT-Root-UI_Medium.ttf') format('truetype'),
+}
+@font-face {
+  font-display: swap;
+  font-family: 'PT Root UI';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('/assets/fonts/PT-Root-UI_Bold.ttf') format('truetype'),
 }
 
 @font-face {
@@ -336,16 +344,16 @@ hr {
   margin-bottom: $size-line * 3;
 }
 
-body {
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
+// body {
+//   overflow: auto;
+//   -ms-overflow-style: none;
+//   scrollbar-width: none;
+// }
 
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+// body::-webkit-scrollbar {
+//   width: 0;
+//   height: 0;
+// }
 
 .primary-nav {
   overflow: visible; 

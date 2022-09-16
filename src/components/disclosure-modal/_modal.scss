@@ -30,6 +30,9 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
   }
 }
+.dropdown-open {
+  padding-right: 1.7rem;
+}
 // Overlay
 .modal-backdrop {
   @extend %backdrop;

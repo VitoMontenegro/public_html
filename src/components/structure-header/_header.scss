@@ -73,7 +73,7 @@
     }
     
   }
-  &.is_audio {
+  &.is_audio_header {
     @include media-breakpoint-up(sm) {
       max-width: 59.2rem;
       margin: auto;
@@ -162,13 +162,13 @@
   }
 }
 
-.is_audio {
-      gap: 0;
+.is_audio_header {
+    gap: 0;
   .header__search {
-        grid-column: 1/span 9;
+    grid-column: 1/span 9;
   }
   .header__menu {
-        grid-column: 10/span 4;
+    grid-column: 10/span 4;
   }
 }
 
@@ -534,6 +534,11 @@
 
   &.edit_link {
     padding-left: $size-1p5;
+  }
+}
+.liveCheck {
+  .form-check {
+    padding: 1rem 0 1rem 1.3rem;
   }
 }
 .is_rubber {
