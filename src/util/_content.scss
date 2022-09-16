@@ -168,6 +168,10 @@
         object-fit:cover;
       }
   }
+
+  &.dropdown {
+    cursor: pointer;
+  }
 }
 .speakers_main {
   margin-top: $size-2;
@@ -180,14 +184,18 @@
   }
   .speakers-item {
     position: relative;
-    opacity: 0.5;
 
     &__avatar {
       width: 8rem;
       height: 8rem; 
+      opacity: 0.5;
+    }  
+    &__name {
+      opacity: 0.5;
     }  
 
-    &:after {
+    &:after { 
+      opacity: 0.5;
       content: "";
       display: inline-block;
       right: 2rem;
@@ -205,7 +213,17 @@
     }
 
     &.is_speaking {
-      opacity: 1;
+
+      .speakers-item__avatar,
+      .speakers-item__name {
+        opacity: 1;
+      }
+
+
+      &:after {
+        opacity: 1;
+      }
+      
     }
   }
 }
