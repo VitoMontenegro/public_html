@@ -31,7 +31,10 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   }
 }
 .dropdown-open {
-  padding-right: 1.7rem;
+  @include media-breakpoint-up(xl) {
+    padding-right: 1.7rem;
+  }
+  
 }
 // Overlay
 .modal-backdrop {
@@ -229,6 +232,17 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   .modal-content {
       height: 100%;
       overflow: hidden;
+      @include media-breakpoint-up(md) {
+        // display: block;
+        // overflow: scroll;
+      }
+      &:not(.flex-scrollable) {
+        @include media-breakpoint-down(sm) {
+          display: block;
+          overflow: scroll;
+        }        
+      }
+
   }
   .modal-body {
       overflow-y: auto;
@@ -236,12 +250,12 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
   }
 }
 
-#broadcastModal {
-  .modal-dialog-scrollable {
-    height: auto;
-    max-height: calc(100% - 5.5rem);
-  }
-}
+// #broadcastModal {
+//   .modal-dialog-scrollable {
+//     height: auto;
+//     max-height: calc(100% - 5.5rem);
+//   }
+// }
 
 // Actual modal (.modal-content in BS)
 .modal__box,
@@ -269,7 +283,7 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 // Top section of the modal w/ title and dismiss
 .modal__header,
 .modal-header {
-
+  padding: $size-3 $size-4 0;
   > div {
     display: flex;
     align-items:center;
@@ -288,6 +302,14 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     align-items: center;
     flex-wrap: wrap;
   }
+  .left,
+  .right {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+  }
 }
 .modal__subheader {
   padding: $modal-body-padding;
@@ -296,12 +318,17 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 .modal__title,
 .modal-title {
   @extend %h1;
+  padding-top: 0;
   padding-right: $size-1;
 }
 
 .edit__title {
   font-weight: 500;
   font-size: var(--font-size-big);
+
+  @include media-breakpoint-down(sm) {
+    font-size: var(--font-size-middle);
+  }
 }
 .modal__subheader {
     line-height: var(--font-line-height-base);
@@ -340,7 +367,6 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 .modal-body {
   padding: $modal-body-padding;
   position: relative;
-  margin-top: $size-1;
   .edit__images {
     flex-wrap:wrap;
     justify-content: center;
@@ -363,12 +389,14 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
       justify-content:center;
       background: var(--color-primary-base);
       height: 100%;
+      min-height: 16rem;
       color: var(--color-ink-inverse-base);
       font-size: var(--font-size-small);
       text-transform: uppercase;
 
       img {
         width: 100%;
+        height: 100%;
         object-fit:cover;
       }
   }
@@ -612,6 +640,13 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     height: 75vh;
     overflow: hidden;
     overflow-y: scroll;
+    @include media-breakpoint-up(sm) {
+      height: calc(97vh - 8rem);
+    }
+    @include media-breakpoint-up(md) {
+      height: calc(93vh - 8rem);
+    }
+        
 }
 
 .modal-scroll::-webkit-scrollbar {
@@ -645,42 +680,41 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 } 
 
 .modal__header__list__menu {
-    display: none;
-    padding: 0;
+    padding: 0.4rem;
     border-radius: var(--shape-border-radius-base);
     position: absolute;
-    background-color: var(--color-background-base);;
-    width: 50%;
+    background-color: var(--color-background-base);
     z-index: 1;
     overflow: hidden;
     left: 0;
     right: 0;
     margin: auto;
-    @include media-breakpoint-up(sm) {
-      margin-top: 3rem;
-      background-color: var(--color-ink-accent);
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      li {
-        width: 50%;
+    margin-top: 3rem;
+    background-color: var(--color-ink-accent);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      width: 50%;
       &.active {
-        button {
+        .button {
           background: #DCE7F9;
         }     
       }
       &:not(:first-child):before {
         display: block;
       }
-      }
+    }
+    @include media-breakpoint-up(sm) {
+      width: 50%;
     }
     @include media-breakpoint-up(md) {
       margin-top: 3rem;
     }
     li {
 
-      button {
+      .button {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -693,20 +727,33 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
     }
 }
 
-.equipment__setup {
-  >div {
-    margin-bottom: 3rem;
-  }
-  .else {
-    padding: 0.4rem 0.8rem;
-    background: var(--color-sidebar-count);
-    border-radius: var(--shape-border-radius-pill);
-    color: var(--color-ink-inverse-max);
-    text-shadow: 0px 1px 0px rgb(0 0 0 / 12%);
-    font-size: var(--font-size-small);
-    cursor: pointer;
+.equipment {
+  &__setup {
+    >div {
+      margin-bottom: 3rem;
+    }
+    .else {
+      padding: 0.4rem 0.8rem;
+      background: var(--color-sidebar-count);
+      border-radius: var(--shape-border-radius-pill);
+      color: var(--color-ink-inverse-max);
+      text-shadow: 0px 1px 0px rgb(0 0 0 / 12%);
+      font-size: var(--font-size-small);
+      cursor: pointer;
+    }
   }
 }
+.ec_notice {
+  text-align: center;
+  color: var(--color-ink-2ry);
+  padding: 0 $size-2 $size-3;
+}
+.edit_live {
+  .ec_notice {
+    margin-top: $size-2;
+  }
+}
+
 
 .type__equipment {
     font-size: var(--font-size-small);
@@ -872,3 +919,32 @@ $modal-combined-padding:                $size-line var(--size-padding-x-box) var
 
 
 }
+.modal {
+  @include media-breakpoint-down(sm) {
+    &.is-lg {
+      .modal__body,
+      .modal-body {
+        padding-top: 0;
+        .modal__header {
+            padding: 0.8rem 2.1rem;
+            box-shadow: 0px 1px 0px rgb(23 25 28 / 4%);
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            margin-bottom: $size-3;
+            .modal__title {
+              font-size: var(--font-size-base);
+              padding: 0;
+              line-height: 1; 
+          }      
+        }
+
+      }
+      .modal__footer,
+      .modal-footer {
+        /* display: none; */
+      }
+    }
+  }
+}
+

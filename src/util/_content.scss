@@ -33,9 +33,9 @@
 }
 
 .sm_hidden {
-  display: none;
+  display: none!important;
   @include media-breakpoint-up(sm) {
-    display: var(--display);
+    display: var(--display)!important;
   }
 }
 
@@ -60,9 +60,9 @@
 }
 
 .sm_visible {
-  display: var(--display);
+  display: var(--display) !important;
   @include media-breakpoint-up(sm) {        
-    display: none;
+    display: none!important;
   }
 }
 
@@ -96,6 +96,10 @@
   font-weight: 600;
 }
 
+.is-ghost {
+  color: var(--color-ink-2ry);
+  background-color: transparent;
+}
 .likeblue {
   .icon{
     color: var(--icon-fill-blue);

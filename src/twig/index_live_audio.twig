@@ -118,7 +118,46 @@
         </div>
         
         <nav class="primary-nav">
-        	{% include 'components/primary_nav.twig' %}
+        	<div class="md_hidden">
+        		{% include 'components/primary_nav.twig' %}
+        	</div>
+        	
+        	<div class="md_visible">
+				<ul class="menu">
+					<li class="menu__item">
+						<button class="is-ghost menu__link" type="button">
+	                        <svg class="icon" aria-hidden="true" focusable="false">
+	                            <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
+	                        </svg>
+	                        <span class="label">Share</span>
+	                    </button>
+					</li>
+					<li class="menu__item">
+						<button class="is-ghost menu__link" type="button" data-target="#liveComments">
+	                        <svg class="icon" aria-hidden="true" focusable="false">
+	                            <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+	                        </svg>
+	                        <span class="label">chat</span>
+	                    </button>
+					</li>
+					<li class="menu__item">
+						<button class="is-ghost menu__link" type="button" data-target="#inviteFriends">
+	                        <svg class="icon" aria-hidden="true" focusable="false">
+	                            <use href="/assets/sprite/sprite.svg#icon-invite"></use>
+	                        </svg>
+	                        <span class="label">Invite</span>
+	                    </button>
+					</li>
+					<li class="menu__item">
+						<button class="is-ghost menu__link" type="button">
+	                        <svg class="icon" aria-hidden="true" focusable="false">
+	                            <use href="/assets/sprite/sprite.svg#icon-hand"></use>
+	                        </svg>
+	                        <span class="label">Speak</span>
+	                    </button>
+					</li>
+				</ul>	
+        	</div>
     	</nav>
         
         <div class="l-nav is_audio">

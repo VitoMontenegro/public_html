@@ -7,6 +7,7 @@ jQuery(document).ready(function($){
 		}
 		$(this).addClass('open');
 	});
+
 	$('.is_subscribe').on('click', function(){
 		if ($(this).hasClass('active')) {
 			$('#unsubscribe').modal('show');
@@ -14,32 +15,37 @@ jQuery(document).ready(function($){
 		} else {
 			$(this).addClass('active');
 		}
-
 	});
+
 	$('.show_lside').on('click',function(){
 		$('.is_audio').addClass('active');
 		let $target = $(this).attr('data-target');
     	$('.l-nav__modals').hide();
     	$($target).show();
 	});
+
 	$('#getliveMenu').on('click', function(){
 		$('.l-nav__menu').show();
 	});
+
 	$('.location-list a').on('click', function() {
 		let tab_content = $(this).closest('.tab_content');
 		tab_content.removeClass('active');
 		tab_content.next().addClass('active');
 
 	});
+
 	$('#getLiveInfo').on('click', function(){
 		$('.content-card.modal-card').show();
 	});
+
 	$('.content-card.modal-card').click(function(){
 		if ($(window).width() < 1024) {
 			$(this).hide();
 		}
     	
     });
+
     $('.l-comment__children-count').on('click', function(){
     	$(this).closest('.l-thread').find('.l-thread__children').toggle();
     });
@@ -53,16 +59,26 @@ jQuery(document).ready(function($){
     	$theParent.addClass('active');
     });
 
+    $('.expand__action__item').on('click', function(){
+    	let parentWrap = $(this).closest('div');
+    	parentWrap.find('.expand__action__item').each(function(){
+    		$(this).removeClass('active');
+    	});
+    	$(this).addClass('active');
+    });
+
     if ($(window).width() < 1024) {
 	    $('.menu__link').on('click', function() {
 	    	let $target = $(this).attr('data-target');
 	    	$('.l-nav__modals').hide();
 	    	console.log($target);
 	    	$($target).show();
+    		$('body').addClass('hover');
 	    });
 
 	    $('.l-nav__modals .is_close').on('click', function(){
 	    	$(this).closest('.l-nav__modals').hide();
+    		$('body').removeClass('hover');
 	    });
     }
 
@@ -184,6 +200,13 @@ jQuery(document).ready(function($){
 		
 	});
 
+	$(".air_select").change(function() {
+		if ($('.v_select').prop("checked")) {
+		  $('.stream-start__form').removeClass('form-audio').addClass('form-video');
+		} else {
+		  $('.stream-start__form').removeClass('form-video').addClass('form-audio');
+		}
+	});
 
 	function selectOption(target, option) {
 	  	target.empty();

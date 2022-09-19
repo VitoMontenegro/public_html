@@ -211,3 +211,21 @@ form .flex > label {
     }
   }  
 }
+.stream-start {
+  &__form {
+    .for_audio,
+    .for_video {
+      display: none;
+    }
+    &.form-video {
+      .for_video {
+        display: block;
+      }
+    }
+    &.form-audio {
+      .for_audio {
+        display: block;
+      }
+    }
+  }
+}

@@ -151,6 +151,19 @@
 
   		
   	}
+
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      &:checked,
+      &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+
+      }
+    }
 }
 .expand__action__item.active + .expand__action__item:before {
   display: none;

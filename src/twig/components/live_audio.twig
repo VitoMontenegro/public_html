@@ -1,232 +1,107 @@
-  	<div class="main__body main__content__body">
-        <div class="content-card has-shadow has-border-radius-lg">
+<div class="main__body main__content__body">
+    <div class="content-card has-shadow has-border-radius-lg">
+        <div class="content-card__header">
+            <a class="content-card__line-cell line-cell" href="#">
+                <figure class="entety__avatar">
+                    <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+                </figure>  
+
+                <div class="line-cell__content">
+                    <div class="line-cell__title">UX / UI design</div>
+                    <div class="line-cell__subtitles flex align-center">
+                		<svg class="icon is-sm is-left" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
+                        </svg>
+                    	<span class="is_success">live</span>
+                    </div>
+                </div>
+            </a>   
+
+            <div class="is_link dropdown is-right">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                </svg>
+                <div class="dropdown-menu_wrap">
+                    <ul class="dropdown-menu"> 
+                        <li>
+							<button class="button is-bare" type="button" data-bs-toggle="modal" data-bs-target="#editLiveAudio">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-info"></use>
+                                </svg>
+                            	<span class="label">theme and settings</span>
+                          	</button>
+                        </li>
+                        <li class="lg_only">
+                            <button class="button is-bare show_lside" type="button" data-target="#inviteFriends">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-invite"></use>
+                                </svg>
+                                <span>invite friends</span>
+                            </button>
+                        </li>
+                        <li class="lg_only">
+                            <button class="button is-bare show_lside" type="button" data-target="#liveComments">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+                                </svg>
+                                <span>chat</span>
+                            </button>
+                        </li>
+                        <li class="">
+							<span class="border_bottom_grey bold_border"></span>
+						</li>
+                        <li class="">
+                            <a href="" class="turn-off">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
+                                </svg>
+                                <span class="reduce">end the broadcast</span>
+                            </a>
+                        </li>
+                    </ul>  
+                </div>
+            </div>       
+        </div>
+
+        <figure class="img-wrapper">
+            <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+        </figure>
+
+        <div class="main__content__body__txt crop-height">
             <div class="content-card__header">
-                <a class="content-card__line-cell line-cell" href="#">
-                    <figure class="entety__avatar">
-                        <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
-                    </figure>  
-
-                    <div class="line-cell__content">
-                        <div class="line-cell__title">UX / UI design</div>
-                        <div class="line-cell__subtitles flex align-center">
-                    		<svg class="icon is-sm is-left" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
-                            </svg>
-                        	<span class="is_success">live</span>
-                        </div>
-                    </div>
-                </a>   
-
-                <div class="is_link dropdown is-right">
-                    <svg class="icon" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
-                    </svg>
-                    <div class="dropdown-menu_wrap">
-                        <ul class="dropdown-menu"> 
-                            <li>
-								<button class="button is-bare" type="button" data-bs-toggle="modal" data-bs-target="#modal-edit-post">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-info"></use>
-                                    </svg>
-	                            	<span class="label">theme and settings</span>
-	                          	</button>
-                            </li>
-                            <li class="lg_only">
-                                <button class="button is-bare show_lside" type="button" data-target="#inviteFriends">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-invite"></use>
-                                    </svg>
-                                    <span>invite friends</span>
-                                </button>
-                            </li>
-                            <li class="lg_only">
-                                <button class="button is-bare show_lside" type="button" data-target="#liveComments">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
-                                    </svg>
-                                    <span>chat</span>
-                                </button>
-                            </li>
-                            <li class="">
-								<span class="border_bottom_grey bold_border"></span>
-							</li>
-                            <li class="">
-                                <a href="" class="turn-off">
-                                    <svg class="icon" aria-hidden="true" focusable="false">
-                                        <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
-                                    </svg>
-                                    <span class="reduce">end the broadcast</span>
-                                </a>
-                            </li>
-                        </ul>  
-                    </div>
-                </div>       
+            	<h2>What kind of music do you like to work with?</h2>
+            	<div class="btns_block flex">
+            		<div class="likeblue">
+		            	<button class="btn has_notice" type="button">   
+		        			<svg class="icon" aria-hidden="true" focusable="false">
+		            			<use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
+		        			</svg>
+		        			 <span class="nt-only">Turn on the <br>microphone</span>
+						</button>  
+            		</div>
+            		<div class="likeblue active">
+		            	<button class="btn has_notice" type="button">   
+		        			<svg class="icon" aria-hidden="true" focusable="false">
+		            			<use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
+		        			</svg>
+		        			 <span class="nt-only">Click to turn off</span>
+						</button>  
+            		</div>
+            	</div>          	
             </div>
 
-            <figure class="img-wrapper">
-                <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-            </figure>
+            <span class="crop-height__txt">Traditional rock? Indie? Hard rock and heavy metal? Maybe techno or rap? Let's discuss musical preferences and try to find patterns.</span> 
+        </div>
 
-            <div class="main__content__body__txt crop-height">
-	            <div class="content-card__header">
-	            	<h2>What kind of music do you like to work with?</h2>
-	            	<div class="btns_block flex">
-	            		<div class="likeblue">
-			            	<button class="btn is-ghost has_notice" type="button">   
-			        			<svg class="icon" aria-hidden="true" focusable="false">
-			            			<use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
-			        			</svg>
-			        			 <span class="nt-only">Turn on the <br>microphone</span>
-							</button>  
-	            		</div>
-	            		<div class="likeblue active">
-			            	<button class="btn is-ghost has_notice" type="button">   
-			        			<svg class="icon" aria-hidden="true" focusable="false">
-			            			<use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
-			        			</svg>
-			        			 <span class="nt-only">Click to turn off</span>
-							</button>  
-	            		</div>
-	            	</div>          	
-	            </div>
+        <div class="speakers_list speakers_main">
+        	<div class="speakers">
+        		<div class="speakers-item dropdown not_fixed">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Владимир</div>
 
-                <span class="crop-height__txt">Traditional rock? Indie? Hard rock and heavy metal? Maybe techno or rap? Let's discuss musical preferences and try to find patterns.</span> 
-            </div>
-
-            <div class="speakers_list speakers_main">
-            	<div class="speakers">
-            		<div class="speakers-item dropdown not_fixed">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Владимир</div>
-
-		                <div class="dropdown-menu_wrap">
-		                    <ul class="dropdown-menu">  
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
-		                                </svg>
-		                                <span>Message</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic-off"></use>
-		                                </svg>
-		                                <span class="reduce">transfer to listeners</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-complain"></use>
-		                                </svg>
-		                                <span class="reduce">complain</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                            <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
-		                                </svg>
-		                                <span class="reduce">Block</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                            <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-user-off"></use>
-		                                </svg>
-		                                <span class="reduce">Block</span>
-		                            </a>
-		                        </li>
-		                    </ul>                    
-		                </div>
-            		</div>
-            		<div class="speakers-item is_speaking dropdown not_fixed">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Анастасия</div>
-
-		                <div class="dropdown-menu_wrap">
-		                    <ul class="dropdown-menu">  
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
-		                                </svg>
-		                                <span>Message</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic-off"></use>
-		                                </svg>
-		                                <span class="reduce">transfer to listeners</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                             <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-complain"></use>
-		                                </svg>
-		                                <span class="reduce">complain</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                            <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
-		                                </svg>
-		                                <span class="reduce">Block</span>
-		                            </a>
-		                        </li>
-		                        <li>
-		                            <a href="javascript:void(0);">
-		                                <svg class="icon" aria-hidden="true" focusable="false">
-		                                    <use href="/assets/sprite/sprite.svg#icon-user-off"></use>
-		                                </svg>
-		                                <span class="reduce">Block</span>
-		                            </a>
-		                        </li>
-		                    </ul>                    
-		                </div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Елена</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Ольга</div>
-            		</div>
-            		<div class="speakers-item mic_off">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Руслан</div>
-            		</div>
-            	</div>
-            </div>
-
-            <div class="speakers_list">
-            	<h4>Speaker Friends — 6</h4>
-            	<div class="speakers">
-            		<div class="speakers-item dropdown not_fixed">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Владимир</div>
-
+	                <div class="dropdown-menu_wrap">
 	                    <ul class="dropdown-menu">  
 	                        <li>
 	                             <a href="javascript:void(0);">
@@ -239,17 +114,25 @@
 	                        <li>
 	                             <a href="javascript:void(0);">
 	                                <svg class="icon" aria-hidden="true" focusable="false">
-	                                    <use href="/assets/sprite/sprite.svg#icon-messages"></use>
+	                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic-off"></use>
 	                                </svg>
-	                                <span>invite as a speaker</span>
+	                                <span class="reduce">transfer to listeners</span>
 	                            </a>
 	                        </li>
 	                        <li>
 	                             <a href="javascript:void(0);">
 	                                <svg class="icon" aria-hidden="true" focusable="false">
-	                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
+	                                    <use href="/assets/sprite/sprite.svg#icon-complain"></use>
 	                                </svg>
-	                                <span>invite as a moderator</span>
+	                                <span class="reduce">complain</span>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
+	                                </svg>
+	                                <span class="reduce">Block</span>
 	                            </a>
 	                        </li>
 	                        <li>
@@ -261,341 +144,458 @@
 	                            </a>
 	                        </li>
 	                    </ul>                    
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Анастасия</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Елена</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Ольга</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Руслан</div>
-            		</div>
-            	</div>
-            </div>
+	                </div>
+        		</div>
+        		<div class="speakers-item is_speaking dropdown not_fixed">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Анастасия</div>
 
-            <div class="speakers_list">
-            	<h4>Other listeners - 458</h4>
-            	<div class="speakers">
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Владимир</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Анастасия</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Елена</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Ольга</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Руслан</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Владимир</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Анастасия</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Елена</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Ольга</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Руслан</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Анастасия</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Елена</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Ольга</div>
-            		</div>
-            		<div class="speakers-item">
-	            		<figure class="speakers-item__avatar item-people__avatar">
-	                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
-	                    </figure>
-	                    <div class="speakers-item__name">Руслан</div>
-            		</div>
-            	</div>
-            </div>
-
-
-            <div class="main__content__body__list__captio">
-                <div class="btn is-ghost count_btn">
-                    <span class="is_success">+44</span>
-                    <div class="dropdown-menu_wrap">
-                        <ul class="dropdown-menu"> 
-                            <li><span class="menu__title"></span></li>
-                        </ul>  
-                    </div>
-                </div>
-                <div class="btn is-ghost count_btn">
-                    <span class="reduce">-1</span>
-                    <div class="dropdown-menu_wrap">
-                        <ul class="dropdown-menu"> 
-                            <li><span class="menu__title"></span></li>
-                        </ul>  
-                    </div>
-                </div>
-                <div class="btn is-compact is-ghost sm_hidden">
-                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-community"></use>
-                    </svg>
-                    <span>464</span>
-                </div>
-                <div class="btn is-compact is-ghost sm_hidden">
-                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
-                    </svg>
-                    <span>5</span>
-                </div>
-                <div class="btn is-compact is-ghost comments_toggle">
-                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
-                    </svg>
-                    <span>2+1</span>
-                    <div class="dropdown-menu_wrap">
-                        <ul class="dropdown-menu"> 
-                            <li><span class="menu__title"></span></li>
-                        </ul>  
-                    </div>
-                </div>
-               <div class="btn is-ghost sm_hidden">
-                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-                        <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
-                    </svg>
-                </div>
-            </div>
-
-			<div class="post__comments comments">
-			    <h3 class="comments__title">Комментарии</h3>
-			    <div class="comments__items" id="comments__items">
-			        <div class="comments__thread thread">
-			            <div class="thread__indent-l-0">
-			                <div class="thread__comment comment">
-			                    <div class="comment__body">
-			                        <div class="comment__header">
-			                            <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
-			                            	<img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-			                            </a>
-			                            <div class="comment__info">
-			                                <div class="comment__user">
-			                                    <a href="#" class="comment__author small is-bolder">Agressia</a>
-			                                    <a href="#" class="comment__link small">вчера</a>
-			                                </div>
-			                                {% include '../components/comments_drop.twig' %}
-			                            </div>
-			                        </div>
-			                        <div class="comment__text">
-			                            <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
-			                        </div>
-			                    </div>
-			                    <div class="comment__footer rating-buttons">
-			                        <div class="comment__rating-buttons">
-						                <div class="btn is-ghost count_btn">
-						                    <span class="is_success">+44</span>
-						                    <div class="dropdown-menu_wrap">
-						                        <ul class="dropdown-menu"> 
-						                            <li><span class="menu__title"></span></li>
-						                        </ul>  
-						                    </div>
-						                </div>
-						                <div class="btn is-ghost count_btn">
-						                    <span class="reduce">-1</span>
-						                    <div class="dropdown-menu_wrap">
-						                        <ul class="dropdown-menu"> 
-						                            <li><span class="menu__title"></span></li>
-						                        </ul>  
-						                    </div>
-						                </div>
-			                        </div>
-					                <button class="btn is-ghost">
-					                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-					                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
-					                    </svg>
-					                    <span class="small is-bolder">Ответить</span>
-					                </button>
-			                    </div>
-			                </div>
-			            </div>
-			            <div class="thread__children">
-			                <div class="comments__thread thread">
-			                    <div class="thread__indent-l-1">
-			                        <div class="thread__comment comment">
-			                            <div class="comment__body">
-			                                <div class="comment__header">
-			                                    <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
-			                                    <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-			                                    </a>
-			                                    <div class="comment__info">
-			                                        <div class="comment__user">
-			                                            <a href="#" class="comment__author small is-bolder">Mirlan Akynbekov</a>
-			                                            <a href="#" class="comment__link small">8 ч. назад</a>
-			                                        </div>
-			                                        {% include '../components/comments_drop.twig' %}
-			                                    </div>
-			                                </div>
-			                                <div class="comment__text">
-			                                    <p> Читал, что в Японии в период бурного экономического роста в крупных городах стояли автоматы по продаже чистого воздуха! </p>
-			                                </div>
-			                            </div>
-					                    <div class="comment__footer rating-buttons">
-					                        <div class="comment__rating-buttons">
-								                <div class="btn is-ghost count_btn">
-								                    <span class="is_success">+44</span>
-								                    <div class="dropdown-menu_wrap">
-								                        <ul class="dropdown-menu"> 
-								                            <li><span class="menu__title"></span></li>
-								                        </ul>  
-								                    </div>
-								                </div>
-								                <div class="btn is-ghost count_btn">
-								                    <span class="reduce">-1</span>
-								                    <div class="dropdown-menu_wrap">
-								                        <ul class="dropdown-menu"> 
-								                            <li><span class="menu__title"></span></li>
-								                        </ul>  
-								                    </div>
-								                </div>
-					                        </div>
-							                <button class="btn is-ghost">
-							                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-							                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
-							                    </svg>
-							                    <span class="small is-bolder">Ответить</span>
-							                </button>
-			                            </div>
-			                        </div>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="comments__thread thread">
-			            <div class="thread__indent-l-0">
-			                <div class="thread__comment comment">
-			                    <div class="comment__body">
-			                        <div class="comment__header">
-			                            <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
-			                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-			                            </a>
-			                            <div class="comment__info">
-			                                <div class="comment__user">
-			                                    <a href="#" class="comment__author small is-bolder">Андрей Борджиа</a>
-			                                    <a href="#" class="comment__link small">15 мая</a>
-			                                </div>
-			                                {% include '../components/comments_drop.twig' %}
-			                            </div>
-			                        </div>
-			                        <div class="comment__text">
-			                            <p> Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес </p>
-			                        </div>
-			                    </div>
-			                    <div class="comment__footer rating-buttons">
-			                        <div class="comment__rating-buttons">
-						                <div class="btn is-ghost count_btn">
-						                    <span class="is_success">+44</span>
-						                    <div class="dropdown-menu_wrap">
-						                        <ul class="dropdown-menu"> 
-						                            <li><span class="menu__title"></span></li>
-						                        </ul>  
-						                    </div>
-						                </div>
-						                <div class="btn is-ghost count_btn">
-						                    <span class="reduce">-1</span>
-						                    <div class="dropdown-menu_wrap">
-						                        <ul class="dropdown-menu"> 
-						                            <li><span class="menu__title"></span></li>
-						                        </ul>  
-						                    </div>
-						                </div>
-			                        </div>
-					                <button class="btn is-ghost">
-					                    <svg class="icon is-left" aria-hidden="true" focusable="false">
-					                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
-					                    </svg>
-					                    <span class="small is-bolder">Ответить</span>
-					                </button>
-			                    </div>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-			    <form class="comments__form">
-			        <a href="#" class="entety__avatar is-md is-round has-overlay">
-			        <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
-			        </a>
-			        <div class="form__item">
-			            <div class="form__control-group">
-			                <button class="form__control-icon is-right button is-bare is-icon" type="button">
-			                    <svg role="img" class="icon is-md">
-			                        <use href="/assets/sprite/sprite.svg#icon-send"></use>
-			                    </svg>
-			                </button>
-			                <input type="text" class="form__control has-icon-right" required="" placeholder="Добавить комментарий">
-			            </div>
-			        </div>
-			    </form>
-			</div>
+	                <div class="dropdown-menu_wrap">
+	                    <ul class="dropdown-menu">  
+	                        <li>
+	                             <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+	                                </svg>
+	                                <span>Message</span>
+	                            </a>
+	                        </li>
+	                        <li>
+	                             <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic-off"></use>
+	                                </svg>
+	                                <span class="reduce">transfer to listeners</span>
+	                            </a>
+	                        </li>
+	                        <li>
+	                             <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-complain"></use>
+	                                </svg>
+	                                <span class="reduce">complain</span>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
+	                                </svg>
+	                                <span class="reduce">Block</span>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="javascript:void(0);">
+	                                <svg class="icon" aria-hidden="true" focusable="false">
+	                                    <use href="/assets/sprite/sprite.svg#icon-user-off"></use>
+	                                </svg>
+	                                <span class="reduce">Block</span>
+	                            </a>
+	                        </li>
+	                    </ul>                    
+	                </div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Елена</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Ольга</div>
+        		</div>
+        		<div class="speakers-item mic_off">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Руслан</div>
+        		</div>
+        	</div>
         </div>
+
+        <div class="speakers_list">
+        	<h4>Speaker Friends — 6</h4>
+        	<div class="speakers">
+        		<div class="speakers-item dropdown not_fixed">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Владимир</div>
+
+                    <ul class="dropdown-menu">  
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+                                </svg>
+                                <span>Message</span>
+                            </a>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-messages"></use>
+                                </svg>
+                                <span>invite as a speaker</span>
+                            </a>
+                        </li>
+                        <li>
+                             <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
+                                </svg>
+                                <span>invite as a moderator</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <svg class="icon" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-user-off"></use>
+                                </svg>
+                                <span class="reduce">Block</span>
+                            </a>
+                        </li>
+                    </ul>                    
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Анастасия</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Елена</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Ольга</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Руслан</div>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="speakers_list">
+        	<h4>Other listeners - 458</h4>
+        	<div class="speakers">
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Владимир</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Анастасия</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Елена</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Ольга</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Руслан</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Владимир</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Анастасия</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Елена</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Ольга</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Руслан</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Анастасия</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Елена</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Ольга</div>
+        		</div>
+        		<div class="speakers-item">
+            		<figure class="speakers-item__avatar item-people__avatar">
+                        <img src="/assets/images/The_National.webp" alt="" class="entety__avatar_img">
+                    </figure>
+                    <div class="speakers-item__name">Руслан</div>
+        		</div>
+        	</div>
+        </div>
+
+
+        <div class="main__content__body__list__captio">
+            <div class="btn is-ghost count_btn">
+                <span class="is_success">+44</span>
+                <div class="dropdown-menu_wrap">
+                    <ul class="dropdown-menu"> 
+                        <li><span class="menu__title"></span></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="btn is-ghost count_btn">
+                <span class="reduce">-1</span>
+                <div class="dropdown-menu_wrap">
+                    <ul class="dropdown-menu"> 
+                        <li><span class="menu__title"></span></li>
+                    </ul>  
+                </div>
+            </div>
+            <div class="btn is-compact is-ghost sm_hidden">
+                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-community"></use>
+                </svg>
+                <span>464</span>
+            </div>
+            <div class="btn is-compact is-ghost sm_hidden">
+                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-sm-mic"></use>
+                </svg>
+                <span>5</span>
+            </div>
+            <div class="btn is-compact is-ghost comments_toggle">
+                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                </svg>
+                <span>2+1</span>
+                <div class="dropdown-menu_wrap">
+                    <ul class="dropdown-menu"> 
+                        <li><span class="menu__title"></span></li>
+                    </ul>  
+                </div>
+            </div>
+           <div class="btn is-ghost sm_hidden">
+                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-repposts"></use>
+                </svg>
+            </div>
+        </div>
+
+		<div class="post__comments comments">
+		    <h3 class="comments__title">Комментарии</h3>
+		    <div class="comments__items" id="comments__items">
+		        <div class="comments__thread thread">
+		            <div class="thread__indent-l-0">
+		                <div class="thread__comment comment">
+		                    <div class="comment__body">
+		                        <div class="comment__header">
+		                            <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+		                            	<img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		                            </a>
+		                            <div class="comment__info">
+		                                <div class="comment__user">
+		                                    <a href="#" class="comment__author small is-bolder">Agressia</a>
+		                                    <a href="#" class="comment__link small">вчера</a>
+		                                </div>
+		                                {% include '../components/comments_drop.twig' %}
+		                            </div>
+		                        </div>
+		                        <div class="comment__text">
+		                            <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
+		                        </div>
+		                    </div>
+		                    <div class="comment__footer rating-buttons">
+		                        <div class="comment__rating-buttons">
+					                <div class="btn is-ghost count_btn">
+					                    <span class="is_success">+44</span>
+					                    <div class="dropdown-menu_wrap">
+					                        <ul class="dropdown-menu"> 
+					                            <li><span class="menu__title"></span></li>
+					                        </ul>  
+					                    </div>
+					                </div>
+					                <div class="btn is-ghost count_btn">
+					                    <span class="reduce">-1</span>
+					                    <div class="dropdown-menu_wrap">
+					                        <ul class="dropdown-menu"> 
+					                            <li><span class="menu__title"></span></li>
+					                        </ul>  
+					                    </div>
+					                </div>
+		                        </div>
+				                <button class="btn is-ghost">
+				                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+				                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+				                    </svg>
+				                    <span class="small is-bolder">Ответить</span>
+				                </button>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="thread__children">
+		                <div class="comments__thread thread">
+		                    <div class="thread__indent-l-1">
+		                        <div class="thread__comment comment">
+		                            <div class="comment__body">
+		                                <div class="comment__header">
+		                                    <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+		                                    <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		                                    </a>
+		                                    <div class="comment__info">
+		                                        <div class="comment__user">
+		                                            <a href="#" class="comment__author small is-bolder">Mirlan Akynbekov</a>
+		                                            <a href="#" class="comment__link small">8 ч. назад</a>
+		                                        </div>
+		                                        {% include '../components/comments_drop.twig' %}
+		                                    </div>
+		                                </div>
+		                                <div class="comment__text">
+		                                    <p> Читал, что в Японии в период бурного экономического роста в крупных городах стояли автоматы по продаже чистого воздуха! </p>
+		                                </div>
+		                            </div>
+				                    <div class="comment__footer rating-buttons">
+				                        <div class="comment__rating-buttons">
+							                <div class="btn is-ghost count_btn">
+							                    <span class="is_success">+44</span>
+							                    <div class="dropdown-menu_wrap">
+							                        <ul class="dropdown-menu"> 
+							                            <li><span class="menu__title"></span></li>
+							                        </ul>  
+							                    </div>
+							                </div>
+							                <div class="btn is-ghost count_btn">
+							                    <span class="reduce">-1</span>
+							                    <div class="dropdown-menu_wrap">
+							                        <ul class="dropdown-menu"> 
+							                            <li><span class="menu__title"></span></li>
+							                        </ul>  
+							                    </div>
+							                </div>
+				                        </div>
+						                <button class="btn is-ghost">
+						                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+						                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+						                    </svg>
+						                    <span class="small is-bolder">Ответить</span>
+						                </button>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="comments__thread thread">
+		            <div class="thread__indent-l-0">
+		                <div class="thread__comment comment">
+		                    <div class="comment__body">
+		                        <div class="comment__header">
+		                            <a href="#" class="comment__avatar entety__avatar avatar is-md is-round has-overlay">
+		                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		                            </a>
+		                            <div class="comment__info">
+		                                <div class="comment__user">
+		                                    <a href="#" class="comment__author small is-bolder">Андрей Борджиа</a>
+		                                    <a href="#" class="comment__link small">15 мая</a>
+		                                </div>
+		                                {% include '../components/comments_drop.twig' %}
+		                            </div>
+		                        </div>
+		                        <div class="comment__text">
+		                            <p> Японские предприниматели могут усыновлять преданных сотрудников — они становятся частью семьи и наследуют бизнес </p>
+		                        </div>
+		                    </div>
+		                    <div class="comment__footer rating-buttons">
+		                        <div class="comment__rating-buttons">
+					                <div class="btn is-ghost count_btn">
+					                    <span class="is_success">+44</span>
+					                    <div class="dropdown-menu_wrap">
+					                        <ul class="dropdown-menu"> 
+					                            <li><span class="menu__title"></span></li>
+					                        </ul>  
+					                    </div>
+					                </div>
+					                <div class="btn is-ghost count_btn">
+					                    <span class="reduce">-1</span>
+					                    <div class="dropdown-menu_wrap">
+					                        <ul class="dropdown-menu"> 
+					                            <li><span class="menu__title"></span></li>
+					                        </ul>  
+					                    </div>
+					                </div>
+		                        </div>
+				                <button class="btn is-ghost">
+				                    <svg class="icon is-left" aria-hidden="true" focusable="false">
+				                        <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+				                    </svg>
+				                    <span class="small is-bolder">Ответить</span>
+				                </button>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <form class="comments__form">
+		        <a href="#" class="entety__avatar is-md is-round has-overlay">
+		        <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		        </a>
+		        <div class="form__item">
+		            <div class="form__control-group">
+		                <button class="form__control-icon is-right button is-bare is-icon" type="button">
+		                    <svg role="img" class="icon is-md">
+		                        <use href="/assets/sprite/sprite.svg#icon-send"></use>
+		                    </svg>
+		                </button>
+		                <input type="text" class="form__control has-icon-right" required="" placeholder="Добавить комментарий">
+		            </div>
+		        </div>
+		    </form>
+		</div>
     </div>
+</div>
     
