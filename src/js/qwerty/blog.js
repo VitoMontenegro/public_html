@@ -73,6 +73,14 @@ jQuery(document).ready(function($){
 	    	$('.l-nav__modals').hide();
 	    	console.log($target);
 	    	$($target).show();
+	    });
+
+	    $('.l-nav__modals .is_close').on('click', function(){
+	    	$(this).closest('.l-nav__modals').hide();
+	    });
+    }
+    if ($(window).width() < 768) {
+	    $('.audio-sm-menu .menu__link').on('click', function() {
     		$('body').addClass('hover');
 	    });
 

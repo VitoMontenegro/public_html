@@ -102,3 +102,39 @@
 .primary-nav .is-more.for_tablet.open .menu .dropdown__link {
     justify-content:flex-start;
 }
+
+.primary-nav .bottom-btn.is-more .dropdown__menu{
+  @include media-breakpoint-down(xl) {
+    position: fixed;
+    background: var(--color-ink-inverse-base);
+    left: 11.2rem;
+    width: 20rem;
+    border-radius: var(--shape-border-radius-lg);
+    top: auto;
+    bottom: 5rem;
+    padding: 2rem;
+    
+    .btn.menu__link {
+      height: auto;
+      flex-direction: row;
+      padding-left: 2rem;
+      justify-content: flex-start;
+      background: inherit;
+      color: var(--color-ink-2ry);
+
+      svg {
+          margin: 0 1rem 0 0;
+          color: var(--color-ink-2ry);
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 2.4rem 1.6rem;
+  }
+}
