@@ -2781,3 +2781,305 @@
         </form>
     </div>
 </div>
+
+<div class="modal fade is-full" id="photoContent"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+       <button class="btn is-close is-top is-left pop_control" type="button" data-bs-dismiss="modal" aria-label="Close">
+            <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="modal-body modal__body">
+            <div class="photo-pop">
+                <div class="photo-pop__content">
+                    <button class="btn is-top sidebar_hide pop_control" type="button">                       
+                    </button>
+
+                    <div class="photo-pop__slider photo-slider">
+                        <div class="photo-slider__items">
+                            <!-- Story posted image -->
+                            <figure class="flex align-center justify-center">
+                                <img src="/assets/images/lili.jpg" alt="" class="entety__avatar_img"> 
+                            </figure>
+                            <a href="javascript:void(0)" data-item="previous" class="photo-slidenav-prev">
+                                <svg class="icon deg270" aria-hidden="true">
+                                    <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </a>
+                            <a href="javascript:void(0)" data-item="next" class="photo-slidenav-next">
+                                <svg class="icon deg90" aria-hidden="true">
+                                    <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-pop__side">
+                    <div class="photo-pop__nav">
+                        <div class="photo-pop__side__content">
+                            <div class="comments">
+                                <div class="comments__items">
+                                    <div class="comments__thread thread">
+                                        <div class="thread__indent-l-0">
+                                            <div class="thread__comment">
+                                                <div class="comment__body">
+                                                    <div class="comment__header">
+                                                        <a href="#" class="entety__avatar is-md is-round">
+                                                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                                        </a>
+                                                        <div class="comment__info">
+                                                            <div class="comment__user">
+                                                                <a href="#" class="comment__author small is-bolder">Agressia</a>
+                                                                <a href="#" class="comment__link small">вчера</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment__dropdown dropdown is-bottom-right">
+                                                            <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button">
+                                                                <svg role="img" class="icon">
+                                                                    <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">copy link</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-eye-slash"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">hide comment</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-complain"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">complain</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment__text">
+                                                        <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__footer rating-buttons">
+                                                    <div class="comment__rating-buttons">
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="is_success">+44</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="reduce">-1</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn is-ghost">
+                                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                                            <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                                        </svg>
+                                                        <span class="small is-bolder">Ответить</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="thread__children">
+                                                <div class="comment__body">
+                                                    <div class="comment__header">
+                                                        <a href="#" class="entety__avatar is-md is-round">
+                                                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                                        </a>
+                                                        <div class="comment__info">
+                                                            <div class="comment__user">
+                                                                <a href="#" class="comment__author small is-bolder">Agressia</a>
+                                                                <a href="#" class="comment__link small">вчера</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment__dropdown dropdown is-bottom-right">
+                                                            <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button">
+                                                                <svg role="img" class="icon">
+                                                                    <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">copy link</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-eye-slash"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">hide comment</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-complain"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">complain</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment__text">
+                                                        <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__footer rating-buttons">
+                                                    <div class="comment__rating-buttons">
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="is_success">+44</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="reduce">-1</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn is-ghost">
+                                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                                            <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                                        </svg>
+                                                        <span class="small is-bolder">Ответить</span>
+                                                    </button>
+                                                </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="comments__thread thread">
+                                        <div class="thread__indent-l-0">
+                                            <div class="thread__comment">
+                                                <div class="comment__body">
+                                                    <div class="comment__header">
+                                                        <a href="#" class="entety__avatar is-md is-round">
+                                                            <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                                        </a>
+                                                        <div class="comment__info">
+                                                            <div class="comment__user">
+                                                                <a href="#" class="comment__author small is-bolder">Agressia</a>
+                                                                <a href="#" class="comment__link small">вчера</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment__dropdown dropdown is-bottom-right">
+                                                            <button class="button is-bare is-ghost is-icon dropdown-toggle" type="button">
+                                                                <svg role="img" class="icon">
+                                                                    <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                                                                </svg>
+                                                            </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-copylink"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">copy link</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-eye-slash"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">hide comment</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">
+                                                                        <svg role="img" class="icon is-left">
+                                                                            <use href="/assets/sprite/sprite.svg#icon-complain"></use>
+                                                                        </svg>
+                                                                        <span class="label is-bolder">complain</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment__text">
+                                                        <p> Будучи в Японии обратила внимание на то что рядом с огромными городами рядом соседствует леса и никто не стремится там построить новый район или новый бизнес-центр. Т.е. внимание в отношении места где они живут дает очень большое уважение к ним самим.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="comment__footer rating-buttons">
+                                                    <div class="comment__rating-buttons">
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="is_success">+44</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn is-ghost count_btn">
+                                                            <span class="reduce">-1</span>
+                                                            <div class="dropdown-menu_wrap">
+                                                                <ul class="dropdown-menu">
+                                                                    <li><span class="menu__title"></span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn is-ghost">
+                                                        <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                                            <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+                                                        </svg>
+                                                        <span class="small is-bolder">Ответить</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="comments__form">
+                                    <a href="#" class="entety__avatar is-md is-round has-overlay">
+                                    <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+                                    </a>
+                                    <div class="form__item">
+                                        <div class="form__control-group">
+                                            <button class="form__control-icon is-right button is-bare is-icon" type="button">
+                                                <svg role="img" class="icon is-md">
+                                                    <use href="/assets/sprite/sprite.svg#icon-send"></use>
+                                                </svg>
+                                            </button>
+                                            <input type="text" class="form__control has-icon-right" required="" placeholder="Добавить комментарий">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

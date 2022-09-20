@@ -110,6 +110,11 @@
     }
   }
 
+  &.home-wrapper {
+    max-width: 1360px;
+    min-height: unset;
+  }
+
 }
 
 .primary-nav {

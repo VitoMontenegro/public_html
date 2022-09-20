@@ -15,6 +15,7 @@
                             <a class="logo big_logo" href="/">
                                 {% include "components/content_logo.twig" %}
                             </a>
+                            {% include './components/search_form.twig' %}
                         </div>
                     </div>
                     <div class="header__col is-buttons">
@@ -39,6 +40,14 @@
                                 </button>
                                 {% include "components/languages_modal.twig" %}
 
+                            </li>
+
+                            <li class="has-search-button">
+                                <button class="header__search-toggle btn is-compact is-icon" type="button" aria-haspopup="true" aria-label="Отправить поиск">
+                                    <svg role="img" class="icon">
+                                        <use href="/assets/sprite/sprite.svg#icon-search"></use>
+                                    </svg>
+                                </button>
                             </li>
                         </ul>
                     </div>

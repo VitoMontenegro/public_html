@@ -44,15 +44,21 @@
 
   &.is-home {
     border-bottom: none;
+    padding: $size-5 0 $size-4;
 
     @include media-breakpoint-up(sm) {
-      padding: $size-5 0 $size-4;
       z-index: var(--layer-zindex-header);
     }
-
+    .header__search {
+      display: none;
+    }
     @include media-breakpoint-down(sm) {
+      .header__search {
+        display: flex;
+      }
       .header__col {
-        &.is-buttons {
+        .header__button,
+        .header__language-toggle {
           display: none;
         }        
       }      

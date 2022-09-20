@@ -155,7 +155,7 @@
   }
 
   .left {
-      height: 15vh;
+      height: 10rem;
       width: 100%;
       background-image: url(/assets/images/main/sign-bg.png);
     @include media-breakpoint-up(sm) {
@@ -259,7 +259,7 @@
     @include media-breakpoint-up(sm) {
       height: 76rem;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       height: auto;
     }
     
@@ -269,7 +269,7 @@
     @include media-breakpoint-up(sm) {
       height: 50rem;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       height: auto;
     }
     
@@ -279,7 +279,7 @@
     @include media-breakpoint-up(sm) {
       height: 35rem;
     }
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       height: auto;
     }
     

@@ -85,4 +85,6 @@ $grid-breakpoints: (
 $container-max-widths: (
   lg: $size-max-width-container,
 );
+
+$size-resolution-retina: 'print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)';
 // #endregion

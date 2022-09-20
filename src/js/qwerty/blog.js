@@ -35,6 +35,10 @@ jQuery(document).ready(function($){
 
 	});
 
+	$('.sidebar_hide').on('click', function(){
+		$('.photo-pop').toggleClass('active');
+	});
+
 	$('#getLiveInfo').on('click', function(){
 		$('.content-card.modal-card').show();
 	});

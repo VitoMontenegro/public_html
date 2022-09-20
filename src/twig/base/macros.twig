@@ -1228,7 +1228,8 @@
 {% macro photo(entetyAvatarImg, entetyName,entetyCount) %}
     <div class="photo-list__item">
         <div class="photo-list__ava">
-            <a href="{{ entetyAvatarImg }}">
+            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#photoContent" aria-label="photoContent" tabindex="0">
+
                 <figure class="entety__bg has-border-radius-base">
                     <img src="{{ entetyAvatarImg }}" alt="" class="entety__avatar_img">
                 </figure>             

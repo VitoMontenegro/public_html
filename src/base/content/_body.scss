@@ -367,7 +367,8 @@ hr {
 //   height: 0;
 // }
 
-.primary-nav {
+.primary-nav,
+.photo-pop__side {
   overflow: visible; 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -377,7 +378,8 @@ hr {
 }
 
 
-.primary-nav::-webkit-scrollbar {
+.primary-nav::-webkit-scrollbar,
+.photo-pop__side::-webkit-scrollbar {
   width: 0;
   height: 0;
 }

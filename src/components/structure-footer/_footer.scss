@@ -1,11 +1,11 @@
 .footer {
-  padding-top: calc(var(size-space-base) + .6rem);
+  padding-top: calc(var(--size-space-base) + .6rem);
   padding-bottom: ($size-line * 4) - .6rem;
 
   @include media-breakpoint-down(sm) {
     padding-top: $size-6;
     padding-bottom: 6.6rem;
-    border-top: 1px solid var(color-ink-dark-border-alt);
+    border-top: 1px solid var(--color-ink-dark-border-alt);
   }
   &__container {
     @include media-breakpoint-down(sm) {
@@ -34,8 +34,8 @@
         margin: 0 calc($size-2 / 2) $size-1;
       }
       @include media-breakpoint-down(sm) {
-        font-size: var(font-size-small);
-        line-height: var(font-line-height-small);
+        font-size: var(--font-size-small);
+        line-height: var(--font-line-height-small);
       }
     }
     a {
@@ -86,7 +86,7 @@
     justify-content: center;
     .dropdown-toggle {
       padding: 0;
-      color: var(color-ink-blue-text);
+      color: var(--color-ink-blue-text);
       .icon {
         &.is-left {
           margin-left: 0;
