@@ -57,7 +57,9 @@
       margin-top: 5.6rem;
     }
   }
-
+  .buttons {
+    min-width: unset;
+  }
   .menu {
     display: flex;
     padding: 0;

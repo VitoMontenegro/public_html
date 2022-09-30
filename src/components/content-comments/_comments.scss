@@ -60,6 +60,13 @@
         margin-left: $size-2p5;
       }
     }
+    &-l-1p5 {
+      margin-left: $size-3;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: $size-3;
+      }
+    }
   }
   &__comment {
     margin-bottom: $size-3;
@@ -144,6 +151,48 @@
   &__action {
     &:not(:last-child) {
       margin-right: $size-3;
+    }
+  }
+}
+
+.header__notify {
+  .l-comment {
+        padding: 0 0 0 5rem;
+  }
+  .l-comment__avatar {
+    width: 4rem;
+    height: 4rem;
+    left: -5rem;
+
+  }  
+  .l-comment__header {
+    .icon {
+      background: #2061CB;
+      border-radius: 50%;
+      padding: 3px;
+      color: #fff;
+      position: absolute;
+      left: -26px;
+      top: 20px;
+    }
+  }
+  .l-comment__author {
+    font-weight: 600;
+  }
+  .l-comments__thread {
+    position: relative;
+    &.is_online {
+
+      &:after {
+        content: '';
+        width: $size-1;
+        height: $size-1;
+        border-radius: 50%;
+        background: #2061CB;
+        left: $size-1;
+        top: $size-1p5;
+        position: absolute;
+      }
     }
   }
 }

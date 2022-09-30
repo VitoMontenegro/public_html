@@ -1,0 +1,22 @@
+.event_hosted {
+	&__img {
+	    overflow: hidden;
+	    width: 4rem;
+	    height: 4rem;
+	    margin-right: 1.6rem;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;	
+	    
+	    img {
+		    object-fit: cover;
+		    width: 100%;
+		    height: 100%;
+	    }		
+	}
+
+	&__detail {
+	    display: flex;
+	    align-items: center;
+	}
+}

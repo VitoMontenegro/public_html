@@ -46,7 +46,6 @@
 
     @include media-breakpoint-up(md) {
       max-width: 60rem;
-      width: 90vw;
     }
 
   @include media-breakpoint-up(lg) {
@@ -234,7 +233,7 @@
   }
   &__links {
     margin-right: $size-3;
-
+    display: flex;
 
     a {
       color: var(--color-ink-2ry);
@@ -257,7 +256,7 @@
 
   &.is_sign-up {
     @include media-breakpoint-up(sm) {
-      height: 76rem;
+      min-height: 76rem;
     }
     @include media-breakpoint-up(lg) {
       height: auto;

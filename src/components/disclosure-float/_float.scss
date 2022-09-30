@@ -27,7 +27,8 @@
 
   @include media-breakpoint-up(sm) {
     position:absolute;
-    width: var(--size-width-sm);
+    width: max-content;
+    min-width: var(--size-width-sm);
     border-radius: var(--shape-border-radius-base);
     top: auto;
     bottom: auto;

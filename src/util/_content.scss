@@ -21,6 +21,9 @@
 .justify-center {
   justify-content:center;
 }
+.justify-around {
+  justify-content:space-around;
+}
 
 .is_link {
   cursor: pointer;
@@ -79,6 +82,15 @@
     display: none;
   }
 }
+.is_left {
+  text-align: left;
+}
+.md_left {
+  text-align: center;
+    @include media-breakpoint-up(md) {        
+      text-align: left;;
+    }
+}
 
 .relative,
 %relative {
@@ -116,7 +128,9 @@
     }
   }
 }
-
+.is_bold {
+  font-weight: 500;
+}
 
 /************************************************************/
 
@@ -230,4 +244,13 @@
       
     }
   }
+}
+.circle {
+    border-radius: 50%;
+}
+.list-style-none {
+  list-style: none;
+}
+.is_uppercase {
+  text-transform: uppercase;
 }

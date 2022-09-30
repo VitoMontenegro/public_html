@@ -35,11 +35,13 @@
 // @import 'components/content/kpi';
 // @import 'components/input/combobox';
 // @import 'components/structure-card/product-tile';
+@import 'components/spinner/spinner';
 @import 'components/structure-add-story/add-story';
 @import 'components/structure-co-hosts/co-hosts';
 @import 'components/structure-l-video/l-video';
 @import 'components/structure-fb-slider/fb-slider';
 @import 'components/structure-lang/lang';
+@import 'components/structure-img-wrapper/img-wrapper';
 @import 'components/structure-post-card/post-card';
 @import 'components/structure-photo-popup/photo-popup';
 @import 'components/structure-story-slider/story-slider';
@@ -86,11 +88,15 @@
 
 // Pages
 @import 'pages/auth/auth';
+@import 'pages/about/about';
+@import 'pages/event/event';
 // @import 'pages/blog/blog';
 @import 'pages/home/home';
 // @import 'pages/official/contacts';
+@import 'pages/nearby/nearby';
 @import 'pages/profile/profile';
 @import 'pages/promotions/promotions';
+@import 'pages/stories-archive/stories-archive';
 // @import 'pages/communities/communities';
 // @import 'pages/job/job';
 // @import 'pages/tweaks';

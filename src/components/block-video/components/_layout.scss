@@ -74,7 +74,7 @@
 // desired aspect ratio. Default to 16x9 unless another ratio is given.
 @mixin apply-aspect-ratio($width, $height) {
   /* padding-top: 100% * ($height / $width); */
-  padding-top:  calc($height / $width * 100%);
+  padding-top:  90%;
 }
 
 // Not including a default AR in vjs-fluid because it would override
@@ -86,6 +86,10 @@
 .video-js.vjs-1-1 {
   width: 100%;
   max-width: 100%;
+}
+.img-wrapper.video-js {
+  width: 100%;
+  height: 100%;
 }
 
 .video-js.vjs-fluid:not(.vjs-audio-only-mode),

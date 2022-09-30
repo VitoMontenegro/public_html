@@ -101,6 +101,10 @@
 %no_bg {
   background: unset;
 }
+.border-top,
+%border-top {
+  border-top: 1px solid #D1D9E6;
+}
 .border-bottom,
 %border-bottom {
   border-bottom: 1px solid #D1D9E6;
@@ -215,4 +219,18 @@ body .is_open {
       left: -50%;
     }    
   }
+}
+
+.alert {
+    margin-top: 3.2rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    .name__equipment {
+        color: var(--color-ink-error-base);
+    }
+}
+.alert-primary {
+    color: var(--color-ink-link);
+    background-color: var(--color-background-hero);
+    border-radius: var(--shape-border-radius-sm);
 }

@@ -290,12 +290,75 @@
                                         </div>
                                     </div>
 
-                                    <a class="btn menu__link" href="#" target="_blank">
+                                    <button class="btn menu__link add_more" type="button">
                                         <svg class="icon is-left" aria-hidden="true" focusable="false">
                                             <use href="/assets/sprite/sprite.svg#icon-plus"></use>
                                         </svg>
                                         add another university
-                                    </a>
+                                    </button>
+
+                                    <div class="form__group ">
+                                        <div class="title">New place of study</div>
+                                    
+
+                                        <div class="form__item">
+                                            <label for="educationLevel">the level of education *</label>
+                                            <input class="form__control" id="educationLevel" name="educationLevel" type="text" placeholder="">
+                                        </div>
+
+                                        <div class="form__item">
+                                            <label for="educationProfession">Profession *</label>
+                                            <input class="form__control" id="educationProfession" name="educationProfession" type="text" placeholder="">
+                                        </div>
+
+                                        <div class="form__item">
+                                            <label for="nameInstitution">The name of the institution *</label>
+                                            <input class="form__control" id="nameInstitution" name="nameInstitution" type="text" placeholder="">
+                                        </div>
+
+                                        <div class="form__item">
+                                            <span class="flex justify-between">
+                                            <label>
+                                                <span class="form-label__title">Country *</span>
+                                                <select name="" id=""></select>
+
+                                            </label>
+                                            <label>
+                                                <span class="form-label__title">City *</span>
+                                                 <select name="" id=""></select>
+                                            </label>
+                                            </span>
+                                        </div>
+
+                                        <div class="form__item">
+                                            <span class="form-label__title">Start date:</span>
+                                            <span class="flex justify-between">
+                                                <label for="startLearnMounth">
+                                                    <input class="form__control" id="startLearnMounth" name="startLearnMounth" type="text" placeholder="Mounth">
+                                                </label>
+                                                <label for="starLearnYear">
+                                                    <input class="form__control" id="starLearnYear" name="starLearnYear" type="text" placeholder="Year">
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form__item">
+                                            <span class="form-label__title">End date:</span>
+                                            <span class="flex justify-between">
+                                                <label for="endLearnMounth">
+                                                    <input class="form__control" id="endLearnMounth" name="endLearnMounth" type="text" placeholder="Mounth">
+                                                </label>
+                                                <label for="endLearnYear">
+                                                    <input class="form__control" id="endLearnYear" name="endLearnYear" type="text" placeholder="Year">
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="form__item">
+                                            <label class="flex align-center">
+                                                <input type="checkbox" name="stillWork"> 
+                                                I am still learning
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>                           
                         </div>
@@ -3083,3 +3146,91 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade is-lg" id="editAlbum" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <form class="modal-content modal__box" id="edit_photo">
+            <div class="modal-body modal__body">
+                <div class="sm_visible">
+                    <div class="modal__header">
+                        <button class="sm_visible btn is-ghost is_uppercase is_close" type="button" data-bs-dismiss="modal" aria-label="Cancel">
+                            Cancel
+                        </button>
+
+                        <h3 class="modal__title">Edit album</h3>
+
+                        <button class="sm_visible btn is-ghost is_uppercase is_close">
+                            <span>Save</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal__content">
+                    <div class="form__photo-selectors photo-selectors">
+                        <div class="photo-selectors__group">
+                            <div class="form__item">
+                                <label for="albumDesc">Name:</label>
+                                <input class="form__control" id="albumDesc" name="albumDesc" type="text" placeholder="add Email">
+                            </div>
+                            <div class="form__item">
+                                <label for="albumDesc">Description:</label>
+                                <textarea name="albumDesc" id="albumDesc" rows="3" placeholder=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer modal__footer has-dual-purpose">
+                <div class="left">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Cancel">
+                        Cancel
+                    </button>
+                </div>
+                <div class="right edit__icons">
+                     <a href="javascript:void(0);" class="button flex align-center">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+                        </svg>
+                        <span class="is-danger button small">Delete</span>
+                    </a>
+                    <a class="btn is-primary button" href="/ru/editpost">
+                        Save
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <div class="modal fade is-lg" id="complainModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content modal__box">
+                <div class="modal-body modal__body">
+                    <div class="modal__header">
+                        <button class="sm_visible btn is-ghost is_uppercase is_close" type="button" data-bs-dismiss="modal" aria-label="Cancel">
+                            Cancel
+                        </button>
+
+                        <h3 class="modal__title">Title</h3>
+
+                        <button class="sm_visible btn is-ghost is_uppercase is_close">
+                            <span>Save</span>
+                        </button>
+                    </div>
+
+                    <div class="modal__body">
+                    </div>
+                </div>
+                
+                <div class="modal-footer modal__footer has-dual-purpose">
+                    <button class="btn is-close" type="button" data-bs-dismiss="modal" aria-label="Cancel">
+                        Cancel
+                    </button>
+                    <button class="btn is-primary" type="submit">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

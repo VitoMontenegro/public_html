@@ -65,13 +65,16 @@
 .dropdown-menu,
 .dropdown__menu {
   @extend %float;
+  white-space: nowrap;
   display: none;
+
   &.is-open,
   .dropup.open &,
   .dropdown.open & {
     @extend %float-open;
     display: block;
   }
+  
   &.size_xs {
     width: var(--size-width-xs);
   }

@@ -1,7 +1,8 @@
+/projects/'+PageModelInstance.extraData.domain()+'/images/
+/projects/"+PageModelInstance.extraData.domain()+"/images/
+/projects/`+PageModelInstance.extraData.domain()+`/images/
 
-
-
-$(document).ready(function($){
+jQuery(document).ready(function($){
 	$(' .dropdown').on('click', function(){
 		//$('.dropdown').not($(this)).removeClass('open');
 
@@ -483,5 +484,3 @@ $(document).ready(function($){
 	});
 
 });
-
-

@@ -103,7 +103,7 @@
 .list__captio__item {
     font-weight: var(--font-weight-base);
     font-size: var(--font-size-small);
-    line-height: var(--font-line-height-base);
+    line-height: $size-2;
     /* or 133% */
 
     text-align: center;
