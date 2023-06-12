@@ -1,0 +1,166 @@
+@use 'sass:math';
+
+.icon {
+  color: var(--color-ink-3ry);
+  --icon-stroke: var(--color-ink-3ry);
+  --stroke: var(--color-ink-3ry);
+  --icon-stroke-width: 2;
+  --icon-fill: var(--color-background-alt);
+  --fill: transparent;
+
+  display: inline-block;
+
+  // Prevent the icon from shrinking inside a flex container.
+  flex-shrink: 0;
+  overflow: hidden;
+
+  // Vertical-align: middle не всегда
+  // выравнивает по визуальному центру. В таких случаях надо
+  // экспериментировать с цифровыми значениями
+  vertical-align: middle;
+  transition: fill var(--motion-duration-sm),
+              opacity var(--motion-duration-sm);
+
+  width: var(--size-height-icon);
+  height: var(--size-height-icon);
+
+  &.is-lg,
+  .icon-badge.is-lg {
+    --size-height-icon: 4.4rem;
+  }
+  &.is-left{
+    margin-right: $size-1;
+  }
+  &.is-right{
+    margin-left: $size-1;
+  }
+    
+  &.is-left-xl {
+    @include media-breakpoint-up(xl) {
+      margin-right: $size-1;
+    }
+  }
+
+  &.is-center {
+    margin-right: 0;
+  }
+
+  // Sizes
+  &.is-sm {
+    width: $size-2p5;
+    height: $size-2p5;
+  }
+  &.is-md {
+    width: $size-3;
+    height: $size-3;
+  }
+
+
+  // Colors
+  &.is-primary {
+    color: var(--color-primary);
+  }
+
+  &.is-danger{
+    color: var(--color-ink-danger-fill);
+  }
+
+  &.is_rotate {
+    transform: rotate(180deg);
+  }
+  
+  &.is_white {
+    color: #FFFFFF;
+  }
+  
+  &.is_blue {
+    color: var(--icon-fill-blue);
+  }
+  &.is-heart.is-selected {
+    color: var(--color-ink-danger-fill);
+    --fill: hsl(1 73% 52%);
+  }
+
+}
+.header__language-toggle .icon {
+  height: var(--size-height-icon);
+  width: var(--size-height-icon);
+}
+.is-primary {
+  .icon {
+      color: var(--color-ink-inverse-base);
+  }
+  &.has_text {
+    .icon {
+      color: var(--color-ink-inverse-2ry);
+    } &:hover {
+      .icon {
+          color: var(--color-ink-inverse-base);
+      }
+    }
+  }
+}
+%icon-active,
+.icon-active {
+  --icon-stroke: var(--color-ink-inverse-base);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+%icon-alert,
+.icon-alert {
+  --icon-stroke: var(--color-ink-error-base);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
+%icon-ready,
+.icon-ready {
+  --icon-stroke: var(--color-ink-success-fill);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
+%icon-backround,
+.icon-backround {
+  color: var(--color-background-base);
+  --icon-stroke: var(--color-background-base);
+  filter: drop-shadow(var(--layer-box-shadow-z1));
+}
+
+.is_opacity {
+  opacity: 0.54;
+}
+.unsubscribebtn {
+  .icon {
+    color: var(--color-ink-inverse-base);
+  }
+} 
+.subscribebtn {
+  .icon {
+    color: var(--icon-fill-blue);
+  }
+}
+button.unsubscribebtn,
+.btn.is-ghost.unsubscribebtn {
+    background: none;
+    background-color: var(--color-background-primary-dark);;
+    background: var(--color-background-primary-dark)    ;
+    box-shadow: inset 0px 4px 8px rgba(8, 25, 53, 0.24), inset 0px 2px 4px rgba(8, 25, 53, 0.24);
+}
+.unsubscribe .btn.is-close {
+    margin-right: 0.5rem;
+}
+
+.icon_toggle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+// -----------------------------------------------------------------------------
+// OVERRIDES
+// -----------------------------------------------------------------------------
+
+

@@ -1,0 +1,126 @@
+.is_market {
+  grid-column: 2 / span 12 !important;
+}
+
+.consumer {
+  @include market-width;
+  // .consumer__content
+  &__content {
+    display: flex;
+    gap: 4.8rem;
+    margin-bottom: 2.4rem;
+    @include media-breakpoint-down(lg) {
+      gap: 4rem;
+    }
+    @include media-breakpoint-down(md) {
+      gap: 2rem;
+    }
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      gap: 0rem;
+    }
+  }
+
+  // .consumer__right-data
+  &__right-data {
+    max-width: 65.7rem;
+
+    @include media-breakpoint-down(xl) {
+      max-width: 46.9rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 56rem;
+    }
+  }
+
+  // .consumer__header
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  // .consumer__title
+  &__title {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #081935;
+    padding: 0 0 2.2rem 0;
+
+    & span {
+      color: #4f88e3;
+    }
+    @include media-breakpoint-down(xl) {
+      font-weight: 500;
+      font-size: 2.8rem;
+      line-height: 1.14;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 2.2rem;
+    }
+  }
+
+  // .consumer__quantities
+  &__quantities {
+    display: grid;
+    grid-template-columns: repeat(4, 9.7rem);
+    column-gap: 0.8rem;
+    padding: 0.8rem 0 1.6rem;
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(2, 9.7rem);
+      grid-template-rows: auto auto;
+    }
+  }
+
+  // .consumer__block-quantity
+  &__block-quantity {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem 1.6rem;
+    min-width: 9.1rem;
+    font-family: "Roboto";
+    font-weight: 500;
+    line-height: 1.33;
+    color: #475f85;
+  }
+
+  &__text-1 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  &__text-2 {
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 1.41;
+    color: #475f85;
+    padding: 0;
+  }
+
+  &__text-3 {
+    font-size: 1.2rem;
+    padding: 0;
+    line-height: 1.33;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4.2rem;
+      height: 0.1rem;
+      top: 0;
+      left: 0;
+      top: calc(50% - 0rem - 0.1em);
+      background-color: #475f85;
+    }
+  }
+}
+
+// -------active
+.block-quantity-active {
+  background: #e9f0fc;
+  border-radius: 0.8rem;
+  .text-2-active {
+    color: #174692;
+  }
+}

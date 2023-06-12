@@ -108,14 +108,24 @@
   }
 
   &:active {
-    background-image: none;
-    box-shadow:
-      inset 0 0 0 1px var(--color-ink-base),
-      inset 0 3px 5px var(--color-ink-base),
-      inset 0 0 0 100px var(--color-ink-accent);
+    // background-image: none;
+    // box-shadow:
+    //   inset 0 0 0 1px var(--color-ink-base),
+    //   inset 0 3px 5px var(--color-ink-base),
+    //   inset 0 0 0 100px var(--color-ink-accent);
+  }
+  &.no_icon {
+    color: var(--color-ink-inverse-base);
   }
 }
 
+button.subscribebtn,
+.btn.is-ghost.subscribebtn {
+    color: var(--color-ink-2ry);
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+}
 
 .buttons {
   margin: 0;

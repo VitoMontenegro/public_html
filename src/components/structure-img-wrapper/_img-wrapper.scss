@@ -17,6 +17,11 @@ $motion-duration-sm: .124s;
 @supports not at-rule(@layer) {
 
   .img-wrapper {
+    max-height: clamp(200px, 600px, 80vh);
+    
+    a {
+      position: relative;
+    }
     
     img {
       border-radius: var(--shape-border-radius-lg);
@@ -34,7 +39,7 @@ $motion-duration-sm: .124s;
       gap: $size-1;
       grid-template-columns: 1fr 1fr;
       margin-inline: auto;
-      width: min(100%, 600px);
+      width: 100%;
       
       img {
         object-fit: cover;
@@ -42,6 +47,9 @@ $motion-duration-sm: .124s;
         height: 100%;        
       }
 
+    }
+    &.has-2-items {
+      aspect-ratio: 2 / 1;
     }
 
 

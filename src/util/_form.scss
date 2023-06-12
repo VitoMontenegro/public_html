@@ -43,7 +43,8 @@ body {
 	    }
 	}
     .chosen-search-input {
-        display:none;
+        // display:none;
+        min-height:inset;
         &.default {
              display: block;
          }

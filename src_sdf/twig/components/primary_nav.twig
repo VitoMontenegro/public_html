@@ -1,0 +1,190 @@
+
+        
+        
+        	<a class="primary-nav__logo logo" href="/">
+			    {% include '../components/content_logo.twig' %}
+		  	</a>
+
+            <ul class="menu" role="menu">
+                <li class="menu__item is-mypage">
+                	<a class="menu__link active" href="/mypage/">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-home"></use>
+		                </svg>
+	                	<span class="label">My page</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-news">
+                	<a class="menu__link" href="/news/">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-news"></use>
+		                </svg>
+	                	<span class="label">News</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-add">
+                	<a class="menu__link active" href="javascript:void(0)">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-plus"></use>
+		                </svg>
+	                	<span class="label">Add</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-messenger">
+                	<a class="menu__link" href="/messenger/">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-messenger"></use>
+		                </svg>
+	                	<span class="label">Messenger</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-friends">
+                	<a class="menu__link" href="/friends/">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-friends"></use>
+		                </svg>
+	                	<span class="label">Friends</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-community">
+                	<a class="dropdown__link" href="/community">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-community"></use>
+		                </svg>
+	                	<span class="label">Community</span>
+               	 	</a>
+                </li>
+                <li class="menu__item is-organizations">
+                	<a class="dropdown__link" href="/organizations">
+		                <svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-organizations"></use>
+		                </svg>
+	                	<span class="label">Organizations</span>
+               	 	</a>
+                </li>
+                <li class="menu__item dropdown is-more for_tablet">
+                	<a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                		<svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-more"></use>
+		                </svg>
+		                <span class="label">More</span>
+                	</a>
+                	<div class="dropdown-menu_wrap">
+			            <ul class="dropdown__menu menu" role="menu" aria-label="More">
+			                <li class="menu__item is-events">
+			                	<a class="dropdown__link" href="/events">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-events"></use>
+					                </svg>
+				                	<span class="label">Events</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-promotions">
+			                	<a class="dropdown__link" href="/promotions">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-promotions"></use>
+					                </svg>
+				                	<span class="label">Promotions</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-advertising">
+			                	<a class="dropdown__link" href="/advertising/">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-advertising"></use>
+					                </svg>
+				                	<span class="label">Advertising</span>
+			               	 	</a>
+			                </li>
+			            </ul>                		
+                	</div>
+                </li>
+                <li class="menu__item dropdown is-more for_mobile">
+                	<a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                		<svg class="icon" aria-hidden="true" focusable="false">
+		                	<use href="/assets/sprite/sprite.svg#icon-more"></use>
+		                </svg>
+		                <span class="label">More</span>
+                	</a>
+                	<div class="dropdown-menu_wrap">
+			            <ul class="dropdown__menu menu" role="menu" aria-label="More">
+
+			                <li class="menu__item is-friends__copy">
+			                	<a class="dropdown__link" href="#">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-friends"></use>
+					                </svg>
+				                	<span class="label">Friends</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-community__copy">
+			                	<a class="dropdown__link" href="/community">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-community"></use>
+					                </svg>
+				                	<span class="label">Community</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-organizations__copy">
+			                	<a class="dropdown__link" href="/organizations">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-organizations"></use>
+					                </svg>
+				                	<span class="label">Organizations</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-events__copy">
+			                	<a class="dropdown__link" href="/events">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-events"></use>
+					                </svg>
+				                	<span class="label">Events</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-promotions__copy">
+			                	<a class="dropdown__link" href="/promotions">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-promotions"></use>
+					                </svg>
+				                	<span class="label">Promotions</span>
+			               	 	</a>
+			                </li>
+			                <li class="menu__item is-advertising__copy">
+			                	<a class="dropdown__link" href="/advertising/">
+					                <svg class="icon" aria-hidden="true" focusable="false">
+					                	<use href="/assets/sprite/sprite.svg#icon-advertising"></use>
+					                </svg>
+				                	<span class="label">Advertising</span>
+			               	 	</a>
+			                </li>
+			            </ul>                		
+                	</div>
+                </li>
+            </ul> 
+
+            <div class="menu__item dropdown is-more bottom-btn">
+            	<a href="javascript:void(0)" class="menu__link"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            		<svg class="icon" aria-hidden="true" focusable="false">
+	                	<use href="/assets/sprite/sprite.svg#icon-plus"></use>
+	                </svg>
+            	</a>
+            	<div class="dropdown-menu_wrap">
+					<ul class="dropdown__menu buttons">
+						<li>
+							<button class="btn menu__link menu__link is-primary has_text iconFix" type="button" data-bs-toggle="modal" data-bs-target="#createPost" aria-label="createPost">   
+		            			<svg class="icon" aria-hidden="true" focusable="false">
+		                			<use href="/assets/sprite/sprite.svg#icon-plus"></use>
+		            			</svg>
+		            			<span>Publication</span>
+							</button>
+						</li>
+						<li>
+							<button class="btn menu__link" type="button" data-bs-toggle="modal" data-bs-target="#broadcastModal" aria-label="broadcastModal">   
+		            			<svg class="icon" aria-hidden="true" focusable="false">
+		                			<use href="/assets/sprite/sprite.svg#icon-broadcast"></use>
+		            			</svg>
+		            			<span>Broadcast</span>
+							</button>
+						</li>
+					</ul> 
+            	</div>
+            </div>  

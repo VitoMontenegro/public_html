@@ -1,0 +1,153 @@
+{% extends "../index_single.twig" %} {% set title = 'Checkout payment' %} {%
+block content %}
+<div class="checkout-payment">
+  <div class="checkout-payment__content">
+    <div class="checkout-payment__shop-block">
+      {# ------- block order ------ #}
+      <div class="checkout-payment__stages">
+        <h2 class="checkout-payment__title">Оформление заказа</h2>
+        <div class="checkout-payment__wrapper">
+          <div class="checkout-payment__stage stage-full-bg">
+            <p class="checkout-payment__stage-bg-text agr-text">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+              </svg>
+            </p>
+            <span class="checkout-payment__stage-text">доставка</span>
+          </div>
+          <div class="checkout-payment__line-between"></div>
+          <div class="checkout-payment__stage stage-full-bg">
+            <p class="checkout-payment__stage-bg-text">2</p>
+            <span class="checkout-payment__stage-text">оплата</span>
+          </div>
+        </div>
+        <div class="checkout-payment__stage-info">
+          в корзине - <span>5</span> товаров на <span>75 550</span>₽
+        </div>
+      </div>
+      {# ------- end block order ------ #}
+      <div class="checkout-payment__choice-delivery mb-2">
+        <div class="checkout-payment__header-list">
+          <ul class="checkout-payment__content-list">
+            <li class="checkout-payment__item active-item">
+              <button
+                class="btn is-ghost"
+                type="button"
+                aria-label="Edit profile"
+              >
+                <span>карта</span>
+              </button>
+            </li>
+            <li class="checkout-payment__item">
+              <button
+                class="btn is-ghost"
+                type="button"
+                aria-label="Edit profile"
+              >
+                <span>наличные</span>
+              </button>
+            </li>
+            <li class="checkout-payment__item">
+              <button
+                class="btn is-ghost"
+                type="button"
+                aria-label="Edit profile"
+              >
+                <span>безналичный платёж</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="checkout-payment__registration">
+      <div class="checkout-payment__container">
+        <form class="checkout-payment__control form-auth__controls">
+          {# ---------- form item ------------ #}
+          <div class="checkout-payment__block mb-1">
+            <div class="checkout-payment__wrap-input">
+              <label class="wdth-label-full ttu"
+                >владелец карты
+                <input
+                  type="text"
+                  class="is-border-st"
+                  placeholder="Так, как написано на карте"
+                />
+              </label>
+            </div>
+            <div
+              class="checkout-payment__wrap-input wrap-label-cart wrap-inpt-xl"
+            >
+              <label class="wdth-label-cart ttu"
+                >номер карты
+                <input type="number" class="is-border-st" placeholder="" />
+              </label>
+              <label class="ttu wdth-label"
+                >ММ / ГГ
+                <input type="number" class="is-border-st" placeholder=""
+              /></label>
+              <h3 class="checkout-payment__visible-text wdth-label-cart">
+                Последние цифры на обороте карты
+              </h3>
+              <label class="ttu wdth-label">
+                cvv
+                <span class="checkout-payment__question">?</span>
+                <input type="password" class="is-border-st" placeholder=""
+              /></label>
+            </div>
+          </div>
+          {# -------------- #}
+          <div class="checkout-payment__wrap-input mb-2">
+            <label
+              for="auth-questions-item"
+              class="flex align-center near-block-label"
+            >
+              <input
+                id="auth-questions-item"
+                type="checkbox"
+                name="choice-status"
+                checked
+              />
+              <span class="checkout-payment__status"
+                >Запомнить эту карту для следующих заказов</span
+              >
+            </label>
+          </div>
+          <div class="checkout-payment__comments">
+            <div class="checkout-payment__btn-block">
+              <button type="button" class="btn no-icon">
+                <span class="label is-bolder">назад</span>
+              </button>
+              <button type="submit" class="btn is-primary">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                </svg>
+                <span class="label is-bolder">оплатить</span>
+              </button>
+            </div>
+          </div>
+        </form>
+        {# ----- info and time ----- #}
+        <div class="checkout-payment__info-time">
+          <h4 class="checkout-payment__certificat">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-lock-big"></use>
+            </svg>
+            защищено сертификатом SSL
+          </h4>
+          <h4 class="checkout-payment__certificat">
+            Осталось <span>19:59</span>
+          </h4>
+        </div>
+        {# ------------- #}
+      </div>
+    </div>
+    {# ---- #}
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

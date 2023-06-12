@@ -1,0 +1,17 @@
+{% extends "../index_single.twig" %}
+
+
+
+{% set title = 'Select your language' %}
+
+
+{% block content %}
+    <div class="main__body main__content__body">
+        {% include '../components/group_content_header.twig' %}
+        <div class="languages">
+            {% include "../components/languages.twig" %}
+        </div>
+        
+    </div>
+{% endblock %}
+

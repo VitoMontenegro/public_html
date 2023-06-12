@@ -1,0 +1,848 @@
+{% extends "../index_single.twig" %} {#{% extends "../index.twig" %}#} {% set
+title = 'Buyer Capital Good' %} {% block content %}
+<div class="mp-capital">
+  <div class="mp-capital__content">
+    {# ---------- left-capital-data ----------- #}
+    <div class="mp-capital__left-data left-capital-data">
+      <div class="left-capital-data__carousel">
+        <div class="left-capital-data__carousel-container">
+          <div class="left-capital-data__carousel-item active">
+            <img src="/assets/images/market/mobile-house.jpg" alt="Image 1" />
+          </div>
+        </div>
+        <div class="left-capital-data__carousel-nav">
+          <button class="left-capital-data__nav-btn btn-prev-img">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+          {# ----- carousel ----- #}
+          <ul class="left-capital-data__carousel-list">
+            <li
+              class="left-capital-data__carousel-item-img active-img"
+              data-index="0"
+            >
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 1"
+              />
+            </li>
+            <li class="left-capital-data__carousel-item-img" data-index="1">
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 2"
+              />
+            </li>
+            <li class="left-capital-data__carousel-item-img" data-index="2">
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 3"
+              />
+            </li>
+            <li class="left-capital-data__carousel-item-img" data-index="3">
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 4"
+              />
+            </li>
+            <li class="left-capital-data__carousel-item-img" data-index="4">
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 5"
+              />
+            </li>
+            <li class="left-capital-data__carousel-item-img" data-index="5">
+              <img
+                src="/assets/images/market/mobile-house.jpg"
+                width="48px"
+                height="64px"
+                alt="Image 6"
+              />
+            </li>
+          </ul>
+          {# ----- end carousel ----- #}
+          <button class="left-capital-data__nav-btn btn-next-img">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    {# ---------- end left-data ----------- #} {# ---------- right-data
+    ----------- #}
+    <div class="mp-capital__right-data right-data">
+      <div class="mp-capital__header">
+        <div class="mp-capital__rating ratings-capital">
+          <div class="ratings-capital__likes">
+            <p class="ratings-capital__likes-counter">Пока нет отзывов</p>
+          </div>
+          <div class="ratings-capital__favorites">
+            <button class="ratings-capital__favorite">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-bookmark"></use>
+              </svg>
+              <span>сохранить</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mp-capital__main-info">
+        <h2 class="mp-capital__title">
+          Современный модульный мобильный сборный дом с панорамным остеклением
+        </h2>
+        <div class="mp-capital__quantities mb-1">
+          {# ---- block price ---- #}
+          <div class="mp-capital__block-quantity block-quantity-active">
+            <p class="mp-capital__text-1">1–4 шт.</p>
+            <p class="mp-capital__text-2 text-2-active">1 535 279 ₽</p>
+          </div>
+          {# ----------- #} {# ---- block price ---- #}
+          <div class="mp-capital__block-quantity">
+            <p class="mp-capital__text-1">>=5 шт.</p>
+            <p class="mp-capital__text-2">1 458 515 ₽</p>
+            <p class="mp-capital__text-3">-5%</p>
+          </div>
+          {# ----------- #}
+        </div>
+        <div class="mp-capital__size-table material-data">
+          {# --------- material --------- #}
+          <div class="material-data__list">
+            <h2 class="material-data__title">материал:</h2>
+            <button class="material-data__checked button btn" type="button">
+              <svg class="icon is-left" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <span class="label is-bolder">Алюминиевый сплав</span>
+            </button>
+            <div class="material-data__checked border border-1 ttu">
+              <span>стальной каркас</span>
+            </div>
+          </div>
+          {# --------- end material --------- #} {# --------- lead time
+          --------- #}
+          <div class="material-data__times mb-1">
+            <h2 class="material-data__title">Время выполнения заказа:</h2>
+            <div class="material-data__table">
+              <div class="material-data__element border-top border-bottom ttu">
+                1–10 шт.
+              </div>
+              <div class="material-data__element border-top border-bottom ttu">
+                > 10
+              </div>
+              <div
+                class="material-data__element border-top border-bottom elem-text"
+              >
+                60 дней
+              </div>
+              <div
+                class="material-data__element border-top border-bottom elem-text"
+              >
+                Договорное
+              </div>
+            </div>
+          </div>
+          {# --------- end lead time --------- #} {# --------- lead time
+          --------- #}
+          <div class="material-data__delivery">
+            <div class="material-data__content mb-1">
+              <h2 class="material-data__title">доставка:</h2>
+              <button class="material-data__checked button btn" type="button">
+                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                </svg>
+                <span class="label is-bolder">РЖД</span>
+              </button>
+            </div>
+            <div class="material-data__text small">
+              Для оформления заказов на производственные и крупногабаритные
+              товары, свяжитесь напрямую с производителем / дистрибьютером.
+            </div>
+            {# --------- end lead time --------- #}
+          </div>
+
+          <div class="mp-capital__description-product capital-description">
+            {# -------------- #} {# -------------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">
+                Описание и характеристики
+              </h2>
+              <div class="capital-description__lists list-capital">
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Применение: загородный дом, кемпинг, летний детский лагерь,
+                    кафе, рабочее общежитие, воинская казарма, сторожка.
+                  </li>
+                  <li class="capital-description__item">
+                    Количество жителей / постояльцев: 2.
+                  </li>
+                  <li class="capital-description__item">
+                    Площадь здания: 24,5 кв. м.
+                  </li>
+                  <li class="capital-description__item">
+                    Размеры: 7 × 3,5 × 3,2 м.
+                  </li>
+                  <li class="capital-description__item">Вес нетто: 5,5 т.</li>
+                  <li class="capital-description__item">
+                    Привлекательный дизайн.
+                  </li>
+                </ul>
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Типовой проект или индивидуальное проектирование.
+                  </li>
+                  <li class="capital-description__item">
+                    Дополнительные возможности: дизайн интерьера,
+                    3D-моделирование пространства.
+                  </li>
+                  <li class="capital-description__item">
+                    Производство в Иркутске.
+                  </li>
+                  <li class="capital-description__item">
+                    Возможности поставки: 10 шт. / мес.
+                  </li>
+                  <li class="capital-description__item">Гарантия: 1 год.</li>
+                </ul>
+              </div>
+            </div>
+            {# -------------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">Конструкция</h2>
+              <div class="capital-description__lists">
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Сверхмощная открытая алюминиевая рама с фторуглеродным
+                    покрытием.
+                  </li>
+                  <li class="capital-description__item">
+                    Закаленное теплопоглощающее стекло, обладающее
+                    звукоизоляционными свойствами.
+                  </li>
+                  <li class="capital-description__item">Сигнализация.</li>
+                </ul>
+              </div>
+            </div>
+            {# -------------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">Отделка и интерьер</h2>
+              <div class="capital-description__lists">
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Подвесные потолки и стеновые панели.
+                  </li>
+                  <li class="capital-description__item">
+                    Экологичный деревянный пол в основном помещении.
+                  </li>
+                  <li class="capital-description__item">
+                    Кухня со столом и мойкой.
+                  </li>
+                  <li class="capital-description__item">
+                    Внутренняя канализация и водопровод.
+                  </li>
+                  <li class="capital-description__item">
+                    Туалет и душевая кабина.
+                  </li>
+                  <li class="capital-description__item">
+                    Электропроводка и система освещения.
+                  </li>
+                  <li class="capital-description__item">
+                    Мраморный пол в санузле.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {# ----------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">Оплачивается отдельно</h2>
+              <div class="capital-description__lists">
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Электрический подогрев пола.
+                  </li>
+                  <li class="capital-description__item">
+                    Электроника и бытовая техника: холодильник, телевизор,
+                    кухонная плита, кондиционер, водонагреватель, посудомойка.
+                  </li>
+                  <li class="capital-description__item">
+                    Изменения в проекте под ваши пожелания: перепланировка и
+                    дизайн интерьера.
+                  </li>
+                  <li class="capital-description__item">Солнечные батареи.</li>
+                  <li class="capital-description__item">
+                    Подключение дома к коммуникациям.
+                  </li>
+                  <li class="capital-description__item">
+                    Настройка умного дома.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {# ----------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">Доставка</h2>
+              <div class="capital-description__lists">
+                <ul class="capital-description__list delivery-list">
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">1</span>
+                    Упаковка собранного дома в водонепроницаемый тент.
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">2</span>Вывоз с
+                    фабрики..
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">3</span>
+                    Загрузка в железнодорожный контейнер.
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">4</span>
+                    Доставка до станции назначения.
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">5</span>
+                    Выгрузка/погрузка региональным партнёром.
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">6</span>Доставка на
+                    участок.
+                  </li>
+                  <li class="capital-description__item">
+                    <span class="delivery-list__number">7</span>
+                    Монтаж собранного дома.
+                  </li>
+                </ul>
+              </div>
+              <p class="small">
+                Подключение дома к канализации, водоснабжению, линиям
+                электропередач, центральному отоплению производится за
+                дополнительную плату с учетом местной инфраструктуры.
+              </p>
+            </div>
+            {# ----------- #}
+            <div class="capital-description__characteristic">
+              <h2 class="capital-description__title">
+                Производитель — «Добрострой», Иркутск
+              </h2>
+              <div class="capital-description__lists list-capital">
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    Дата регистрации: 2020-11-04
+                  </li>
+                  <li class="capital-description__item">Персонал: 450 чел.</li>
+                  <li class="capital-description__item">
+                    <a href="#">Все товары «Добрострой».</a>
+                  </li>
+                  <li class="capital-description__item">
+                    <a href="#">Страница производителя</a>
+                  </li>
+                </ul>
+                <ul class="capital-description__list">
+                  <li class="capital-description__item">
+                    <a href="#">20 отзывов</a>
+                    на 32 товара «Добрострой», проданных за 1г. и 6 мес.
+                    на маркетплейсе.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {# ----------- #}
+            <div class="capital-description__comment capital-product">
+              <h2 class="capital-product__title">
+                Отзывы
+                <span> - 0</span>
+              </h2>
+              <ul class="capital-product__scale op">
+                {# ----- rating like-------- #}
+                <li class="capital-product__item">
+                  <svg
+                    class="icon is-heart is-selected"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="/assets/sprite/sprite.svg#checkbox"></use>
+                  </svg>
+                  <label class="capital-product__rating">
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                  </label>
+                  <div class="capital-product__line-rating">
+                    <div class="capital-product__line-rating-empty"></div>
+                    {#
+                    <div class="capital-product__line-rating-full"></div>
+                    #}
+                  </div>
+                  <div class="capital-product__rating-count">
+                    <span>0</span>%
+                  </div>
+                </li>
+                {# ----- end rating like-------- #} {# ----- rating like--------
+                #}
+                <li class="capital-product__item">
+                  <svg
+                    class="icon is-heart is-selected"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="/assets/sprite/sprite.svg#checkbox"></use>
+                  </svg>
+                  <label class="capital-product__rating">
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                  </label>
+                  <div class="capital-product__line-rating">
+                    <div class="capital-product__line-rating-empty"></div>
+                    {#
+                    <div class="capital-product__line-rating-full"></div>
+                    #}
+                  </div>
+                  <div class="capital-product__rating-count">
+                    <span>0</span>%
+                  </div>
+                </li>
+                {# ----- end rating like-------- #} {# ----- rating like--------
+                #}
+                <li class="capital-product__item">
+                  <svg
+                    class="icon is-heart is-selected"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="/assets/sprite/sprite.svg#checkbox"></use>
+                  </svg>
+                  <label class="capital-product__rating">
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                  </label>
+                  <div class="capital-product__line-rating">
+                    <div class="capital-product__line-rating-empty"></div>
+                    {#
+                    <div class="capital-product__line-rating-full"></div>
+                    #}
+                  </div>
+                  <div class="capital-product__rating-count">
+                    <span>0</span>%
+                  </div>
+                </li>
+                {# ----- end rating like-------- #} {# ----- rating like--------
+                #}
+                <li class="capital-product__item">
+                  <svg
+                    class="icon is-heart is-selected"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="/assets/sprite/sprite.svg#checkbox"></use>
+                  </svg>
+                  <label class="capital-product__rating">
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                  </label>
+                  <div class="capital-product__line-rating">
+                    <div class="capital-product__line-rating-empty"></div>
+                    {#
+                    <div class="capital-product__line-rating-full"></div>
+                    #}
+                  </div>
+                  <div class="capital-product__rating-count">
+                    <span>0</span>%
+                  </div>
+                </li>
+                {# ----- end rating like-------- #} {# ----- rating like--------
+                #}
+                <li class="capital-product__item">
+                  <svg
+                    class="icon is-heart is-selected"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <use href="/assets/sprite/sprite.svg#checkbox"></use>
+                  </svg>
+                  <label class="capital-product__rating">
+                    <svg
+                      class="icon is-heart is-selected"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-full"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                    <svg
+                      class="icon is-heart"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-like-empty"
+                      ></use>
+                    </svg>
+                  </label>
+                  <div class="capital-product__line-rating">
+                    <div class="capital-product__line-rating-empty"></div>
+                    {#
+                    <div class="capital-product__line-rating-full"></div>
+                    #}
+                  </div>
+                  <div class="capital-product__rating-count">
+                    <span>0</span>%
+                  </div>
+                </li>
+                {# ----- end rating like-------- #}
+              </ul>
+            </div>
+          </div>
+          {# --------- posts --------- #}
+          <div class="mp-capital__post product-post">
+            <div class="comments__items product-post__items">
+              <div class="product-post__thread">
+                <div class="product-post__comments">
+                  <div class="product-post__comment">
+                    {# -------- all comments ------ #}
+                    <div class="product-post__all-comments all-comments">
+                      {# -------- оставить отзыв --------- #}
+                      <form class="comments__form">
+                        <div class="form__item">
+                          <button class="all-comments__button" type="button">
+                            Оставить отзыв
+                          </button>
+                        </div>
+                      </form>
+                      {# -------- end оставить отзыв --------- #}
+                    </div>
+                    {# ----------- end comment -------------- #}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {# -------- end posts ------- #}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mp-capital__similar-items similar-product">
+    <div class="similar-product__block">
+      <div class="similar-product__titles">
+        <h2 class="similar-product__title">Похожие товары</h2>
+        <a href="#" class="similar-product__link">
+          <span>все</span>
+          <svg
+            class="icon similar-product__arrow"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="similar-product__content">
+        {# -------- similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Каркасный дом «Моя прелесть»</h4>
+          <p class="similar-product__price">1 600 000 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #} {# --------
+        similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Сборный дом «Хижина дяди Фомы»</h4>
+          <p class="similar-product__price">1 400 000 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #} {# --------
+        similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Сборный дом «Натали»</h4>
+          <p class="similar-product__price">1 500 000 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #} {# --------
+        similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Сборный дом «Лесная заимка»</h4>
+          <p class="similar-product__price">1 500 100 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #} {# --------
+        similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Каркасный дом «Барский»</h4>
+          <p class="similar-product__price">1 499 000 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #} {# --------
+        similar-product card -------- #}
+        <div class="similar-product__card">
+          <a href="#">
+            <img
+              class="similar-product__image"
+              src="/assets/images/market/mobile-house.jpg"
+              alt="product"
+            />
+          </a>
+          <h4 class="similar-product__text">Каркасный дом «Мечта идиота»</h4>
+          <p class="similar-product__price">1 500 000 ₽</p>
+        </div>
+        {# -------- end similar-product card -------- #}
+      </div>
+    </div>
+  </div>
+
+  <button class="add-basket-product btn is-primary tooltip" type="button">
+    <span class="tooltiptext">
+      <span class="mobile-tooltip">
+        <span class="mobile-tooltip-text">Запрос продавцу</span>
+        <span>Cумма: 3 407 ₽</span>
+      </span>
+    </span>
+    <svg class="icon" aria-hidden="true" focusable="false">
+      <use href="/assets/sprite/sprite.svg#icon-mail"></use>
+    </svg>
+    <span class="add-order">запрос продавцу</span>
+  </button>
+  {% endblock %} {% block footer %}
+  <div class="footer-wr-full">
+    {% include "../components/single_footer.twig" %}
+  </div>
+  {% endblock %}
+</div>

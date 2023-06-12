@@ -1,0 +1,86 @@
+{% extends "../index.twig" %}
+{% set title = 'Photo list' %}
+{% set avatar = 'avatar.jpg' %}
+{% set countCols = 'photo-list' %}
+{% set captionActions = [
+	['dropText', "All", 'Sort', [
+			['all', 'All'],
+			['landscape', 'just Photo'],
+			['vcamera', 'video only'],
+			['album', 'Albums']
+		], ''
+	],
+	['dropText', "alphabetically", 'Sort', [
+			['alphabet', 'alphabetically'],
+			['calendar', 'By date added'],
+			['likeblue', 'By popularity'],
+			['comment', 'By comments'],
+		], ''
+	],
+	['isIcon', "Add", 'plus']
+] %}
+
+{% set photoList = [
+	['/assets/images/metalica.jpg'],
+	['/assets/images/avatarnew.jpg'],
+	['/assets/images/lili.jpg'],
+	['/assets/images/avatarF.jpg'],
+	['/assets/images/mybg1.jpg'],
+	['/assets/images/specialBg.jpg'],
+	['/assets/images/osetinskiy.jpg'],
+	['/assets/images/mybghome.jpg']
+] %}
+{% set mainSidebarList = [
+	['info', 'link','#', "About me", '', 'active'],
+	['news', 'link','#', "Newsline", ''],
+	['camera', 'link','#', "Photo and video", '204'],
+	['tag', 'link','#', "Favorites", '248'],
+	['archive', 'link','#', "Stories archive", '3']
+] %}
+
+
+
+{% block content %}
+	<div class="main__body main__content__body">
+		{% include '../components/group_content_header.twig' %}
+		<div class="media-frame mb-2">
+			<div class="uploader-inline">
+				<button class="btn is-close is-ghost px-1s" type="button">
+		            <svg class="icon is_white is_opacity" aria-hidden="true" focusable="false">
+		                <use href="/assets/sprite/sprite.svg#icon-close"></use>
+		            </svg>
+		        </button>
+				<div class="uploader-inline-content no-upload-message">
+					<div class="upload-ui">
+						<div class="icon_wrap mb-1s">
+	                        <svg class="icon is-left is_white is_opacity" aria-hidden="true" focusable="false">
+	                            <use href="/assets/sprite/sprite.svg#icon-upload"></use>
+	                        </svg>						
+						</div>
+						<div class="upload-instructions drop-instructions">Перетащите изображения либо
+						щелкните, чтобы загрузить их</div>
+						<p class="upload-instructions drop-instructions"></p>
+						<div class="file-upload">
+                            <label>
+                                <input type="file" name="file">
+                                <svg class="icon is-left" aria-hidden="true" focusable="false">
+                                    <use href="/assets/sprite/sprite.svg#icon-camera"></use>
+                                </svg>
+                                <span>Add</span>
+                            </label>
+                        </div>
+					</div>
+
+					<div class="upload-inline-status"></div>
+				</div>
+			</div>
+		</div>
+		{% include '../components/group_content_body.twig' %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+<div class="main__sidebar__item has-shadow has-border-radius-base">
+	{% include '../components/main_sidebar_item.twig' %}
+</div>
+{% endblock %}

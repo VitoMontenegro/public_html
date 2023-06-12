@@ -6,6 +6,11 @@
 	  &:not(:last-child) {
 	    margin-bottom: $size-1;
 	  }
+	  @include media-breakpoint-up(lg) {
+	  	white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		}
 	}
 	&__about {
 		
@@ -19,14 +24,19 @@
 	}	
 }
 .back_profile {
-	a {
+	&__wrap {
 		display: flex;
-		align-items:center;
-		margin-right: 2rem;
-		height: 7.2rem;
-	}
-	.entety__avatar {
-		margin: 0 0 0 1rem;
+	    align-items: center;
+	    height: 7.2rem;
+
+		a {
+		    display: flex;
+	    	align-items: center;
+		}
+		
+		.entety__avatar {
+		    margin: 0 2rem 0 1rem;
+		}
 	}
 	h1,h2 {
 		padding: 0;

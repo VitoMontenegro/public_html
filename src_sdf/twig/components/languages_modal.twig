@@ -1,0 +1,50 @@
+{% set languages = {
+  af: "Afrikaans",
+  de: "Deutsch",
+  en: "English",
+  es: "Español",
+  fr: "Français",
+  it: "Italiano",
+  pl: "Polski",
+  pt: "Português",
+  hr: "Srpsko-hrvatski",
+  fi: "Suomi",
+  tr: "Türkçe",
+  ru: "Русский",
+  uk: "Українська",
+  hy: "Հայերեն",
+  he: "עִברִית",
+  ar: "العربية",
+  hi: "हिन्दी",
+  th: "ภาษาไทย",
+  zh: "中文",
+  ja: "日本語"
+} %}
+{% set count = 0 %}
+<div class="dropdown-menu_wrap">
+    <ul class="dropdown-menu">
+        {% for key, value in languages %}
+            {% if count < 7 %}
+                <li class="menu__item is-dashboard">
+                    <a href="/{{ key }}" lang="{{ key }}">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use href="/assets/images/flags.svg#icon-flag-{{ key }}"></use>
+                        </svg>
+                        {{ value }}
+                    </a>
+                </li>
+            {% set count = count + 1 %}
+            {% endif %}
+        {% endfor %}
+        {% if count >= 7 %}
+            <li class="menu__item is-dashboard">
+                <a href="/lang">
+                    <svg role="img" class="icon">
+                        <use href="/assets/sprite/sprite.svg#icon-more"></use>
+                    </svg>
+                    More
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</div>

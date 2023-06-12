@@ -234,3 +234,11 @@ body .is_open {
     background-color: var(--color-background-hero);
     border-radius: var(--shape-border-radius-sm);
 }
+.custom-radio {
+   label.is_access input:not(:checked) + span {
+    color: #148016;
+  }
+  label.is_access .icon {
+    color:  #148016;
+  }
+}

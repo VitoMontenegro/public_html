@@ -1,0 +1,104 @@
+.tag {
+  @extend .label;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: var(--shape-border-radius-pill);
+  border: 1px solid #D1D9E6;
+  padding: .2rem $size-1p5 0;
+   min-height: $size-4;
+  max-width: 18rem;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &__delete {
+    transform: translateY(-.1rem);
+    margin-left: $size-half;
+  }
+
+  &.is-active {
+    background-color: var(--color-background-alt);
+  }
+
+  &.is-white {
+    background-color: var(--color-background-base);
+    color: var(--color-ink-dark-2ry);
+  }
+
+  &.is-bordered {
+    background-color: var(--color-background-alt);
+    color: var(--color-ink-dark-2ry);
+    border-bottom: 1px solid var(--color-ink-dark-border-st);
+    &:hover {
+      background-color: var(--color-ink-dark-psi);
+      border-color: var(--color-ink-dark-psi);
+      color: var(--color-ink-dark-2ry);
+    }
+  }
+
+  &__delete {
+    height: auto;
+  }
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$size-half;
+  margin-right: -$size-half;
+  margin-bottom: -$size-1;
+  &__tag {
+    margin-left: $size-half;
+    margin-right: $size-half;
+    margin-bottom: $size-1;
+  }
+}
+.tags-form {
+  &__control {
+    text-transform: none;
+  }
+  .tag {
+    max-width: unset;
+  }
+}
+.add_tag-item {
+  &.custom-tag {
+    width: auto;
+  }  
+}
+#dropdownTags,
+#dropdownGeoTags {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: $size-2;
+    max-height: 216px;
+    overflow-y:auto;
+
+    li {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      button {
+        border-radius: var(--shape-border-radius-base);
+        font-size: var(--font-size-small);
+        line-height: var(--font-line-height-small);
+        color: var(--color-ink-2ry);
+        padding: 1.5rem 1.2rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: var(--color-ink-accent);
+        }
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

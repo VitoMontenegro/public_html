@@ -1,0 +1,69 @@
+{% extends "../index.twig" %}
+
+{% set title = 'Promotions' %}
+
+{% set captionActions = [
+	['isIcon', "Sort", 'sort', [
+			['alphabet', 'alphabetically'],
+			['calendar', 'date added'],
+			['likebig', 'popularity']
+		], 'Sort by'
+	],
+	['popupAction', "editPromotion", 'plus']
+] %}
+
+{# ['entetyAvatarImg', "entetyTitle", 'entetySubTytle', 'entetyCount']#}
+{% set promoList = [
+	['/assets/images/osetinskiy.jpg', "рестораны и кафе — от 990 руб.", 'Осетинские пироги от пекарни «ИрПирог»', 'Осетинские пироги — не просто национально… ', 'м. Преображенская площадь'],
+	['/assets/images/imageVolga.jpg', "отели — от 10 780 руб.", 'Отдых на берегу реки Волги с трехразовым питанием в отеле…', '«Лунево на Волге» можно назвать одним из…', 'Костромская обл.'],
+	['/assets/images/imageCaring.jpg', "развлечения — от 910 руб.", 'Заезд на электрокарте', 'Спецпредложение от многофункционального картинг-центра Egokarting.', 'м. Нижегородская'],
+	['/assets/images/imageCaring.jpg', "развлечения — от 910 руб.", 'Заезд на электрокарте', 'Спецпредложение от многофункционального картинг-центра Egokarting.', 'м. Нижегородская'],
+	['/assets/images/imageCaring.jpg', "развлечения — от 910 руб.", 'Заезд на электрокарте', 'Спецпредложение от многофункционального картинг-центра Egokarting.', 'м. Нижегородская'],
+	['/assets/images/imageCaring.jpg', "развлечения — от 910 руб.", 'Заезд на электрокарте', 'Спецпредложение от многофункционального картинг-центра Egokarting.', 'м. Нижегородская'],
+	['/assets/images/imageCaring.jpg', "развлечения — от 910 руб.", 'Заезд на электрокарте', 'Спецпредложение от многофункционального картинг-центра Egokarting.', 'м. Нижегородская'],
+] %}
+
+{% set SidebarGroupList = [
+	['/assets/images/rzd.png', "RZD", 'Transport', '#'],
+	['/assets/images/mybg.jpg', "VTB", 'Finance', '#'],
+	['/assets/images/mybg.jpg', "Ozon", 'Trading', '#'],
+	['/assets/images/mybg.jpg', "Tilda", 'Technology', '#'],
+] %}
+
+
+{% set countCols = 'column-2' %}
+
+{% block content %}
+	{% include '../components/group_content_header.twig' %}
+	{% include '../components/group_content_body.twig' %}
+{% endblock %}
+
+{% block sidebar %}
+<aside class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+	<div class="main__sidebar__section">
+		<div class="main__sidebar__header">
+			<div class="block-aside__title label is-bolder">категории</div>
+		</div>
+		<div class="block-aside__tags tags">
+			<a href="#" class="tags__tag tag is-active">
+			<svg class="icon" aria-hidden="true" focusable="false">
+			<use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+			</svg>
+			<span>все</span>
+			</a>
+			<a href="#" class="tags__tag tag"><span>интервью и шоу</span></a>
+			<a href="#" class="tags__tag tag"><span>Кино и сериалы</span></a>
+			<a href="#" class="tags__tag tag"><span>Кулинария</span></a>
+			<a href="#" class="tags__tag tag"><span>Культура</span></a>
+			<a href="#" class="tags__tag tag"><span>Мода и красота</span></a>
+			<a href="#" class="tags__tag tag"><span>мое</span></a>
+			<a href="#" class="tags__tag tag"><span>Музыка</span></a>
+			<a href="#" class="tags__tag tag"><span>Научпоп</span></a>
+			<a href="#" class="tags__tag tag"><span>Спорт и физкультура</span></a>
+			<a href="#" class="tags__tag tag"><span>Технологии</span></a>
+			<a href="#" class="tags__tag tag"><span>Транспорт</span></a>
+			<a href="#" class="tags__tag tag"><span>Туризм</span></a>
+		</div>
+	</div>
+</aside>
+{% endblock %}

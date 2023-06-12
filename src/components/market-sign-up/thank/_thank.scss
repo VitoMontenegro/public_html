@@ -1,0 +1,47 @@
+.thank-block {
+  // .thank-block__wrapper
+  max-width: 75.2rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 2.4rem;
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 2rem 2.4rem;
+    background: #f6f7f9;
+    border-radius: 1.7rem;
+    max-width: 36.4rem;
+  }
+
+  // .thank-block__container-left
+
+  &__container-left {
+    min-width: 7.2rem;
+  }
+
+  // .thank-block__image
+
+  &__image {
+  }
+
+  // .thank-block__container-right
+  &__container-right {
+    & h3 {
+      padding: 0.6rem 0 0.2rem 0;
+    }
+    & p {
+      margin: 0 !important;
+      padding: 0.4rem 0;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}

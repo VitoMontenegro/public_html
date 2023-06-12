@@ -126,10 +126,16 @@
             .photo-slidenav-prev {
                 left: -8rem;
                 right: auto;
+                @include media-breakpoint-down(sm) {
+                    left: 0;
+                }
             }
             .photo-slidenav-next {
                 left: auto;
                 right: -8rem;
+                @include media-breakpoint-down(sm) {
+                    right: 0;
+                }
             }
         }
 

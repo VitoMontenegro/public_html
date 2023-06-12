@@ -1,0 +1,229 @@
+{% extends "../index_single.twig" %} {% set title = 'MY Orders' %} {% block
+content %}
+
+<div class="my-orders">
+  <div class="my-orders__wrapper">
+    <div class="my-orders__header">
+      <div class="my-orders__purchases">
+        <a href="#" class="my-orders__purchase">
+          <span
+            >Покупки
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </a>
+        <h2 class="my-orders__subtitle"><span>Мои</span> заказы</h2>
+      </div>
+      <div class="my-orders__filtres">
+        {# --- product filter --- #}
+        <div class="my-orders__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>все</span>
+            </div>
+          </a>
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-diagram"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="все"
+                    checked=""
+                  />
+                  <span>все</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="получен" />
+                  <span>получен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-dislike"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="рекламация" />
+                  <span>рекламация</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-truck"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отправлен" />
+                  <span>отправлен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-partially"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="частичная отгрузка"
+                  />
+                  <span>частичная отгрузка</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/sprite/sprite.svg#icon-loader-progress"
+                    ></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="в обработке" />
+                  <span>в обработке</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-money-off"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="не оплачен" />
+                  <span>не оплачен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отменен" />
+                  <span>отменен</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {# --- product filter --- #} {# ------ time filter ---- #}
+        <div class="my-orders__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>за месяц</span>
+            </div>
+          </a>
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="за месяц"
+                    checked=""
+                  />
+                  <span>за месяц</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="по год" />
+                  <span>за год</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <input type="radio" name="feed_check" value="за всё время" />
+                  <span>за всё время</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {# --- end time filter --- #}
+      </div>
+    </div>
+    <div class="my-orders__main main-orders">
+      <div class="main-orders__wrapper">
+        <div class="main-orders__products">
+          <ul class="main-orders__product-list">
+            {# ----- наименование товаров ------ #}
+            <li class="main-orders__product-item border-top border-bottom">
+              <div class="main-orders__product elem-custom pos-item">
+                товары
+              </div>
+              <div class="main-orders__product elem-custom">
+                <span>сумма</span>, ₽
+              </div>
+              <div class="main-orders__product elem-custom">
+                дата
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-down"></use>
+                </svg>
+              </div>
+              <div class="main-orders__product elem-custom">ID</div>
+              <div class="main-orders__product elem-custom">поставщик</div>
+              <div class="main-orders__product">статус</div>
+            </li>
+            {# ----- описание товара ------ #}
+            <li class="main-orders__product-item border-top">
+              <div class="main-orders__product name-product pos-item">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="main-orders__description">
+                  <h4>
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </h4>
+                  <span>+1 товар</span>
+                </div>
+              </div>
+              <div class="main-orders__product elem-product">
+                <span>51 380</span>, ₽
+              </div>
+              <div class="main-orders__product elem-product">23 янв</div>
+              <div class="main-orders__product elem-product">
+                8157 7306 8262
+              </div>
+              <div class="main-orders__product elem-product-provider">
+                Товары почтой
+              </div>
+              <div class="main-orders__product elem-product-status">
+                не оплачен
+              </div>
+            </li>
+            {# ------------- #}
+          </ul>
+          {# ---- #}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

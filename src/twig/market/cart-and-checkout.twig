@@ -1,0 +1,245 @@
+{% extends "../index_single.twig" %} {% set title = 'Market cart and checkout'
+%} {% block content %}
+<div class="cart-checkout">
+  <div class="cart-checkout__container">
+    <div class="cart-checkout__main items-cart">
+      <div class="cart-checkout__titles">
+        <h2 class="cart-checkout__title">Корзина</h2>
+        <h4 class="cart-checkout__subtitle"><span>5</span>товаров</h4>
+      </div>
+      <div class="items-cart__container">
+        {# --- список товаров --- #}
+        <ul class="items-cart__lists">
+          {# --- item in the cart --- #}
+          <li class="items-cart__product">
+            <button type="button" class="items-cart__icon">
+              <span class="items-cart-close"></span>
+            </button>
+            <div class="items-cart__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="items-cart__descripptions">
+              <h4 class="items-cart__title">
+                Джинсы Norma Jeane женские с высокой посадкой широкие кле…
+              </h4>
+              <p class="items-cart__text small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="items-cart__counter">
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-decrement"></span>
+              </button>
+              <div class="items-cart__quatity">15</div>
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-increment"></span>
+              </button>
+            </div>
+            <div class="items-cart__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# -- end items in the cart -- #} {# --- item in the cart --- #}
+          <li class="items-cart__product">
+            <button type="button" class="items-cart__icon">
+              <span class="items-cart-close"></span>
+            </button>
+            <div class="items-cart__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="items-cart__descripptions">
+              <h4 class="items-cart__title">
+                Джинсы Norma Jeane женские с высокой посадкой широкие кле…
+              </h4>
+              <p class="items-cart__text small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="items-cart__counter">
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-decrement"></span>
+              </button>
+              <div class="items-cart__quatity">15</div>
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-increment"></span>
+              </button>
+            </div>
+            <div class="items-cart__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# -- end items in the cart -- #} {# --- item in the cart --- #}
+          <li class="items-cart__product">
+            <button type="button" class="items-cart__icon">
+              <span class="items-cart-close"></span>
+            </button>
+            <div class="items-cart__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="items-cart__descripptions">
+              <h4 class="items-cart__title">
+                Джинсы Norma Jeane женские с высокой посадкой широкие кле…
+              </h4>
+              <p class="items-cart__text small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="items-cart__counter">
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-decrement"></span>
+              </button>
+              <div class="items-cart__quatity">15</div>
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-increment"></span>
+              </button>
+            </div>
+            <div class="items-cart__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# -- end items in the cart -- #} {# --- item in the cart --- #}
+          <li class="items-cart__product">
+            <button type="button" class="items-cart__icon">
+              <span class="items-cart-close"></span>
+            </button>
+            <div class="items-cart__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="items-cart__descripptions">
+              <h4 class="items-cart__title">
+                Джинсы Norma Jeane женские с высокой посадкой широкие кле…
+              </h4>
+              <p class="items-cart__text small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="items-cart__counter">
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-decrement"></span>
+              </button>
+              <div class="items-cart__quatity">15</div>
+              <button type="button" class="items-cart__btn">
+                <span class="items-cart-increment"></span>
+              </button>
+            </div>
+            <div class="items-cart__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# -- end items in the cart -- #}
+        </ul>
+      </div>
+    </div>
+    {# --- your order --- #}
+    <div class="cart-checkout__block your-order">
+      <h3 class="your-order__title">Ваш заказ</h3>
+      <div class="your-order__info">
+        <div class="your-order__block-header">
+          <div class="your-order__block">
+            <h4 class="your-order__subtitle">Подытог:</h4>
+            <h4 class="your-order__price">75 550 ₽</h4>
+          </div>
+          <div class="your-order__block">
+            <div class="your-order__dropdown-list dropdown is-right">
+              <a
+                href="#"
+                class="dropdown-toggle feed_target is_rubber"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <div class="">
+                  <span>доставка курьером</span>
+                </div>
+              </a>
+              <div class="dropdown-menu_wrap">
+                <ul class="dropdown-menu feed_select">
+                  <li class="dropdown custom-radio edit_link">
+                    <label>
+                      <svg class="icon" aria-hidden="true" focusable="false">
+                        <use
+                          href="/assets/sprite/sprite.svg#icon-scooter"
+                        ></use>
+                      </svg>
+                      <input
+                        type="radio"
+                        name="feed_check"
+                        value="курьером"
+                        checked=""
+                      />
+                      <span>курьером</span>
+                    </label>
+                  </li>
+                  <li class="dropdown custom-radio edit_link">
+                    <label>
+                      <svg class="icon" aria-hidden="true" focusable="false">
+                        <use href="/assets/sprite/sprite.svg#icon-pin"></use>
+                      </svg>
+                      <input type="radio" name="feed_check" value="самовывоз" />
+                      <span>самовывоз</span>
+                    </label>
+                  </li>
+                  <li class="dropdown custom-radio edit_link">
+                    <label>
+                      <svg class="icon" aria-hidden="true" focusable="false">
+                        <use
+                          href="/assets/sprite/sprite.svg#icon-railroad"
+                        ></use>
+                      </svg>
+                      <input
+                        type="radio"
+                        name="feed_check"
+                        value="грузоперевозки"
+                      />
+                      <span>грузоперевозки</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h4 class="your-order__price">1000 ₽</h4>
+          </div>
+          <div class="your-order__block order-total-tp">
+            <h4 class="your-order__subtitle">Итог:</h4>
+            <h4 class="your-order__price">76 550 ₽</h4>
+          </div>
+        </div>
+        <div class="your-order__block-footer mb-1">
+          <div class="your-order__block">
+            <input
+              type="text"
+              class="large-placeholder"
+              name="somename[]"
+              placeholder="Промокод, если есть"
+            />
+            <input
+              type="text"
+              class="small-placeholder"
+              name="somename[]"
+              placeholder="Промокод"
+            />
+            <button type="button" class="your-order__check button btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="your-order__block order-total-tl mb-1">
+            <h4 class="your-order__subtitle">Итог:</h4>
+            <h4 class="your-order__price">76 550 ₽</h4>
+          </div>
+          <button class="your-order__btn btn btn-primary ttu">
+            <span>Оформить</span>
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %} {% block footer %}
+  <div class="footer-wr-full">
+    {% include "../components/single_footer.twig" %}
+  </div>
+  {% endblock %}
+</div>

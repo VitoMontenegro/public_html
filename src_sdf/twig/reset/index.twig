@@ -1,0 +1,87 @@
+{% include '../components/head.twig' %}
+<body>
+	<div class="page-auth">
+		<div class="page-auth__container container">
+
+			<div class="flex">
+				<div class="left">
+					<div class="page-auth__logo-wrap">
+						<a href="/"><img src="/assets/images/logo/logomark.svg" alt="alt" class="form-auth__logo img-r"></a>
+					</div>
+					<div class="page-auth__wrap">
+						<h1 class="page-auth__title">
+							Welcome back
+						</h1>
+						<div class="page-auth__subtitle big">
+							Don't miss the next Movement event
+						</div>
+						<div class="page-auth__content">
+							June 11–13. Business picnic in the estate "Grebnevo" (Shchelkovsky district, Moscow region)
+						</div>						
+					</div>
+
+					
+					<div class="team">
+						<div class="team_desc">
+							<div class="team_desc___name">Андрей Ковалев</div>
+							<div class="team_desc___about">
+								Председатель<br>
+								Общероссийского<br>
+								движения<br>
+								предпринимателей
+							</div>
+						</div>
+
+						<div class="team_image">
+							<img width="227" height="300" src="/assets/images/main/main_profile.png">
+						</div>
+					</div>
+				</div>
+				<div class="right">
+					<form class="page-auth__form form-auth form is_reset">
+						<div class="form-auth__title">Забыли пароль?</div>
+						<div class="form-auth__auth-methods auth-methods">
+							<div class="auth-methods__title">Введите зарегистрированный номер телефона — мы вышлем ссылку для восстановления пароля в SMS.</div>
+						</div>
+						<div class="form-auth__controls">
+							<div class="form__item">
+								<div class="form__control-group">
+									<input type="text" class="form__control is-border-st has-icon-left" required placeholder="Phone">
+									<svg role="img" class="form__control-icon is-left icon">
+										<use href="/assets/sprite/sprite.svg#icon-phone" />
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="form-auth__footer">
+							<button type="submit" class="form-auth__back btn is-ghost is-bare is-icon-hoverable">
+								<svg role="img" class="icon deg270">
+									<use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+								</svg>
+								<span class="label">назад</span>
+							</button>
+							<button type="submit" class="form-auth__submit btn is-primary">
+								<span class="label is-bolder">далее</span>
+							</button>
+						</div>
+					</form>
+
+					<div class="page-auth__language-toggle dropdown is-top-center">
+						<button class="button is-bare dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" data-bs-auto-close="outside">
+							<svg class="icon is-left" aria-hidden="true" focusable="false">
+					      		<use href="/assets/images/flags.svg#icon-flag-ru"></use>
+					  		</svg>
+							<span class="label">Русский</span>
+							<svg role="img" class="icon is-sm">
+								<use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+							</svg>
+						</button>
+						{% include "../components/languages_modal.twig" %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

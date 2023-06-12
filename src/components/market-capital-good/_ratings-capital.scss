@@ -1,0 +1,51 @@
+.ratings-capital {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+
+  &__likes {
+    display: flex;
+    align-items: center;
+  }
+
+  &__like {
+    padding: 0;
+    background: transparent;
+    color: red;
+    position: relative;
+    & .is-selected {
+      position: absolute;
+      top: 0.18rem;
+      left: 0;
+    }
+  }
+
+  &__likes-counter {
+    @include style-text;
+    font-weight: 400;
+    color: #475f85;
+    padding: 0.6rem 0 0.2rem 0;
+    margin-left: 0.8rem;
+  }
+
+  &__favorites {
+    display: flex;
+    align-items: center;
+  }
+
+  &__favorite {
+    @include style-text;
+    padding: 0.8rem 0 0.4rem 0;
+    background: transparent;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #475f85;
+    & span {
+      padding: 0.4rem 0;
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+}

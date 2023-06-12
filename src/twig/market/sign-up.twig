@@ -1,0 +1,219 @@
+{% extends "../index_single.twig" %} {% set title = 'Sign Up' %} {% block
+content %}
+<div class="sign-up">
+  <div class="sign-up__content">
+    <div class="sign-up__shop-block block-shop">
+      {# ------- block shop ------ #}
+      <div class="block-shop__container">
+        <div class="block-shop__picture mb-1">
+          <img src="/assets/images/market/market.jpg" alt="my shop" class="" />
+        </div>
+        <div class="block-shop__main-info">
+          <div class="block-shop__titles">
+            <h2 class="block-shop__title">
+              Открой свой новый магазин за 10 мин и один день
+            </h2>
+            <p class="block-shop__subtitle">
+              Заполните две коротких формы, и мы рассмотрим заявку в течение 24
+              часов
+            </p>
+            <div class="block-shop__text">
+              Маркетплейс оформляет заказы и вместе с оплатой передаёт их
+              продавцу, который сам организует хранение, сборку, упаковку и
+              доставку товара. Продавец отчисляет маркетплейсу 5–20% комиссии
+              с каждого проданного товара —
+              <a href="#">тариф зависит от товарной группы</a>.
+            </div>
+            <div class="block-shop__stages">
+              <div class="block-shop__stage stage-full-bg">
+                <p class="block-shop__stage-bg-text">1</p>
+                <span class="block-shop__stage-text">регистрация</span>
+              </div>
+              <div class="block-shop__stage">
+                <p class="block-shop__stage-bg-text">2</p>
+                <span class="block-shop__stage-text">договор</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {# ------- end block shop ------ #}
+    </div>
+    <div class="block-shop__registration registration-block">
+      {# -------- registration block -------- #}
+      <div class="registration-block__header">
+        <div class="registration-block__ava">
+          <a href="#" class="registration-block__avatar">
+            <img src="/assets/images/avatar.jpg" />
+          </a>
+        </div>
+        <div class="registration-block__title">
+          <div class="registration-block__group-name">
+            <div class="registration-block__name-info">
+              <h4 class="registration-block__name">Владимир Никишин</h4>
+              <h5 class="registration-block__num">+7925*****67</h5>
+            </div>
+          </div>
+        </div>
+        <div class="registration-block__actions">
+          <button
+            class="registration-block__btn-edit"
+            type="button"
+            aria-label="editProfile"
+          >
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {# ---------- #}
+      <div class="registration-block__container reg-form">
+        <form class="reg-form__contrl form-auth__controls">
+          {# ---------- form item ------------ #}
+          <div class="reg-form__block">
+            <label for="auth-shop-item" class="ttu">Название магазина *</label>
+            <input
+              id="auth-shop-item"
+              type="text"
+              class="form__control is-border-st"
+              required
+              placeholder="Например, Genco Pura Olive Oil Company"
+            />
+          </div>
+          {# --------- end form item ---------- #} {# ---------- form item
+          ------------ #}
+          <div class="reg-form__block">
+            <label for="auth-city-item" class="ttu"
+              >Город, где хранятся товары *</label
+            >
+            <input
+              id="auth-city-item"
+              type="text"
+              class="form__control is-border-st"
+              required
+              readonly
+              placeholder="Выберите"
+            />
+            <button class="form__btn-choice" type="button">
+              <svg role="img" class="icon">
+                <use href="/assets/sprite/sprite.svg#icon-arrow" />
+              </svg>
+            </button>
+          </div>
+          {# --------- end form item ---------- #} {# ---------- form item
+          ------------ #}
+          <div class="reg-form__block">
+            <label for="auth-category-item" class="ttu"
+              >основная категория *</label
+            >
+            <input
+              id="auth-category-item"
+              type="text"
+              class="form__control is-border-st"
+              required
+              placeholder="Выберите"
+            />
+            <button class="form__btn-choice" type="button">
+              <svg role="img" class="icon">
+                <use href="/assets/sprite/sprite.svg#icon-arrow" />
+              </svg>
+            </button>
+          </div>
+          {# ----end form item ---- #} {# ---------- form item ------------ #}
+          <div class="reg-form__block">
+            <label for="auth-quantity-item" class="ttu"
+              >сколько наименований продаёте *</label
+            >
+            <input
+              id="auth-quantity-item"
+              type="text"
+              class="form__control is-border-st"
+              required
+              placeholder="Выберите"
+            />
+            <button class="form__btn-choice" type="button">
+              <svg role="img" class="icon">
+                <use href="/assets/sprite/sprite.svg#icon-arrow" />
+              </svg>
+            </button>
+          </div>
+          {# ----end form item ---- #} {# -----form item radio-- #}
+          <div class="reg-form__block">
+            <h3 class="reg-form__title">ваш предпринимательский статус *</h3>
+            <div class="reg-form__content">
+              <label for="agr-organization-item" class="flex align-center">
+                <input
+                  type="radio"
+                  id="agr-organization-item"
+                  name="choice-status"
+                  checked
+                />
+                <span class="reg-form__status">ИП или организация</span>
+              </label>
+
+              <label for="agr-self-item" class="flex align-center">
+                <input type="radio" id="agr-self-item" name="choice-status" />
+                <span class="reg-form__status">Самозанятый</span>
+              </label>
+            </div>
+          </div>
+          {# ----end form item ---- #} {# -----form item radio-- #}
+          <div class="reg-form__block">
+            <h3 class="reg-form__title">кому будете продавать? *</h3>
+            <div class="reg-form__content">
+              <label for="agr-individual-item" class="flex align-center">
+                <input
+                  type="checkbox"
+                  id="agr-individual-item"
+                  name="choice-status"
+                  checked
+                />
+                <span class="reg-form__status">Физическим лицам</span>
+              </label>
+
+              <label for="agr-entity-item" class="flex align-center">
+                <input
+                  type="checkbox"
+                  id="agr-entity-item"
+                  name="choice-status"
+                />
+                <span class="reg-form__status">Юридическим лицам</span>
+              </label>
+            </div>
+          </div>
+          {# ----end form item ---- #} {# -----form item radio-- #}
+          <div class="reg-form__block">
+            <label for="agr-site-item" class="ttu">сайт, если есть</label>
+            <input
+              id="agr-site-item"
+              type="text"
+              class="form__control is-border-st"
+              placeholder="Например, genco-pura.ru"
+            />
+          </div>
+          {# ----end form item ---- #}
+          <div class="reg-form__next-step small">
+            <span>
+              Нажимая кнопку «Далее», вы принимаете
+              <a href="#">Условия торговли на маркетплейсе.</a></span
+            >
+            <button type="submit" class="btn is-primary icon">
+              <span class="label is-bolder">Далее</span>
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "../index_single.twig" %} {% set title = 'Sign Up' %} {% block
+content %}
+<div class="mp-purchases">
+  <div class="mp-purchases__content">
+    <div class="mp-purchases__block">
+      <div class="mp-purchases__stages">
+        <div class="mp-purchases__titles mb-1">
+          <span class="mp-purchases__element">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+          </span>
+          <h2 class="mp-purchases__title mb-1">Спасибо за покупку</h2>
+        </div>
+        <div class="mp-purchases__stage-text mb-1">
+          Заказы оформляются и скоро будут переданы в службу доставки. В течение
+          часа с вами свяжутся представители продавцов и вы договоритесь о
+          времени. Ориентировочно — сегодня, после 16:00. По адресу: Москва,
+          Большая Переяславская 15, кв. 62.
+        </div>
+      </div>
+    </div>
+    <div class="mp-purchases__cart-items mb-2">
+      <ul class="mp-purchases__list mb-2">
+        {# ---- product name ----- #}
+        <li class="mp-purchases__item">
+          <p>
+            Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+            палаццо
+          </p>
+          <div class="mp-purchases__info">
+            <span class="mp-purchases__quantity">x15</span>
+            <span class="mp-purchases__sum"> 48555 <span> ₽ </span></span>
+          </div>
+        </li>
+        {# ---------- #} {# ---- product name ----- #}
+        <li class="mp-purchases__item">
+          <p>
+            Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+            палаццо
+          </p>
+          <div class="mp-purchases__info">
+            <span class="mp-purchases__quantity">x15</span>
+            <span class="mp-purchases__sum"> 48555 <span> ₽ </span></span>
+          </div>
+        </li>
+        {# ---------- #} {# ---- product name ----- #}
+        <li class="mp-purchases__item">
+          <p>Галстук узкий мужской атласный однотонный Calvin Klein</p>
+          <div class="mp-purchases__info">
+            <span class="mp-purchases__quantity"></span>
+            <span class="mp-purchases__sum"> 1825 <span> ₽ </span></span>
+          </div>
+        </li>
+        {# ---------- #}
+      </ul>
+      <div class="mp-purchases__total">
+        <p class="mp-purchases__result">Итог:</p>
+        <span class="mp-purchases__result-sum">75550<span> ₽ </span></span>
+      </div>
+    </div>
+    {# ---- #}
+    <div class="mp-purchases__mp-link">
+      <a href="#" class="btn is-primary">
+        <span class="label is-bolder">Вернуться на маркетплейс</span>
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

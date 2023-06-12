@@ -21,7 +21,7 @@
 
   [src*='nophoto'],
   [src*='no-image'] {
-    opacity: 0;
+    // opacity: 0;
     display: block;
   }
 }

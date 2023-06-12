@@ -1,0 +1,42 @@
+{% import "../base/macros.twig" as nameMacro %}
+
+
+<div class="main__body group__body {{ countCols }}">
+	<div class="group__body__list">
+	{% if groupList|length > 0 %}
+		{% for key, value in groupList %}
+			{{ nameMacro.groups(value[0], value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	{% endif %}
+
+	{% if groupListCommunity|length > 0 %}
+		{% for key, value in groupListCommunity %}
+			{{ nameMacro.groupsCommunity(value[0], value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	{% endif %}
+
+	{% if friendList|length > 0 %}
+		{% for key, value in friendList %}
+			{{ nameMacro.friends(value[0], value[1], value[2], value[3]) }}
+		{% endfor %}
+	{% endif %}
+
+	{% if promoList|length > 0 %}
+		{% for key, value in promoList %}
+			{{ nameMacro.promo(value[0], value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	{% endif %}
+
+	{% if eventList|length > 0 %}
+		{% for key, value in eventList %}
+			{{ nameMacro.event(value[0], value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	{% endif %}
+
+	{% if photoList|length > 0 %}
+		{% for key, value in photoList %}
+			{{ nameMacro.photo(value[0], value[1], value[2]) }}
+		{% endfor %}
+	{% endif %}
+	</div>
+</div>

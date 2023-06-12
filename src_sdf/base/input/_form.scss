@@ -1,0 +1,311 @@
+%control-icon-left {
+  left: $size-1p5;
+  margin: 0;
+}
+
+%control-icon-right {
+  right: $size-1p5;
+  margin: 0;  
+  position: absolute;
+  top: 2.5rem;
+}
+
+
+.form {
+  &__control-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    &.is-left {
+      @extend %control-icon-left;
+      position: absolute;
+      top: 2.4rem;
+    }
+    &.is-right{
+      @extend %control-icon-right;
+    }
+  }
+  &__control-group {
+    position: relative;
+  }
+  &__group {
+    margin-top: $size-4;
+  }
+}
+  
+
+
+
+select,
+textarea,
+select,
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='date'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+.form-control,
+%input {
+  appearance: none;
+  background-clip: padding-box;
+  border-radius: var(--shape-border-radius-sm);
+  border: 0;
+  color: var(--color-ink-2ry);
+  display: block;
+  font-size: var(--font-size-base);
+  margin: 0;
+  padding-top: var(--size-padding-y-input);
+  padding-right: var(--size-padding-right-input);
+  padding-bottom: var(--size-padding-y-input);
+  padding-left: var(--size-padding-left-input);
+  overflow: visible;
+  transition: border-color var(--motion-easing-base) var(--motion-duration-sm);
+  width: 100%;
+  max-width: 100%;
+  min-height: $size-line * 2;
+
+  &:focus {
+    color: var(--color-ink-base);
+    box-shadow: var(--layer-box-shadow-focus-outline);
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: var(--color-ink-3ry);
+    opacity: 1;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: var(--size-width-readable);
+  }
+
+
+  &.has-icon-left {
+    padding-left: 4.4rem;
+  }
+
+  &.has-icon-right {
+    padding-right: 4.4rem;
+  }
+}
+.placeholder {
+    color: var(--color-ink-3ry);
+    // Override Firefox's unusual default opacity
+    opacity: 1;
+}
+textarea {
+  // In textarea, we cannot control the bottom padding. But we can add whitespace
+  // from above
+  padding-top: calc(var(--size-padding-y-input) + .9rem);
+}
+
+input[type='date'] {
+  border: 1px solid var(--color-ink-border);
+  min-width: 100%;
+}
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+textarea,
+%input {
+  // override lastpass inline styles
+  background-image: none !important;
+  border: 1px solid var(--color-ink-border);
+  min-width: 100%;
+}
+
+input[type=checkbox] {
+  width: 2rem;
+  height: 2rem; 
+  margin-right: 1rem;
+}
+select {
+  background-image: none !important;
+  border: 1px solid var(--color-ink-border);
+}
+.flex .form-label__title {
+  margin-right: $size-2;
+}
+.form-label__title,
+.form__item > label {
+  display: flex;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: var(--color-ink-2ry);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+// Input container
+.form__item,
+.filter__item {
+  position: relative;
+}
+.modal .form__item {
+      color: var(--color-ink-2ry);
+  margin-top: 3rem;
+}
+.form__item_notice, .form__item_notice p {
+    font-size: var(--font-size-small);
+    margin-top: $size-1;    
+    color: var(--color-ink-2ry);
+    letter-spacing: 0.05rem;
+    line-height: var(--font-line-height-small);
+}
+form .flex > label {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 48%;
+  }
+}
+.columns .form-check {
+  margin-bottom: 1rem;
+}
+
+.is-disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+.selected_photo {
+  border-radius: var(--shape-border-radius-base);
+  overflow: hidden;
+}
+.modal__body {
+  .photo-selectors {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__group {
+      @include media-breakpoint-up(md) {
+        order: -1;
+        width: 44rem;
+        margin-right: 4rem;        
+      }
+
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      letter-spacing: -1px;
+    }
+    .edit__images__ava {
+      width: 100%;
+      margin-right: 0;
+
+      @include media-breakpoint-up(md) {
+        width: calc(100% - 48rem);
+      }
+      .file-upload {
+        width: 5.6rem;
+        height: 4rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -5.6rem;
+      }
+    }
+  }  
+}
+.stream-start {
+  &__form {
+    .for_audio,
+    .for_video {
+      display: none;
+    }
+    &.form-video {
+      .for_video {
+        display: block;
+      }
+    }
+    &.form-audio {
+      .for_audio {
+        display: block;
+      }
+    }
+  }
+}
+input[type=date], input[type=datetime-local] {
+    background-image: var(--asset-data-image-calendar);
+    background-position: center right 1.4rem;
+    background-repeat: no-repeat;
+    background-size: var(--icon-width) auto;
+    padding: 1rem 1rem;
+    -webkit-appearance: auto!important;
+    -moz-appearance: auto!important;
+    appearance: auto!important;
+    touch-action: auto!important;
+    padding-right: 1.6rem!important;
+    cursor: pointer;
+    position: relative;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    padding-left: 0;
+    left: 60%;
+    display: flex;
+    cursor: pointer;
+}
+::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0; 
+}
+
+.form_notice {
+  list-style: none;
+  padding-left: $size-2;
+  span {
+    display: block;
+    &.success {
+      color: var(--color-ink-success-text);
+      position: relative;
+      padding-left: 2.3rem;
+      &:after {
+        content: "";
+        position: absolute;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        left: 0;
+        top: 0.5rem;
+        width: 1.7rem;
+        height: 1.2rem;
+        background: var(--asset-data-image-check-success);
+      }
+    }
+    &.reduce {
+      color: var(--color-btn-reduce);
+      position: relative;
+      padding-left: 2.3rem;
+      &:after {
+        content: "·";
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        left: 0;
+        top: 0;
+        position: absolute;
+        font-size: 40px;
+      }
+    }
+  }
+}

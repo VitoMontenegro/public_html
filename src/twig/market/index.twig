@@ -1,0 +1,584 @@
+{% extends "../index_single.twig" %} {# посомтреть в корне #} {#{% set title =
+'My Page' %}#} {#посмотреть в индексе#} {% set title = 'Buyer Home' %} {% block
+content %}
+<div class="buyer">
+  <div class="data">
+    <div class="data__info">
+      <div class="data__picture">
+        <img
+          src="/assets/images/market/balls.jpg"
+          alt="balls"
+          class="data__img"
+        />
+      </div>
+      <div class="data__news">
+        <a class="data__link" href="#">Актуальное</a>
+        <h3 class="data__title">Всё для футбола</h3>
+        <p class="data__subtitle">
+          Мячи, форма, бутсы с символикой чемпионата в Катаре
+        </p>
+        <button class="btn btn-primary btn-choice">
+          выбрать
+          <img src="/assets/images/market/arrow.svg" alt="arrow" />
+        </button>
+        <div class="data__carousel">
+          <a href="#">
+            <svg class="icon arrow-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <span>1/4</span>
+          <a href="#">
+            <svg class="icon arrow-right" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {# --------- hits -------- #}
+  <div class="hits">
+    <div class="hits__titles-info">
+      <h4 class="hits__title">Хиты продаж</h4>
+      <a href="#" class="hits__link"
+        >все
+        <svg class="icon arrow-right" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hits__content">
+      <!-- cards block -->
+      <div class="hits__cards">
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Бытовая электроника</p>
+            </div>
+            <h5 class="card__title">
+              Смартфон Xiaomi Redmi Note 9 Pro 6/128GB Global Version
+            </h5>
+            <p class="card__text">1000 €</p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/img.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">
+              Платье Monki Midi в черно-синий цветочек
+            </h5>
+            <p class="card__text">1000 €</p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/img.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">
+              Платье Monki Midi в черно-синий цветочек
+            </h5>
+            <p class="card__text">1000</p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/img.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">
+              Платье Monki Midi в черно-синий цветочек
+            </h5>
+            <p class="card__text">
+              1000 €
+              <span>+ 17 € доставка</span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Бытовая электроника</p>
+            </div>
+            <h5 class="card__title">
+              Смартфон Xiaomi Redmi Note 9 Pro 6/128GB Global Version
+            </h5>
+            <p class="card__text">1000 €</p>
+          </div>
+        </div>
+        <!-- end card -->
+      </div>
+    </div>
+    {# --------- спецпредлложения --------------- #}
+    <div class="hits__special-offer">
+      <div class="hits__special-titles">
+        <h4 class="hits__title">Спецпредлложения</h4>
+        <a href="#" class="hits__link"
+          >все
+          <svg class="icon arrow-right" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="hits__special-cards">
+        {# ------- special card ---------- #}
+        <div class="hits__special-card">
+          <div class="hits__special-picture">
+            <img
+              src="/assets/images/market/seif.jpg"
+              alt="seif"
+              class="data__img"
+            />
+          </div>
+          <div class="hits__special-info">
+            <h4 class="hits__special-subtitle">Безопасность</h4>
+            <div class="hits__special-sale">-20%</div>
+          </div>
+        </div>
+        {# ------- end special card ---------- #} {# ------- special card
+        ---------- #}
+        <div class="hits__special-card">
+          <div class="hits__special-picture">
+            <img
+              src="/assets/images/market/ny.jpg"
+              alt="ney year"
+              class="data__img"
+            />
+          </div>
+          <div class="hits__special-info">
+            <h4 class="hits__special-subtitle">Новый год</h4>
+            <div class="hits__special-sale">-70%</div>
+          </div>
+        </div>
+        {# ------- end special card ---------- #} {# ------- special card
+        ---------- #}
+        <div class="hits__special-card">
+          <div class="hits__special-picture">
+            <img
+              src="/assets/images/market/seif.jpg"
+              alt="balls"
+              class="data__img"
+            />
+          </div>
+          <div class="hits__special-info">
+            <h4 class="hits__special-subtitle">Одежда</h4>
+            <div class="hits__special-sale">-50%</div>
+          </div>
+        </div>
+        {# ------- end special card ---------- #}
+      </div>
+    </div>
+    {# --------- end спецпредлложения --------------- #}
+  </div>
+  {# -------- popular ------ #}
+  <div class="hits">
+    <div class="hits__titles-info">
+      <h4 class="hits__title">Популярные новинки</h4>
+      <a href="#" class="hits__link"
+        >все
+        <svg class="icon arrow-right" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hits__content">
+      <!-- cards block -->
+      <div class="hits__cards">
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">Рождественские носки на осень и зиму</h5>
+            <p class="card__text">
+              0,61 - 0,68 €
+              <span> за пару </span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">Рождественские носки на осень и зиму</h5>
+            <p class="card__text">
+              0,61 - 0,68 €
+              <span> за пару </span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">Рождественские носки на осень и зиму</h5>
+            <p class="card__text">
+              0,61 - 0,68 €
+              <span> за пару </span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">Рождественские носки на осень и зиму</h5>
+            <p class="card__text">
+              0,61 - 0,68 €
+              <span> за пару </span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Одежда</p>
+            </div>
+            <h5 class="card__title">Рождественские носки на осень и зиму</h5>
+            <p class="card__text">
+              0,61 - 0,68 €
+              <span> за пару </span>
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+      </div>
+    </div>
+  </div>
+  {# --------- special ------ #}
+  <div class="hits">
+    <div class="hits__titles-info">
+      <h4 class="hits__title">Специально для вас</h4>
+      <a href="#" class="hits__link"
+        >все
+        <svg class="icon arrow-right" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hits__content">
+      <!-- cards block -->
+      <div class="hits__cards">
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Строительство и недвижимость</p>
+            </div>
+            <h5 class="card__title">
+              Высококачественный контейнерный дом на 2 спальни
+            </h5>
+            <p class="card__text">
+              <span>от</span>
+              26 493,70 €
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Строительство и недвижимость</p>
+            </div>
+            <h5 class="card__title">
+              Высококачественный контейнерный дом на 2 спальни
+            </h5>
+            <p class="card__text">
+              <span>от</span>
+              26 493,70 €
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Строительство и недвижимость</p>
+            </div>
+            <h5 class="card__title">
+              Высококачественный контейнерный дом на 2 спальни
+            </h5>
+            <p class="card__text">
+              <span>от</span>
+              26 493,70 €
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Строительство и недвижимость</p>
+            </div>
+            <h5 class="card__title">
+              Высококачественный контейнерный дом на 2 спальни
+            </h5>
+            <p class="card__text">
+              <span>от</span>
+              26 493,70 €
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="hits__card">
+          <div class="hits__image">
+            <img
+              src="/assets/images/market/phone.jpg"
+              class="card-img-top"
+              alt="dress"
+            />
+          </div>
+          <div class="card__body">
+            <div class="card__info">
+              <img
+                class="card__img"
+                src="/assets/images/market/like.svg"
+                alt="like"
+              />
+              <p class="card__rating">4.9</p>
+              <p class="card__counter">(10)</p>
+              <p class="card__description">Строительство и недвижимость</p>
+            </div>
+            <h5 class="card__title">
+              Высококачественный контейнерный дом на 2 спальни
+            </h5>
+            <p class="card__text">
+              <span>от</span>
+              26 493,70 €
+            </p>
+          </div>
+        </div>
+        <!-- end card -->
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

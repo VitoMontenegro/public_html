@@ -1,0 +1,203 @@
+.items-cart {
+  // .items-cart__container
+
+  &__container {
+  }
+
+  // .items-cart__lists
+  &__lists {
+    padding-left: 0 !important;
+  }
+
+  // .items-cart__product
+  &__product {
+    display: grid;
+    grid-template-columns: 3rem 9.6rem 3fr 1fr 1fr;
+    gap: 0.8rem;
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr 3fr;
+      column-gap: 1.6rem;
+      row-gap: 0.8rem;
+      position: relative;
+      background: #f6f7f9;
+      border-radius: 1.7rem;
+      padding: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  // .items-cart__icon
+  &__icon {
+    background: transparent;
+    display: flex;
+    padding: 3rem 0 0 0;
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      right: 2.6rem;
+      bottom: 2.3rem;
+      padding: 1rem;
+    }
+  }
+
+  // .items-cart__picture
+  &__picture {
+    & img {
+      width: 9.6rem;
+      height: 9.6rem;
+      object-fit: cover;
+      box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
+      border-radius: 1.7rem;
+      @include media-breakpoint-down(sm) {
+        width: 5.6rem;
+        height: 5.6rem;
+      }
+    }
+  }
+
+  // .items-cart__descripptions
+  &__descripptions {
+    padding: 0.8rem 2.4rem;
+    @include media-breakpoint-down(xl) {
+      padding: 0.8rem 1.6rem;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 0.8rem 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+  }
+
+  // .items-cart__title
+  &__title {
+    @include style-text;
+    padding: 0.6rem 0 0.2rem;
+    font-weight: 500;
+    color: #081935;
+    max-width: 33.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include media-breakpoint-down(xl) {
+      max-width: 10.7rem;
+    }
+    @include media-breakpoint-down(md) {
+      max-width: 15.8rem;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 17.6rem;
+    }
+  }
+
+  // .items-cart__text
+  &__text {
+    padding: 0;
+    @include style-link;
+    font-weight: 400;
+    color: #475f85;
+    max-width: 15.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include media-breakpoint-down(md) {
+      max-width: 10.7rem;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 17.6rem;
+    }
+  }
+
+  // .items-cart__counter
+  &__counter {
+    display: flex;
+  }
+
+  // .items-cart__btn
+  &__btn {
+    width: 1.6rem;
+    height: auto;
+    min-width: 4.8rem;
+    height: 4.8rem;
+    background: transparent;
+    color: #8197bb;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  // .items-cart__quatity
+  &__quatity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5.4rem;
+    height: 4.6rem;
+    padding: 1.1rem 1.2rem;
+    background: #f6f7f9;
+    border: 1px solid #d1d9e6;
+    border-radius: 0.8rem;
+  }
+
+  // .items-cart__grand-total
+  &__grand-total {
+    @include style-text;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.4rem 0 0.2rem;
+    font-weight: 500;
+    color: #081935;
+    min-width: 7rem;
+    @include media-breakpoint-down(sm) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.items-cart-close {
+  top: -0.7rem !important;
+  left: 0.4rem !important;
+  transform: rotate(45deg);
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background: #8197bb;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @include media-breakpoint-down(sm) {
+    top: -0.4rem !important;
+    left: 0rem !important;
+  }
+}
+.items-cart-close,
+.items-cart-increment,
+.items-cart-decrement {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 0.2rem;
+  background: #8197bb;
+  position: relative;
+  top: -0.4rem;
+  border-radius: 1rem;
+}
+
+.items-cart-increment {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 0.2rem;
+    border-radius: 1rem;
+    background: #8197bb;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

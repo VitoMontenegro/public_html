@@ -1,11 +1,12 @@
 @use 'sass:math';
 
 .icon {
-
   color: var(--color-ink-3ry);
   --icon-stroke: var(--color-ink-3ry);
+  --stroke: var(--color-ink-3ry);
   --icon-stroke-width: 2;
   --icon-fill: var(--color-background-alt);
+  --fill: transparent;
 
   display: inline-block;
 
@@ -16,8 +17,9 @@
   // Vertical-align: middle не всегда
   // выравнивает по визуальному центру. В таких случаях надо
   // экспериментировать с цифровыми значениями
-  vertical-align: -.4rem;
-  transition: fill var(--motion-duration-sm);
+  vertical-align: middle;
+  transition: fill var(--motion-duration-sm),
+              opacity var(--motion-duration-sm);
 
   width: var(--size-height-icon);
   height: var(--size-height-icon);
@@ -74,6 +76,10 @@
   &.is_blue {
     color: var(--icon-fill-blue);
   }
+  &.is-heart.is-selected {
+    color: var(--color-ink-danger-fill);
+    --fill: hsl(1 73% 52%);
+  }
 
 }
 .header__language-toggle .icon {
@@ -118,8 +124,41 @@
   filter: drop-shadow(var(--layer-box-shadow-z1));
 }
 
+.is_opacity {
+  opacity: 0.54;
+}
+.unsubscribebtn {
+  .icon {
+    color: var(--color-ink-inverse-base);
+  }
+} 
+.subscribebtn {
+  .icon {
+    color: var(--icon-fill-blue);
+  }
+}
+button.unsubscribebtn,
+.btn.is-ghost.unsubscribebtn {
+    background: none;
+    background-color: var(--color-background-primary-dark);;
+    background: var(--color-background-primary-dark)    ;
+    box-shadow: inset 0px 4px 8px rgba(8, 25, 53, 0.24), inset 0px 2px 4px rgba(8, 25, 53, 0.24);
+}
+.unsubscribe .btn.is-close {
+    margin-right: 0.5rem;
+}
 
-
+.icon_toggle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.4rem;
+    height: 2.4rem;
+}
 // -----------------------------------------------------------------------------
 // OVERRIDES
 // -----------------------------------------------------------------------------

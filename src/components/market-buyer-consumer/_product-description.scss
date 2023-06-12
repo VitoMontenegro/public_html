@@ -1,0 +1,36 @@
+.product-description {
+  // .product-decription__characteristic
+  &__characteristic {
+  }
+
+  // .product-decription__title
+  &__title {
+  }
+
+  // .product-decription__lists
+  &__lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+      row-gap: 0rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .product-decription__list
+  &__list {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  // .product-decription__item
+  &__item {
+  }
+
+  // .product-decription__text
+  &__text {
+  }
+}

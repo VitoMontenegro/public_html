@@ -140,6 +140,27 @@
   @include media-breakpoint-up(md) {
     margin-top: 0;
   }
+  
+  &__playlist-table {
+    margin-top: $size-5;
+    margin-bottom: $size-3;
+    tbody {
+      tr {
+        background-color: var(color-background-base);
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+      thead {
+        display: none;
+      }
+    }
+  }
+  &__playlist-paging {
+    .paging__list {
+      justify-content: flex-end;
+    }
+  }
 }
 
 .live-video {
@@ -164,7 +185,7 @@
 
 .is_aside {
   .main {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       --gap: #{$size-3};
       display: grid;
       gap: var(--gap, 1.6rem);
@@ -181,7 +202,9 @@
   .main__content {
     margin-bottom: 7.2rem;
     max-width: 100%;
-    @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+    grid-column: 1/span 12;
+    @include media-breakpoint-up(lg) {
       margin-bottom: 0;
       grid-column: 1/span 8;
     }
@@ -228,4 +251,11 @@
   gap: var(--gap, #{$size-2});
   grid-template-columns: repeat(var(--columns, 12), 1fr);
   // grid-template-rows: repeat(var(--rows, 1), auto);
+}
+.tmpBorder {
+    opacity: 0.02;
+    border-radius: 6px;
+    animation: background 1s infinite alternate;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }

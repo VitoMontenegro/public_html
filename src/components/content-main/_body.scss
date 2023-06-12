@@ -1,9 +1,11 @@
 .main__body {
-	margin-bottom: 5rem;
+	margin-bottom: 10rem;
 }
 .content-card {
 	padding: 1.6rem;
 	margin-top: 3.2rem;
+	display: flex;
+	flex-direction: column;
 
   @include media-breakpoint-up(md) {
     padding: $size-2 $size-4 $size-4;
@@ -23,6 +25,25 @@
 		.dropdown-menu {
 			    /* padding: 0.5rem 3.2rem 0.5rem; */
 		}
+	}
+
+	.main__content__body__txt {
+		order:1;
+	}
+	.main__content__body__list__captio {
+		order:2;
+	}
+	.tag_wrapper {
+    order: 2;
+	}
+	.crop-height__txt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+	}
+	.crop-height__txt.fullshow {
+    -webkit-line-clamp: unset;
 	}
 } 
 .drop_second {
@@ -93,8 +114,82 @@
     line-height: var(--font-line-height-small);
 		color: var(--color-ink-2ry);
 	}	
-
 } 
+
+.line-big {
+    flex-wrap: unset;
+
+		&__avatar  {
+			width: $size-1*10;
+			height: $size-1*12;
+			border-radius: var(--shape-border-radius-base);
+			overflow: hidden;
+	    min-width: $size-1*10;
+    	margin-right: $size-2;
+    	position: relative;
+
+			img{
+			    height: 100%;
+			    width: 100%;
+			    object-fit: cover;
+			}
+			.sale_notice {
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    width: fit-content;
+		    height: 31px;
+			}
+		}
+		&__content {
+		    width: auto;
+		}
+
+}
+.is_community {
+	.main__content__body__txt span {
+		overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    box-orient: vertical;
+	}
+}
+.is_promo {
+  @include media-breakpoint-down(sm) {
+  	.line-big__avatar {
+  		width: 100%;
+  		height: $size-1*6;
+  	}
+  	.line-big {
+  		flex-wrap:wrap;
+  	}
+  }
+}
+.is_post {
+	.main__content__body__txt span {
+		overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+
+	  @include media-breakpoint-down(sm) {
+	  	line-clamp: 6;
+    	-webkit-line-clamp: 3;
+	  }
+	}
+}
   	
 .entety__avatar {
   align-items: center;

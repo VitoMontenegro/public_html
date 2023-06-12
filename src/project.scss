@@ -1,139 +1,182 @@
-@import 'base/variables';
-//@import 'base/mixins';  
- 
+@import "base/variables";
+//@import 'base/mixins';
+
 // BS
-@import './node_modules/bootstrap/scss/functions';
-@import './node_modules/bootstrap/scss/variables';
-@import './node_modules/bootstrap/scss/mixins';
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
 
 // Base
-@import 'base/root';
-@import 'base/normalize';
-@import 'base/content/body';
-@import 'base/content/headings';
-@import 'base/graphics/icon';
-@import 'base/graphics/logo';
+@import "base/root";
+@import "base/normalize";
+@import "base/content/body";
+@import "base/content/headings";
+@import "base/graphics/icon";
+@import "base/graphics/logo";
 // @import 'base/content/media';
-@import 'base/content/lists';
-@import 'base/button';
-@import 'base/shared';
-@import 'base/input/form';
+@import "base/content/lists";
+@import "base/button";
+@import "base/shared";
+@import "base/input/form";
 // @import 'base/input/label';
 // @import 'base/input/select';
 // @import 'base/input/checks-radio';
 
-@import 'base/layout/layout';
+@import "base/layout/layout";
 // @import 'base/layout/main';
 // @import 'base/animation';
 
 // Components
 // @import 'components/actions-cta/cta';
-@import 'components/block-people/people';
+@import "components/block-people/people";
 // @import 'components/content/featurette';
-@import 'components/content-comments/comments';
-@import 'components/content-live-comments/live-comments';
+@import "components/content-comments/comments";
+@import "components/content-live-comments/live-comments";
 // @import 'components/content/kpi';
 // @import 'components/input/combobox';
 // @import 'components/structure-card/product-tile';
-@import 'components/spinner/spinner';
-@import 'components/structure-add-story/add-story';
-@import 'components/structure-co-hosts/co-hosts';
-@import 'components/structure-l-video/l-video';
-@import 'components/structure-fb-slider/fb-slider';
-@import 'components/structure-lang/lang';
-@import 'components/structure-img-wrapper/img-wrapper';
-@import 'components/structure-post-card/post-card';
-@import 'components/structure-photo-popup/photo-popup';
-@import 'components/structure-story-slider/story-slider';
-@import 'components/structure-story-popup/story-popup';
-@import 'components/structure-tab/tab';
-@import 'components/block-stats/stats';
+@import "components/spinner/spinner";
+@import "components/structure-add-story/add-story";
+@import "components/structure-co-hosts/co-hosts";
+@import "components/structure-l-video/l-video";
+@import "components/structure-fb-slider/fb-slider";
+@import "components/structure-lang/lang";
+@import "components/structure-img-wrapper/img-wrapper";
+@import "components/structure-post-card/post-card";
+@import "components/structure-photo-popup/photo-popup";
+@import "components/structure-story-slider/story-slider";
+@import "components/structure-story-popup/story-popup";
+@import "components/structure-tab/tab";
+@import "components/block-stats/stats";
 // @import 'components/actions-rating/rating';
-@import 'components/attribution-avatar/avatar';
-@import 'components/attribution-tag/tag';
+@import "components/attribution-avatar/avatar";
+@import "components/attribution-tag/tag";
 // @import 'components/content-comments/comments';
 // @import 'components/content-empty-state/empty-state';
-@import 'components/content-main/body';
+@import "components/content-main/body";
 // @import 'components/content-main/byline';
-@import 'components/content-main/header';
-@import 'components/content-main/main-sidebar';
-@import 'components/content-main/content-group';
+@import "components/content-main/header";
+@import "components/content-main/main-sidebar";
+@import "components/content-main/content-group";
 // @import 'components/content-main/tools';
 // @import 'components/content-table/table';
-@import 'components/disclosure-accordion/accordion';
-@import 'components/disclosure-float/dropdown';
-@import 'components/disclosure-float/float';
-@import 'components/disclosure-modal/modal';
+@import "components/disclosure-accordion/accordion";
+@import "components/disclosure-float/dropdown";
+@import "components/disclosure-float/float";
+@import "components/disclosure-modal/modal";
+@import "components/disclosure-teaser/teaser";
+@import "components/disclosure-uploader/uploader";
 // @import 'components/disclosure-tabs/tabs';
 // @import 'components/disclosure-tooltip/tooltip';
 // @import 'components/feedback-alert/alert';
 // @import 'components/feedback-progress/spinner';
 // @import 'components/input/autocomplete';
 // @import 'components/input/file';
-@import 'components/input/placeholder';
+@import "components/input/placeholder";
 // @import 'components/input/filter';
 // @import 'components/input/picker';
 // @import 'components/input/validation';
 // @import 'components/nav-languages/languages';
-@import 'components/nav-menu/menu';
-@import 'components/nav-primary/primary-nav';
+
+@import "components/market-mixin/mixins";
+@import "components/market-buyer-home/buyer-home";
+@import "components/market-buyer-category-and-search/buyer-category";
+@import "components/market-buyer-consumer/buyer-consumer";
+@import "components/market-buyer-consumer/left-data";
+@import "components/market-buyer-consumer/ratings-block";
+@import "components/market-buyer-consumer/product-data";
+@import "components/market-buyer-consumer/custom-checkbox-radio";
+@import "components/market-buyer-consumer/basket-market";
+@import "components/market-buyer-consumer/comment-product";
+@import "components/market-buyer-consumer/product-description";
+@import "components/market-buyer-consumer/product-post";
+@import "components/market-buyer-consumer/all-comments";
+@import "components/market-buyer-consumer/similar-products";
+@import "components/market-buyer-consumer/footer-wrapper";
+
+@import "components/market-sign-up/agreement/agreement";
+@import "components/market-sign-up/sign-up/sign-up";
+@import "components/market-sign-up/thank/thank";
+
+@import "components/market-capital-good/market-capital-good.scss";
+@import "components/market-capital-good/left-capital-data.scss";
+@import "components/market-capital-good/capital-description.scss";
+@import "components/market-capital-good/ratings-capital.scss";
+@import "components/market-capital-good/capital-product.scss";
+@import "components/market-capital-good/similar-product.scss";
+@import "components/market-capital-good/delivery-list.scss";
+@import "components/market-capital-good/material-data.scss";
+
+@import "components/market-cart-and-checkout/cart-checkout.scss";
+@import "components/market-cart-and-checkout/items-cart.scss";
+@import "components/market-cart-and-checkout/your-order.scss";
+@import "components/market-cart-and-checkout/checkout-delivery.scss";
+@import "components/market-cart-and-checkout/cart-purchases.scss";
+@import "components/market-cart-and-checkout/checkout-payment.scss";
+
+@import "components/market-my-orders/my-orders-header";
+@import "components/market-my-orders/my-orders-main";
+
+@import "components/nav-menu/menu";
+@import "components/nav-primary/primary-nav";
 // @import 'components/structure-card/card';
 // @import 'components/structure-cover/cover';
-@import 'components/structure-footer/footer';
-@import 'components/structure-header/header';
+@import "components/structure-footer/footer";
+@import "components/structure-header/header";
 // @import 'components/structure-hero/hero';
 // @import 'components/structure-section/section';
 // @import 'components/view-list/list';
 // Video.js
 
 // Pages
-@import 'pages/auth/auth';
-@import 'pages/about/about';
-@import 'pages/event/event';
+@import "pages/auth/auth";
+@import "pages/about/about";
+@import "pages/event/event";
 // @import 'pages/blog/blog';
-@import 'pages/home/home';
+@import "pages/home/home";
 // @import 'pages/official/contacts';
-@import 'pages/nearby/nearby';
-@import 'pages/profile/profile';
-@import 'pages/promotions/promotions';
-@import 'pages/stories-archive/stories-archive';
+@import "pages/nearby/nearby";
+@import "pages/news/news";
+@import "pages/profile/profile";
+@import "pages/promotions/promotions";
+@import "pages/stories-archive/stories-archive";
+
 // @import 'pages/communities/communities';
 // @import 'pages/job/job';
 // @import 'pages/tweaks';
 
 // Utilities
-@import 'util/content';
+@import "util/content";
 // @import 'util/layout';
 // @import 'util/overrides';
-@import 'util/form';
-@import 'util/slider';
+@import "util/form";
+@import "util/slider";
 
 // BS5 utilities
 @import "./node_modules/bootstrap/scss/maps";
-@import './node_modules/bootstrap/scss/utilities';
+@import "./node_modules/bootstrap/scss/utilities";
 
-
-@import 'components/block-video/video-js';
+@import "components/block-video/video-js";
 
 // Only use the utilities we need
 $utilities: map-get-multiple(
   $utilities,
   (
-    'display',
-    'margin-top',
-    'margin-bottom',
-    'margin-x',
-    'negative-margin-bottom',
-    'padding-x',
-    'padding-top',
-    'padding-bottom',
-    'padding-right',
-    'padding-left'
-    // 'order','flex','flex-direction','flex-grow','flex-shrink','flex-wrap','justify-content','align-items','align-content','align-self','margin', 'margin-y', 'margin-left','negative-margin','negative-margin-x','negative-margin-y','negative-margin-top','negative-margin-right', 'negative-margin-left','padding','padding-x','padding-y',
-  ));
+    "display",
+    "margin-top",
+    "margin-bottom",
+    "margin-x",
+    "negative-margin-bottom",
+    "padding-x",
+    "padding-top",
+    "padding-bottom",
+    "padding-right",
+    "padding-left"
+      // 'order','flex','flex-direction','flex-grow','flex-shrink','flex-wrap','justify-content','align-items','align-content','align-self','margin', 'margin-y', 'margin-left','negative-margin','negative-margin-x','negative-margin-y','negative-margin-top','negative-margin-right', 'negative-margin-left','padding','padding-x','padding-y',
+  )
+);
 
-
-@import './node_modules/bootstrap/scss/utilities/api';
+@import "./node_modules/bootstrap/scss/utilities/api";
 
 // Print
 //@import 'base/print';

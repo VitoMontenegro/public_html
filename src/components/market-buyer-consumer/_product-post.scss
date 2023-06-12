@@ -1,0 +1,137 @@
+.product-post {
+  // .product-post__items
+
+  &__items {
+  }
+
+  // .product-post__thread
+
+  &__thread {
+  }
+
+  // .product-post__comments
+
+  &__comments {
+  }
+
+  // .product-post__comment
+
+  &__comment {
+  }
+
+  // .product-post__body
+
+  &__body {
+    margin-bottom: 2.4rem;
+  }
+
+  // .product-post__header
+
+  &__header {
+    display: flex;
+    gap: 1.6rem;
+    @include media-breakpoint-down(lg) {
+      position: relative;
+    }
+  }
+
+  // .product-post__avatar
+  &__avatar {
+    position: relative;
+    min-width: 4rem;
+    width: 4rem;
+    height: 4rem;
+    top: 1.4rem;
+    left: 0rem;
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      top: -2.2rem;
+      left: 2rem;
+    }
+  }
+
+  // .product-post__info
+  &__info {
+    margin-bottom: 4.8rem;
+  }
+
+  // .product-post__user
+
+  &__user {
+    @include style-text;
+    padding: 2.2rem 2.4rem 2.6rem;
+    gap: 1rem;
+    background: #f6f7f9;
+    border-radius: 1.7rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #475f85;
+  }
+  // .product-post__author
+
+  &__author {
+    @include style-text;
+    font-weight: 500;
+    color: #475f85;
+  }
+
+  // .product-post__likes
+  &__likes {
+  }
+
+  // .product-post__text
+  &__text {
+  }
+
+  // .product-post__footer
+  &__footer {
+  }
+
+  // .product-post__rating-btn
+  &__rating-btn {
+  }
+
+  // .product-post__counter
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  // .product-post__link
+  &__link {
+    @include style-link;
+    font-weight: 400;
+    color: #475f85;
+  }
+
+  // .product-post__favorites
+  &__favorites {
+    @include style-link;
+    font-weight: 400;
+    display: flex;
+    padding: 0.2rem 0 0 0;
+    gap: 0.8rem;
+  }
+
+  // .product-post__text-like
+  &__text-like {
+    color: #2268d8;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.45rem;
+      left: -0.8rem;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #3073df;
+    }
+  }
+
+  // .product-post__counter-like
+  &__counter-like {
+    color: #475f85;
+  }
+}

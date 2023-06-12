@@ -1,0 +1,152 @@
+{% extends "../index_single.twig" %}
+{# посомтреть в корне  #}
+
+{#посмотреть в индексе#}
+{% set title = 'Buyer Category' %}
+
+	{% block content %}
+		<div class="electronics"> <div class="electronics__header">
+			<h4 class="electronics__subtitle">бытовая электроника</h4>
+			<div class="electronics__titles-info">
+				<h4 class="electronics__title">Смартфоны</h4>
+				<div class="electronics__filter">
+					<div class="electronics__dropdown-list dropdown is-right">
+						<a href="#" class="dropdown-toggle feed_target is_rubber" data-toggle="dropdown" aria-expanded="false">
+							<div class="">
+								<span>по популярности</span>
+							</div>
+						</a>
+						<div class="dropdown-menu_wrap">
+							<ul class="dropdown-menu feed_select">
+								<li class="dropdown custom-radio edit_link">
+									<label>
+										<svg class="icon" aria-hidden="true" focusable="false">
+											<use href="/assets/sprite/sprite.svg#icon-star"></use>
+										</svg>
+										<input type="radio" name="feed_check" value="по популярности" checked="">
+										<span>по популярности</span>
+									</label>
+								</li>
+								<li class="dropdown custom-radio edit_link">
+									<label>
+										<svg class="icon" aria-hidden="true" focusable="false">
+											<use href="/assets/sprite/sprite.svg#icon-money"></use>
+										</svg>
+										<input type="radio" name="feed_check" value="по цене">
+										<span>по цене</span>
+									</label>
+								</li>
+								<li class="dropdown custom-radio edit_link">
+									<label>
+										<svg class="icon" aria-hidden="true" focusable="false">
+											<use href="/assets/sprite/sprite.svg#icon-time"></use>
+										</svg>
+										<input type="radio" name="feed_check" value="по новизне">
+										<span>по новизне</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="electronics__check-list">
+						<button class="electronics__checked button btn" type="button">
+							<svg class="icon is-left" aria-hidden="true" focusable="false">
+								<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
+								<span class="label is-bolder">apple</span>
+							</button>
+
+							<button class="electronics__checked button btn" type="button">
+								<svg class="icon is-left" aria-hidden="true" focusable="false">
+									<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
+									<span class="label is-bolder">samsung</span>
+								</button>
+
+								<button class="electronics__checked button btn" type="button">
+									<svg class="icon is-left" aria-hidden="true" focusable="false">
+										<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
+										<span class="label is-bolder">чёрный</span>
+									</button>
+
+									<button class="electronics__checked button btn" type="button">
+										<svg class="icon is-left" aria-hidden="true" focusable="false">
+											<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
+											<span class="label is-bolder">серый</span>
+										</button>
+
+										<button class="electronics__checked button btn" type="button">
+											<svg class="icon is-left" aria-hidden="true" focusable="false">
+												<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
+												<span class="label is-bolder">до 150 000 ₽</span>
+											</button>
+
+
+										</div>
+										<div class="electronics__all-filters">
+
+											<img src="/assets/images/market/filter.svg" class="" alt="filter icon"/>
+											<a href="#" class="electronics__link-filter">все фильтры
+												<span class="electronics__counter-filter">+1</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div
+								class="electronics__content">
+								<!-- cards block -->
+								<div
+									class="electronics__cards">
+									<!-- card -->
+									<div class="electronics__card">
+										<div class="electronics__image">
+											<img src="/assets/images/market/apple.jpg" class="card-img-top" alt="apple"/>
+										</div>
+										<div class="card__body">
+											<div class="card__info">
+												<img class="card__img" src="/assets/images/market/like.svg" alt="like"/>
+												<p class="card__rating">4.9</p>
+												<p class="card__counter">(10)</p>
+												<p class="card__description">Хит продаж</p>
+											</div>
+											<h5 class="card__title">
+												Смартфон Apple iPhone SE 2022 64 ГБ, midnight
+											</h5>
+											<div class="card__text">
+												<p class="card__price">32 670 ₽</p>
+												<p class="card__delivery">доставка завтра</p>
+											</div>
+										</div>
+									</div>
+									<!-- end card -->
+									<!-- card -->
+									<div class="electronics__card">
+										<div class="electronics__image">
+											<img src="/assets/images/market/samsung.jpg" class="card-img-top" alt="samsung"/>
+										</div>
+										<div class="card__body">
+											<div class="card__info">
+												<img class="card__img" src="/assets/images/market/like.svg" alt="like"/>
+												<p class="card__rating">4.9</p>
+												<p class="card__counter">(10)</p>
+												<p class="card__description">Новинка</p>
+											</div>
+											<h5 class="card__title">
+												Смартфон Samsung Galaxy S23 Ultra 12/256 ГБ, черный фантом
+											</h5>
+											<div class="card__text">
+												<p class="card__price">104 990 ₽</p>
+												<p class="card__delivery">доставка завтра</p>
+											</div>
+										</div>
+									</div>
+									<!-- end card -->
+								</div>
+							</div>
+						</div>
+					{% endblock %}
+
+					{% block footer %}
+						<div class="footer-wr-full footer-wrapper">
+							{% include "../components/single_footer.twig" %}
+						</div>
+					{% endblock %}

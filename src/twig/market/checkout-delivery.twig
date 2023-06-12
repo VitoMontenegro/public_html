@@ -1,0 +1,220 @@
+{% extends "../index_single.twig" %} {% set title = 'Checkout delivery' %} {%
+block content %}
+<div class="ordering">
+  <div class="ordering__content">
+    <div class="ordering__shop-block block-order">
+      {# ------- block order ------ #}
+      <div class="block-order__stages">
+        <h2 class="block-order__title">Оформление заказа</h2>
+        <div class="block-order__wrapper">
+          <div class="block-order__stage stage-full-bg">
+            <p class="block-order__stage-bg-text agr-text">1</p>
+            <span class="block-order__stage-text">доставка</span>
+          </div>
+          <div class="block-order__line-between"></div>
+          <div class="block-order__stage">
+            <p class="block-order__stage-bg-text">2</p>
+            <span class="block-order__stage-text">оплата</span>
+          </div>
+        </div>
+        <div class="block-order__stage-info">
+          в корзине - <span>5</span> товаров на <span>75 550</span>₽
+        </div>
+      </div>
+      {# ------- end block order ------ #}
+      <div class="block-order__choice-delivery choice-delivery">
+        <div class="choice-delivery__block">
+          <div class="choice-delivery__dropdown-list dropdown is-right">
+            <a
+              href="#"
+              class="dropdown-toggle feed_target is_rubber"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <div class="">
+                <span>доставка курьером</span>
+              </div>
+            </a>
+            <div class="dropdown-menu_wrap">
+              <ul class="dropdown-menu feed_select">
+                <li class="dropdown custom-radio edit_link open">
+                  <label>
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use href="/assets/sprite/sprite.svg#icon-scooter"></use>
+                    </svg>
+                    <input
+                      type="radio"
+                      name="feed_check"
+                      value="курьером"
+                      checked=""
+                    />
+                    <span>курьером</span>
+                  </label>
+                </li>
+                <li class="dropdown custom-radio edit_link">
+                  <label>
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use href="/assets/sprite/sprite.svg#icon-pin"></use>
+                    </svg>
+                    <input type="radio" name="feed_check" value="самовывоз" />
+                    <span>самовывоз</span>
+                  </label>
+                </li>
+                <li class="dropdown custom-radio edit_link">
+                  <label>
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use href="/assets/sprite/sprite.svg#icon-railroad"></use>
+                    </svg>
+                    <input
+                      type="radio"
+                      name="feed_check"
+                      value="грузоперевозки"
+                    />
+                    <span>грузоперевозки</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h4 class="choice-delivery__text">
+            <span>завтра</span>, будет согласовано по телефону
+          </h4>
+        </div>
+      </div>
+    </div>
+    <div class="block-order__registration registration-block">
+      <div class="registration-block__container order-form">
+        <form class="order-form__control form-auth__controls">
+          {# ---------- form item ------------ #}
+          <div class="order-form__block">
+            <div class="order-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >Имя *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="Ваше имя"
+              /></label>
+              <label class="ttu"
+                >фамилия *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="Ваша фамилия"
+              /></label>
+            </div>
+            {# -------- #}
+            <div class="order-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >EMail *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="email@yandex.ru"
+              /></label>
+              <label class="ttu"
+                >телефон *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="Например, +7(915)123-45-67"
+              /></label>
+            </div>
+            {# ----- #}
+          </div>
+          {# ----end form item ---- #} {# ---------- form item ------------ #}
+          <div class="order-form__block mb-1">
+            <h3 class="order-form__agr-title mb-1">Адрес доставки</h3>
+            <div class="order-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >страна *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="Выберите"
+                />
+                <button class="order-form__select" type="button">
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-arrow" />
+                  </svg>
+                </button>
+              </label>
+              <label class="ttu"
+                >область, край, республика *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder=""
+                />
+              </label>
+            </div>
+            <div class="reg-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >город *
+                <input type="text" class="is-border-st" required placeholder=""
+              /></label>
+              <label class="ttu"
+                >адрес *
+                <input
+                  type="text"
+                  class="is-border-st"
+                  required
+                  placeholder="3-я ул. Строителей 25, кв. 12"
+              /></label>
+            </div>
+            <label
+              for="auth-questions-item"
+              class="flex align-center near-block-label"
+            >
+              <input
+                id="auth-questions-item"
+                type="checkbox"
+                name="choice-status"
+                checked
+              />
+              <span class="reg-form__status"
+                >Сохранить адрес в профиле для повторных покупок</span
+              >
+            </label>
+          </div>
+          {# -------------- #}
+          <div class="order-form__comments">
+            <div class="order-form__wrap-input mb-1">
+              <label>Комментарий для курьера:</label>
+              <textarea
+                name="commentForCourier"
+                id="commentForCourier"
+                cols="20"
+                placeholder=""
+              ></textarea>
+            </div>
+            <div class="order-form__btn-block">
+              <button type="button" class="btn no-icon">
+                <span class="label is-bolder">отмена</span>
+              </button>
+              <button type="submit" class="btn is-primary">
+                <span class="label is-bolder">продолжить</span>
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    {# ---- #}
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

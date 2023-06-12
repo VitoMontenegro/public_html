@@ -1,0 +1,345 @@
+{% extends "../index_single.twig" %} {% set title = 'Sign Up' %} {% block
+content %}
+<div class="sign-up">
+  <div class="sign-up__content">
+    <div class="sign-up__shop-block block-shop">
+      {# ------- block shop ------ #}
+      <div class="block-shop__container">
+        <div class="block-shop__picture mb-1">
+          <img src="/assets/images/market/market2.jpg" alt="my shop" class="" />
+        </div>
+        <div class="block-shop__main-info">
+          <div class="block-shop__titles">
+            <h2 class="block-shop__title">
+              Открой свой новый магазин за 10 мин и один день
+            </h2>
+            <p class="block-shop__subtitle">
+              Заполните две коротких формы, и мы рассмотрим заявку в течение 24
+              часов
+            </p>
+            <div class="block-shop__stages stages-header">
+              <div class="block-shop__stage stage-full-bg">
+                <p class="block-shop__stage-bg-text agr-text">
+                  <svg class="" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                  </svg>
+                </p>
+                <span class="block-shop__stage-text">регистрация</span>
+              </div>
+              <div class="block-shop__stage stage-full-bg">
+                <p class="block-shop__stage-bg-text">2</p>
+                <span class="block-shop__stage-text">договор</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {# ------- end block shop ------ #}
+    </div>
+    <div class="block-shop__registration registration-block">
+      <div class="registration-block__container reg-form">
+        <form class="reg-form__contrl form-auth__controls">
+          {# ---------- form item ------------ #}
+          <div class="reg-form__block">
+            <h3 class="reg-form__agr-title">Реквизиты предприятия</h3>
+            <label for="auth-organization-item" class="ttu"
+              >инн организации *</label
+            >
+            <input
+              id="auth-organization-item"
+              type="text"
+              class="form__control is-border-st"
+              required
+              placeholder="Например, 1234567890"
+            />
+          </div>
+          {# --------- end form item ---------- #} {# ---------- form item
+          ------------ #}
+          <div class="reg-form__block mb-1">
+            <div class="reg-form__wrap-input wrap-input-sm">
+              <label class="ttu"
+                >адрес организации *
+                <input
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="Например: Москва, ул. Пятницкая, 39, кв. 4"
+              /></label>
+              <label for="auth-index-item" class="reg-form__sm-label ttu"
+                >почтовый индекс *
+                <input
+                  id="auth-index-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="119017"
+              /></label>
+            </div>
+            <label
+              for="auth-address-item"
+              class="flex align-center near-block-label"
+            >
+              <input
+                id="auth-address-item"
+                type="checkbox"
+                class=""
+                name="choice-status"
+                checked
+              />
+              <span class="reg-form__status"
+                >Фактический адрес совпадает с юридическим</span
+              >
+            </label>
+          </div>
+          {# --------- end form item ---------- #} {# ---------- form item
+          ------------ #}
+          <div class="reg-form__block">
+            <h3 class="reg-form__agr-title">Банковские данные</h3>
+            <p class="reg-form__agr-subtitle small mb-1">
+              Реквизиты счета, на который будем перечислять вашу выручку.
+            </p>
+            {# this stake is stail #}
+            <div class="reg-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >номер расчетного счета *
+                <input
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="4080 2810 2700 1001 6429"
+              /></label>
+              <label class="ttu"
+                >телефон *
+                <input
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="+7 (925) 718-79-67"
+              /></label>
+            </div>
+            {# -------- #}
+            <div class="reg-form__wrap-input wrap-input-md">
+              <label class="ttu"
+                >название банка *
+                <input type="text" class="form__control is-border-st" required
+              /></label>
+              <label class="ttu"
+                >корреспондентский счет *
+                <input type="text" class="form__control is-border-st" required
+              /></label>
+            </div>
+          </div>
+          {# ----end form item ---- #} {# ---------- form item ------------ #}
+          <div class="reg-form__block mb-1">
+            <h3 class="reg-form__agr-title mb-1">Налогообложение</h3>
+            {# this stake is stail #}
+            <div class="reg-form__wrap-input wrap-input-sm">
+              <label class="ttu"
+                >СистеМА налогобложения *
+                <input
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="Выберите" />
+                <button class="form__btn-choice" type="button">
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-arrow" />
+                  </svg></button
+              ></label>
+              <label for="auth-bet-item" class="reg-form__sm-label"
+                >СТАВКА НДС *
+                <input
+                  id="auth-bet-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="%" />
+                <button class="form__btn-choice" type="button">
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-arrow" />
+                  </svg></button
+              ></label>
+            </div>
+            <label
+              for="auth-bet-cat-item"
+              class="flex align-center near-block-label"
+            >
+              <input
+                id="auth-bet-cat-item"
+                type="checkbox"
+                name="choice-status"
+                checked
+              />
+              <span class="reg-form__status">Брать ставки НДС из каталога</span>
+            </label>
+          </div>
+          {# -------- #} {# ---------- form item ------------ #}
+          <div class="reg-form__block mb-1">
+            <h3 class="reg-form__agr-title">Лицензия на продажу товаров</h3>
+            <p class="reg-form__agr-subtitle small mb-1">
+              Для продажи лекарств и ювелирных изделий на маркетплейсе нужны
+              лицензии. Загрузите их, если в вашем ассортименте есть такие
+              товары.
+            </p>
+            {# this stake is stail #}
+            <button type="button" class="btn">Загрузить</button>
+          </div>
+          {# -------- #} {# ---- Заявитель ---- #}
+          <div class="reg-form__block">
+            <h3 class="reg-form__agr-title">Заявитель</h3>
+            <p class="reg-form__agr-subtitle">
+              Лицо, с которым маркетплейс заключает договор.
+            </p>
+            {# this stake is stail #}
+            <div class="reg-form__wrap-input wrap-input-thr">
+              <label for="auth-name-item" class="ttu"
+                >Имя *
+                <input
+                  id="auth-name-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="Имя"
+              /></label>
+
+              <label for="auth-surname-item" class="ttu"
+                >Отчество *
+                <input
+                  id="auth-surname-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="Отчество"
+              /></label>
+
+              <label for="auth-secondname-item" class="ttu"
+                >Фамилия *
+                <input
+                  id="auth-secondname-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="Фамилия"
+              /></label>
+            </div>
+            <div class="reg-form__wrap-input wrap-input-md">
+              <label for="auth-email-item" class="ttu"
+                >Электронная почта *
+                <input
+                  id="auth-email-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="@gmail.ru"
+              /></label>
+              <label for="auth-phone-item" class="ttu"
+                >Телефон *
+                <input
+                  id="auth-phone-item"
+                  type="text"
+                  class="form__control is-border-st"
+                  required
+                  placeholder="+7 (925) 718-79-67"
+              /></label>
+            </div>
+            <div class="reg-form__wrap-input">
+              <label for="auth-rang-item" class="ttu">должность *</label>
+              <input
+                id="auth-rang-item"
+                type="text"
+                class="form__control is-border-st"
+                required
+                placeholder="Например, генеральный директор"
+              />
+            </div>
+          </div>
+          <div class="reg-form__block mb-1">
+            <label for="auth-charter-item" class="ttu">Устав</label>
+            <input
+              id="auth-charter-item"
+              type="text"
+              class="form__control is-border-st"
+              required=""
+              placeholder="Выберите"
+            />
+            <button class="form__btn-choice" type="button">
+              <svg role="img" class="icon">
+                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          {# -------- #}
+          <div class="reg-form__block mb-1 pb-1 border-bottom">
+            <h3 class="reg-form__agr-title">Контактное лицо</h3>
+            <p class="reg-form__agr-subtitle small mb-1">
+              Лицо, с которым маркетплейс будет обсуждать вопросы оплаты и
+              документации
+            </p>
+            <label
+              for="auth-questions-item"
+              class="flex align-center near-block-label"
+            >
+              <input
+                id="auth-questions-item"
+                type="checkbox"
+                name="choice-status"
+                checked
+              />
+              <span class="reg-form__status"
+                >Текущие вопросы будут обсуждаться с заявителем.</span
+              >
+            </label>
+          </div>
+          {# -------- #}
+          <div class="reg-form__next-step agr-next-step">
+            <label
+              for="auth-accept-item"
+              class="agr-next-step__block-label flex align-center near-block-label"
+            >
+              <input
+                id="auth-accept-item"
+                type="checkbox"
+                name="accept-status"
+              />
+              <span class="reg-form__status">
+                Я гарантирую, что организация, от имени которой составлено
+                заявление, несёт ответственность за любые действия, которые
+                совершаются на маркетплейсе сво всех логинов, имеющих дсотуп к
+                аккаунту этой организации.</span
+              >
+            </label>
+          </div>
+          <div class="agr-next-step__btn-block">
+            <button type="button" class="btn no-icon">
+              <span class="label is-bolder">назад</span>
+            </button>
+            <button type="submit" class="btn is-primary ttu">
+              отправить заявление
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    {# ---- #}
+    <div class="block-shop__stages stages-footer">
+      <div class="block-shop__stage stage-full-bg">
+        <p class="block-shop__stage-bg-text agr-text">
+          <svg aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+        </p>
+        <span class="block-shop__stage-text">регистрация</span>
+      </div>
+      <div class="block-shop__stage stage-full-bg">
+        <p class="block-shop__stage-bg-text">2</p>
+        <span class="block-shop__stage-text">договор</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

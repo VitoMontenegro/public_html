@@ -535,12 +535,28 @@
         opacity: 1;
       }
     }
+    &.checked {
+      input {
+        &+span {
+          &:after {
+              opacity: 1;
+          }          
+        }
+
+      } 
+
+    } 
+
   }
+
 
   &.edit_link {
     padding-left: $size-1p5;
   }
 }
+
+
+
 .liveCheck {
   .form-check {
     padding: 1rem 0 1rem 1.3rem;

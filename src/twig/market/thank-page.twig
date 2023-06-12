@@ -1,0 +1,65 @@
+{% extends "../index_single.twig" %} {% set title = 'Sign Up' %} {% block
+content %}
+<div class="sign-up">
+  <div class="sign-up__content">
+    <div class="sign-up__shop-block block-shop">
+      <div class="block-shop__container">
+        <div class="block-shop__picture mb-1">
+          <img src="/assets/images/market/market3.jpg" alt="Спасибо" />
+        </div>
+        <div class="block-shop__main-info">
+          <div class="block-shop__titles">
+            <h2 class="block-shop__title">Спасибо</h2>
+            <p class="block-shop__subtitle">У вас — товар, у нас — купцы</p>
+            <div class="block-shop__text">
+              Мы проверим ваше заявление в течение 24 часов и пришлем результат
+              на почту. Пока можете почитать справочные материалы.
+            </div>
+            <div class="block-shop__content-thank thank-block">
+              {# ------ thank block ------ #}
+              <div class="thank-block__wrapper">
+                <div class="thank-block__container-left">
+                  <img
+                    src="/assets/images/market/add-product-img.jpg"
+                    alt="image"
+                  />
+                </div>
+                <div class="thank-block__container-right reg-form">
+                  <h3 class="reg-form__agr-title">Обзор интерфейса</h3>
+                  <p class="reg-form__agr-subtitle small mb-1">
+                    Разделы «Сводка», «Заказы», «Покупатели», «Финансы»,
+                    «Отчёты» и…
+                  </p>
+                </div>
+              </div>
+              {# ----- end thank block ------ #} {# ------ thank block ------ #}
+              <div class="thank-block__wrapper">
+                <div class="thank-block__container-left">
+                  <img
+                    src="/assets/images/market/add-product-img.jpg"
+                    alt="image"
+                  />
+                </div>
+                <div class="thank-block__container-right reg-form">
+                  <h3 class="reg-form__agr-title">
+                    Как добавить товары на маркетплейс
+                  </h3>
+                  <p class="reg-form__agr-subtitle small mb-1">
+                    Чтобы начать добавление товаров в…
+                  </p>
+                </div>
+              </div>
+              {# ----- end thank block ------ #}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

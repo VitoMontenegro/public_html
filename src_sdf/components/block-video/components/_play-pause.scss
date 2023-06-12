@@ -1,0 +1,26 @@
+.video-js .vjs-play-control {
+  margin-right: $size-2 - 1rem;
+
+  .icon {
+    color: var(--color-ink-light-base);
+  }
+  .icon.is-play {
+    display: block;
+    width: $size-2;
+    height: $size-2;
+  }
+  .icon.is-pause {
+    display: none;
+  }
+}
+.video-js .vjs-play-control.vjs-playing {
+  .icon.is-play {
+    display: none;
+  }
+  .icon.is-pause {
+    display: block;
+  }
+}
+.video-js .vjs-play-control.vjs-ended {
+  // @extend .vjs-icon-replay;
+}

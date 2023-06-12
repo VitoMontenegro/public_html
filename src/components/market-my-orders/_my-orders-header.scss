@@ -1,0 +1,71 @@
+.my-orders {
+  // .my-orders__wrapper
+
+  &__wrapper {
+  }
+
+  // .my-orders__header
+  &__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  // .my-orders__purchases
+  &__purchases {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+  }
+
+  // .my-orders__purchase
+  &__purchase {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.07;
+    color: #475f85;
+    & svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  // .my-orders__subtitle
+  &__subtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.07;
+    color: #081935;
+    padding: 0 0.8rem;
+    @include media-breakpoint-down(sm) {
+      text-transform: capitalize;
+    }
+    & span {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  // .my-orders__filtres
+  &__filtres {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  // .my-orders__dropdown-list
+  &__dropdown-list {
+    & a {
+      padding: 0 0.8rem;
+    }
+  }
+
+  // .my-orders__main
+  &__main {
+  }
+}

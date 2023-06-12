@@ -1,0 +1,189 @@
+%btn {
+  --display: inline-flex;
+
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  display: var(--display);
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  vertical-align: middle;
+  color: var(--color-ink-2ry);;
+
+  &:focus {
+    outline: 0;
+  }  
+  .icon {
+    /* margin-right: 13px; */
+  }
+}
+.btn,
+%btn-base {
+  @extend %btn, %label;
+
+  --padding: 0 #{$size-2};
+
+  background-color: var(--color-ink-accent);
+  border-radius: var(--shape-border-radius-base);
+  font-weight: 500;
+  text-decoration: none;
+  padding: var(--padding);
+  height: $size-5;
+  transition: var(--motion-duration-sm) var(--motion-easing-base);
+
+  &:hover {
+    background-color: var(--color-ink-accent-hover);
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow:
+      inset 0 0 0 1px var(--color-ink-border),
+      inset 0 3px 5px var(--color-ink-border),
+      inset 0 0 0 100px var(--color-ink-accent);
+  }
+
+  &:focus,
+  &:active:focus {
+    outline: 0;
+  }
+
+  &.is-compact {
+    --padding: 0 #{$size-1p5};
+  }
+
+  &.is-lg {
+    height: $size-6;
+  }
+  &.is-ghost {
+    color: var(--color-ink-2ry);
+        background-color: transparent;
+  }
+  &.is-outline {
+    box-shadow: inset 0 0 0 0.1rem var(--color-ink-primary-border);
+    background-color: transparent;
+    --padding: 0 1.6rem;
+  }
+  &.is-bare {
+    --padding: 0;
+    min-height: auto;
+    color: var(--color-ink-dark-2ry);
+  }
+
+  @include media-breakpoint-up(md) {
+    --padding: 0 #{$size-3};
+  }
+  &.is-icon-hoverable .icon {
+    width: calc(var(--size-height-icon) + 0.4rem * 2);
+    height: calc(var(--size-height-icon) + 0.4rem * 2);
+    padding: 0.4rem;
+    border-radius: var(--shape-border-radius-round);
+    transition: background var(--motion-duration-sm) var(--motion-easing-base),margin var(--motion-duration-sm) var(--motion-easing-base);
+  }
+}
+
+.btn.is-primary,
+.btn-primary,
+%btn-primary {
+  background-color: var(--color-background-primary-dark);
+  color: var(--color-ink-inverse-2ry);
+  text-shadow: 0 1px 0 hsl(var(--color-ink-shadow) / .12);
+  transition:
+  filter var(--motion-duration-sm),
+  box-shadow var(--motion-duration-sm);
+
+  &:hover {
+    background-color: var(--color-background-primary-dark);
+    background-image: var(--color-primary-gradient-dark);
+    color: var(--color-ink-inverse-base);
+    filter: brightness(var(--color-brightness-hover));
+    text-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: var(--layer-box-shadow-focus-outline);
+  }
+
+  &:active {
+    // background-image: none;
+    // box-shadow:
+    //   inset 0 0 0 1px var(--color-ink-base),
+    //   inset 0 3px 5px var(--color-ink-base),
+    //   inset 0 0 0 100px var(--color-ink-accent);
+  }
+  &.no_icon {
+    color: var(--color-ink-inverse-base);
+  }
+}
+
+button.subscribebtn,
+.btn.is-ghost.subscribebtn {
+    color: var(--color-ink-2ry);
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.buttons {
+  margin: 0;
+  padding-left: 0;
+  li {
+    margin-bottom: $size-1;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+.count_btn {
+  width: 4rem;
+  height: 3.2rem;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #D1D9E6;
+}
+.main__content__body__list__captio {
+  display: flex;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top: 1.6rem;
+  .btn {
+    margin-right: 0.5rem;
+    span {    
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  } 
+}
+.grow {
+  color:var(--color-ink-success-text);
+}
+.is_success {
+  color:var(--color-ink-success-text);
+}
+.reduce {
+  color: var(--color-btn-reduce);
+}
+.is_reduce {
+  background-color: var(--color-btn-reduce);
+  color: var(--color-ink-inverse-base);;
+}
+.button.is-primary {
+    text-shadow: var(--layer-box-shadow-text);
+    background: var(--color-primary-gradient-base);
+    color: var(--color-ink-inverse-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--shape-border-radius-sm);
+}
+.btns_block {
+  .btn {
+        padding: 0 1.2rem;
+  }
+}

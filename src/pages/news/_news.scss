@@ -1,0 +1,112 @@
+.b_calendar {
+  position: relative;
+  .badge {
+    position: absolute;
+    right: 0.3rem;
+    top: -0.5rem;
+    background: var(--color-sidebar-count);
+    border-radius: var(--shape-border-radius-pill);
+    color: var(--color-ink-inverse-max);
+    text-shadow: 0px 1px 0px rgb(0 0 0 / 12%);
+    height: 2.2rem;
+    width: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;        
+  }
+}
+.audio_live{
+  &__list {
+    a, a:hover{
+      text-decoration: none;
+      color: var(--color-ink-base);
+    }
+    .event__body__list__item {
+      background: #F6F7F9;
+      &.active {
+        background: #F2F6FD;
+      }
+    }
+    .event__body__list__title {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .event__body__list__content {
+      padding-right: 1.5rem;
+    }
+    .event__body__list__captio {
+      display: flex;
+      .block_ava {
+        width: 35%;
+        margin-top: $size-1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        .entety__avatar {
+          margin: 0;
+        }
+        .entety__avatar+.entety__avatar {
+            margin: 0;
+            position: relative;
+            top: 1.5rem;
+            right: 1rem;
+        }
+      }
+      .block_name {
+        width: 65%;
+        &__item {
+          display: flex;
+          justify-content: space-between;
+        }                
+      }
+      .block_counts {
+        display: flex;
+        align-items: center;
+        span {
+          margin-right: 0.6rem;
+          font-weight: 500;
+          font-size: 1.2rem;
+          line-height: $size-2;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          color: #475F85;
+        }
+      }
+    }
+    .event__body__list_date {
+
+    }
+
+    .btn {
+      padding: 0 1.2rem;
+    }
+    &.audio_live__list__soon {
+      .event__body__list__title {
+        -webkit-line-clamp: 4;
+      }
+      .people__list {
+        justify-content: flex-start;
+      }
+      .people__item {
+        width: 17%;
+      }
+      .entety__avatar {
+        margin:0;
+      }
+      .event__body__list__captio {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: $size-2;
+        color: #475F85;
+      }
+      .added {
+        background: #DCE7F9;
+        .icon {
+          color: var(--color-background-primary-dark);
+        }
+      }
+    }
+  }
+}

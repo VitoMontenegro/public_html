@@ -1,0 +1,18 @@
+{% extends "../index_live_audio.twig" %}
+
+{% set title = 'Live audio' %}
+
+{% set wrapp = 'full' %}
+
+{% set captionActions = [
+	['details', "all"],
+	['details', "By name", 3]
+] %}
+
+
+
+
+{% block content %}
+	{% include '../components/live_audio.twig' %}
+{% endblock %}
+

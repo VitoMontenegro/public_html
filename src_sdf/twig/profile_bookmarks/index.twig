@@ -1,0 +1,52 @@
+{% extends "../index.twig" %}
+
+{% set title = 'Bookmarks' %}
+{% set avatar = 'avatar.jpg' %}
+
+{% set captionActions = [
+	['dropText', "All", 'Sort', [
+			['all', 'All'],
+			['news', 'Posts'],
+			['user', 'Peoples'],
+			['community', 'Communities'],
+			['organizations', 'Organizations'],
+			['events', 'Events'],
+			['promotions', 'Promotions'],
+		], ''
+	],
+	['dropText', "By date added", 'Sort', [
+			['all', 'By date added'],
+			['news', 'By author'],
+			['landscape', 'By popularity'],
+		], ''
+	],
+] %}
+
+
+
+{% set mainContentList = [
+	['tailors.png', 'Tailors', "Open community", 'mybg3.jpg', 'Зарплаты резать точно не буду — не хочу потерять людей.Так решил Александр, владелец небольшой мебельной мастерской. Алёна, хозяйка кофейни, сокращает меню. А Сергей, совладелец автосервиса, планирует закупиться запчастями. Вместе с Яндекс Бизнесом мы сняли ролик про предпринимателей, которые перестраивают бизнес в кризис. А чтобы помочь им не на словах, а на деле, запускаем акцию — даём деньги на развитие'],
+	['alpha.jpg', 'Альфа-Банк', "2 hours ago", 'mybg4.jpg', ]
+] %}
+
+{% set mainSidebarList = [
+	['info', 'link','#', "About"],
+	['news', 'link','#', "Timeline", '2', 'active'],
+	['tag', 'link','#', "Themes", '100 500'],
+	['camera', 'link','#', "Photo/Video", '204'],
+	['events', 'link','#', "Favorites"],
+	['', 'link','#', "Archive", '20']
+] %}
+
+{% block content %}
+	<div class="main__body main__content__body">
+		{% include '../components/group_content_header.twig' %}
+		{% include '../components/main_content_body.twig' %}
+	</div>
+{% endblock %}
+
+{% block sidebar %}
+	<div class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+		{% include '../components/main_sidebar_item.twig' %}
+	</div>
+{% endblock %}

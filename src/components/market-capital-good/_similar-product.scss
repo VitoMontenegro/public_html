@@ -1,0 +1,125 @@
+.similar-product {
+  // .similar-product__block
+
+  &__block {
+  }
+
+  // .similar-product__titles
+  &__titles {
+    margin-bottom: 1.9rem;
+    position: relative;
+  }
+
+  // .similar-product__title
+  &__title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.07;
+    text-align: center;
+    color: #081935;
+    padding: 0.5rem 0 0.3rem 0;
+    @include media-breakpoint-down(sm) {
+      text-align: start;
+    }
+  }
+
+  // .similar-product__link
+  &__link {
+    @include style-link;
+    font-weight: 400;
+    position: absolute;
+    top: 1.5rem;
+    right: -1.5rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #475f85;
+    align-items: center;
+    align-self: end;
+    @include media-breakpoint-down(lg) {
+      right: -0.5rem;
+    }
+  }
+
+  &__arrow {
+    transform: rotate(90deg);
+  }
+
+  // .similar-product__content
+  &__content {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(17.73rem, 1fr));
+    gap: 2.4rem;
+    @include media-breakpoint-down(lg) {
+      gap: 2rem;
+    }
+    @include media-breakpoint-down(sm) {
+      display: flex !important;
+      min-width: 17.73rem;
+      flex: 1 1 16.66%;
+      overflow: hidden;
+    }
+  }
+
+  // .similar-product__card
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:nth-child(-n + 2) {
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+    }
+
+    &:nth-child(-n + 3) {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-width: 17.73rem;
+      flex: 1 1 20%;
+      &:nth-child(-n + 2) {
+        display: flex;
+      }
+
+      &:nth-child(-n + 3) {
+        display: flex;
+      }
+    }
+  }
+
+  // .similar-product__image
+  &__image {
+    margin-bottom: 2.2rem;
+  }
+
+  // .similar-product__text
+  &__text {
+    @include style-text;
+    flex: 1 1 auto;
+    margin-bottom: 0.2rem;
+    padding: 0;
+    font-weight: 400;
+    text-align: center;
+    color: #475f85;
+  }
+
+  // .similar-product__price
+  &__price {
+    @include style-text;
+    padding: 0;
+    font-weight: 500;
+    text-align: center;
+    color: #081935;
+    & span {
+      font-size: 1.2rem;
+      line-height: 1.33;
+      text-align: center;
+      color: #475f85;
+    }
+  }
+}

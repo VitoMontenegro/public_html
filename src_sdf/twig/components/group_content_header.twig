@@ -1,0 +1,27 @@
+{% import "../base/macros.twig" as groupCaption %}
+
+<div class="main__header has-single-action allads">
+
+	{% if avatar|length > 0 %}
+		<div class="back_profile flex align-center">
+		<a href="/mypage/">
+            <svg class="icon deg270" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+            <figure class="entety__avatar">
+                <img src="/assets/images/avatar.jpg" alt="" class="entety__avatar_img">
+            </figure>
+			
+		</a>
+		<h1>{{ title }}</h1>
+		</div>
+	{% else %}
+		<h1>{{ title }}</h1>
+	{% endif %}
+	<div class="group-caption__actions">
+		{% for key, value in captionActions %}
+			{% set name = value[0] %}
+			{{ groupCaption[name](value[1], value[2], value[3], value[4]) }}
+		{% endfor %}
+	</div>
+</div>

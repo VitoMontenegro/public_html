@@ -1,0 +1,224 @@
+.electronics {
+  @include market-width;
+  &__header {
+    margin-bottom: 2.4rem;
+  }
+
+  // .electornics__subtitle
+  &__subtitle {
+    padding: 0;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #148016;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  // .electornics__titles-info
+  &__titles-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .electornics__title
+  &__title {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.07;
+    color: #081935;
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      gap: 0rem;
+    }
+  }
+
+  // .electornics__dropdown-list
+  &__dropdown-list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    min-width: 18rem;
+    @include media-breakpoint-down(md) {
+      gap: 0rem;
+      min-width: 17rem;
+    }
+  }
+
+  //------------------
+  // .electornics__check-list
+  &__check-list {
+    height: 4.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    align-self: flex-end;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  // .electornics__checked
+  &__checked {
+    display: inline-block;
+    text-align: center;
+    padding: 0.4rem 1.6rem 0.4rem 1.2rem;
+    background: #f2f6fd;
+    border-radius: 10rem;
+
+    font-size: 1.2rem;
+    line-height: 1.33;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #475f85;
+    & svg {
+      color: #3073df;
+    }
+  }
+
+  // .electornics__all-filters
+  &__all-filters {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0 1.5rem 0 0;
+  }
+
+  // .electornics__link-filter
+  &__link-filter {
+    display: flex;
+    align-items: center;
+    min-width: 9rem;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.33;
+
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: #475f85;
+    position: relative;
+  }
+
+  // .electornics__counter-filter
+  &__counter-filter {
+    position: absolute;
+    top: -2.4rem;
+    right: -1.6rem;
+    padding: 0.4rem 0.8rem;
+    height: 2.4rem;
+    background: #8197bb;
+    border-radius: 100px;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.33;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.12);
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  // .electornics__cards
+  &__cards {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+    gap: 1rem;
+  }
+
+  // .electornics__card
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.2rem;
+    background-color: #f6f7f9;
+    border-radius: 1.5rem;
+  }
+
+  // .electornics__image
+  &__image {
+    width: 22rem;
+    height: 25.6rem;
+
+    border-radius: 1rem;
+    padding: 2.4rem;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
+
+    margin-bottom: 3.4rem;
+
+    background: #ffffff;
+    border: 1px solid #d1d9e6;
+    border-radius: 0.67rem;
+  }
+}
+
+.card {
+  // .card__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  // .card__img
+  &__img {
+    margin-right: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  // .card__rating
+
+  &__rating,
+  &__counter,
+  &__description {
+    padding: 0;
+  }
+
+  // .card__counter
+
+  &__counter {
+    font-weight: 400;
+    color: #475f85;
+  }
+
+  // .card__description
+
+  &__description {
+    color: #148016;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.33;
+  }
+
+  // .card__title
+
+  &__title {
+    flex: 1 1 auto;
+    font-size: 1.7rem;
+    line-height: 1.41;
+    color: #081935;
+  }
+}

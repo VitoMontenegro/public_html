@@ -1,10 +1,21 @@
 .about-info {
 	&__header {
-
+		.main__about-info {
+			.about-info__title {
+				word-break: break-all;
+			}
+		}
 	}
 	&__content {
 		margin-top: $size-8; 
 	    color: var(--color-ink-2ry);
+
+	    .body_title {
+	    	p:first-child {
+	    		font-weight: 400;
+    			font-size: 23px;
+	    	}
+	    }
 	}
 	&__details {
 

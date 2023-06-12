@@ -1,0 +1,103 @@
+{% extends "../index.twig" %}	
+
+{% set title = 'Single Community' %}
+
+{% set profileCoverImg = '/assets/images/tailors.jpg' %}
+{% set entetyAvatarImg = '/assets/images/tailors.png' %}
+{% set groupNameH = 'Tailors' %}
+{% set groupNameInfo = 'Open community. 327 695 members' %}
+{% set headerActions = {
+	editProfile: "editCommunity",
+	more: "statisticForm",
+} %}
+
+{% set mainSidebarList = [
+	['info', 'link','#', "About"],
+	['news', 'link','#', "Timeline", '2', 'active'],
+	['tag', 'link','#', "Themes", '100 500'],
+	['camera', 'link','#', "Photo/Video", '204'],
+	['events', 'link','#', "Events"],
+	['', 'link','#', "Files", '20']
+] %}
+
+{% set headerActionsList = [
+	['stats', 'toggle', 'statisticForm', 'Stats'],
+	['invite', 'link','#', 'Invite friends'],
+	['archive', 'link', '#', 'Archive'],
+] %}
+
+{% set mainContentList = [
+	['avatar.jpg', 'Владимир Никишкин', "10 minuts ago", 'tailors.jpg', 'В США по подписке можно получить практически любую одежду: от повседневной мужской в Thread Beast до дорогих праздничных платьев в Rent the Runway. В России разнообразие таких сервисов гораздо меньше, а некоторые даже успели закрыться (например, «Гардероб»). Тем не менее, новые проекты продолжают появляться. Так, бренд KMRB запустил подписку на свои вещи. Подписавшийся пользователь каждый месяц получает несколько предметов гардероба своего размера (это более выгодно, чем покупать их по отдельности, скидка доходит до 50%). Все это базовые вещи, которые легко сочетать между собой: в основном футболки, худи, штаны и так далее. Стоимость самого дешевого набора — 2000 рублей. Вряд ли из предложенных вариантов (футболок и носков) можно составить себе трендовый гардероб, но сервис точно помогает решить проблему поиска повседневных вещей.'],
+	['avatar2.jpg', 'Вероника Крылова', "2 hours ago", 'mybg2.jpg', ]
+] %}
+
+{% block content %}
+	{% include '../components/main_content_header.twig' %}
+	{% include '../components/main_content_body.twig' %}
+{% endblock %}
+
+
+{% block sidebar %}
+	<aside class="main__sidebar__item has-shadow has-border-radius-base is_pickout">
+		<div class="main__sidebar__section">
+			{% include '../components/main_sidebar_item.twig' %}			
+		</div>
+
+		<div class="main__sidebar__section">		
+			<div class="main__sidebar__header">
+				<div class="main__sidebar__title label is-bolder">Members</div>
+				<div class="main__sidebar__count label">327 695</div>
+			</div>
+		    <div class="people__list">
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Андрей</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Ксения</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Евгений</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Мария</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Анна</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Андрей</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Ксения</div>
+		        </a>
+		        <a href="/profile_special" class="people__item item-people">
+		            <div class="item-people__avatar entety__avatar is-md is-round">
+		                <img src="/assets/images/profile_friend.png" alt="alt" class="img-r">
+		            </div>
+		            <div class="item-people__name">Евгений</div>
+		        </a>
+		    </div>
+		</div>
+	</aside>
+{% endblock %}
