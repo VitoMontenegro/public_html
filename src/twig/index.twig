@@ -2,7 +2,8 @@
 
 <body>
 	<div class="scroll-fix"></div>
-	<div class="wrapper is_aside">
+	<div class="wrapper is_aside single_entity">
+	{#<div class="wrapper is_aside">#}
 		<header class="header" id="header">
 			<a class="header__logo logo" href="/">
 				{% include 'components/content_logo.twig' %}
@@ -11,7 +12,7 @@
 
 			<ul class="header__menu" id="header-menu">
 				<li class="header__notify dropdown is-right">
-					<div class="dropdown-toggle">
+					<button class="dropdown-toggle">
 						<svg class="icon" aria-hidden="true" focusable="false">
 							<use href="/assets/sprite/sprite.svg#icon-bell"></use>
 						</svg>
@@ -29,6 +30,9 @@
 							</svg>
 						</div>
 						<span>Владимир</span>
+					    <svg class="icon deg180 is_white is-right" aria-hidden="true" focusable="false">
+					    	<use href="/assets/sprite/sprite.svg#icon-chevron-down-sm"></use>
+					    </svg>
 					</a>
 					{% include "components/profile.twig" %}
 				</li>
@@ -128,6 +132,47 @@
 						</li>
 					</ul>
 					<br>
+					<ul>
+						<li>
+							<a href="/market/index.html">market</a>
+						</li>
+						<li>
+							<a href="/market/agreement.html">agreement</a>
+						</li>
+						<li>
+							<a href="/market/buyer-category.html">buyer-category</a>
+						</li>
+						<li>
+							<a href="/market/buyer-consumer.html">buyer-consumer</a>
+						</li>
+						<li>
+							<a href="/market/capital-good.html">capital-good</a>
+						</li>
+						<li>
+							<a href="/market/cart-and-checkout.html">cart-and-checkout</a>
+						</li>
+						<li>
+							<a href="/market/cart-purchases.html">cart-purchases</a>
+						</li>
+						<li>
+							<a href="/market/checkout-delivery.html">checkout-delivery</a>
+						</li>
+						<li>
+							<a href="/market/checkout-payment.html">checkout-payment</a>
+						</li>
+						<li>
+							<a href="/market/my-orders.html">my-orders</a>
+						</li>
+						<li>
+							<a href="/market/order-page.html">order-page</a>
+						</li>
+						<li>
+							<a href="/market/sign-up.html">sign-up</a>
+						</li>
+						<li>
+							<a href="/market/thank-page.html">thank-page</a>
+						</li>
+					</ul>
 					<br>
 					<ul>
 						<li><a href="/live-audio/">live audio</a></li>

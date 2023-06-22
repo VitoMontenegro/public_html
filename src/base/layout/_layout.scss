@@ -39,7 +39,7 @@
     @extend %q-container;
     min-height: 100vh;
 
-  &:not(.home-wrapper, .live-video, .live-audio) {
+  &:not(.home-wrapper, .live-video, .live-audio, .single_entity) {
     @include media-breakpoint-up(md) {
       display: grid;
       align-items: start;
@@ -56,6 +56,56 @@
 
     @include media-breakpoint-up(xl) {
       grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
+    }
+  }
+
+  &.single_entity {
+    @include media-breakpoint-up(md) {
+      display: grid;
+      align-items: start;
+      grid-template-areas:
+        'sidebar header'
+        'sidebar main'
+        'sidebar footer';
+      grid-template-columns: 11.6rem 1fr;
+      padding-left: 0;
+      grid-template-rows: 0rem 1fr minmax(min-content, max-content);
+      grid-column-gap: unset;
+      grid-row-gap: unset;
+      padding-right: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-right: var(--size-padding-x-container);
+      grid-column-gap: var(--size-gutter-xl);
+      grid-row-gap: 2.4rem;
+      grid-template-rows: 12rem 1fr minmax(min-content, max-content);      
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: clamp(27.2rem, #{percentage(math.div(1, 6))}, 32rem) 1fr;
+    }
+    .main {
+      @include media-breakpoint-down(lg) {
+          padding: 0 var(--size-gutter-xl) 0 var(--size-gutter-xl);
+          &__content{
+            &__header {
+              &__cover {
+                margin: 0 -4rem 0 -4rem;
+              }
+            }
+          }
+      }
+      @include media-breakpoint-down(md) {
+        margin-top: -10rem;
+        padding: 0;
+        &__content{
+            &__header {
+              &__cover {
+                margin: 0 -2rem 0 -2rem;
+              }
+            }
+          }
+      }
     }
   }
 

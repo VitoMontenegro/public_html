@@ -1,8 +1,0 @@
-{% import "../base/macros.twig" as nameMacro %}
-
-
-<ul class="main__sidebar__group__list">
-	{% for key, value in SidebarGroupList %}
-		{{ nameMacro.sidebarGroupList(value[0], value[1], value[2], value[3]) }}
-	{% endfor %}
-</ul>
