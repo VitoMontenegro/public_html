@@ -1,0 +1,73 @@
+.seller-p-table {
+    max-width: 118.4rem;
+    margin: 0 auto;
+    width: 100%;
+    // .seller-p-table__wrapper
+    &__wrapper {
+    }
+
+    // .seller-p-table__header
+    &__header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 2rem;
+        @include media-breakpoint-down(xl) {
+            flex-wrap: wrap;
+        }
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    // .seller-p-table__purchases
+    &__purchases {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    // .seller-p-table__purchase
+    &__purchase {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 1.07;
+        color: #475f85;
+    }
+
+    // .seller-p-table__subtitle
+    &__subtitle {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.07;
+        color: #081935;
+        padding: 0 0.8rem;
+    }
+
+    // .seller-p-table__filtres
+    &__filtres {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        @include media-breakpoint-down(sm) {
+            gap: 0rem;
+        }
+    }
+
+    // .seller-p-table__dropdown-list
+    &__dropdown-list {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        & span {
+            @include media-breakpoint-down(sm) {
+                display: flex;
+                max-width: 13.5rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

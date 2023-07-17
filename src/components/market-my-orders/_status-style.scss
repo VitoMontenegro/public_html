@@ -1,0 +1,28 @@
+.status-nopay {
+    @include color-danger;
+    @include bg-danger;
+}
+
+.status-process {
+    @include color-process;
+    @include bg-process;
+}
+
+.status-send {
+    @include color-send;
+    @include bg-send;
+}
+
+.status-received {
+    @include color-received;
+    @include bg-received;
+}
+
+.status-ad {
+    @include color-ad;
+    @include bg-ad;
+}
+
+.status-delivered{
+    border: 1px solid var(--ink-dark-border, #D1D9E6) !important;  
+}

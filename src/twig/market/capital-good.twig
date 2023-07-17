@@ -171,7 +171,7 @@ title = 'Buyer Capital Good' %} {% block content %}
             {# --------- end lead time --------- #}
           </div>
 
-          <div class="mp-capital__description-product capital-description">
+          <div class="mp-capital__buyer-request capital-description">
             {# -------------- #} {# -------------- #}
             <div class="capital-description__characteristic">
               <h2 class="capital-description__title">
@@ -840,7 +840,99 @@ title = 'Buyer Capital Good' %} {% block content %}
     </svg>
     <span class="add-order">запрос продавцу</span>
   </button>
-  {% endblock %} {% block footer %}
+
+  {# --------- send a request ------ #}
+  <div class="buyer-request">
+    <div class="buyer-request__wrapper">
+      <div class="buyer-request__container">
+        <h2 class="buyer-request__title">Отправить запрос</h2>
+        <div class="buyer-request__data">
+          <div class="buyer-request__send-to">
+            Кому: <span>Ирина Алексеева, «Добрострой»</span>
+          </div>
+          <div class="buyer-request__tapic">
+            <h3 class="buyer-request__tapic-text">
+              Тема:
+              <span>
+                Современный модульный стеклянный мобильный сборный дом</span
+              >
+            </h3>
+            <div class="buyer-request__count-info">
+              <input type="text" value="1" />
+              <button>
+                <span>шт.</span>
+                <svg class="icon deg180" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <form class="buyer-request__form">
+          <label class="buyer-request__label-ta">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              placeholder="Что вас интересует? Своими словами или можете выбрать стандартные вопросы ниже…"
+            ></textarea>
+          </label>
+          <h3 class="buyer-request__questions">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow-left-up"></use>
+            </svg>
+            Вот, что вы можете спросить:
+          </h3>
+          <div class="buyer-request__examples">
+            <div class="buyer-request__example-qu">
+              Какова самая низкая цена на указанное мной количество?
+            </div>
+            <div class="buyer-request__example-qu">
+              Какова стоимость доставки?
+            </div>
+            <div class="buyer-request__example-qu">
+              Сколько времени займет доставка?
+            </div>
+            <div class="buyer-request__example-qu">У вас есть каталог?</div>
+            <div class="buyer-request__example-qu">
+              Сможете ли изготовить на заказ?
+            </div>
+          </div>
+        </form>
+        {# ------- message ----- #}
+        <div class="buyer-request__messages">
+          Ваши сообщения конфиденциальны и будут отправлены только
+          получателю(ям). Верифицированные поставщики могут просматривать вашу
+          контактную информацию, в том числе ваш адрес электронной почты,
+          зарегистрированный на маркетплейсе. Наша система никогда не будет
+          распространять или продавать вашу личную информацию третьим лицам без
+          вашего разрешения.
+        </div>
+      </div>
+      <footer class="buyer-request__footer">
+        <div class="buyer-request__wrap">
+          <div class="buyer-request__buttons">
+            <button class="btn buyer-request__btn-cancel" type="button">
+              <span class="label is-bolder">отмена</span>
+            </button>
+            <h4 class="buyer-request__f-title b-title-footer">
+              Отправить запрос
+            </h4>
+            <button
+              class="btn btn-primary buyer-request__btn-check"
+              type="button"
+            >
+              <span class="buyer-request__btn-text">отправить</span>
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  {# =============== #} {% endblock %} {% block footer %}
   <div class="footer-wr-full">
     {% include "../components/single_footer.twig" %}
   </div>

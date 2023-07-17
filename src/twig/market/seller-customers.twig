@@ -1,0 +1,662 @@
+{% extends "../index_single.twig" %} {% set title = 'Seller customers' %} {%
+block content %}
+
+<div class="seller-order">
+  <div class="seller-order__wrapper">
+    <div class="seller-order__container ovflw-a">
+      <div class="seller-order__content">
+        <div class="seller-order__header"></div>
+        {# ------ header ----- #}
+        <h2 class="seller-order__title sel-title-name">Владимир Никишин</h2>
+        {# ----- end header ----- #}
+        <div class="seller-order__line mob-line"></div>
+        <form class="seller-order__form">
+          {# ---- choice product block ---- #}
+          <div class="seller-order__block mb-1">
+            <div class="seller-order__info sel-grid-cust">
+              <div class="sel-grid-cust__sum-title">
+                <h4>зарегистрирован</h4>
+              </div>
+              <div class="sel-grid-cust__date">
+                <h3>1 янв 2020</h3>
+              </div>
+              <div class="seller-order__info">
+                <div class="sel-grid-cust__status-text">
+                  <h4>заказы:всего/выполнены</h4>
+                </div>
+              </div>
+              <div class="sel-grid-cust__date">
+                <h3>1/6</h3>
+              </div>
+            </div>
+          </div>
+
+          {# --------- #} {# ---- choice product block ---- #}
+          <div class="seller-order__block mb-1">
+            <div class="seller-order__info sel-grid-cust">
+              <div class="sel-grid-cust__sum-title">
+                <h4>сумма заказов</h4>
+              </div>
+              <div class="sel-grid-cust__sum">
+                <span>9 060,00 ₽</span>
+              </div>
+              <div class="sel-grid-cust__status-text">
+                <h4>средний чек</h4>
+              </div>
+              <div class="sel-grid-cust__sum">
+                <span>9 060,00 ₽</span>
+              </div>
+            </div>
+          </div>
+          {# ------ line ------ #}
+          <div class="seller-order__line"></div>
+
+          {# --------- #} {# ---- choice product block ---- #}
+          <div class="seller-order__block">
+            <div class="seller-order__info info-sel-cust">
+              {# ------- block address ------ #}
+              <div class="info-sel-cust__container">
+                <div class="info-sel-cust__address-titles">
+                  <h4 class="info-sel-cust__address-title">Адрес</h4>
+                  <button
+                    class="is-ghost"
+                    type="button"
+                    data-bs-toggle=""
+                    data-bs-target=""
+                    aria-label="editProfile"
+                  >
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-editProfile"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="info-sel-cust__address">
+                  <span>Большая Переяславская 15, кв. 62 Москва, 129110</span>
+                </div>
+              </div>
+              {# ------- block address ------ #}
+              <div class="info-sel-cust__container">
+                <div class="info-sel-cust__address-titles">
+                  <h4 class="info-sel-cust__address-title">контакты</h4>
+                  <button
+                    class="is-ghost"
+                    type="button"
+                    data-bs-toggle=""
+                    data-bs-target=""
+                    aria-label="editProfile"
+                  >
+                    <svg class="icon" aria-hidden="true" focusable="false">
+                      <use
+                        href="/assets/sprite/sprite.svg#icon-editProfile"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="info-sel-cust__address">
+                  <ul class="info-sel-cust__links">
+                    <li>
+                      <a href="tel:+79257187967">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                          <use
+                            href="/assets/sprite/sprite.svg#icon-phone"
+                          ></use>
+                        </svg>
+                        <span>+7 (925) 718-79-67</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:nickysheen@yandex.ru">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                          <use
+                            href="/assets/sprite/sprite.svg#icon-email"
+                          ></use>
+                        </svg>
+                        <span>nickysheen@yandex.ru</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {# --------- #} {# ----- block seller data order ------ #}
+          <div class="seller-order__data sel-data-grid">
+            <div class="sel-data-grid__table-wrapper mb-1">
+              <figure>
+                <table class="sel-data-grid__table">
+                  <tbody class="sel-data-grid__tbody">
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg"
+                      >
+                        <div class="sel-data-grid__subtitle-table">
+                          <div class="">№</div>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product sel-dg-date">
+                        <div class="sel-data-grid__subtitle-table">
+                          дата
+                          <svg role="img" class="icon">
+                            <use
+                              href="/assets/sprite/sprite.svg#icon-down"
+                            ></use>
+                          </svg>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product sel-dg-status">
+                        <div class="sel-data-grid__subtitle-table">
+                          статус
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product sel-dg-sum">
+                        <div
+                          class="sel-data-grid__subtitle-table t-right"
+                        >
+                          сумма, ₽ / товаров
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <button class="status-send ttu">
+                            <span>обработка</span>
+                            <svg role="img" class="icon deg180">
+                              <use
+                                href="/assets/sprite/sprite.svg#icon-arrow"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text"
+                          >2 451 / 1</span
+                        >
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <button class="status-nopay ttu">
+                            <span>задержка платежа</span>
+                            <svg role="img" class="icon deg180">
+                              <use
+                                href="/assets/sprite/sprite.svg#icon-arrow"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text">2 451 / 1</span>
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <button class="status-process ttu">
+                            <span>приостановлен</span>
+                            <svg role="img" class="icon deg180">
+                              <use
+                                href="/assets/sprite/sprite.svg#icon-arrow"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text">2 451 / 1</span>
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <span class="status-received ttu">выполнен</span>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text">2 451 / 1</span>
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <span class="status-ad ttu">отмена</span>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text">2 451 / 1</span>
+                      </td>
+                    </tr>
+
+                    <tr class="sel-data-grid__product-items">
+                      <td
+                        class="sel-data-grid__product sel-dg-product product-sel-dg d-flex"
+                      >
+                        <div class="sel-data-grid__title">
+                          <a href="#">78945612</a>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <span class="sel-data-grid__text">8 мар 2023</span>
+                      </td>
+                      <td class="sel-data-grid__product">
+                        <div class="sel-data-grid__status">
+                          <span class="status-nopay ttu">возврат</span>
+                        </div>
+                      </td>
+                      <td class="sel-data-grid__product t-right">
+                        <span class="sel-data-grid__text">2 451 / 1</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </figure>
+            </div>
+            {#
+            <div class="sel-data-grid__wrapper">
+              <ul class="sel-data-grid__list">
+                <li class="sel-data-grid__row">
+                  <h3 class="sel-data-grid__m-title">№</h3>
+                  <h3 class="sel-data-grid__m-title">
+                    дата
+                    <svg role="img" class="icon">
+                      <use href="/assets/sprite/sprite.svg#icon-down"></use>
+                    </svg>
+                  </h3>
+                  <h3 class="sel-data-grid__m-title">статус</h3>
+                  <h3 class="sel-data-grid__m-title t-right">
+                    сумма, ₽ / товаров
+                  </h3>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">8 мар 2023</span>
+                  <div class="sel-data-grid__status">
+                    <button class="status-send ttu">
+                      <span>обработка</span>
+                      <svg role="img" class="icon deg180">
+                        <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="sel-data-grid__text t-right">2 451 / 1</span>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">3020</span>
+                  <div class="sel-data-grid__status">
+                    <button class="status-nopay ttu">
+                      <span>задержка платежа</span>
+                      <svg role="img" class="icon deg180">
+                        <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="sel-data-grid__text t-right">12 859 / 3</span>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">3020</span>
+                  <div class="sel-data-grid__status">
+                    <span class="status-received ttu">выполнен</span>
+                  </div>
+                  <span class="sel-data-grid__text t-right">2 451 / 1</span>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">3020</span>
+                  <div class="sel-data-grid__status">
+                    <span class="status-nopay ttu">возврат</span>
+                  </div>
+                  <span class="sel-data-grid__text t-right">2 451 / 1</span>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">3020</span>
+                  <div class="sel-data-grid__status">
+                    <span class="status-ad ttu">отмена</span>
+                  </div>
+                  <span class="sel-data-grid__text t-right">2 451 / 1</span>
+                </li>
+                <li class="sel-data-grid__row">
+                  <h4 class="sel-data-grid__title"><a href="#">78945612</a></h4>
+                  <span class="sel-data-grid__text">3020</span>
+                  <div class="sel-data-grid__status">
+                    <button class="status-process ttu">
+                      <span>приостановлен</span>
+                      <svg role="img" class="icon deg180">
+                        <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <span class="sel-data-grid__text t-right">2 451 / 1</span>
+                </li>
+              </ul>
+            </div>
+            #}
+          </div>
+        </form>
+      </div>
+    </div>
+    {# ----- footer ----- #}
+    <footer class="seller-product-footer">
+      <div class="seller-product-footer__wrapper">
+        <div class="seller-product-footer__buttons">
+          <button class="seller-product-footer__btn btn" type="button">
+            <span class="label is-bolder">отмена</span>
+          </button>
+
+          <h2 class="seller-product-footer__title">Покупатель</h2>
+
+          <button
+            class="seller-product-footer__btn-complete btn btn-primary"
+            disabled
+            type="button"
+          >
+            <span class="label is-bolder">готово</span>
+            <svg role="img" class="icon">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+    {# -------- end footer ----- #}
+  </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+{# ----- seller customers page ---- #}
+<div class="seller-page">
+  <div class="seller-page__wrpapper">
+    <div class="seller-page__header mb-1">
+      <div class="seller-page__purchases">
+        <a href="#" class="seller-page__purchase">
+          <span>
+            Продажи
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </a>
+        <h2 class="seller-page__subtitle">Покупатели<span> — 128</span></h2>
+      </div>
+      <div class="seller-page__filtres">
+        <div class="seller-page__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>московская игротека</span>
+            </div>
+          </a>
+          {#
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-diagram"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="все"
+                    checked=""
+                  />
+                  <span>все</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="получен" />
+                  <span>получен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-dislike"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="рекламация" />
+                  <span>рекламация</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-truck"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отправлен" />
+                  <span>отправлен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-partially"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="частичная отгрузка"
+                  />
+                  <span>частичная отгрузка</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/sprite/sprite.svg#icon-loader-progress"
+                    ></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="в обработке" />
+                  <span>в обработке</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-money-off"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="не оплачен" />
+                  <span>не оплачен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отменен" />
+                  <span>отменен</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          #}
+        </div>
+      </div>
+    </div>
+    {# ------- table ------- #}
+    <div
+      class="seller-page__table-wrapper scroller mb-2"
+      tabindex="0"
+      role="group"
+      aria-labelledby="content"
+    >
+      <figure>
+        <table class="seller-page__table">
+          <tbody class="seller-page__tbody">
+            <tr class="seller-page__tr">
+              <td class="seller-page__td td-w-buyer sel-pos-st">покупатель</td>
+              <td class="seller-page__td td-w-email">email</td>
+              <td class="seller-page__td td-w-lorder">
+                Посл. заказ
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-down"></use>
+                </svg>
+              </td>
+              <td class="seller-page__td td-w-coplete t-right">
+                выполнено / всего
+              </td>
+              <td class="seller-page__td td-w-sum t-right">сумма, ₽</td>
+              <td class="seller-page__td td-w-check t-right">ср. чек, ₽</td>
+            </tr>
+
+            <tr class="seller-page__tr">
+              <td class="seller-page__td sel-pos-st">
+                <div class="seller-page__name">
+                  <a href="#">Владимир Никишин</a>
+                </div>
+                <span>Москва</span>
+              </td>
+              <td class="seller-page__td">
+                <a href="#">tienlapspktnd@gmail.com</a>
+              </td>
+              <td class="seller-page__td"><span>8 мар 2023</span></td>
+              <td class="seller-page__td t-right"><span>1/6</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+            </tr>
+
+            <tr class="seller-page__tr">
+              <td class="seller-page__td sel-pos-st">
+                <div class="seller-page__name">
+                  <a href="#">Владимир Никишин</a>
+                </div>
+                <span>Москва</span>
+              </td>
+              <td class="seller-page__td">
+                <a href="#">tienlapspktnd@gmail.com</a>
+              </td>
+              <td class="seller-page__td"><span>8 мар 2023</span></td>
+              <td class="seller-page__td t-right"><span>1/6</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+            </tr>
+
+            <tr class="seller-page__tr">
+              <td class="seller-page__td sel-pos-st">
+                <div class="seller-page__name">
+                  <a href="#">Владимир Никишин</a>
+                </div>
+                <span>Москва</span>
+              </td>
+              <td class="seller-page__td">
+                <a href="#">tienlapspktnd@gmail.com</a>
+              </td>
+              <td class="seller-page__td"><span>8 мар 2023</span></td>
+              <td class="seller-page__td t-right"><span>1/6</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+              <td class="seller-page__td t-right"><span>9 060</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+    {# ------ pagination ------ #}
+    <nav class="mp-pagination">
+      <ul class="mp-pagination-list">
+        <li class="mp-page-item">
+          <a class="mp-page-link" href="#" aria-label="Предыдущая">
+            <svg class="icon deg270" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">1</a></li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">2</a></li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">3</a></li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">4</a></li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">5</a></li>
+        <li class="mp-page-item">
+          <a class="mp-page-link active-mp-pl" href="#">6</a>
+        </li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">7</a></li>
+        <li class="mp-page-item"><a class="mp-page-link" href="#">8</a></li>
+        <li class="mp-page-item">
+          <a class="mp-page-link" href="#" aria-label="Следующая">
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

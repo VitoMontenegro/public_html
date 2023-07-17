@@ -1,0 +1,63 @@
+.info-sel-or {
+    display: grid;
+    grid-template-columns: 8rem 1fr 6rem 1fr;
+    gap: 2.4rem;
+    align-items: end;
+    & h3,
+    h4 {
+        padding: 0 !important;
+    }
+    // .info-sel-or__sum-title
+    &__sum-title {
+        @include style-link;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    // .info-sel-or__sum
+    &__sum {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 1.6rem !important;
+    }
+
+    // .info-sel-or__status-text
+    &__status-text {
+        @include style-link;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    // .info-sel-or__status
+    &__status {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    // .info-sel-or__choice
+    &__choice {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        align-items: center;
+        & h3,
+        span {
+            @include style-text;
+            color: var(--ink-dark-base, #081935);
+            line-height: 1;
+        }
+        & svg {
+            width: 2rem;
+            height: 2rem;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}

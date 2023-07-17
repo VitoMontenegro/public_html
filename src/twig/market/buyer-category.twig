@@ -1,152 +1,1990 @@
-{% extends "../index_single.twig" %}
-{# посомтреть в корне  #}
+{% extends "../index_single.twig" %} {# посомтреть в корне #} {#посмотреть в
+индексе#} {% set title = 'Buyer Category' %} {% block content %}
+<div class="electronics">
+  <div class="electronics__header">
+    <h4 class="electronics__subtitle">бытовая электроника</h4>
+    <div class="electronics__titles-info">
+      <h4 class="electronics__title">Смартфоны</h4>
+      <div class="electronics__filter">
+        <div class="electronics__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>по популярности</span>
+            </div>
+          </a>
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-star"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="по популярности"
+                    checked=""
+                  />
+                  <span>по популярности</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-money"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="по цене" />
+                  <span>по цене</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-time"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="по новизне" />
+                  <span>по новизне</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="electronics__check-list">
+          <button class="electronics__checked button btn" type="button">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">apple</span>
+          </button>
 
-{#посмотреть в индексе#}
-{% set title = 'Buyer Category' %}
+          <button class="electronics__checked button btn" type="button">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">samsung</span>
+          </button>
 
-	{% block content %}
-		<div class="electronics"> <div class="electronics__header">
-			<h4 class="electronics__subtitle">бытовая электроника</h4>
-			<div class="electronics__titles-info">
-				<h4 class="electronics__title">Смартфоны</h4>
-				<div class="electronics__filter">
-					<div class="electronics__dropdown-list dropdown is-right">
-						<a href="#" class="dropdown-toggle feed_target is_rubber" data-toggle="dropdown" aria-expanded="false">
-							<div class="">
-								<span>по популярности</span>
-							</div>
-						</a>
-						<div class="dropdown-menu_wrap">
-							<ul class="dropdown-menu feed_select">
-								<li class="dropdown custom-radio edit_link">
-									<label>
-										<svg class="icon" aria-hidden="true" focusable="false">
-											<use href="/assets/sprite/sprite.svg#icon-star"></use>
-										</svg>
-										<input type="radio" name="feed_check" value="по популярности" checked="">
-										<span>по популярности</span>
-									</label>
-								</li>
-								<li class="dropdown custom-radio edit_link">
-									<label>
-										<svg class="icon" aria-hidden="true" focusable="false">
-											<use href="/assets/sprite/sprite.svg#icon-money"></use>
-										</svg>
-										<input type="radio" name="feed_check" value="по цене">
-										<span>по цене</span>
-									</label>
-								</li>
-								<li class="dropdown custom-radio edit_link">
-									<label>
-										<svg class="icon" aria-hidden="true" focusable="false">
-											<use href="/assets/sprite/sprite.svg#icon-time"></use>
-										</svg>
-										<input type="radio" name="feed_check" value="по новизне">
-										<span>по новизне</span>
-									</label>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="electronics__check-list">
-						<button class="electronics__checked button btn" type="button">
-							<svg class="icon is-left" aria-hidden="true" focusable="false">
-								<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
-								<span class="label is-bolder">apple</span>
-							</button>
+          <button class="electronics__checked button btn" type="button">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">чёрный</span>
+          </button>
 
-							<button class="electronics__checked button btn" type="button">
-								<svg class="icon is-left" aria-hidden="true" focusable="false">
-									<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
-									<span class="label is-bolder">samsung</span>
-								</button>
+          <button class="electronics__checked button btn" type="button">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">серый</span>
+          </button>
 
-								<button class="electronics__checked button btn" type="button">
-									<svg class="icon is-left" aria-hidden="true" focusable="false">
-										<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
-										<span class="label is-bolder">чёрный</span>
-									</button>
+          <button class="electronics__checked button btn" type="button">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">до 150 000 ₽</span>
+          </button>
 
-									<button class="electronics__checked button btn" type="button">
-										<svg class="icon is-left" aria-hidden="true" focusable="false">
-											<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
-											<span class="label is-bolder">серый</span>
-										</button>
+          {# <button> #}
+            <button class="electronics__all-filters electronics__checked button">
+              <img
+                src="/assets/images/market/filter.svg"
+                class=""
+                alt="filter icon"
+              />
+              <a href="#" class="electronics__link-filter"
+                >все фильтры
+                <span class="electronics__counter-filter">+1</span>
+              </a>
+            </button>
+          {# </button> #}
+        </div>
+        {# <div class="electronics__all-filters">
+          <img
+            src="/assets/images/market/filter.svg"
+            class=""
+            alt="filter icon"
+          />
+          <a href="#" class="electronics__link-filter"
+            >все фильтры
+            <span class="electronics__counter-filter">+1</span>
+          </a>
+        </div> #}
+      </div>
+    </div>
+  </div>
+  <div class="electronics__content">
+    <!-- cards block -->
+    <div class="electronics__cards">
+      <!-- card -->
+      <div class="electronics__card">
+        <div class="electronics__image">
+          <img
+            src="/assets/images/market/apple.jpg"
+            class="card-img-top"
+            alt="apple"
+          />
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <img
+              class="card__img"
+              src="/assets/images/market/like.svg"
+              alt="like"
+            />
+            <p class="card__rating">4.9</p>
+            <p class="card__counter">(10)</p>
+            <p class="card__description">Хит продаж</p>
+          </div>
+          <h5 class="card__title">
+            Смартфон Apple iPhone SE 2022 64 ГБ, midnight
+          </h5>
+          <div class="card__text">
+            <p class="card__price">32 670 ₽</p>
+            <p class="card__delivery">доставка завтра</p>
+          </div>
+        </div>
+      </div>
+      <!-- end card -->
+      <!-- card -->
+      <div class="electronics__card">
+        <div class="electronics__image">
+          <img
+            src="/assets/images/market/samsung.jpg"
+            class="card-img-top"
+            alt="samsung"
+          />
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <img
+              class="card__img"
+              src="/assets/images/market/like.svg"
+              alt="like"
+            />
+            <p class="card__rating">4.9</p>
+            <p class="card__counter">(10)</p>
+            <p class="card__description">Новинка</p>
+          </div>
+          <h5 class="card__title">
+            Смартфон Samsung Galaxy S23 Ultra 12/256 ГБ, черный фантом
+          </h5>
+          <div class="card__text">
+            <p class="card__price">104 990 ₽</p>
+            <p class="card__delivery">доставка завтра</p>
+          </div>
+        </div>
+      </div>
+      <!-- end card -->
+      <!-- card -->
+      <div class="electronics__card">
+        <div class="electronics__image">
+          <img
+            src="/assets/images/market/samsung.jpg"
+            class="card-img-top"
+            alt="samsung"
+          />
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <img
+              class="card__img"
+              src="/assets/images/market/like.svg"
+              alt="like"
+            />
+            <p class="card__rating">4.9</p>
+            <p class="card__counter">(10)</p>
+            <p class="card__description">Новинка</p>
+          </div>
+          <h5 class="card__title">
+            Смартфон Samsung Galaxy S23 Ultra 12/256 ГБ, черный фантом
+          </h5>
+          <div class="card__text">
+            <p class="card__price">104 990 ₽</p>
+            <p class="card__delivery">доставка завтра</p>
+          </div>
+        </div>
+      </div>
+      <!-- end card -->
+      <!-- card -->
+      <div class="electronics__card">
+        <div class="electronics__image">
+          <img
+            src="/assets/images/market/samsung.jpg"
+            class="card-img-top"
+            alt="samsung"
+          />
+        </div>
+        <div class="card__body">
+          <div class="card__info">
+            <img
+              class="card__img"
+              src="/assets/images/market/like.svg"
+              alt="like"
+            />
+            <p class="card__rating">4.9</p>
+            <p class="card__counter">(10)</p>
+            <p class="card__description">Новинка</p>
+          </div>
+          <h5 class="card__title">
+            Смартфон Samsung Galaxy S23 Ultra 12/256 ГБ, черный фантом
+          </h5>
+          <div class="card__text">
+            <p class="card__price">104 990 ₽</p>
+            <p class="card__delivery">доставка завтра</p>
+          </div>
+        </div>
+      </div>
+      <!-- end card -->
+    </div>
+  </div>
+</div>
+{# ------------------------------ list --------------------------------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps ovflw-a">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-box"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="искать товары" />
+          <span>искать товары</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-user"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="искать продавцов" />
+          <span>искать продавцов</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-globe"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="по всему сайту" />
+          <span>по всему сайту</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
 
-										<button class="electronics__checked button btn" type="button">
-											<svg class="icon is-left" aria-hidden="true" focusable="false">
-												<use href="/assets/sprite/sprite.svg#icon-checkmark">></svg>
-												<span class="label is-bolder">до 150 000 ₽</span>
-											</button>
+{# --------------------------------------------------------------------- #}
+<div class="buyer-menu-categories__dropdown-menu">
+  <div class="buyer-menu-categories__dropdown-header"></div>
+  <ul class="buyer-menu-categories__select">
+    <li class="buyer-menu-categories__dropdown bmc-title">
+      <a href="#" class="buyer-menu-categories__link">
+        <svg class="icon deg270" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+        <span>назад</span>
+      </a>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Автозапчасти, аксессуары"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Автозапчасти, аксессуары</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Багаж, сумки и чехлы" />
+        <span class="buyer-menu-categories__subtitle"
+          >Багаж, сумки и чехлы</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бытовая техника" />
+        <span class="buyer-menu-categories__subtitle">Бытовая техника</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бытовая электроника" />
+        <span class="buyer-menu-categories__subtitle">Бытовая электроника</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Детский мир" />
+        <span class="buyer-menu-categories__subtitle">Детский мир</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Дом и сад" />
+        <span class="buyer-menu-categories__subtitle">Дом и сад</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Домашний текстиль" />
+        <span class="buyer-menu-categories__subtitle">Домашний текстиль</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Еда и напитки" />
+        <span class="buyer-menu-categories__subtitle">Еда и напитки</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Здоровье и медицина" />
+        <span class="buyer-menu-categories__subtitle">Здоровье и медицина</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Красота" />
+        <span class="buyer-menu-categories__subtitle">Красота</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Мебель" />
+        <span class="buyer-menu-categories__subtitle">Мебель</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Модные аксессуары" />
+        <span class="buyer-menu-categories__subtitle">Модные аксессуары</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Обувь" />
+        <span class="buyer-menu-categories__subtitle">Обувь</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Одежда" />
+        <span class="buyer-menu-categories__subtitle">Одежда</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Подарки и ремесла" />
+        <span class="buyer-menu-categories__subtitle">Подарки и ремесла</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Свет и освещение" />
+        <span class="buyer-menu-categories__subtitle">Свет и освещение</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Спорт и развлечения" />
+        <span class="buyer-menu-categories__subtitle">Спорт и развлечения</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Часы, украшения и очки" />
+        <span class="buyer-menu-categories__subtitle"
+          >Часы, украшения и очки</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Школьные и офисные принадлежности"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Школьные и офисные принадлежности</span
+        >
+      </label>
+    </li>
+    <li class="d-product-forms__dropdown bmc-title">
+      <span class="dividing-line"></span>
+    </li>
+    <li class="buyer-menu-categories__dropdown bmc-title">
+      <h4>Промышленные товары</h4>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Безопасность" />
+        <span class="buyer-menu-categories__subtitle">Безопасность</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бизнес-услуги" />
+        <span class="buyer-menu-categories__subtitle">Бизнес-услуги</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Инструменты и оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Инструменты и оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="коммерческая мебель" />
+        <span class="buyer-menu-categories__subtitle">коммерческая мебель</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Коммерческое сервисное оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Коммерческое сервисное оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Металлы и сплавы" />
+        <span class="buyer-menu-categories__subtitle">Металлы и сплавы</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Промышленное оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Промышленное оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Резина и пластмассы" />
+        <span class="buyer-menu-categories__subtitle">Резина и пластмассы</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Сельское хозяйство" />
+        <span class="buyer-menu-categories__subtitle">Сельское хозяйство</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Строительство и недвижимость"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Строительство и недвижимость</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Ткань и текстильное сырье"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Ткань и текстильное сырье</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Упаковка и печать" />
+        <span class="buyer-menu-categories__subtitle">Упаковка и печать</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Услуги по изготовлению" />
+        <span class="buyer-menu-categories__subtitle"
+          >Услуги по изготовлению</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Химикаты" />
+        <span class="buyer-menu-categories__subtitle">Химикаты</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Электронные компоненты, аксессуары и телекоммуникации"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Электронные компоненты, аксессуары и телекоммуникации</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Электрооборудование и расходные материалы"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Электрооборудование и расходные материалы</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Энергетические химикаты" />
+        <span class="buyer-menu-categories__subtitle"
+          >Энергетические химикаты</span
+        >
+      </label>
+    </li>
+  </ul>
+  <div class="buyer-menu-categories__dropdown-blur"></div>
+</div>
 
+{# --------------------------------------------------------------------- #}
+<div class="d-product-forms d-mp-height ovflw-a">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <div class="d-product-forms__header"></div>
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-store"></use>
+          </svg>
+          <span>главная</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-list"></use>
+          </svg>
+          <span>каталог</span>
 
-										</div>
-										<div class="electronics__all-filters">
+          <a href="#" class="d-product-forms__link">
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Покупки</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-shopping"></use>
+          </svg>
+          <span>корзина</span>
+          <span class="d-product-forms__count">5</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span>избранное</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Продажи</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-grid"></use>
+          </svg>
+          <span>сводка</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-box"></use>
+          </svg>
+          <span>товары</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+          <span class="d-product-forms__count">99+</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-group"></use>
+          </svg>
+          <span>покупатели</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-gift"></use>
+          </svg>
+          <span>купоны</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-chart"></use>
+          </svg>
+          <span>статистика</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-settings"></use>
+          </svg>
+          <span>Настройки</span>
+        </label>
+      </li>
+    </ul>
+    <div class="d-product-forms__blur"></div>
+  </div>
+</div>
+{# --------------------------------------------------------------------- #}
+<div class="buyer-filter">
+  <div class="buyer-filter__wrapper">
+    <div class="buyer-filter__container">
+      <div class="buyer-filter__blur-header"></div>
+      <div class="buyer-filter__header">
+        <h2 class="buyer-filter__title">фильтры</h2>
+        <div class="buyer-filter__button">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+          </svg>
+        </div>
+      </div>
+      {# ---- block grade ----- #}
+      <div class="buyer-filter__grade-block buyer-grade">
+        <div class="buyer-grade__wrapper">
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">оценка</h2>
+            {# ------- dropdown-menu grade ------ #}
+            <ul class="buyer-grade__list d-flex">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="grade" id="" checked />
+                  <span>Любая</span>
+                </label>
+                <span class="buyer-grade__quantity">1040</span>
+              </li>
 
-											<img src="/assets/images/market/filter.svg" class="" alt="filter icon"/>
-											<a href="#" class="electronics__link-filter">все фильтры
-												<span class="electronics__counter-filter">+1</span>
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div
-								class="electronics__content">
-								<!-- cards block -->
-								<div
-									class="electronics__cards">
-									<!-- card -->
-									<div class="electronics__card">
-										<div class="electronics__image">
-											<img src="/assets/images/market/apple.jpg" class="card-img-top" alt="apple"/>
-										</div>
-										<div class="card__body">
-											<div class="card__info">
-												<img class="card__img" src="/assets/images/market/like.svg" alt="like"/>
-												<p class="card__rating">4.9</p>
-												<p class="card__counter">(10)</p>
-												<p class="card__description">Хит продаж</p>
-											</div>
-											<h5 class="card__title">
-												Смартфон Apple iPhone SE 2022 64 ГБ, midnight
-											</h5>
-											<div class="card__text">
-												<p class="card__price">32 670 ₽</p>
-												<p class="card__delivery">доставка завтра</p>
-											</div>
-										</div>
-									</div>
-									<!-- end card -->
-									<!-- card -->
-									<div class="electronics__card">
-										<div class="electronics__image">
-											<img src="/assets/images/market/samsung.jpg" class="card-img-top" alt="samsung"/>
-										</div>
-										<div class="card__body">
-											<div class="card__info">
-												<img class="card__img" src="/assets/images/market/like.svg" alt="like"/>
-												<p class="card__rating">4.9</p>
-												<p class="card__counter">(10)</p>
-												<p class="card__description">Новинка</p>
-											</div>
-											<h5 class="card__title">
-												Смартфон Samsung Galaxy S23 Ultra 12/256 ГБ, черный фантом
-											</h5>
-											<div class="card__text">
-												<p class="card__price">104 990 ₽</p>
-												<p class="card__delivery">доставка завтра</p>
-											</div>
-										</div>
-									</div>
-									<!-- end card -->
-								</div>
-							</div>
-						</div>
-					{% endblock %}
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="grade" id="" />
+                  <span>5</span>
+                </label>
+                <span class="buyer-grade__quantity">77</span>
+              </li>
 
-					{% block footer %}
-						<div class="footer-wr-full footer-wrapper">
-							{% include "../components/single_footer.twig" %}
-						</div>
-					{% endblock %}
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="grade" id="" />
+                  <span>4 и выше</span>
+                </label>
+                <span class="buyer-grade__quantity">114</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="grade" id="" />
+                  <span>3 и выше</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+            </ul>
+          </div>
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">цена</h2>
+            {# ------- dropdown-menu price ------- #}
+            <div class="buyer-grade__items">
+              <label>
+                <input type="text" name="" id="" placeholder="От" />
+              </label>
+              <label>
+                <input type="text" name="" id="" placeholder="До" />
+              </label>
+            </div>
+          </div>
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title accordion-btn">бренд</h2>
+            <div class="buyer-grade__wrap-items">
+              <label class="buyer-grade__wrap-label">
+                <input type="text" name="" placeholder="Найти" id="" />
+                <button class="buyer-grade__btn-search">
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-search"></use>
+                  </svg>
+                </button>
+              </label>
+              {# ------- dropdown-menu grade ------ #}
+              <ul class="buyer-grade__list ovflw-a">
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" checked name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Apple</span>
+                  </label>
+                  <span class="buyer-grade__quantity">159</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" checked name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Samsung</span>
+                  </label>
+                  <span class="buyer-grade__quantity">405</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Xiaomi</span>
+                  </label>
+                  <span class="buyer-grade__quantity">612</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Xiaomi</span>
+                  </label>
+                  <span class="buyer-grade__quantity">612</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Xiaomi</span>
+                  </label>
+                  <span class="buyer-grade__quantity">612</span>
+                </li>
+              </ul>
+
+              {# ----------- #}
+              <div class="buyer-grade__line-dotted"></div>
+
+              <ul class="buyer-grade__list">
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Alcatel</span>
+                  </label>
+                  <span class="buyer-grade__quantity">14</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>Asus</span>
+                  </label>
+                  <span class="buyer-grade__quantity">405</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>BQ</span>
+                  </label>
+                  <span class="buyer-grade__quantity">612</span>
+                </li>
+
+                <li class="buyer-grade__item">
+                  <label>
+                    <input type="checkbox" name="b-brand" id="" />
+                    <span class="buyer-grade-custom"></span>
+                    <span>CAT</span>
+                  </label>
+                  <span class="buyer-grade__quantity">612</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {# ----------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">год выпуска</h2>
+            {# ------- dropdown-menu grade ------ #}
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2022</span>
+                </label>
+                <span class="buyer-grade__quantity">922</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2021</span>
+                </label>
+                <span class="buyer-grade__quantity">114</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2020</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2019</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2018</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2017</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-years" id="" />
+                  <span>2016</span>
+                </label>
+                <span class="buyer-grade__quantity">738</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">диагональ экрана (дюймы)</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>4.7</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5,45</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5,5</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>6,1</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>6,28</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>6,5</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5,5</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5,5</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-screen-size" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>5,5</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+          {# ----------- #}
+          <div class="buyer-grade__line"></div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">тип экрана</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>AMOLED</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>IPS</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>LCD</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Liquid Retina</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>OLED</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Retina</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Super AMOLED</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Super AMOLED</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Super AMOLED</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-type-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Super AMOLED</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">разрешение экрана</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>960x480</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1280x720</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1334x750</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1440x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1600x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1612x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1640x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1640x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1640x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-w-screen" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1640x720</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">цвет</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Бежевый</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Голубой</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Желтый</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Зеленый</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Коричневый</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Красный</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Красный</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Красный</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Красный</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-color-check" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Красный</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">операционная система</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Android 10 Go</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Android 10.0</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Android 11 Go</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Android 12</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Android 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>iOS 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>iOS 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>iOS 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>iOS 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-os" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>iOS 13</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">встроенная память (ГБ)</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>4</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>6</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>8</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>16</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>32</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>64</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>128</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>256</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>512</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-gb" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">оперативная память (ГБ)</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>2</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>3</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>4</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>6</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>8</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>12</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>32</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>64</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-memory-card" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>128</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">процессор</h2>
+
+            <ul class="buyer-grade__list b-list-screen ovflw-a">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Apple A11 Bionic</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Apple A12 Bionic</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Apple A13 Bionic</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Apple A14 Bionic</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Apple A15 Bionic</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>MediaTek Dimensity</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>MediaTek Helio A20</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>MediaTek Helio A20</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>MediaTek Helio A20</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-processor" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>MediaTek Helio A20</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">количество sim-карт</h2>
+
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-quantity-sim" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-quantity-sim" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>2</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">стандарт связи</h2>
+
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-network-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>GSM</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-network-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>GSM 1800</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-network-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>GSM 900</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-network-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>3G</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-network-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>4G</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">спутниковая навигация</h2>
+
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-gps-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>A-GPS</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-gps-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>BeiDou</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-gps-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Galileo</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-gps-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>GPS</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-gps-signal" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>ГЛОНАСС</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">беспроводные интерфейсы</h2>
+
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-interface" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Bluetooth</span>
+                </label>
+                <span class="buyer-grade__quantity">14</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-interface" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>NFC</span>
+                </label>
+                <span class="buyer-grade__quantity">405</span>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="checkbox" name="b-interface" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Wi-Fi</span>
+                </label>
+                <span class="buyer-grade__quantity">612</span>
+              </li>
+            </ul>
+          </div>
+
+          {# ----------------------- #}
+          <div class="buyer-grade__line"></div>
+
+          <div class="buyer-grade__dropdown-menu">
+            <h2 class="buyer-grade__title">срок доставки</h2>
+
+            <ul class="buyer-grade__list">
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="b-delivery" id="" checked />
+                  <span class="buyer-grade-custom"></span>
+                  <span>Любой</span>
+                </label>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="b-delivery" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>1 день</span>
+                </label>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="b-delivery" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>2 дня</span>
+                </label>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="b-delivery" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>до 3 дней</span>
+                </label>
+              </li>
+
+              <li class="buyer-grade__item">
+                <label>
+                  <input type="radio" name="b-delivery" id="" />
+                  <span class="buyer-grade-custom"></span>
+                  <span>до 5 дней</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          {# #}
+        </div>
+      </div>
+    </div>
+
+    {# ---- footer ----- #}
+    <div class="buyer-footer">
+      <div class="buyer-footer__wrapper">
+        <h4 class="buyer-footer__result">
+          Отобрали <span class="buyer-footer__count">3274</span> товара
+        </h4>
+        <div class="buyer-footer__blocks-btn">
+          <button class="btn btn-primary buyer-footer__ready">
+            <span class="buyer-footer__text-btn">Показать</span>
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+          </button>
+          <h4 class="buyer-footer__result b-title-footer">фильтры</h4>
+          <button class="btn buyer-footer__cancel">
+            <span class="buyer-footer__text-btn">Сбросить всё</span>
+            <span class="buyer-footer__text-btn b-cancel-btn">отмена</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full footer-wrapper">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

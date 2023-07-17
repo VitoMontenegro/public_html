@@ -1,212 +1,203 @@
-{% extends "../index_single.twig" %}
-{% set title = 'Sign Up' %}
-{% block content %}
+{% extends "../index_single.twig" %} {% set title = 'Order page' %} {% block
+content %}
 
-    Evgeniy, [14.06.2023 16:59]
-    {% extends "../index_single.twig" %} {% set title = 'Order page' %} {% block
-    content %}
-
-    <div class="order-page">
-        <div class="order-page__wrapper">
-            {# ----- header page ---- #}
-            <div class="order-page__header mb-1">
-                <div class="order-page__purchases">
-                    <span>Заказ</span> № 8157 7306 8262
-                    <span class="order-page__date-delivery"> от 23 янв 2023 </span>
-                </div>
-                <div class="order-page__status">
-                    <span>получен</span>
-                </div>
-            </div>
-            {# ---- main content ---- #}
-            <div class="order-page__main">
-                {# --- block info products --- #}
-                <div class="order-page__info-products mb-1">
-                    <div class="order-page__info-product">
-                        <h4 class="order-page__title">Получатель</h4>
-                        <div class="order-page__text">
-                            <p>Владимир Никишин</p>
-                            <p>Большая Переяславская 15, кв. 62, Москва, Россия, 129110</p>
-                        </div>
-                    </div>
-
-                    <div class="order-page__info-product">
-                        <h4 class="order-page__title">Поставщик</h4>
-                        <div class="order-page__text">
-                            <p><a href="#">ООО «Товары — почтой»</a>, Москва</p>
-                        </div>
-                    </div>
-
-                    Evgeniy, [14.06.2023 16:59]
-                    <div class="order-page__info-product">
-                        <h4 class="order-page__title">Оплата</h4>
-                        <div class="order-page__text">
-                            <p>Банковской картой</p>
-                        </div>
-                    </div>
-                </div>
-                {# --- block products --- #}
-                <div class="order-page__products">
-                    <ul class="order-page__lists">
-                        {# --- product --- #}
-                        <li class="order-page__product">
-                            <div class="order-page__picture">
-                                <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
-                            </div>
-                            <div class="order-page__descripptions">
-                                <h4 class="order-page__names">
-                                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
-                                    ©палаццо
-                                </h4>
-                                <p class="order-page__paragraph small">
-                                    Размер: 42. Цвет: тёмно-синий
-                                </p>
-                            </div>
-                            <div class="order-page__counter">
-                                <span class="order-cart-quantity">×15</span>
-                            </div>
-                            <div class="order-page__grand-total">
-                                <span>48 555 ₽</span>
-                            </div>
-                        </li>
-                        {# --- product --- #}
-                        <li class="order-page__product">
-                            <div class="order-page__picture">
-                                <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
-                            </div>
-                            <div class="order-page__descripptions">
-                                <h4 class="order-page__names">
-                                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
-                                    ©палаццо
-                                </h4>
-                                <p class="order-page__paragraph small">
-                                    Размер: 42. Цвет: тёмно-синий
-                                </p>
-                            </div>
-                            <div class="order-page__counter">
-                                <span class="order-cart-quantity">×15</span>
-                            </div>
-                            <div class="order-page__grand-total">
-                                <span>48 555 ₽</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            {# ---- end main content ---- #}
-            <div class="order-page__footer">
-                <div class="order-page__results mb-2">
-                    <div class="order-page__delivery">
-                        <h4>доставка:</h4>
-                        <span>500 ₽</span>
-                    </div>
-                    <div class="order-page__result">
-                        <h4>итого:</h4>
-                        <span>51 380 ₽</span>
-                    </div>
-                </div>
-                <div class="order-page__content">
-                    <ul class="order-page__lists-btn">
-                        <li>
-                            <a href="#" class="order-page__btn">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-cart"></use>
-                                </svg>
-                                <span class="is-danger button">удалить</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="order-page__btn">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-repeat"></use>
-                                </svg>
-                                <span>повторить</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="order-page__btn btn">
-                                <svg class="icon" aria-hidden="true" focusable="false">
-                                    <use href="/assets/sprite/sprite.svg#icon-comment"></use>
-                                </svg>
-                                <span>чат с поставщиком</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<div class="order-page">
+  <div class="order-page__wrapper">
+    {# ----- header page ---- #}
+    <div class="order-page__header mb-1">
+      <div class="order-page__purchases">
+        <span>Заказ</span> № 8157 7306 8262 
+        <span class="order-page__date-delivery"> от 23 янв 2023 </span>
+      </div>
+      <div class="order-page__status">
+        <span>получен</span>
+      </div>
+    </div>
+    {# ---- main content ---- #}
+    <div class="order-page__main">
+      {# --- block info products --- #}
+      <div class="order-page__info-products mb-1">
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Получатель</h4>
+          <div class="order-page__text">
+            <p>Владимир Никишин</p>
+            <p>Большая Переяславская 15, кв. 62, Москва, Россия, 129110</p>
+          </div>
         </div>
-        {# ----- chat modal ----- #}
-        <div class="order-page__chat chat-order">
-            <div class="chat-order__wrapper">
-                <div class="chat-order__header">
-                    <div class="chat-order__avatar">
-                        <figure class="entety__avatar">
-                            <img
-                                    src="/assets/images/avatar.jpg"
-                                    alt=""
-                                    class="entety__avatar_img"
-                            />
-                        </figure>
-                    </div>
-                    <div class="chat_order__description">
-                        <div class="chat_order__title">ООО «Товары — почтой»</div>
-                        <div class="chat_order__subtitle">Заказ № 8157 7306 8262</div>
-                    </div>
-                    <a href="#" class="order-page__btn">
 
-                        Evgeniy, [14.06.2023 16:59]
-                        <svg class="icon" aria-hidden="true" focusable="false">
-                            <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="chat-order__main">
-                    <div class="chat-order__messages">
-                        {# ---- message ---- #}
-                        <div class="chat-order__message message-sup">
-                            <div class="message-sup__data">
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Поставщик</h4>
+          <div class="order-page__text">
+            <p><a href="#">ООО «Товары — почтой»</a>, Москва</p>
+          </div>
+        </div>
+
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Оплата</h4>
+          <div class="order-page__text">
+            <p>Банковской картой</p>
+          </div>
+        </div>
+      </div>
+      {# --- block products --- #}
+      <div class="order-page__products">
+        <ul class="order-page__lists">
+          {# --- product --- #}
+          <li class="order-page__product">
+            <div class="order-page__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="order-page__descripptions">
+              <h4 class="order-page__names">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                ©палаццо
+              </h4>
+              <p class="order-page__paragraph small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="order-page__counter">
+              <span class="order-cart-quantity"><span>×</span>15</span>
+            </div>
+            <div class="order-page__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# --- product --- #}
+          <li class="order-page__product">
+            <div class="order-page__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="order-page__descripptions">
+              <h4 class="order-page__names">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                ©палаццо
+              </h4>
+              <p class="order-page__paragraph small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="order-page__counter">
+              <span class="order-cart-quantity"><span>×</span>15</span>
+            </div>
+            <div class="order-page__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {# ---- end main content ---- #}
+    <div class="order-page__footer">
+      <div class="order-page__results mb-2">
+        <div class="order-page__delivery">
+          <h4>доставка:</h4>
+          <span>500 ₽</span>
+        </div>
+        <div class="order-page__result">
+          <h4>итого:</h4>
+          <span>51 380 ₽</span>
+        </div>
+      </div>
+      <div class="order-page__content">
+        <ul class="order-page__lists-btn">
+          <li>
+            <a href="#" class="order-page__btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="is-danger button">удалить</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="order-page__btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-repeat"></use>
+              </svg>
+              <span>повторить</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="order-page__btn btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+              </svg>
+              <span>чат с поставщиком</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {# ----- chat modal ----- #}
+  <div class="order-page__chat chat-order">
+    <div class="chat-order__wrapper">
+      <div class="chat-order__header">
+        <div class="chat-order__avatar">
+          <figure class="entety__avatar">
+            <img
+              src="/assets/images/avatar.jpg"
+              alt=""
+              class="entety__avatar_img"
+            />
+          </figure>
+        </div>
+        <div class="chat_order__description">
+          <div class="chat_order__title">ООО «Товары — почтой»</div>
+          <div class="chat_order__subtitle">Заказ № 8157 7306 8262</div>
+        </div>
+        <a href="#" class="order-page__btn">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="chat-order__main">
+        <div class="chat-order__messages">
+          {# ---- message ---- #}
+          <div class="chat-order__message message-sup">
+            <div class="message-sup__data">
               <span class="message-sup__text"
-              >Здравствуйте, меня зовут Игорь Иванович. Чем я могу вам
+                >Здравствуйте, меня зовут Игорь Иванович. Чем я могу вам
                 помочь?</span
               >
-                                <span class="message-sup__time">12:38</span>
-                            </div>
-                        </div>
-                        {# --- end message --- #} {# ---- message ---- #}
-                        <div class="chat-order__message message-user">
-                            <div class="message-user__data">
-              <span class="message-user__text"
-              >Добрый день. Можно ли перенести время доставки?</span
-              >
-                                <span class="message-user__time">12:37</span>
-                            </div>
-                        </div>
-                        {# --- end message --- #}
-                    </div>
-                </div>
-                <div class="chat-order__footer">
-                    <div class="chat-order__footer-container">
-                        <button id="">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-plus"></use>
-                            </svg>
-                        </button>
-                        <textarea id="" class="chat-order__text-area" placeholder="Сообщение"></textarea>
-                        <button id="btn-send-message">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="/assets/sprite/sprite.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+              <span class="message-sup__time">12:38</span>
             </div>
+          </div>
+          {# --- end message --- #} {# ---- message ---- #}
+          <div class="chat-order__message message-user">
+            <div class="message-user__data">
+              <span class="message-user__text"
+                >Добрый день. Можно ли перенести время доставки?</span
+              >
+              <span class="message-user__time">12:37</span>
+            </div>
+          </div>
+          {# --- end message --- #}
         </div>
-        {# --- end chat --- #}
+      </div>
+      <div class="chat-order__footer">
+        <div class="chat-order__footer-container">
+          <button id="">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+          <textarea id="" class="chat-order__text-area" placeholder="Сообщение"></textarea>
+          <button id="btn-send-message">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-
+  </div>
+  {# --- end chat --- #}
+</div>
 
 {% endblock %} {% block footer %}
-    <div class="footer-wr-full">
-        {% include "../components/single_footer.twig" %}
-    </div>
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
 {% endblock %}

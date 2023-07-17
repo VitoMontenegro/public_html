@@ -1,0 +1,66 @@
+{% extends "../index_single.twig" %} {% set title = 'Import product chocie' %} {%
+block content %}
+<div class="import-product-main">
+  <div class="import-product-main__wrapper">
+    <div class="import-product-main__container">
+      <div class="import-product-main__content">
+        <h2 class="import-product-main__title">Импорт товаров</h2>
+
+        <div class="import-product-main__block">
+          <div class="import-product-main__stages">
+            <div class="import-product-main__stage stage-full-bg">
+              <p class="import-product-main__stage-bg-text">1</p>
+              <span class="import-product-main__stage-text">выбор файла</span>
+            </div>
+            <div class="import-product-main__stage">
+              <p class="import-product-main__stage-bg-text">2</p>
+              <span class="import-product-main__stage-text">соответствие колонок</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="import-product-main__form form-import">
+          {# ---- delivery block ---- #}
+          <div class="form-import__upload">
+            <label class="form-import__label">
+              <input class="form-import__inpt" name="files" type="file" />
+              <span class="form-import__custom">выберите файл</span>
+              <span class="form-import__text">Файл не выбран</span>
+            </label>
+            <span class="flex mb-1">Максимальный размер — 8 Мб</span>
+
+            <label class="flex align-center">
+              <input type="checkbox" name="choice-status" checked="" />
+              <span class="form-import__update"
+                >Обновить существующие товары</span
+              >
+            </label>
+            <span
+              >Если артикул импортируемого товара совпадает с артикулом
+              существующего.</span
+            >
+          </div>
+          {# ----- #}
+        </form>
+      </div>
+    </div>
+    <footer class="import-footer-product">
+      <div class="import-footer-product__wrapper">
+        <div class="import-footer-product__buttons">
+          <button class="import-footer-product__btn-cancel btn" type="button">
+            <span class="label is-bolder">отмена</span>
+          </button>
+
+          <button
+            class="import-footer-product__btn-complete btn btn-primary"
+            disabled
+            type="button"
+          >
+            <span class="label is-bolder">далее</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+{% endblock %}

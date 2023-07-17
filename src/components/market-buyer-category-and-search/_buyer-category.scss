@@ -1,5 +1,7 @@
 .electronics {
-  @include market-width;
+  max-width: 118.4rem;
+  margin: 0 auto;
+
   &__header {
     margin-bottom: 2.4rem;
   }
@@ -21,9 +23,11 @@
 
   // .electornics__titles-info
   &__titles-info {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 19rem 1fr; 
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
     }
@@ -42,6 +46,8 @@
 
   &__filter {
     display: flex;
+    // display: grid;
+    // grid-template-columns: 18rem 3fr;
     gap: 0.8rem;
     align-items: center;
     @include media-breakpoint-down(lg) {
@@ -55,7 +61,7 @@
     align-items: center;
     text-align: center;
     gap: 0.8rem;
-    min-width: 18rem;
+    min-width: 17rem;
     @include media-breakpoint-down(md) {
       gap: 0rem;
       min-width: 17rem;
@@ -63,35 +69,63 @@
   }
 
   //------------------
-  // .electornics__check-list
+  // .electronics__check-list
   &__check-list {
-    height: 4.8rem;
-    overflow: hidden;
+    // height: 4.8rem;
+    // overflow: hidden;
+    // flex-wrap: wrap;
     display: flex;
-    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    // grid-template-columns: repeat(7, 1fr);
     align-items: center;
     gap: 0.8rem;
-    align-self: flex-end;
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
+    // align-self: flex-end;
   }
 
   // .electornics__checked
   &__checked {
-    display: inline-block;
+    // display: block;
+    // flex: 1 0 19%;
+    // min-width: 10rem;
+    display: flex;
     text-align: center;
     padding: 0.4rem 1.6rem 0.4rem 1.2rem;
     background: #f2f6fd;
     border-radius: 10rem;
 
     font-size: 1.2rem;
-    line-height: 1.33;
+    line-height: 1;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     color: #475f85;
+    white-space: nowrap;
+
     & svg {
       color: #3073df;
+    }
+    &:nth-last-child(-n + 2) {
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+    }
+    &:nth-last-child(-n + 3) {
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+    }
+    // &:nth-last-child(-n + 4) {
+    //   @include media-breakpoint-down(lg) {
+    //     display: none;
+    //   }
+    // }
+    // &:nth-last-child(-n + 5) {
+    //   @include media-breakpoint-down(md) {
+    //     display: none;
+    //   }
+    // }
+    @include media-breakpoint-down(sm) {
+      display: none;
     }
   }
 
@@ -100,6 +134,7 @@
     display: flex;
     gap: 1.2rem;
     padding: 0 1.5rem 0 0;
+    background-color: transparent;
   }
 
   // .electornics__link-filter

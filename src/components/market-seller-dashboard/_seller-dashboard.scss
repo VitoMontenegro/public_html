@@ -1,0 +1,62 @@
+.sel-dashboard {
+    & h2,
+    h3,
+    p,
+    a {
+        padding: 0 !important;
+    }
+
+    width: 100%;
+    max-width: 118.4rem;
+    margin: 0 auto;
+
+    // .sel-dashboard__wrapper
+    &__wrapper {
+    }
+
+    // .sel-dashboard__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media-breakpoint-down(sm) {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+        }
+    }
+
+    // .sel-dashboard__purchases
+    &__purchases {
+    }
+
+    // .sel-dashboard__subtitle
+    &__subtitle {
+    }
+
+    // .sel-dashboard__filtres
+    &__filtres {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem;
+        & a {
+            padding: 0;
+        }
+        @include media-breakpoint-down(sm) {
+            justify-content: space-between;
+        }
+    }
+
+    // .sel-dashboard__dropdown-list
+    &__dropdown-list {
+        & span {
+            white-space: nowrap;
+        }
+    }
+}
+
+
+
+
+

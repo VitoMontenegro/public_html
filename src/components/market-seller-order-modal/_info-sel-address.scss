@@ -1,0 +1,45 @@
+.info-sel-address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    // .info-sel-address__container
+    &__container {
+        padding: 4rem 0;
+    }
+
+    // .info-sel-address__address-titles
+    &__address-titles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.4rem;
+    }
+
+    // .info-sel-address__address-title
+    &__address-title {
+        @include style-link;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 0;
+    }
+
+    // .info-sel-address__address
+    &__address {
+        color: var(--ink-dark-base, #081935);
+        & span {
+            @include style-text;
+        }
+    }
+
+    // .info-sel-address__links
+    &__links {
+        padding: 0;
+        & li {
+            list-style: none;
+            padding: 0.3rem 0;
+        }
+    }
+}

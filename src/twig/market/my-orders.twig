@@ -3,11 +3,11 @@ content %}
 
 <div class="my-orders">
   <div class="my-orders__wrapper">
-    <div class="my-orders__header">
+    <div class="my-orders__header mb-1">
       <div class="my-orders__purchases">
         <a href="#" class="my-orders__purchase">
-          <span
-            >Покупки
+          <span>
+            Покупки
             <svg class="icon" aria-hidden="true" focusable="false">
               <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
             </svg>
@@ -165,63 +165,781 @@ content %}
         {# --- end time filter --- #}
       </div>
     </div>
-    <div class="my-orders__main main-orders">
-      <div class="main-orders__wrapper">
-        <div class="main-orders__products">
-          <ul class="main-orders__product-list">
-            {# ----- наименование товаров ------ #}
-            <li class="main-orders__product-item border-top border-bottom">
-              <div class="main-orders__product elem-custom pos-item">
-                товары
-              </div>
-              <div class="main-orders__product elem-custom">
-                <span>сумма</span>, ₽
-              </div>
-              <div class="main-orders__product elem-custom">
-                дата
-                <svg class="icon" aria-hidden="true" focusable="false">
-                  <use href="/assets/sprite/sprite.svg#icon-down"></use>
-                </svg>
-              </div>
-              <div class="main-orders__product elem-custom">ID</div>
-              <div class="main-orders__product elem-custom">поставщик</div>
-              <div class="main-orders__product">статус</div>
-            </li>
-            {# ----- описание товара ------ #}
-            <li class="main-orders__product-item border-top">
-              <div class="main-orders__product name-product pos-item">
+
+    {# --- table ---- #}
+    <div class="main-orders__table-wrapper scroller">
+      <figure>
+        <table class="main-orders__table">
+          <tbody class="main-orders__tbody">
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product td-w-products products-pos-st">
+                <div class="main-orders__subtitle-table">товары</div>
+              </td>
+              <td class="main-orders__product td-w-sum-prod t-right">
+                <div class="main-orders__subtitle-table">сумма, ₽</div>
+              </td>
+              <td class="main-orders__product td-w-date-prod">
+                <div class="main-orders__subtitle-table">
+                  дата
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-down"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="main-orders__product td-w-id-prod">
+                <div class="main-orders__subtitle-table">ID</div>
+              </td>
+              <td class="main-orders__product td-w-delivery-prod">
+                <div class="main-orders__subtitle-table">поставщик</div>
+              </td>
+              <td class="main-orders__product td-w-status-prod">
+                <div class="main-orders__subtitle-table">статус</div>
+              </td>
+            </tr>
+
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product products-pos-st d-flex">
                 <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
                 <div class="main-orders__description">
-                  <h4>
-                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                  <a href="#" class="main-orders__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
                     трубы палаццо, скидка — 5%
-                  </h4>
+                  </a>
                   <span>+1 товар</span>
                 </div>
-              </div>
-              <div class="main-orders__product elem-product">
-                <span>51 380</span>, ₽
-              </div>
-              <div class="main-orders__product elem-product">23 янв</div>
-              <div class="main-orders__product elem-product">
-                8157 7306 8262
-              </div>
-              <div class="main-orders__product elem-product-provider">
-                Товары почтой
-              </div>
-              <div class="main-orders__product elem-product-status">
-                не оплачен
-              </div>
-            </li>
-            {# ------------- #}
-          </ul>
-          {# ---- #}
+              </td>
+              <td class="main-orders__product t-right">
+                <span>1 535 279</span>
+              </td>
+              <td class="main-orders__product"><span>23 янв</span></td>
+              <td class="main-orders__product"><span>8157 7306 8262</span></td>
+              <td class="main-orders__product">
+                <span><a href="#">Товары почтой</a></span>
+              </td>
+              <td class="main-orders__product status-prod">
+                <span class="status-nopay">не оплачен</span>
+              </td>
+            </tr>
+
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product products-pos-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="main-orders__description">
+                  <a href="#" class="main-orders__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </a>
+                  <span>+1 товар</span>
+                </div>
+              </td>
+              <td class="main-orders__product t-right"><span>51 380</span></td>
+              <td class="main-orders__product"><span>23 янв</span></td>
+              <td class="main-orders__product"><span>8157 7306 8262</span></td>
+              <td class="main-orders__product">
+                <span><a href="#">Товары почтой</a></span>
+              </td>
+              <td class="main-orders__product status-prod">
+                <span class="status-process">В ОБРАБОТКЕ</span>
+              </td>
+            </tr>
+
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product products-pos-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="main-orders__description">
+                  <a href="#" class="main-orders__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </a>
+                  <span>+1 товар</span>
+                </div>
+              </td>
+              <td class="main-orders__product t-right"><span>51 380</span></td>
+              <td class="main-orders__product"><span>23 янв</span></td>
+              <td class="main-orders__product"><span>8157 7306 8262</span></td>
+              <td class="main-orders__product">
+                <span><a href="#">Товары почтой</a></span>
+              </td>
+              <td class="main-orders__product status-prod">
+                <span class="status-send">отправлен</span>
+              </td>
+            </tr>
+
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product products-pos-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="main-orders__description">
+                  <a href="#" class="main-orders__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </a>
+                  <span>+1 товар</span>
+                </div>
+              </td>
+              <td class="main-orders__product t-right"><span>51 380</span></td>
+              <td class="main-orders__product"><span>23 янв</span></td>
+              <td class="main-orders__product"><span>8157 7306 8262</span></td>
+              <td class="main-orders__product">
+                <span><a href="#">Товары почтой</a></span>
+              </td>
+              <td class="main-orders__product status-prod">
+                <span class="status-received">получен</span>
+              </td>
+            </tr>
+
+            <tr class="main-orders__product-items">
+              <td class="main-orders__product products-pos-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="main-orders__description">
+                  <a href="#" class="main-orders__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </a>
+                  <span>+1 товар</span>
+                </div>
+              </td>
+              <td class="main-orders__product t-right"><span>51 380</span></td>
+              <td class="main-orders__product"><span>23 янв</span></td>
+              <td class="main-orders__product"><span>8157 7306 8262</span></td>
+              <td class="main-orders__product">
+                <span><a href="#">Товары почтой</a></span>
+              </td>
+              <td class="main-orders__product status-prod">
+                <span class="status-ad">рекламация</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+    {# --- end table --- #}
+  </div>
+</div>
+{# -------------------------------------- order page
+-------------------------------------- #}
+<div class="order-page">
+  <div class="order-page__wrapper">
+    {# ----- header page ---- #}
+    <div class="order-page__header mb-1">
+      <div class="order-page__purchases">
+        <span>Заказ</span> № 8157 7306 8262
+        <span class="order-page__date-delivery"> от 23 янв 2023 </span>
+      </div>
+      <div class="order-page__status">
+        <span>получен</span>
+      </div>
+    </div>
+    {# ---- main content ---- #}
+    <div class="order-page__main">
+      {# --- block info products --- #}
+      <div class="order-page__info-products mb-1">
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Получатель</h4>
+          <div class="order-page__text">
+            <p>Владимир Никишин</p>
+            <p>Большая Переяславская 15, кв. 62, Москва, Россия, 129110</p>
+          </div>
+        </div>
+
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Поставщик</h4>
+          <div class="order-page__text">
+            <p><a href="#">ООО «Товары — почтой»</a>, Москва</p>
+          </div>
+        </div>
+
+        <div class="order-page__info-product">
+          <h4 class="order-page__title">Оплата</h4>
+          <div class="order-page__text">
+            <p>Банковской картой</p>
+          </div>
+        </div>
+      </div>
+      {# --- block products --- #}
+      <div class="order-page__products">
+        <ul class="order-page__lists">
+          {# --- product --- #}
+          <li class="order-page__product">
+            <div class="order-page__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="order-page__descripptions">
+              <h4 class="order-page__names">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                ©палаццо
+              </h4>
+              <p class="order-page__paragraph small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="order-page__counter">
+              <span class="order-cart-quantity"><span>×</span>15</span>
+            </div>
+            <div class="order-page__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+          {# --- product --- #}
+          <li class="order-page__product">
+            <div class="order-page__picture">
+              <img src="/assets/images/market/jeans.jpg" alt="Image 1" />
+            </div>
+            <div class="order-page__descripptions">
+              <h4 class="order-page__names">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                ©палаццо
+              </h4>
+              <p class="order-page__paragraph small">
+                Размер: 42. Цвет: тёмно-синий
+              </p>
+            </div>
+            <div class="order-page__counter">
+              <span class="order-cart-quantity"><span>×</span>15</span>
+            </div>
+            <div class="order-page__grand-total">
+              <span>48 555 ₽</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {# ---- end main content ---- #}
+    <div class="order-page__footer">
+      <div class="order-page__results mb-2">
+        <div class="order-page__delivery">
+          <h4>доставка:</h4>
+          <span>500 ₽</span>
+        </div>
+        <div class="order-page__result">
+          <h4>итого:</h4>
+          <span>51 380 ₽</span>
+        </div>
+      </div>
+      <div class="order-page__content">
+        <ul class="order-page__lists-btn">
+          <li>
+            <a href="#" class="order-page__btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="is-danger button">удалить</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="order-page__btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-repeat"></use>
+              </svg>
+              <span>повторить</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="order-page__btn btn">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-comment"></use>
+              </svg>
+              <span>чат с поставщиком</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {# ----- chat modal ----- #}
+  <div class="order-page__chat chat-order">
+    <div class="chat-order__wrapper">
+      <div class="chat-order__header">
+        <div class="chat-order__avatar">
+          <figure class="entety__avatar">
+            <img
+              src="/assets/images/avatar.jpg"
+              alt=""
+              class="entety__avatar_img"
+            />
+          </figure>
+        </div>
+        <div class="chat_order__description">
+          <div class="chat_order__title">ООО «Товары — почтой»</div>
+          <div class="chat_order__subtitle">Заказ № 8157 7306 8262</div>
+        </div>
+        <a href="#" class="order-page__btn">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="chat-order__main">
+        <div class="chat-order__messages">
+          {# ---- message ---- #}
+          <div class="chat-order__message message-sup">
+            <div class="message-sup__data">
+              <span class="message-sup__text"
+                >Здравствуйте, меня зовут Игорь Иванович. Чем я могу вам
+                помочь?</span
+              >
+              <span class="message-sup__time">12:38</span>
+            </div>
+          </div>
+          {# --- end message --- #} {# ---- message ---- #}
+          <div class="chat-order__message message-user">
+            <div class="message-user__data">
+              <span class="message-user__text"
+                >Добрый день. Можно ли перенести время доставки?</span
+              >
+              <span class="message-user__time">12:37</span>
+            </div>
+          </div>
+          {# --- end message --- #}
+        </div>
+      </div>
+      <div class="chat-order__footer">
+        <div class="chat-order__footer-container">
+          <button id="">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+          <textarea
+            id=""
+            class="chat-order__text-area"
+            placeholder="Сообщение"
+          ></textarea>
+          <button id="btn-send-message">
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
   </div>
+  {# --- end chat --- #}
 </div>
+{# ---------------- end order page ----------------- #} 
+{# ---------------- details ----------------- #}
+<div class="d-product-forms d-mp-height ovflw-a">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <div class="d-product-forms__header"></div>
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-store"></use>
+          </svg>
+          <span>главная</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-list"></use>
+          </svg>
+          <span>каталог</span>
 
+          <a href="#" class="d-product-forms__link">
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Покупки</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-shopping"></use>
+          </svg>
+          <span>корзина</span>
+          <span class="d-product-forms__count">5</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span>избранное</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Продажи</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-grid"></use>
+          </svg>
+          <span>сводка</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-box"></use>
+          </svg>
+          <span>товары</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+          <span class="d-product-forms__count">99+</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-group"></use>
+          </svg>
+          <span>покупатели</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-gift"></use>
+          </svg>
+          <span>купоны</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-chart"></use>
+          </svg>
+          <span>статистика</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-settings"></use>
+          </svg>
+          <span>Настройки</span>
+        </label>
+      </li>
+    </ul>
+    <div class="d-product-forms__blur"></div>
+  </div>
+</div>
+{# -------- -------- #}
+<div class="buyer-menu-categories__dropdown-menu">
+  <div class="buyer-menu-categories__dropdown-header"></div>
+  <ul class="buyer-menu-categories__select">
+    <li class="buyer-menu-categories__dropdown bmc-title">
+      <a href="#" class="buyer-menu-categories__link">
+        <svg class="icon deg270" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+        <span>назад</span>
+      </a>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Автозапчасти,&nbsp;аксессуары"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Автозапчасти,&nbsp;аксессуары</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Багаж, сумки и чехлы" />
+        <span class="buyer-menu-categories__subtitle"
+          >Багаж, сумки и чехлы</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бытовая техника" />
+        <span class="buyer-menu-categories__subtitle">Бытовая техника</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бытовая электроника" />
+        <span class="buyer-menu-categories__subtitle">Бытовая электроника</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Детский мир" />
+        <span class="buyer-menu-categories__subtitle">Детский мир</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Дом и сад" />
+        <span class="buyer-menu-categories__subtitle">Дом и сад</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Домашний текстиль" />
+        <span class="buyer-menu-categories__subtitle">Домашний текстиль</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Еда и напитки" />
+        <span class="buyer-menu-categories__subtitle">Еда и напитки</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Здоровье и медицина" />
+        <span class="buyer-menu-categories__subtitle">Здоровье и медицина</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Красота" />
+        <span class="buyer-menu-categories__subtitle">Красота</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Мебель" />
+        <span class="buyer-menu-categories__subtitle">Мебель</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Модные аксессуары" />
+        <span class="buyer-menu-categories__subtitle">Модные аксессуары</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Обувь" />
+        <span class="buyer-menu-categories__subtitle">Обувь</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Одежда" />
+        <span class="buyer-menu-categories__subtitle">Одежда</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Подарки и ремесла" />
+        <span class="buyer-menu-categories__subtitle">Подарки и ремесла</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Свет и освещение" />
+        <span class="buyer-menu-categories__subtitle">Свет и освещение</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Спорт и развлечения" />
+        <span class="buyer-menu-categories__subtitle">Спорт и развлечения</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Часы, украшения и очки" />
+        <span class="buyer-menu-categories__subtitle"
+          >Часы, украшения и очки</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Школьные и офисные принадлежности"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Школьные и офисные принадлежности</span
+        >
+      </label>
+    </li>
+    <li class="d-product-forms__dropdown bmc-title">
+      <span class="dividing-line"></span>
+    </li>
+    <li class="buyer-menu-categories__dropdown bmc-title">
+      <h4>Промышленные товары</h4>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Безопасность" />
+        <span class="buyer-menu-categories__subtitle">Безопасность</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Бизнес-услуги" />
+        <span class="buyer-menu-categories__subtitle">Бизнес-услуги</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Инструменты и&nbsp;оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Инструменты и&nbsp;оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="коммерческая мебель" />
+        <span class="buyer-menu-categories__subtitle">коммерческая мебель</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Коммерческое сервисное оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Коммерческое сервисное оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Металлы и сплавы" />
+        <span class="buyer-menu-categories__subtitle">Металлы и сплавы</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Промышленное оборудование"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Промышленное оборудование</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Резина и пластмассы" />
+        <span class="buyer-menu-categories__subtitle">Резина и пластмассы</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Сельское хозяйство" />
+        <span class="buyer-menu-categories__subtitle">Сельское хозяйство</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Строительство и&nbsp;недвижимость"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Строительство и&nbsp;недвижимость</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Ткань и текстильное сырье"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Ткань и текстильное сырье</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Упаковка и печать" />
+        <span class="buyer-menu-categories__subtitle">Упаковка и печать</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Услуги по изготовлению" />
+        <span class="buyer-menu-categories__subtitle"
+          >Услуги по изготовлению</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Химикаты" />
+        <span class="buyer-menu-categories__subtitle">Химикаты</span>
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Электронные компоненты, аксессуары и&nbsp;телекоммуникации"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Электронные компоненты, аксессуары и&nbsp;телекоммуникации</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input
+          type="radio"
+          name="feed_check"
+          value="Электрооборудование и&nbsp;расходные материалы"
+        />
+        <span class="buyer-menu-categories__subtitle"
+          >Электрооборудование и&nbsp;расходные материалы</span
+        >
+      </label>
+    </li>
+    <li class="buyer-menu-categories__dropdown">
+      <label>
+        <input type="radio" name="feed_check" value="Энергетические химикаты" />
+        <span class="buyer-menu-categories__subtitle"
+          >Энергетические химикаты</span
+        >
+      </label>
+    </li>
+  </ul>
+  <div class="buyer-menu-categories__dropdown-blur"></div>
+</div>
 {% endblock %} {% block footer %}
 <div class="footer-wr-full">
   {% include "../components/single_footer.twig" %}

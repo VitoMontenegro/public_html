@@ -17,3 +17,57 @@
   font-size: 1.2rem;
   line-height: 1.33;
 }
+
+// status style
+@mixin color-danger {
+  color: #d42421;
+}
+@mixin bg-danger {
+  background: #fceeed;
+}
+
+@mixin color-process {
+  color: #475f85;
+}
+@mixin bg-process {
+  background: #f6f7f9;
+}
+
+@mixin color-send {
+  color: #2268d8;
+}
+@mixin bg-send {
+  background: #f2f6fd;
+}
+
+@mixin color-received {
+  color: #148016;
+}
+@mixin bg-received {
+  background: #d7f9d8;
+}
+
+@mixin color-ad {
+  color: #6d6e11;
+}
+@mixin bg-ad {
+  background: #f3f3b4;
+}
+
+
+@mixin alert-badge {
+  display: flex;
+  justify-content: center;
+  border-radius: 10rem;
+  padding: 0.9rem 1.2rem;
+}
+
+@mixin d-style-text{
+  color: var(--ink-dark-2-ry, #475f85);
+  font-size: 1.2rem;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}

@@ -8,6 +8,9 @@
     @include media-breakpoint-down(lg) {
       grid-template-columns: 1fr;
     }
+    @include media-breakpoint-down(sm) {
+      gap: 0rem;
+    }
   }
 
   // .cart-checkout__titles
@@ -16,6 +19,10 @@
     justify-content: space-between;
     gap: 1rem;
     align-items: flex-end;
+    margin-bottom: 4.3rem;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 2.6rem;
+    }
   }
 
   // .cart-checkout__title
@@ -33,6 +40,29 @@
     @include style-text;
     font-weight: 500;
     color: #475f85;
+  }
+
+  // .cart-checkout__info-block
+  &__info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+    padding: 0;
+    margin-bottom: 4.4rem;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 2.3rem;
+    }
+    & svg {
+      padding: 0;
+    }
+    & h3 {
+      @include style-link;
+      padding: 0;
+      margin: 0 !important;
+      color: var(--ink-dark-2-ry, #475f85);
+      font-weight: 400;
+      align-self: center;
+    }
   }
 
   // .cart-checkout__main

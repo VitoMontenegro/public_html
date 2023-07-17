@@ -78,14 +78,21 @@
 // @import 'components/input/validation';
 // @import 'components/nav-languages/languages';
 
-@import "components/market-mixin/mixins";
+@import "components/market-mixin/mixins.scss";
+@import "components/market-scroller/market-scroller.scss";
+
+@import "components/market-custom-checkbox-radio/custom-checkbox-radio";
+
 @import "components/market-buyer-home/buyer-home";
-@import "components/market-buyer-category-and-search/buyer-category";
+@import "components/market-buyer-home/buyer-menu-categories.scss";
+
+@import "components/market-buyer-category-and-search/buyer-category.scss";
+@import "components/market-buyer-category-and-search/buyer-filter.scss";
+
 @import "components/market-buyer-consumer/buyer-consumer";
 @import "components/market-buyer-consumer/left-data";
 @import "components/market-buyer-consumer/ratings-block";
 @import "components/market-buyer-consumer/product-data";
-@import "components/market-buyer-consumer/custom-checkbox-radio";
 @import "components/market-buyer-consumer/basket-market";
 @import "components/market-buyer-consumer/comment-product";
 @import "components/market-buyer-consumer/product-description";
@@ -106,6 +113,7 @@
 @import "components/market-capital-good/similar-product.scss";
 @import "components/market-capital-good/delivery-list.scss";
 @import "components/market-capital-good/material-data.scss";
+@import "components/market-capital-good/buyer-request.scss";
 
 @import "components/market-cart-and-checkout/cart-checkout.scss";
 @import "components/market-cart-and-checkout/items-cart.scss";
@@ -113,9 +121,65 @@
 @import "components/market-cart-and-checkout/checkout-delivery.scss";
 @import "components/market-cart-and-checkout/cart-purchases.scss";
 @import "components/market-cart-and-checkout/checkout-payment.scss";
+@import "components/market-cart-and-checkout/mini-cart.scss";
+@import "components/market-cart-and-checkout/cart-nav.scss";
 
-@import "components/market-my-orders/my-orders-header";
-@import "components/market-my-orders/my-orders-main";
+
+@import "components/market-my-orders/my-orders-header.scss";
+@import "components/market-my-orders/my-orders-main.scss";
+@import "components/market-my-orders/status-style.scss";
+@import "components/market-my-orders/order-page.scss";
+@import "components/market-my-orders/chat-order.scss";
+
+@import "components/market-add-products/add-prduct-main.scss";
+@import "components/market-add-products/add-product-characteristics.scss";
+@import "components/market-add-products/add-product-description.scss";
+@import "components/market-add-products/add-product-files.scss";
+@import "components/market-add-products/add-product-delivery.scss";
+@import "components/market-add-products/add-product-delivery-final.scss";
+
+@import "components/market-add-product-aside/add-product-aside.scss";
+@import "components/market-add-product-footer/add-product-footer.scss";
+@import "components/market-add-product-page/add-product-page.scss";
+
+@import "components/market-add-product-description/add-product-description.scss";
+
+@import "components/market-edit-products/add-media-files.scss";
+
+@import "components/market-import-product/import-product-choice.scss";
+@import "components/market-import-product/import-product-correspondence.scss";
+@import "components/market-import-product/import-product-details.scss";
+
+@import "components/market-seller-order-footer/seller-order-footer.scss";
+@import "components/market-seller-order-modal/seller-order.scss";
+@import "components/market-seller-order-modal/info-sel-or.scss";
+@import "components/market-seller-order-modal/info-sel-address.scss";
+@import "components/market-seller-order-modal/sel-data-order.scss";
+@import "components/market-seller-order-modal/seller-message-sup.scss";
+@import "components/market-seller-order-modal/seller-message-user.scss";
+@import "components/market-seller-order-modal/user-info-product.scss";
+@import "components/market-seller-order-modal/seller-p-table.scss";
+@import "components/market-seller-order-modal/seller-p-tab.scss";
+
+@import "components/market-seller-customers/seller-customers.scss";
+@import "components/market-seller-customers/info-sel-cust.scss";
+@import "components/market-seller-customers/other-styles-sel-customers.scss";
+@import "components/market-seller-customers/sel-data-grid.scss";
+@import "components/market-seller-customers/seller-page.scss";
+
+@import "components/market-seller-dashboard/seller-dashboard.scss";
+@import "components/market-seller-dashboard/board-info.scss";
+@import "components/market-seller-dashboard/dashboard-orders.scss";
+@import "components/market-seller-dashboard/other-styles-seller.scss";
+@import "components/market-seller-dashboard/seller-board.scss";
+
+@import "components/market-seller-t-products/sel-prod.scss";
+@import "components/market-seller-t-products/sel-t-prod.scss";
+
+@import "components/market-seller-analytics/data-analytics.scss";
+@import "components/market-seller-analytics/sel-analytics.scss";
+@import "components/market-seller-analytics/table-analytics.scss";
+
 
 @import "components/nav-menu/menu";
 @import "components/nav-primary/primary-nav";

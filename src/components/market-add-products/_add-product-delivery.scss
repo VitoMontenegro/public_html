@@ -1,0 +1,46 @@
+.form-delivery {
+    // .form-delivery__block
+    &__block {
+    }
+
+    // .form-delivery__label
+    &__label {
+        @include style-link;
+        width: 100%;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: #475f85;
+        position: relative;
+    }
+
+    // .form-delivery__inputs
+    &__inputs {
+        display: flex;
+        gap: 1rem;
+
+    }
+
+    // .form-delivery__input
+    &__input {
+        margin: 0.5rem 0 !important;
+        background: #f6f7f9;
+    }
+
+    // .form-delivery__btn
+    &__btn {
+        position: absolute;
+        top: 45%;
+        right: 1rem;
+        background: transparent;
+        & svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.del-small-inpt {
+    width: 6.4rem !important;
+    height: 4.6rem !important;
+    min-width: 0 !important;
+    text-align: center;
+}

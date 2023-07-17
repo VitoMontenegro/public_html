@@ -1,0 +1,212 @@
+{% extends "../index_single.twig" %} {% set title = 'Add product description' %}
+{% block content %}
+<div class="add-product-main">
+  <div class="add-product-main__wrapper ovflw-a">
+    <div class="add-product-main__container description-product">
+      <div class="description-product__wrapper">
+        <div class="description-product__header"></div>
+        <h2 class="add-product-main__title">Добавить товар</h2>
+        <h4 class="description-product__subtitle">Джинсы женские Norma Jean</h4>
+        <form class="description-product__form">
+          {# ---- add product block ---- #}
+          <div class="description-product__block">
+            <span>описание*</span>
+            <div class="description-product__label">
+              <label for="label-textarea-decr" class="ttu"></label>
+              <div class="description-product__header-area">
+                <span>подзаголовок</span>
+                <button class="description-product__btn" type="button">
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-list"></use>
+                  </svg>
+                </button>
+                <button class="description-product__btn" type="button">
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-ol"></use>
+                  </svg>
+                </button>
+              </div>
+
+              <textarea
+                id="label-textarea-decr"
+                type="text"
+                class="description-product__textarea"
+                name=""
+                placeholder="Расскажите о товаре — как его использовать, из каких материалов он сделан и как может помочь покупателю.
+                 
+  Подробное описание рекомендуем разбивать подзаголовками.
+  
+  Например.
+  - Отделка и интерьер
+  - Оплачивается отдельно
+  - Доставка"
+              ></textarea>
+            </div>
+          </div>
+          {# ----- #}
+        </form>
+        {# ---- block example ---- #}
+        <div class="description-product__example-text">
+          <p>
+            Расскажите о товаре — как его использовать, из каких материалов он
+            сделан и как может помочь покупателю.
+          </p>
+          <p>Подробное описание рекомендуем разбивать подзаголовками.</p>
+          <p>
+            <span>Например.</span><br />
+            <span>- Отделка и интерьер</span><br />
+            <span>- Оплачивается отдельно</span><br />
+            <span>- Доставка</span>
+          </p>
+        </div>
+        {# ----- #}
+      </div>
+      {# --- aside --- #}
+      <div class="add-product-aside">
+        <div class="add-product-aside__wrapper">
+          <ul class="add-product-aside__list">
+            <li
+              class="add-product-aside__item active-product-page complete-all-fields"
+            >
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                </svg>
+                <span>основное</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/5*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item need-complete">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-error"></use>
+                </svg>
+                <span>характеристики</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/6*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>описание</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>фото и видео</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>доставка</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {# ------ end aside ------ #}
+    </div>
+    {# --------------- footer -------------- #}
+    <footer class="add-footer-product">
+      <div class="add-footer-product__wrapper">
+        <div class="add-footer-product__links">
+          <a href="" class="add-footer-product__prev">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <div class="add-footer-product__buttons">
+            <button class="add-footer-product__btn-cancel btn" type="button">
+              <span class="add-footer-product__sp-can-d label is-bolder"
+                >отменить</span
+              >
+              <span class="add-footer-product__sp-can-m label is-bolder">
+                <svg class="icon deg270" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use></svg
+              ></span>
+            </button>
+            <button class="add-footer-product__btn-save btn" type="button">
+              <span class="label is-bolder">сохранить как черновик</span>
+            </button>
+            {# ------- footer title ------- #}
+            <h4 class="add-footer-product__title">Описание</h4>
+            {# ---------------------------- #}
+            <button
+              class="add-footer-product__btn-complete file-disabled btn btn-primary"
+              disabled
+              type="button"
+            >
+              <svg class="icon is-left" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <span class="label is-bolder">готово</span>
+            </button>
+          </div>
+          <a href="" class="add-footer-product__next">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    {# --------------- end footer -------------- #}
+  </div>
+</div>
+{% endblock %}

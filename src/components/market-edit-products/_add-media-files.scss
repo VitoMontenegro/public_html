@@ -1,0 +1,27 @@
+.add-media-files {
+    display: none;
+    @include media-breakpoint-down(md) {
+        display: block;
+        border: 0;
+    }
+    // .add-media-files__label
+    &__label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background: var(--ink-dark-min, rgba(23, 25, 28, 0.04));
+        border-radius: 1.1rem;
+
+        & input {
+            width: 0;
+            height: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        & svg {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

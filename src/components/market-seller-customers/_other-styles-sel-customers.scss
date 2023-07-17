@@ -1,0 +1,133 @@
+.t-right {
+    text-align: right;
+}
+
+// ---------------------
+
+.sel-pos-st {
+    max-width: 48.8rem;
+    position: sticky !important;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: var(--background-bg-base, #fcfcfd);
+    & span {
+        @include style-link;
+        text-transform: none;
+        color: var(--ink-dark-2-ry, #475f85);
+    }
+    @include media-breakpoint-down(xl) {
+        min-width: 16.5rem;
+    }
+    @include media-breakpoint-down(lg) {
+        min-width: 26.4rem;
+    }
+    @include media-breakpoint-down(md) {
+        min-width: calc(50vw - 2rem);
+        max-width: calc(50vw - 2rem);
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 0.8rem 0 0.8rem 1.6rem !important;
+    }
+}
+
+.td-w-buyer {
+    min-width: 48.8rem;
+    @include media-breakpoint-down(xl) {
+        min-width: 19.7rem;
+    }
+    @include media-breakpoint-down(lg) {
+        min-width: 26.4rem;
+    }
+    @include media-breakpoint-down(md) {
+        min-width: calc(50vw - 2rem);
+        max-width: calc(50vw - 2rem);
+    }
+}
+
+.td-w-email {
+    min-width: 24.3rem;
+    @include media-breakpoint-down(xl) {
+        min-width: 19.7rem;
+    }
+    // width: 20.52%;
+}
+
+.td-w-lorder {
+    min-width: 15.4rem;
+    // width: 10.3%;
+}
+
+.td-w-coplete {
+    min-width: 11.2rem;
+    // width: 9.45%;
+}
+
+.td-w-sum {
+    min-width: 9.4rem;
+    // width: 7.9%;
+}
+
+.td-w-check {
+    min-width: 9.3rem;
+    // width: 7.85%;
+}
+
+.td-w-email,
+.td-w-lorder,
+.td-w-coplete,
+.td-w-sum,
+.td-w-check {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 3rem;
+        background-color: #d1d9e6;
+        @include media-breakpoint-down(md) {
+            width: 0;
+        }
+    }
+}
+
+// ========================
+.mp-pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mp-pagination-list {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.mp-page-item {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.mp-page-link {
+    @include style-text;
+    font-weight: 400;
+    padding: 0 0.8rem;
+
+    color: var(--ink-dark-2-ry, #475f85);
+}
+
+.active-mp-pl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.1rem;
+    padding: 0.8rem !important;
+    min-width: 4rem;
+    height: 4.8rem;
+    color: var(--ink-light-base, rgba(255, 255, 255, 0.87));
+    background: var(--ink-blue-text-brand-700, #2268d8);
+}

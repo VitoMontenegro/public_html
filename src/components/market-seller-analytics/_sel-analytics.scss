@@ -1,0 +1,86 @@
+.sel-analytics {
+    max-width: 118.4rem;
+    margin: 0 auto;
+    width: 100%;
+
+    // .sel-analytics__wrapper
+    &__wrapper {
+    }
+
+    // .sel-analytics__header
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        @include media-breakpoint-down(xl) {
+            flex-wrap: wrap;
+        }
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    // .sel-analytics__purchases
+    &__purchases {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    // .sel-analytics__purchase
+    &__purchase {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 1.07;
+        color: #475f85;
+        @include media-breakpoint-down(sm) {
+            font-size: 2.6rem;
+        }
+    }
+
+    // .sel-analytics__subtitle
+    &__subtitle {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 1.07;
+        color: #081935;
+        padding: 0 0.8rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 2.6rem;
+            padding: 0;
+        }
+    }
+
+    // .sel-analytics__filtres
+    &__filtres {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    // .sel-analytics__dropdown-list
+    &__dropdown-list {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        & a, button{
+            padding: 0;
+        }
+        & span {
+            @include media-breakpoint-down(sm) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    // .sel-analytics__add-btn
+    &__add-btn {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}

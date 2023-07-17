@@ -1,0 +1,666 @@
+{% extends "../index_single.twig" %} {% set title = 'Import product details' %}
+{% block content %}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-form"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="форма — один товар" />
+          <span>форма — один товар</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-upload"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="csv — группа товаров" />
+          <span>csv — группа товаров</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-store"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="маргарита павловна" />
+          <span>маргарита павловна</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-store"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            checked
+            value="московская игротека"
+          />
+          <span>московская игротека</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            checked
+            value="добавить магазин"
+          />
+          <span>добавить магазин</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-all"></use>
+          </svg>
+          <input type="radio" checked name="feed_check" value="Все" />
+          <span>Все</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-checks"></use>
+          </svg>
+          <span>В продаже</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-success"></use>
+          </svg>
+          <span>в наличии</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+          </svg>
+          <span>нет в наличии</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-editProfile"></use>
+          </svg>
+          <span>Черновики</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-hourglass"></use>
+          </svg>
+          <span>на рассмотрении</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-blocked"></use>
+          </svg>
+          <span>Заблокированы</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-archive"></use>
+          </svg>
+          <span>Сняты с продажи</span>
+          <span class="d-product-forms__count">4</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-forms d-mp-height">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <div class="d-product-forms__header"></div>
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-store"></use>
+          </svg>
+          <span>главная</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-list"></use>
+          </svg>
+          <span>каталог</span>
+          {# <span class="d-product-forms__count">4</span> #}
+          <a href="#" class="d-product-forms__link">
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Покупки</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-shopping"></use>
+          </svg>
+          <span>корзина</span>
+          <span class="d-product-forms__count">5</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-bookmark"></use>
+          </svg>
+          <span>избранное</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown">
+        <h4>Продажи</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-grid"></use>
+          </svg>
+          <span>сводка</span>
+          {# <span class="d-product-forms__count">4</span> #}
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-box"></use>
+          </svg>
+          <span>товары</span>
+          {# <span class="d-product-forms__count">4</span> #}
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-arrows-down-up"></use>
+          </svg>
+          <span>заказы</span>
+          <span class="d-product-forms__count">99+</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-group"></use>
+          </svg>
+          <span>покупатели</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-gift"></use>
+          </svg>
+          <span>купоны</span>
+          {# <span class="d-product-forms__count">4</span> #}
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-chart"></use>
+          </svg>
+          <span>статистика</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-settings"></use>
+          </svg>
+          <span>Настройки</span>
+        </label>
+      </li>
+    </ul>
+    <div class="d-product-forms__blur"></div>
+  </div>
+</div>
+<br />
+<br />
+{# ----- #}
+<div class="d-product-categories">
+  <div class="d-product-categories__container">
+    <form class="d-product-categories__form">
+      <div class="d-product-categories__wrapper">
+        <div class="d-product-categories__block mb-2">
+          <h4>Категории:</h4>
+          <button class="d-product-categories__select" type="button">
+            <span>Все</span>
+            <svg role="img" class="icon deg180">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="d-product-categories__buttons">
+          <label
+            for="auth-questions-item"
+            class="flex align-center near-block-label"
+          >
+            <input
+              id="auth-questions-item"
+              type="checkbox"
+              name="choice-status"
+              checked=""
+            />
+            <span class="checkout-payment__status">Только в своих товарах</span>
+          </label>
+
+          <button
+            class="d-product-categories__btn-complete btn btn-primary"
+            disabled=""
+            type="button"
+          >
+            <span class="label is-bolder">найти</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-categories">
+  <div class="d-product-categories__container">
+    <form class="d-product-categories__form">
+      <div class="d-product-categories__wrapper">
+        <div class="d-product-categories__block mb-2">
+          <h4>Категории:</h4>
+          <button class="d-product-categories__select" type="button">
+            <span>Все</span>
+            <svg role="img" class="icon deg180">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="d-product-categories__list">{# -------- #}</div>
+        <div class="d-product-categories__main mb-2">
+          <div class="d-product-categories__block">
+            <h4>статус:</h4>
+            <button class="d-product-categories__select" type="button">
+              <span class="d-product-categories__subtext">Все</span>
+              <svg role="img" class="icon deg180">
+                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="d-product-categories__block">
+            <h4>период:</h4>
+            <label class="flex align-center">
+              <input type="date" name="choice-status" />
+              <svg role="img" class="d-product-categories__icon icon">
+                <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="d-product-categories__block">
+            <label class="flex align-center">
+              <input type="date" name="choice-status" />
+              <svg role="img" class="d-product-categories__icon icon">
+                <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+              </svg>
+            </label>
+          </div>
+        </div>
+
+        <div class="d-product-categories__buttons">
+          <label
+            for="auth-questions-item"
+            class="flex align-center near-block-label"
+          >
+            <input
+              id="auth-questions-item"
+              type="checkbox"
+              name="choice-status"
+              checked=""
+            />
+            <span class="checkout-payment__status">Только в своих товарах</span>
+          </label>
+
+          <button
+            class="d-product-categories__btn-complete btn btn-primary"
+            disabled=""
+            type="button"
+          >
+            <span class="label is-bolder">найти</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-categories">
+  <div class="d-product-categories__container">
+    <form class="d-product-categories__form">
+      <div class="d-product-categories__wrapper">
+        <div class="d-product-categories__block">
+            <label class="d-product-categories__label mb-1">
+              <span class="ttu">Категории:</span>
+              <input type="text" class="d-product-categories__input" required="" placeholder="Выберите">
+              <button class="d-product-categories__btn-arrow" type="button">
+                <svg role="img" class="icon deg180">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </label>
+        </div>
+        <div class="d-product-categories__list mb-1">
+          {# ----- categorie element ------ #}
+          <div class="d-product-categories__edit">
+            <label class="d-product-categories__label-drag ttu"><span>Здравоохранение</span>
+            </label>
+            <button class="d-product-categories__drag button" type="button">
+              <svg class="icon" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-sm-remove"></use>
+              </svg>
+            </button>
+          </div>
+          {#  ------ end categorie ----- #}
+        </div>
+        <div class="d-product-categories__main mb-2">
+          <div class="d-product-categories__block">
+            <h4>статус:</h4>
+            <button class="d-product-categories__select" type="button">
+              <span class="d-product-categories__subtext">Все</span>
+              <svg role="img" class="icon deg180">
+                <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="d-product-categories__block">
+            <h4>период:</h4>
+            <label class="flex align-center">
+              <input type="date" name="choice-status" checked="" />
+              <svg role="img" class="d-product-categories__icon icon">
+                <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="d-product-categories__block">
+            <label class="flex align-center">
+              <input type="date" name="choice-status" checked="" />
+              <svg role="img" class="d-product-categories__icon icon">
+                <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+              </svg>
+            </label>
+          </div>
+        </div>
+
+        <div class="d-product-categories__buttons">
+          <label
+            for="auth-questions-item"
+            class="flex align-center near-block-label"
+          >
+            <input
+              id="auth-questions-item"
+              type="checkbox"
+              name="choice-status"
+              checked=""
+            />
+            <span class="checkout-payment__status">Только в своих товарах</span>
+          </label>
+
+          <button
+            class="d-product-categories__btn-complete btn btn-primary"
+            disabled=""
+            type="button"
+          >
+            <span class="label is-bolder">найти</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<br />
+<br />
+{# ---------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <h4>Изменить статус:</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-sm-remove"></use>
+          </svg>
+          <input type="radio" name="feed_check" checked value="отмена" />
+          <span>отмена</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-time"></use>
+          </svg>
+          <input type="radio" name="feed_check" checked value="приостановлен" />
+          <span>приостановлен</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-loader-progress"></use>
+          </svg>
+          <input type="radio" name="feed_check" checked value="обработка" />
+          <span>обработка</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+          <input type="radio" name="feed_check" checked value="выполнен" />
+          <span>выполнен</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-all"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="все заказы" />
+          <span>все заказы</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-user"></use>
+          </svg>
+          <input type="radio" name="feed_check" value="Профиль" />
+          <span>Профиль</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #}
+<div class="d-product-forms">
+  <div class="d-product-forms__wrapper dropdown-menu_wraps">
+    <ul class="d-product-forms__select feed_select">
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-checks"></use>
+          </svg>
+          <input type="radio" name="feed_check" checked value="выбрать все" />
+          <span>выбрать все</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link">
+        <h4>Изменить статус выбранных:</h4>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-sm-remove"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            value="отмена"
+            disabled
+          />
+          <span>отмена</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-time"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            value="приостановлен"
+            disabled
+          />
+          <span>приостановлен</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-loader-progress"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            value="обработка"
+            disabled
+          />
+          <span>обработка</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            value="выполнен"
+            disabled
+          />
+          <span>выполнен</span>
+        </label>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <span class="dividing-line"></span>
+      </li>
+      <li class="d-product-forms__dropdown custom-radio edit_link d-pr-opacity">
+        <label>
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-cart"></use>
+          </svg>
+          <input
+            type="radio"
+            name="feed_check"
+            value="удалить выбранные"
+            disabled
+          />
+          <span class="d-product-forms__text">удалить выбранные</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+<br />
+<br />
+{# --------- #} {% endblock %}

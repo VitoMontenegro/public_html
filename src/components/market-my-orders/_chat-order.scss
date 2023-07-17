@@ -1,0 +1,200 @@
+.chat-order {
+    max-width: 32rem;
+    max-height: 56.8rem;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+
+    outline: 1px solid red;
+    box-shadow: inset -1px 0px 0px rgba(23, 25, 28, 0.08);
+    // .chat-order__wrapper
+    &__wrapper {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .chat-order__header
+    &__header {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 0.4rem 0.8rem 0.4rem 2rem;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    // .chat-order__avatar
+    &__avatar {
+        & figure {
+            margin: 0 !important;
+        }
+    }
+
+    // .chat-order__main
+    &__main {
+        padding: 2rem;
+        background: #c6d8f6;
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 1 1 auto;
+    }
+
+    // .chat-order__messages
+    &__messages {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    // .chat-order__message
+    &__message {
+        @include style-text;
+        font-weight: 400;
+        color: #42637b;
+    }
+
+    // .chat-order__footer
+    &__footer {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+    &__footer-container {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.4rem 0.8rem;
+        & button {
+            background: transparent;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &__text-area {
+        min-width: 0;
+        width: 20.8rem;
+        height: 4.8rem;
+        padding: 1.2rem 1.6rem;
+        resize: none;
+    }
+}
+
+.chat_order {
+    // .chat_order__description
+    &__description {
+    }
+
+    // .chat_order__title
+    &__title {
+        @include style-text;
+        font-weight: 400;
+        color: #42637b;
+    }
+
+    // .chat_order__subtitle
+    &__subtitle {
+        @include style-link;
+        font-weight: 400;
+        color: #56819f;
+    }
+}
+
+.message-sup {
+    position: relative;
+    z-index: 2;
+    padding: 0 3.6rem 0.8rem 0;
+    &__data {
+        flex-direction: column;
+        padding: 1.4rem 2rem;
+        max-width: 24.4rem;
+        display: flex;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 0rem 1.7rem 1.7rem 1.7rem;
+    }
+    &__text {
+    }
+    &__time {
+        text-align: end;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1;
+        text-align: right;
+        color: #8197bb;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1.6rem;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    &::after {
+        content: "";
+        width: 3.2rem;
+        height: 1.6rem;
+        position: absolute;
+        top: -1.6rem;
+        left: 0rem;
+        z-index: 1;
+        border-radius: 0 0 1.5rem 1.5rem;
+        background: #c6d8f6;
+    }
+}
+
+.message-user {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 0 3.6rem;
+    &__data {
+        flex-direction: column;
+        padding: 1.4rem 2rem;
+        max-width: 24.4rem;
+        display: flex;
+        backdrop-filter: blur(10px);
+        background: #fcfcfd;
+        border-radius: 1.7rem 1.7rem 0rem 1.7rem;
+    }
+    &__time {
+        text-align: end;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1;
+        text-align: right;
+        color: #8197bb;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -1.6rem;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    &::after {
+        content: "";
+        width: 3.2rem;
+        height: 1.6rem;
+        position: absolute;
+        bottom: -1.6rem;
+        right: 0rem;
+        z-index: 1;
+        border-radius: 1.5rem 1.5rem 0 0;
+        background: #c6d8f6;
+    }
+}
+
+#btn-send-message {
+    & svg {
+        color: #4f88e3;
+    }
+}

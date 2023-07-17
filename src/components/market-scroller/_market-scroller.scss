@@ -1,0 +1,28 @@
+:root {
+    --h: 217;
+    --s-neutral: 10%;
+    --l-bg-base: 99%;
+    --color-ink-shadow: var(--h) var(--s-neutral) 10%;
+}
+
+$scroller-shadow: hsl(var(--color-ink-shadow) / 0.15), hsl(var(--color-ink-shadow) / 0.13) 3%,
+    hsl(var(--color-ink-shadow) / 0.11) 11%, hsl(var(--color-ink-shadow) / 0.09) 23%,
+    hsl(var(--color-ink-shadow) / 0.05) 38%, hsl(var(--color-ink-shadow) / 0.03) 57%,
+    hsl(var(--color-ink-shadow) / 0.01) 78%, hsl(var(--color-ink-shadow) / 0);
+
+$scroller-content-bg: var(--color-background-base);
+$scroller-content-bg-transparent: hsl(var(--h) var(--s-neutral) var(--l-bg-base) / 0);
+$table-col-header-width: calc((100vw - 40px) / 2);
+
+.scroller {
+    @include media-breakpoint-down(md) {
+        background: linear-gradient(to right, $scroller-content-bg 50%, $scroller-content-bg-transparent)
+                $table-col-header-width 0,
+            linear-gradient(to left, $scroller-content-bg-transparent, $scroller-content-bg 50%) 100% 0,
+            linear-gradient(to right, $scroller-shadow) $table-col-header-width 0,
+            linear-gradient(to left, $scroller-shadow) 100% 0, $scroller-content-bg;
+        background-attachment: local, local, scroll, scroll;
+        background-repeat: no-repeat;
+        background-size: 24px 100%, 24px 100%, 12px 100%, 12px 100%;
+    }
+}

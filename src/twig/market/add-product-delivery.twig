@@ -1,0 +1,202 @@
+{% extends "../index_single.twig" %} {% set title = 'Add product deslivery' %}
+{% block content %}
+<div class="add-product-main">
+  <div class="add-product-main__wrapper ovflw-a">
+    <div class="add-product-main__container description-product">
+      <div class="description-product__wrapper add-files">
+        <div class="description-product__header"></div>
+        <h2 class="add-product-main__title">Добавить товар</h2>
+        <h4 class="description-product__subtitle">Джинсы женские Norma Jean</h4>
+        <form class="description-product__form form-delivery">
+          {# ---- delivery block ---- #}
+          <div class="form-delivery__block">
+            <label class="form-delivery__label mb-1">
+                <span class="ttu">доставка из*</span> 
+              <input type="text" class="form-delivery__input" required="" placeholder="Выберите">
+              <button class="form-delivery__btn" type="button">
+                <svg role="img" class="icon">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </label>
+          </div>
+
+          <div class="form-delivery__block">
+            <label class="form-delivery__label mb-1">
+                <span class="ttu">вес в упаковке, кг/шт.*</span>
+              <input type="text" class="form-delivery__input del-small-inpt" required="" placeholder="">
+              <span class="small">Положите товар в упаковку и взвесьте. Значение используется для расчёта стоимости и определения возможности доставки.</span>
+            </label>
+          </div>
+
+          <div class="form-delivery__block">
+            <label class="form-delivery__label mb-1">
+                <span class="ttu">длина, ширина, высота в упаковке, см*</span>
+                <span class="form-delivery__inputs">
+                    <input type="text" class="form-delivery__input del-small-inpt" required="" placeholder="Д">
+                    <input type="text" class="form-delivery__input del-small-inpt" required="" placeholder="Ш">
+                    <input type="text" class="form-delivery__input del-small-inpt" required="" placeholder="В">
+                </span>
+              <span class="small">Положите товар в упаковку и изьмерьте её габариты. Значение используется для расчёта стоимости и определения возможности доставки.</span>
+            </label>
+          </div>
+
+          <div class="form-delivery__block">
+            <label class="form-delivery__label mb-1">
+                <span class="ttu">максимальное время сборки, ч/шт*</span>
+              <input type="text" class="form-delivery__input del-small-inpt" required="" placeholder="">
+              <span class="small">Максимальное время, за которое нужно отправить заказ и указать его трек-номер. Отсчёт начинается с момента оплаты. Если вы не успеете, заказ отменится автоматически и деньги вернутся покупателю.</span>
+            </label>
+          </div>
+          {# ----- #}
+        </form>
+      </div>
+      {# --- aside --- #}
+      <div class="add-product-aside">
+        <div class="add-product-aside__wrapper">
+          <ul class="add-product-aside__list">
+            <li
+              class="add-product-aside__item active-product-page complete-all-fields"
+            >
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                </svg>
+                <span>основное</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/5*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item need-complete">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-error"></use>
+                </svg>
+                <span>характеристики</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/6*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>описание</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>фото и видео</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+            <li class="add-product-aside__item">
+              <div class="add-product-aside__block">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-radio-empty"></use>
+                </svg>
+                <span>доставка</span>
+              </div>
+              <div class="add-product-aside__count">
+                <span>0/1*</span>
+                <svg
+                  class="add-product-aside__next-icon icon deg90"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {# ------ end aside ------ #}
+    </div>
+    {# --------------- footer -------------- #}
+    <footer class="add-footer-product">
+      <div class="add-footer-product__wrapper">
+        <div class="add-footer-product__links">
+          <a href="" class="add-footer-product__prev">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <div class="add-footer-product__buttons">
+            <button class="add-footer-product__btn-cancel btn" type="button">
+              <span class="add-footer-product__sp-can-d label is-bolder"
+                >отменить</span
+              >
+              <span class="add-footer-product__sp-can-m label is-bolder">
+                <svg class="icon deg270" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-arrow"></use></svg
+              ></span>
+            </button>
+            <button class="add-footer-product__btn-save btn" type="button">
+              <span class="label is-bolder">сохранить как черновик</span>
+            </button>
+            {# ------- footer title ------- #}
+            <h4 class="add-footer-product__title">Доставка</h4>
+            {# ---------------------------- #}
+            <button
+              class="add-footer-product__btn-complete file-disabled btn btn-primary"
+              disabled
+              type="button"
+            >
+              <svg class="icon is-left" aria-hidden="true" focusable="false">
+                <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+              </svg>
+              <span class="label is-bolder">готово</span>
+            </button>
+          </div>
+          <a href="" class="add-footer-product__next">
+            <svg class="icon is-left" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    {# --------------- end footer -------------- #}
+  </div>
+</div>
+{% endblock %}

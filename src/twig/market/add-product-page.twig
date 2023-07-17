@@ -1,0 +1,40 @@
+{% extends "../index_single.twig" %} {% set title = 'Add product page' %} {%
+block content %}
+
+<div class="add-prod-page">
+  <div class="add-prod-page__wrapper">
+    <div class="add-prod-page__header">
+      <div class="add-prod-page__purchases">
+        <a href="#" class="add-prod-page__purchase">
+          <span>
+            Продажи
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </a>
+        <h2 class="add-prod-page__subtitle">Товары</h2>
+      </div>
+    </div>
+    <div class="add-prod-page__main">
+      <div class="add-prod-page__data-info">
+      <div class="add-prod-page__icon">
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-hourglass"></use>
+        </svg>
+      </div>
+        <h3 class="add-prod-page__title">В каталоге пока пусто</h3>
+        <p class="add-prod-page__subtext">
+          Чтобы начать торговать, добавьте информацию о своих товарах.
+        </p>
+        <button class="btn ttu" type="button">добавить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+.sel-data-grid {
+    // .sel-data-grid__table-wrapper
+    &__table-wrapper {
+        overflow-x: auto;
+        @include media-breakpoint-down(md) {
+            border-right: 1px solid var(--ink-dark-border, #d1d9e6);
+            border-left: 1px solid var(--ink-dark-border, #d1d9e6);
+            border-bottom: 1px solid var(--ink-dark-border, #d1d9e6);
+        }
+    }
+
+    // .sel-data-grid__table
+    &__table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+    }
+
+    // .sel-data-grid__tbody
+    &__tbody {
+    }
+
+    // .sel-data-grid__product-items
+    &__product-items {
+    }
+
+    // .sel-data-grid__product
+    &__product {
+        @include style-text;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 400;
+        border-top: 1px solid var(--ink-dark-border, #d1d9e6);
+        padding: 0.8rem 1.6rem;
+    }
+
+    // .sel-data-grid__subtitle-table
+    &__subtitle-table {
+        @include style-link;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -1.6rem;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 3rem;
+            background-color: #d1d9e6;
+        }
+    }
+
+    // .sel-data-grid__title
+    &__title {
+    }
+
+    // .sel-data-grid__text
+    &__text {
+    }
+
+    // .sel-data-grid__status
+    &__status {
+        @include style-link;
+        color: var(--ink-blue-text-brand-700, #2268d8);
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        & button {
+            border-radius: 10rem;
+            & svg {
+                width: 2rem;
+                height: 2rem;
+                padding: 0;
+                margin-left: -1rem;
+            }
+        }
+        & span {
+            display: inline-block;
+            border-radius: 10rem;
+            padding: 0.9rem 1.2rem 0.7rem 1.2rem;
+        }
+    }
+
+    // .sel-data-grid__wrapper
+    &__wrapper {
+    }
+
+    // .sel-data-grid__list
+    &__list {
+    }
+
+    // .sel-data-grid__row
+    &__row {
+    }
+
+    // .sel-data-grid__m-title
+    &__m-title {
+    }
+}
+
+// 156.5 156.5 217 110
+.sel-dg-product {
+    min-width: 15.62rem;
+    max-width: 15.62rem;
+}
+.product-sel-dg {
+    min-width: 15.62rem;
+    max-width: 15.62rem;
+}
+.sel-dg-date {
+    min-width: 15.62rem;
+    max-width: 15.62rem;
+}
+
+.sel-dg-status {
+    min-width: 21.7rem;
+    max-width: 21.7rem;
+}
+.sel-dg-sum {
+    min-width: 11rem;
+    max-width: 11rem;
+}

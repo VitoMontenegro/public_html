@@ -1,0 +1,186 @@
+.seller-board {
+    // .seller-board__table-wrapper
+    &__table-wrapper {
+        overflow-x: auto;
+
+        @include media-breakpoint-down(md) {
+            border-bottom: 1px solid var(--ink-dark-border, #d1d9e6);
+            border-left: 1px solid var(--ink-dark-border, #d1d9e6);
+            border-right: 1px solid var(--ink-dark-border, #d1d9e6);
+        }
+    }
+
+    // .seller-board__header
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    // .seller-board__subtitle
+    &__subtitle {
+        color: var(--ink-dark-base, #081935);
+        font-size: 2.3rem;
+        font-family: "Roboto";
+        font-weight: 400;
+        line-height: 1.04;
+    }
+
+    // .seller-board__list-info
+    &__list-info {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        & li {
+            list-style: none;
+        }
+    }
+
+    // .seller-board__info-item
+    &__info-item {
+        color: var(--ink-dark-2-ry, #475f85);
+        @include style-link;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        display: flex;
+        gap: 0.4rem;
+        align-items: center;
+        border-radius: 10rem;
+        padding: 0.8rem 1.2rem;
+        white-space: nowrap;
+
+        & svg {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        &:nth-last-child(-n + 2) {
+            @include media-breakpoint-down(xl) {
+                display: none;
+            }
+        }
+        &:nth-last-child(-n + 3) {
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+        &:nth-last-child(-n + 4) {
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+        &:nth-last-child(-n + 5) {
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
+        }
+    }
+
+    // .seller-board__table
+    &__table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    // .seller-board__tbody
+    &__tbody {
+    }
+
+    // .seller-board__product-items
+    &__product-items {
+    }
+
+    // .seller-board__product
+    &__product {
+        color: var(--ink-dark-base, #081935);
+        font-size: 1.2rem;
+        font-family: "Roboto";
+        line-height: 1.33;
+        letter-spacing: 0.05rem;
+        padding: 0.8rem 1.6rem;
+        white-space: nowrap;
+        position: relative;
+        border-top: 1px solid var(--ink-dark-border, #d1d9e6);
+
+        & img {
+            min-width: 4rem;
+            height: 4rem;
+            object-fit: cover;
+
+            border-radius: 0.667rem;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12) inset;
+            border: 0.08rem solid var(--ink-dark-border, #d1d9e6);
+        }
+
+        & span {
+            @include style-text;
+        }
+
+        & div,
+        a,
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 1.7rem;
+            font-family: "Roboto";
+            line-height: 1.41;
+            @include media-breakpoint-down(sm) {
+                text-overflow: clip;
+            }
+        }
+    }
+    // .seller-board__subtitle-table
+    &__subtitle-table {
+        padding: 0.8rem 0;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-size: 1.2rem !important;
+        font-family: "Roboto";
+        line-height: 1.33 !important;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    // .seller-board__description
+    &__description {
+        & a {
+            display: block;
+            padding: 0;
+        }
+    }
+
+    // .seller-board__prod-name
+    &__prod-name {
+        text-transform: none;
+        color: var(--ink-blue-text-brand-700, #2268d8);
+    }
+
+    // .seller-board__link-order
+    &__link-order {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
+        @include style-link;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        & span {
+            color: #475f85;
+            vertical-align: bottom;
+        }
+        & svg {
+            padding: 0;
+            margin: 0;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    // .seller-board__link
+    &__link {
+    }
+}

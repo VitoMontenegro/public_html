@@ -1,0 +1,55 @@
+.seller-message-sup {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    margin-bottom: 2.4rem;
+
+    // .seller-message-sup__data
+    &__data {
+        display: flex;
+        flex-direction: column;
+        max-width: 60.4rem;
+        padding: 1.4rem 2rem 1rem 2rem;
+        border-radius: 0px 1.7rem 1.7rem 1.7rem;
+        background: var(--background-bg-blue-brand-50, #f2f6fd);
+    }
+
+    // .seller-message-sup__text
+    &__text {
+        color: var(--ink-special-special-base, #42637b);
+        font-size: 1.7rem;
+        font-family: "Roboto";
+        line-height: 1.41;
+    }
+
+    // .seller-message-sup__time
+    &__time {
+        color: var(--ink-dark-3-ry, #8197bb);
+        text-align: right !important;
+        font-size: 12px;
+        font-family: "Roboto";
+        line-height: 1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -1.6rem;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: var(--background-bg-blue-brand-50, #f2f6fd);
+
+        backdrop-filter: blur(10px);
+    }
+    &::before {
+        content: "";
+        width: 3.2rem;
+        height: 1.6rem;
+        position: absolute;
+        top: -1.6rem;
+        left: 0rem;
+        z-index: 1;
+        border-radius: 0 0 1.5rem 1.5rem;
+        background: #fff;
+    }
+}

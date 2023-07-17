@@ -1,0 +1,244 @@
+{% extends "../index_single.twig" %} {% set title = 'seller analytics' %} {%
+block content %}
+<div class="sel-analytics">
+  <div class="sel-analytics__wrapper">
+    <div class="sel-analytics__header mb-1">
+      <div class="sel-analytics__purchases">
+        <a href="#" class="sel-analytics__purchase">
+          <span>
+            Продажи
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </span>
+        </a>
+        <h2 class="sel-analytics__subtitle">Статистика</h2>
+      </div>
+      <div class="sel-analytics__filtres">
+        {# --- product filter --- #}
+        <div class="sel-analytics__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span>московская игротека</span>
+          </a>
+          {#
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-diagram"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="все"
+                    checked=""
+                  />
+                  <span>все</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="получен" />
+                  <span>получен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-dislike"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="рекламация" />
+                  <span>рекламация</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-truck"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отправлен" />
+                  <span>отправлен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-partially"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="частичная отгрузка"
+                  />
+                  <span>частичная отгрузка</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/sprite/sprite.svg#icon-loader-progress"
+                    ></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="в обработке" />
+                  <span>в обработке</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-money-off"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="не оплачен" />
+                  <span>не оплачен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отменен" />
+                  <span>отменен</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          #}
+        </div>
+        {# --- product filter --- #} {# ------ time filter ---- #}
+        <div class="sel-analytics__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span>за 30 дней</span>
+          </a>
+          {#
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="за месяц"
+                    checked=""
+                  />
+                  <span>за месяц</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="по год" />
+                  <span>за год</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <input type="radio" name="feed_check" value="за всё время" />
+                  <span>за всё время</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          #}
+        </div>
+        {# --- end time filter --- #}
+        <div class="sel-analytics__add-btn">
+          <button
+            class="is-ghost is-right"
+            type="button"
+            data-bs-toggle="modal"
+            {#
+            data-bs-target="#addStories"
+            aria-label="editProfile"
+            #}
+          >
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    {# ----- block data ----- #}
+    <div class="data-analytics mb-1">
+      <div class="data-analytics__wrapper">
+        <ul class="data-analytics__list">
+          <li class="data-analytics__item active-data-it">
+            <h4 class="data-analytics__title">Выручка</h4>
+            <div class="data-analytics__number"><span>1 180 325</span> ₽</div>
+            <div class="data-analytics__label profit-label">+16%</div>
+          </li>
+          <li class="data-analytics__item">
+            <h4 class="data-analytics__title">Заказы</h4>
+            <div class="data-analytics__number"><span>150</span></div>
+            <div class="data-analytics__label profit-label">+16%</div>
+          </li>
+          <li class="data-analytics__item">
+            <h4 class="data-analytics__title">Визиты</h4>
+            <div class="data-analytics__number"><span>8 204</span></div>
+            <div class="data-analytics__label decline-label">-12%</div>
+          </li>
+          <li class="data-analytics__item">
+            <h4 class="data-analytics__title">Конверсия</h4>
+            <div class="data-analytics__number"><span>1,83</span>%</div>
+            <div class="data-analytics__label nil-label">0%</div>
+          </li>
+          <li class="data-analytics__item">
+            <h4 class="data-analytics__title">Средний чек</h4>
+            <div class="data-analytics__number"><span>4 374</span> ₽</div>
+            <div class="data-analytics__label nil-label">0%</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {# ----- end block data ----- #} {# --- block analystics ---- #}
+    <div class="table-analytics">
+      <div class="table-analytics__wrapper">
+        <div class="table-analytics__chart">
+          <div class="table-analytics__line">50</div>
+          <div class="table-analytics__line">40</div>
+          <div class="table-analytics__line">30</div>
+          <div class="table-analytics__line">20</div>
+          <div class="table-analytics__line">10</div>
+          <div class="table-analytics__line"></div>
+        </div>
+        <div class="table-analytics__labels">
+          <span>9 фев</span>
+          <span>14 фев</span>
+          <span>19 фев</span>
+          <span>24 фев</span>
+          <span>1 мар</span>
+          <span>6 мар</span>
+          <span>11 мар</span>
+        </div>
+      </div>
+    </div>
+    {# --- end block analystics --- #}
+  </div>
+</div>
+
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

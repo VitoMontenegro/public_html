@@ -1,0 +1,569 @@
+{% extends "../index_single.twig" %} {% set title = 'Seller dashboard' %} {%
+block content %}
+
+<div class="sel-dashboard">
+  <div class="sel-dashboard__wrapper">
+    <div class="sel-dashboard__header mb-1">
+      <div class="sel-dashboard__purchases">
+        <h2 class="sel-dashboard__subtitle">Продажи</h2>
+      </div>
+      <div class="sel-dashboard__filtres">
+        {# --- product filter --- #}
+        <div class="sel-dashboard__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>Маргарита павловна</span>
+            </div>
+          </a>
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-diagram"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="все"
+                    checked=""
+                  />
+                  <span>все</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-success"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="получен" />
+                  <span>получен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-dislike"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="рекламация" />
+                  <span>рекламация</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-truck"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отправлен" />
+                  <span>отправлен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-partially"></use>
+                  </svg>
+                  <input
+                    type="radio"
+                    name="feed_check"
+                    value="частичная отгрузка"
+                  />
+                  <span>частичная отгрузка</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use
+                      href="/assets/sprite/sprite.svg#icon-loader-progress"
+                    ></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="в обработке" />
+                  <span>в обработке</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-money-off"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="не оплачен" />
+                  <span>не оплачен</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-x-mark"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="отменен" />
+                  <span>отменен</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {# --- product filter --- #} {# ------ time filter ---- #}
+        <div class="sel-dashboard__dropdown-list dropdown is-right">
+          <a
+            href="#"
+            class="dropdown-toggle feed_target is_rubber"
+            data-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <div class="">
+              <span>
+                <span class="board-info__mobile">за сегодня,</span> 31 янв</span
+              >
+            </div>
+          </a>
+          <div class="dropdown-menu_wrap">
+            <ul class="dropdown-menu feed_select">
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="за сегодня" />
+                  <span>за сегодня</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="за неделю" />
+                  <span>за неделю</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="за месяц" />
+                  <span>за месяц</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="по год" />
+                  <span>за год</span>
+                </label>
+              </li>
+              <li class="dropdown custom-radio edit_link open">
+                <label>
+                  <svg class="icon" aria-hidden="true" focusable="false">
+                    <use href="/assets/sprite/sprite.svg#icon-calendar"></use>
+                  </svg>
+                  <input type="radio" name="feed_check" value="за всё время" />
+                  <span>за всё время</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {# --- end time filter --- #}
+      </div>
+    </div>
+    {# --------- section info ---------- #}
+    <div class="board-info mb-2">
+      <div class="board-info__wrapper">
+        {# -------- list block info ------- #}
+        <ul class="board-info__items">
+          {# --- block info --- #}
+          <li class="board-info__item">
+            <h4 class="board-info__title">Валовый доход</h4>
+            <h3 class="board-info__income"><span>2 293 376 </span>₽</h3>
+            <div class="board-info__label profit-label">+9,5%</div>
+          </li>
+          {# --- block info --- #}
+          <li class="board-info__item">
+            <h4 class="board-info__title">Выручка</h4>
+            <h3 class="board-info__income"><span>2 092 318 </span>₽</h3>
+            <div class="board-info__label decline-label">-1,0%</div>
+          </li>
+          {# --- block info --- #}
+          <li class="board-info__item">
+            <h4 class="board-info__title">
+              <span class="board-info__mobile">Оплаченные</span> заказы
+            </h4>
+            <h3 class="board-info__income"><span>2</span></h3>
+            <div class="board-info__label nil-label">0%</div>
+          </li>
+          {# --- block info --- #}
+          <li class="board-info__item">
+            <h4 class="board-info__title">
+              <span class="board-info__mobile">Проданные</span> товары
+            </h4>
+            <h3 class="board-info__income"><span>10</span></h3>
+            <div class="board-info__label nil-label">+9,5%</div>
+          </li>
+          {# --- block info --- #}
+          <li class="board-info__item">
+            <h4 class="board-info__title">
+              <span class="board-info__mobile">Осталось</span> в корзинах
+            </h4>
+            <h3 class="board-info__income"><span>44</span></h3>
+            <div class="board-info__label nil-label">+9,5%</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {# --- #}
+    <div class="seller-board__header mb-1">
+      <h2 class="seller-board__subtitle">Заказы</h2>
+      {# --- list product information --- #}
+      <ul class="seller-board__list-info">
+        <li class="seller-board__info-item s-info-item">
+          <svg role="img" class="icon">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+          <span>Не оплачен</span>
+        </li>
+
+        <li class="seller-board__info-item s-info-item">
+          <svg role="img" class="icon">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+          <span>в обработке</span>
+        </li>
+
+        <li class="seller-board__info-item s-info-item">
+          <svg role="img" class="icon">
+            <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+          </svg>
+          <span>доставка</span>
+        </li>
+
+        <li class="seller-board__info-item status-prod">
+          <span class="status-delivered">доставленные</span>
+        </li>
+
+        <li class="seller-board__info-item more-info-item">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-more"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+    {# --- table ---- #}
+    <div class="seller-board__table-wrapper mb-1 scroller">
+      <figure>
+        <table class="seller-board__table">
+          <tbody class="seller-board__tbody">
+            <tr class="seller-board__product-items">
+              <td class="seller-board__product sel-w-products products-sel-st">
+                <div class="seller-board__subtitle-table">товары</div>
+              </td>
+              <td class="seller-board__product sel-w-sum-prod t-right">
+                <div class="seller-board__subtitle-table">сумма, ₽</div>
+              </td>
+              <td class="seller-board__product sel-w-date-prod">
+                <div class="seller-board__subtitle-table">
+                  дата, время
+                  <svg role="img" class="icon">
+                    <use href="/assets/sprite/sprite.svg#icon-down"></use>
+                  </svg>
+                </div>
+              </td>
+              <td class="seller-board__product sel-w-buyer-prod">
+                <div class="seller-board__subtitle-table">покупатель</div>
+              </td>
+              <td class="seller-board__product sel-w-id-prod">
+                <div class="seller-board__subtitle-table">ID</div>
+              </td>
+              <td class="seller-board__product sel-w-status-prod">
+                <div class="seller-board__subtitle-table">статус</div>
+              </td>
+            </tr>
+
+            <tr class="seller-board__product-items">
+              <td class="seller-board__product products-sel-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="seller-board__description">
+                  <a href="#" class="seller-board__prod-name">
+                    Джинсы Norma Jeane женские с высокой посадкой широкие клеш
+                    трубы палаццо, скидка — 5%
+                  </a>
+                  <span>+1 товар</span>
+                </div>
+              </td>
+              <td class="seller-board__product t-right">
+                <span>1 535 279</span>
+              </td>
+              <td class="seller-board__product"><span>23 янв, 18:36</span></td>
+              <td class="seller-board__product">
+                <span><a href="#">Евгений</a></span>
+              </td>
+              <td class="seller-board__product"><span>8157 7306 8262</span></td>
+              <td class="seller-board__product status-prod">
+                <span class="status-nopay ttu">не оплачен</span>
+              </td>
+            </tr>
+
+            <tr class="seller-board__product-items">
+              <td class="seller-board__product products-sel-st d-flex">
+                <img src="/assets/images/market/jeans.jpg" alt="alt" class="" />
+                <div class="seller-board__description">
+                  <a href="#" class="seller-board__prod-name">
+                    Футболка Champion, размер XL, черный
+                  </a>
+                  <span></span>
+                </div>
+              </td>
+              <td class="seller-board__product t-right">
+                <span>1 535 279</span>
+              </td>
+              <td class="seller-board__product"><span>31 янв, 12:36</span></td>
+              <td class="seller-board__product">
+                <span><a href="#">Евгений</a></span>
+              </td>
+              <td class="seller-board__product"><span>8157 7306 8262</span></td>
+              <td class="seller-board__product status-prod">
+                <span class="status-received ttu">оплачен</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </div>
+    {# --- end table --- #}
+    <div class="seller-board__link-order mb-1">
+      <a href="#" class="seller-board__link ttu">
+        <span>все заказы</span>
+        <svg class="icon deg90" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+{# ---------- заказы ------- #}
+<div class="dashboard-orders">
+  <div class="dashboard-orders__wrapper">
+    <ul class="dashboard-orders__list-item">
+      <li class="dashboard-orders__item-info">
+        <div class="dashboard-orders__header">
+          <h3 class="dashboard-orders__title">Хиты продаж</h3>
+          <a href="#" class="dashboard-orders__link ttu">
+            <span>все</span>
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        {# ------ main content ------ #}
+        <div class="dashboard-orders__container">
+          <div class="dashboard-orders__hits-wrapper">
+            <div class="dashboard-orders__container-left">
+              <img
+                src="/assets/images/market/add-product-img.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="dashboard-orders__container-right">
+              <h3 class="dashboard-orders__hit-title">Женская одежда</h3>
+              <p class="dashboard-orders__hit-subtitle">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                палаццо
+              </p>
+            </div>
+          </div>
+          <div class="dashboard-orders__hits-wrapper">
+            <div class="dashboard-orders__container-left">
+              <img
+                src="/assets/images/market/add-product-img.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="dashboard-orders__container-right">
+              <h3 class="dashboard-orders__hit-title">Женская одежда</h3>
+              <p class="dashboard-orders__hit-subtitle">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                палаццо
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dashboard-orders__item-info">
+        <div class="dashboard-orders__header">
+          <h3 class="dashboard-orders__title">Залежанный товар</h3>
+          <a href="#" class="dashboard-orders__link ttu">
+            <span>все</span>
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        {# ------- main content ------ #}
+        <div class="dashboard-orders__container">
+          <div class="dashboard-orders__hits-wrapper">
+            <div class="dashboard-orders__container-left">
+              <img
+                src="/assets/images/market/add-product-img.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="dashboard-orders__container-right">
+              <h3 class="dashboard-orders__hit-title">Женская одежда</h3>
+              <h4 class="dashboard-orders__hit-subtitle">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                палаццо
+              </h4>
+            </div>
+          </div>
+          <div class="dashboard-orders__hits-wrapper">
+            <div class="dashboard-orders__container-left">
+              <img
+                src="/assets/images/market/add-product-img.jpg"
+                alt="image"
+              />
+            </div>
+            <div class="dashboard-orders__container-right">
+              <h3 class="dashboard-orders__hit-title">Женская одежда</h3>
+              <p class="dashboard-orders__hit-subtitle">
+                Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+                палаццо
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+      {# ------------ comments ------------ #}
+      <li class="dashboard-orders__item-info">
+        <div class="dashboard-orders__header">
+          <h3 class="dashboard-orders__title">Последние отзывы</h3>
+          <a href="#" class="dashboard-orders__link ttu">
+            <span>все</span>
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="dashboard-orders__user">
+          <div class="dashboard-orders__comment">
+            <span class="dashboard-orders__author is-bolder">Кристина</span>
+            <span class="dashboard-orders__likes">(5 ❤️)</span>
+            <span class="dashboard-orders__text">
+              — АОАОАОАОАОАОАОАОА, самый кайфовые джинсы в моей жизни) После
+              этих - хочется выкинуть все другие))) Походу придется полностью
+              обновлять все джинсы)))
+            </span>
+          </div>
+
+          <div class="dashboard-orders__rating-btn">
+            <span>31.01. 21:29 </span> -
+            <a href="#" class="dashboard-orders__favorites">
+              Джинсы Norma Jeane женские с высокой посадкой широкие клеш трубы
+              палаццо
+            </a>
+          </div>
+        </div>
+      </li>
+      {# ------------ new buyers ----------- #}
+      <li class="dashboard-orders__item-info">
+        <div class="dashboard-orders__header">
+          <h3 class="dashboard-orders__title">Новые покупатели</h3>
+          <a href="#" class="dashboard-orders__link ttu">
+            <span>все</span>
+            <svg class="icon deg90" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="dashboard-orders__buyers-wrapper">
+          <ul class="dashboard-orders__new-buyers">
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+            <li class="dashboard-orders__new-buyer">
+              <a href="#">
+                <figure class="entety__avatar">
+                  <img
+                    src="/assets/images/profile_friend.png"
+                    alt="alt"
+                    class="entety__avatar_img"
+                  />
+                </figure>
+                <span class="dashboard-orders__name-buyer">Елизавета</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %} {% block footer %}
+<div class="footer-wr-full">
+  {% include "../components/single_footer.twig" %}
+</div>
+{% endblock %}

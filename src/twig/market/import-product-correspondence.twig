@@ -1,0 +1,313 @@
+{% extends "../index_single.twig" %} {% set title = 'Import product correspondence'
+%} {% block content %}
+<div class="import-product-main">
+  <div class="import-product-main__wrapper">
+    <div class="import-product-main__container ovflw-a">
+      <div class="import-product-main__content">
+        <h2 class="import-product-main__title">Импорт товаров</h2>
+
+        <div class="import-product-main__block">
+          <div class="import-product-main__stages">
+            <div class="import-product-main__stage stage-full-bg">
+              <p class="import-product-main__stage-bg-text">
+                <svg class="icon" aria-hidden="true" focusable="false">
+                  <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+                </svg>
+              </p>
+              <span class="import-product-main__stage-text">выбор файла</span>
+            </div>
+            <div class="import-product-main__stage stage-full-bg">
+              <p class="import-product-main__stage-bg-text">2</p>
+              <span class="import-product-main__stage-text"
+                >соответствие колонок</span
+              >
+            </div>
+          </div>
+          <p class="import-product-main__text-product">
+            Выберите название свойства товара в маркетплейсе, соответствующее
+            названию колонки в CSV. Для ненужных колонок выберите «Не
+            импортировать».
+          </p>
+        </div>
+
+        <form class="import-product-main__form">
+          {# ---- delivery block ---- #}
+          <div class="import-product-main__correspondence correspondence">
+            <div class="correspondence__wrapper">
+              <ul class="correspondence__options">
+                {# ---- название товара ---- #}
+                <li class="correspondence__option">
+                  <h3>cvs</h3>
+                  <h3>маркетплейс</h3>
+                </li>
+                <li class="correspondence__option">
+                  {# ---- блок cvs ---- #}
+                  <div class="correspondence__names">
+                    <h4>category</h4>
+                    <p>Пример: Настольные игры</p>
+                  </div>
+                  {# ---- блок маркетплейс ---- #}
+                  <div class="correspondence__properties">
+                    <div class="correspondence__dropdown-list">
+                      <a
+                        href="javascript:void(0)"
+                        class="correspondence__btn"
+                        data-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span>Не импортировать</span>
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                          <use
+                            href="/assets/sprite/sprite.svg#icon-sm-chevron-up-down"
+                          ></use>
+                        </svg>
+                      </a>
+                      {# ---- выпадающий список ---- #}
+                      <div class="correspondence__dropdown-menu">
+                        <div class="correspondence__dropdown-header"></div>
+                        <ul class="correspondence__select">
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Не импортировать"
+                              />
+                              <span class="correspondence__subtitle">Не импортировать</span>
+                            </label>
+                          </li>
+                          <li class="d-product-forms__dropdown">
+                            <span class="dividing-line"></span>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="ID"
+                              />
+                              <span class="correspondence__subtitle">ID</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Артикул"
+                              />
+                              <span class="correspondence__subtitle">Артикул</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Название"
+                              />
+                              <span class="correspondence__subtitle">Название</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Категория"
+                              />
+                              <span class="correspondence__subtitle">Категория</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Краткое описание"
+                              />
+                              <span class="correspondence__subtitle">Краткое описание</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="описание"
+                              />
+                              <span class="correspondence__subtitle">описание</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="Изображения"
+                              />
+                              <span class="correspondence__subtitle">Изображения</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="в продаже"
+                              />
+                              <span class="correspondence__subtitle">рекомендуемый</span>
+                            </label>
+                          </li>
+                          <li class="d-product-forms__dropdown">
+                            <span class="dividing-line"></span>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="базовая цена"
+                              />
+                              <span class="correspondence__subtitle">базовая цена</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="акционная цена"
+                              />
+                              <span class="correspondence__subtitle">акционная цена</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="дата начала действия скидки"
+                              />
+                              <span class="correspondence__subtitle">дата начала действия скидки</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="дата окончания действия скидки"
+                              />
+                              <span class="correspondence__subtitle">дата окончания действия скидки</span>
+                            </label>
+                          </li>
+                          <li class="d-product-forms__dropdown">
+                            <span class="dividing-line"></span>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="остатки на складе"
+                              />
+                              <span class="correspondence__subtitle">остатки на складе</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="вес"
+                              />
+                              <span class="correspondence__subtitle">вес</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="длина"
+                              />
+                              <span class="correspondence__subtitle">длина</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="ширина"
+                              />
+                              <span class="correspondence__subtitle">ширина</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="высота"
+                              />
+                              <span class="correspondence__subtitle">высота</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="апсэлы"
+                              />
+                              <span class="correspondence__subtitle">апсэлы</span>
+                            </label>
+                          </li>
+                          <li class="correspondence__dropdown">
+                            <label>
+                              <input
+                                type="radio"
+                                name="feed_check"
+                                value="кросселы"
+                              />
+                              <span class="correspondence__subtitle">кросселы</span>
+                            </label>
+                          </li>
+                        </ul>
+                        <div class="correspondence__dropdown-blur"></div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {# ----- #}
+        </form>
+      </div>
+    </div>
+    <footer class="import-footer-product">
+      <div class="import-footer-product__wrapper">
+        <div class="import-footer-product__buttons">
+          <button class="import-footer-product__btn-cancel btn" type="button">
+            <span class="label is-bolder">назад</span>
+          </button>
+
+          <button
+            class="import-footer-product__btn-complete btn btn-primary"
+            disabled
+            type="button"
+          >
+            <svg class="icon" aria-hidden="true" focusable="false">
+              <use href="/assets/sprite/sprite.svg#icon-checkmark"></use>
+            </svg>
+            <span class="label is-bolder">импортировать</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+{% endblock %}

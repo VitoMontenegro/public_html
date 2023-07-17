@@ -1,0 +1,48 @@
+.info-sel-cust {
+    padding: 4.4rem 0;
+    display: flex;
+    gap: 4rem;
+    @include media-breakpoint-down(md) {
+        display: block;
+        padding: 2rem 0;
+    }
+    // .info-sel-cust__container
+    &__container {
+        flex: 0 1 50%;
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    // .info-sel-cust__address-titles
+    &__address-titles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+
+    // .info-sel-cust__address-title
+    &__address-title {
+        @include style-link;
+        color: var(--ink-dark-2-ry, #475f85);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 0;
+    }
+
+    // .info-sel-cust__address
+    &__address {
+    }
+
+    // .info-sel-cust__links
+    &__links {
+        padding: 0;
+        & li {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0.4rem;
+        }
+    }
+}

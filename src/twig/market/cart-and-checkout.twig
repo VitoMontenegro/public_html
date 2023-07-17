@@ -7,6 +7,15 @@
         <h2 class="cart-checkout__title">Корзина</h2>
         <h4 class="cart-checkout__subtitle"><span>5</span>товаров</h4>
       </div>
+      <div class="cart-checkout__info-block">
+        <svg class="icon" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-info"></use>
+        </svg>
+        <h3>
+          Чтобы не покупать товар сейчас, но сохранить в корзине на будущее,
+          введите ноль в поле количества.
+        </h3>
+      </div>
       <div class="items-cart__container">
         {# --- список товаров --- #}
         <ul class="items-cart__lists">
@@ -237,7 +246,216 @@
       </div>
     </div>
   </div>
-  {% endblock %} {% block footer %}
+  {# ------------- mini cart checkout ------------ #}
+  <div class="mini-cart">
+    <div class="mini-cart__wrapper">
+      <div class="mini-cart__wrap">
+        <h3 class="mini-cart__title">Корзина</h3>
+        <button type="button" class="mini-cart__icon">
+          <span class="items-cart-close"></span>
+        </button>
+      </div>
+      {# -------- list product -------- #}
+      <ul class="mini-cart__list-product">
+        {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity">x15</span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity">x15</span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #}
+      </ul>
+      <div class="mini-cart__result-block">
+        <h3 class="mini-cart__subtitle">итого:</h3>
+        <div class="mini-cart__sum-res"><span>75 550 </span>₽</div>
+      </div>
+    </div>
+  </div>
+  {# ----------- order processing -------- #}
+  <div class="mini-cart">
+    <div class="mini-cart__wrapper">
+      <h3 class="mini-cart__title">Корзина</h3>
+      {# -------- list product -------- #}
+      <ul class="mini-cart__list-product">
+        {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity">x15</span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity">x15</span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #} {# ---- product ---- #}
+        <li class="mini-cart__product">
+          <button type="button" class="mini-cart__icon">
+            <span class="items-cart-close"></span>
+          </button>
+          <div class="mini-cart__name">
+            Аккумуляторная батарейка АА (HR6) 2100 мАч, 48 шт.
+          </div>
+          <div class="mini-cart__sum">
+            <span class="mini-cart__quantity"></span>
+            <span>48 555</span> ₽
+          </div>
+        </li>
+        {# ----- #}
+      </ul>
+      <div class="mini-cart__result-block mb-1">
+        <h3 class="mini-cart__subtitle">итого:</h3>
+        <div class="mini-cart__sum-res"><span>75 550 </span>₽</div>
+      </div>
+      <button type="button" class="mini-cart__btn btn btn-primary">
+        <span>Оформить заказ</span>
+        <svg class="icon deg90" aria-hidden="true" focusable="false">
+          <use href="/assets/sprite/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  {# -------- primary navigation --------- #}
+  <nav class="cart-nav">
+    <ul class="cart-nav__menu-list">
+      <li class="cart-nav__menu-item">
+        <a class="cart-nav__menu-link active-link-el" href="">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-shopping"></use>
+          </svg>
+          <span class="cart-nav__label">
+            Корзина
+            <span class="cart-nav__counter">5</span>
+          </span>
+        </a>
+      </li>
+      <li class="cart-nav__menu-item">
+        <a class="cart-nav__menu-link" href="">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-buy"></use>
+          </svg>
+          <span class="cart-nav__label">Покупки</span>
+        </a>
+      </li>
+      <li class="cart-nav__menu-item">
+        <a class="cart-nav__menu-link" href="">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-sell"></use>
+          </svg>
+          <span class="cart-nav__label">Продажи</span>
+        </a>
+      </li>
+      <li class="cart-nav__menu-item">
+        <a class="cart-nav__menu-link" href="">
+          <svg class="icon" aria-hidden="true" focusable="false">
+            <use href="/assets/sprite/sprite.svg#icon-more"></use>
+          </svg>
+          <span class="cart-nav__label">Ещё</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  {# ----------------- #} {% endblock %} {% block footer %}
   <div class="footer-wr-full">
     {% include "../components/single_footer.twig" %}
   </div>

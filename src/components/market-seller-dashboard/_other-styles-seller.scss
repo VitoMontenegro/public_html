@@ -1,0 +1,104 @@
+.profit-label {
+    @include color-received;
+    @include bg-received;
+}
+
+.decline-label {
+    @include color-danger;
+    @include bg-danger;
+}
+.nil-label {
+    @include color-process;
+    @include bg-process;
+}
+
+.s-info-item {
+    background: var(--background-bg-alt, #f6f7f9);
+}
+
+// ---------
+.more-info-item {
+    display: none !important;
+    @include media-breakpoint-down(md) {
+        display: block !important; 
+    }
+}
+// ---------
+
+.products-sel-st {
+    align-items: center;
+    gap: 0.8rem;
+    max-width: 50.3rem;
+    position: sticky !important;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: var(--background-bg-base, #fcfcfd);
+    & span {
+        @include style-link;
+        text-transform: none;
+        color: var(--ink-dark-2-ry, #475f85);
+    }
+    @include media-breakpoint-down(xl) {
+        min-width: 17.1rem;
+    }
+    @include media-breakpoint-down(lg) {
+        min-width: 29.6rem;
+    }
+    @include media-breakpoint-down(md) {
+        min-width: calc(50vw - 2rem);
+        max-width: calc(50vw - 2rem);
+    }
+}
+
+//108 153 124 156 140
+.sel-w-products {
+    @include media-breakpoint-down(xl) {
+        min-width: 19.7rem;
+    }
+    @include media-breakpoint-down(lg) {
+        min-width: 29.6rem;
+    }
+    @include media-breakpoint-down(md) {
+        min-width: calc(50vw - 2rem);
+        max-width: calc(50vw - 2rem);
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 0.8rem 0 0.8rem 1.6rem !important;
+    }
+}
+
+.sel-w-sum-prod {
+    min-width: 10.8rem;
+}
+.sel-w-date-prod {
+    min-width: 15.3rem;
+}
+.sel-w-buyer-prod {
+    min-width: 12.4rem;
+}
+.sel-w-id-prod {
+    min-width: 15.6rem;
+}
+.sel-w-status-prod {
+    min-width: 14rem;
+}
+.sel-w-sum-prod,
+.sel-w-date-prod,
+.sel-w-buyer-prod,
+.sel-w-id-prod,
+.sel-w-status-prod {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 3rem;
+        background-color: #d1d9e6;
+        @include media-breakpoint-down(md) {
+            width: 0;
+        }
+    }
+}

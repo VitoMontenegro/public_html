@@ -1,0 +1,33 @@
+.user-info-product {
+    // .user-info-product__list
+    &__list {
+        padding: 0;
+        & li {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 9rem 1fr;
+            gap: 2.4rem;
+            align-items: center;
+            margin-bottom: 2.4rem;
+        }
+        & h4,
+        span {
+            padding: 0 !important;
+        }
+        & h4 {
+            @include style-link;
+            color: var(--ink-dark-2-ry, #475f85);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        & span {
+            @include style-link;
+            color: var(--ink-dark-base, #081935);
+        }
+    }
+
+    // .user-info-product__item
+    &__item {
+    }
+}
